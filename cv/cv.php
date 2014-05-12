@@ -72,7 +72,7 @@
                 <h2>Technologies</h2>
                 <ul>
                     <li>
-                        <p class='m-t-xl'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Adobe CS, Subversion and Git.</p>
+                        <p class='m-t-xl'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Subversion, Git and Adobe&nbsp;CS.</p>
                     </li>
                 </ul>
 
