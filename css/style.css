@@ -1269,5 +1269,6 @@ button.block, .main-nav a.block { width: 100%; }
 .cv ul li { position: relative; }
 .cv h3, .cv h5 { text-transform: uppercase; }
 .cv h2 { border-bottom: 1px solid black; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .cv h2 { border-bottom: none; background-image: linear-gradient(0deg, #ffffef, transparent 50%, black 50%); background-size: 100% 1px; background-repeat: no-repeat; background-position: bottom left; } }
 .cv h3 span { font-size: 10px; font-size: 0.625rem; line-height: 0.9; display: inline-block; border-left: 1px solid black; margin-left: 10px; padding-left: 8px; vertical-align: 4px; height: 12px; letter-spacing: 0.5px; }
 @media (min-width: 56.0625em) { .cv h3 span { font-size: 11px; font-size: 0.6875rem; line-height: 0.90909; vertical-align: 7px; height: 16px; letter-spacing: 0.2px; } }

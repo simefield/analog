@@ -4,7 +4,7 @@
         <title>Analog</title>
         <meta name="description" content="Analog. Freelance front end web development. Wellington, New Zealand.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icons/AppIcon76x76.png">
         <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icons/AppIcon60x60@2x.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icons/AppIcon76x76@2x.png">
@@ -67,7 +67,7 @@
                     <div><!-- must nest for skinny- type margins -->
                         <div class="hero">
                             <div class="hero__image  <?= $photoClass ?>"></div>
-                            <span class='photo-credit'>Photo by <?= $photoCredit[0] ?>. <i><?= $photoCredit[1] ?></i>, <?= $photoCredit[2] ?></span>
+                            <span class='photo-credit'><i><?= $photoCredit[1] ?></i> by <?= $photoCredit[0] ?>, <?= $photoCredit[2] ?></span>
                         </div>
                     </div>
                 </div><!-- /grid__item -->
