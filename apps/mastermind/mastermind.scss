@@ -1,0 +1,558 @@
+/*!
+ * Mastermind CSS | Copyright 2014 Richard Sime */
+ // --------------------------------------------------
+
+
+/*
+ * On screen debug console
+ */
+.console {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    color: white;
+    right: 12px;
+}
+
+
+/*
+ * Sass partials
+ */
+@import "fontello";
+
+
+/*
+ * Variables
+ */
+$link: #2b90d1;
+$black: #191b1d;
+$dark-grey: #272a2d;
+
+$radius: 10px;
+$radius-sm: 10px;
+
+
+/*
+ * Shared shadows & highlights
+ */
+/* Shadows */
+%shadow-ball {
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5), 5px 5px 2px rgba(0, 0, 0, 0.3);
+}
+%shadow-ball-rotated {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 2px rgba(0, 0, 0, 0.3);
+}
+/* Specular highlights */
+%highlight-1 {
+    position: absolute;
+    width: 7px;
+    height: 9px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%);
+    content: '';
+    display: block;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+}
+%highlight-2 {
+    position: absolute;
+    width: 12px;
+    height: 14px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 20%,rgba(255,255,255,0) 100%);
+    content: '';
+    display: block;
+    top: 4px;
+    left: 8px;
+    border-radius: 100%;
+}
+
+
+
+
+/*
+ * Reset
+ */
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*
+ * General
+ */
+html {
+    background-color: #000;
+}
+body {
+    width: 320px;
+    padding: 0 0 11px;
+    margin: 0 auto;
+    background: $dark-grey url('bg-noise.png') repeat 0 0;
+    font-family: AppleSDGothicNeo-Light, HelveticaNeue-Light, HelveticaNeue, helvetica;
+    position: relative;
+    border-radius: $radius;
+}
+
+
+/*
+ * Typography
+ */
+h1 {
+    margin: 0;
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+
+    &.heading {
+        a {
+            color: white;
+            cursor: pointer;
+        }
+
+        position: relative;
+        z-index: 9999;
+        background: $black;
+        width: 300px;
+        padding: 8px 10px 4px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 23px;
+        background: black;
+
+        span {
+            float: right;
+            color: $link;
+            cursor: pointer;
+        }
+    }
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 12px 0 32px;
+    font-weight: normal;
+
+    a {
+        font-size: 16px;
+    }
+}
+
+
+/*
+ * Messages
+ */
+.messages {
+    position: relative;
+    z-index: 99999999;
+    margin: 0 auto;
+    width: 320px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    top: -182px;
+
+    &.open {
+        top: 0;
+    }
+
+    & > div {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 182px;
+        background: #fff;
+        border-radius: 0 0 $radius-sm $radius-sm;
+        width: 320px;
+        box-sizing: border-box;
+        padding: 20px 20px 0;
+
+        button {
+            position: absolute;
+            bottom: 4px;
+        }
+
+        & > * {
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        h1, h2 {
+            font-size: 16px;
+            color: $dark-grey;
+        }
+
+        span {
+            color: #a30202;
+            font-weight: 700;
+        }
+    }
+
+    & > div.lost {
+        background-color: $black;
+    }
+}
+
+
+/*
+ * the game board
+ */
+.board {
+    position: relative;
+    width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: right;
+    padding: 0 20px;
+}
+
+
+/*
+ * Guess box - wrapper
+ */
+.guess-box {
+    position: relative;
+    
+    &.active {
+        padding-top: 95px; /* space for the palette to be positioned */
+
+        // we never want this result box to appear behind the eye-dropper
+        .revealed {
+            display: none;
+        }
+    }
+}
+
+
+/*
+ * Secret & Guess styling
+ */
+/*a*/.revealSecret {
+    position: absolute;
+    z-index: 999;
+    font-size: 13px;
+    left: 20px;
+    top: 28px;
+    cursor: pointer;
+}
+
+.secret { /* revealed at end of game */
+    position: relative;
+    z-index: 9;
+    padding-top: 5px;
+
+    // hide secret pegs
+    span {
+        background-color: #000;
+    }
+
+    &.revealed {
+        z-index: 99999999;
+    }
+}
+.secret.revealed::before {
+    opacity: 0;
+}
+
+
+
+
+// peg appearance
+.secret,
+.guess,
+.touch-cursor {
+    // right-align to viewport gutter
+    margin-right: -12px;
+
+    li {
+        padding: 11px 12px 12px 11px;
+        display: inline-block;
+    }    
+    span {
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        display: block;
+        position: relative;
+    }
+}
+.secret.revealed,
+.guess,
+.touch-cursor {
+    span {
+        // shadows
+        @extend %shadow-ball;
+
+        /* specular highlight */
+        &::before {
+            @extend %highlight-1;
+        }
+        &::after {
+            @extend %highlight-2;
+        }
+    }
+}
+
+// @-webkit-keyframes highlight {
+//     0% {
+//         background: rgba(cyan, 0.25);
+//     }
+//     100% {
+//         background: none;
+//     }
+// }
+.guess {
+    position: relative;
+    z-index: 2;
+
+    // .empty { // for debugging
+    //     background-color: #0ff;
+    // }
+    
+    // /*li*/.hover {
+    //     -webkit-animation: highlight 0.25s;
+    //     // background: cyan;
+    // }
+
+    /* style empty holes */
+    /*li*/.empty span {
+        box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.7), inset -1px -1px 1px rgba(255, 255, 255, 0.25), inset 12px 12px 10px rgba(0, 0, 0, 0.25);
+        
+        /* hide specular highlights */
+        &::before, &::after {
+            background: none;
+        }
+    }
+}
+
+
+/*
+ * Colour palette
+ */
+/*ul*/.palette {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.075);
+    width: 300px;
+    height: 80px;
+    padding: 66px 0 0 20px;
+    border-radius: $radius $radius 0 0;
+    top: 0;
+    left: 0;
+    // mask the body background where corners are rounded with black
+    box-shadow: 0 -10px 0 rgba(0, 0, 0, 1);
+    // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/ 
+    @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
+        background-image: linear-gradient(0deg, rgba(255,255,255,0.075), rgba(255,255,255,0.075) 50%, transparent 50%);
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    
+    li {
+        border-radius: 100%;
+        width: 35px;
+        height: 35px;
+        display: block;
+        float: left;
+        position: relative;
+        // shadows
+        @extend %shadow-ball;
+
+        /* specular highlights */
+        span::before {
+            @extend %highlight-1;
+        }
+        span::after {
+            @extend %highlight-2;
+        }
+
+        // pegs' stems
+        &::before {
+            content: '';
+            display: block;
+            background-color: inherit;
+            width: 11px;
+            height: 18px;
+            position: absolute;
+            left: 12px;
+            top: 34px;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+
+            z-index: -9;
+        }
+        // pegs' stem highlights
+        &::after {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 15px;
+            position: absolute;
+            left: 13px;
+            top: 35px;
+            border-radius: 3px;
+            // background: -moz-linear-gradient(left, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+            // background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.01)), color-stop(20%,rgba(255,255,255,0.4)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+            // background: -webkit-linear-gradient(left, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.4) 20%,rgba(255,255,255,0.01) 100%); /* Chrome10+,Safari5.1+ */
+            background: linear-gradient(to right, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.4) 30%,rgba(255,255,255,0) 100%); /* W3C */
+        }
+
+        // rotate every second peg
+        &:nth-child(even) {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            left: 0;
+            top: 35px;
+            // correct rotated items' shadows
+            @extend %shadow-ball-rotated;
+
+            // correct pegs' shadows
+            &::before {
+                box-shadow: -5px -2px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            /* correct their specular highlights */
+            span::before {
+                top: auto;
+                left: auto;
+                bottom: 6px;
+                right: 5px;
+            }
+            span::after {
+                top: auto;
+                left: auto;
+                bottom: 4px;
+                right: 6px;
+            }
+
+            // pegs' stem highlights corrected
+            &::after {
+                left: 17px;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }        
+    }
+}
+
+
+/*
+ * Eye-dropper
+ */
+/*img*/.eye-dropper {
+    position: absolute;
+    left: 20px;
+    top: 204px;
+}
+
+
+/*
+ * Submit guess button
+ */
+button {
+    margin: 0;
+    padding: 0.7em;
+    background-color: $link;
+    color: #2a2a2a;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    cursor: pointer;
+    z-index: 9999;
+    outline: none;
+    width: 280px;
+    color: white;
+    
+    &:hover {
+        color: black;
+    }
+
+    &.submit {
+        display: none;
+        position: absolute;
+        top: 14px;
+        left: 20px;        
+    }
+}
+
+
+/*
+ * Results
+ */
+/*ul*/.results {
+    opacity: 0; /* reveal via JS */
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    padding: 4px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background-color: #000;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    
+
+    
+    &.revealed {
+        opacity: 1; /* add class in JS */
+    }
+    
+    li {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin: 4px;
+        
+        &.white {
+            background-color: white;
+        }
+        &.red {
+            background-color: red;
+        }
+    }
+}
+
+
+/*
+ * Dragging peg
+ */
+/*ul*/.touch-cursor {
+    position: absolute;
+    display: none;
+    top: -1000px; // position it off screen so it doesn't flash on in the wrong spot
+    li {
+        padding: 0; // make it smaller so we can detect elements beneath it more accurately
+    }
+    &.dragging {
+        display: block;
+        z-index: 9999;
+    }
+}
+
+

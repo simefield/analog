@@ -1,0 +1,100 @@
+<html manifest='mastermind.manifest'>
+
+    <head>
+        <title>Mastermind</title>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <!-- Links -->
+        <link rel="apple-touch-icon" sizes="76x76" href="app-icons/AppIcon76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="app-icons/AppIcon60x60@2x.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="app-icons/AppIcon76x76@2x.png">
+        <link rel="stylesheet" type="text/css" href="mastermind.css">
+        <!-- Scripts -->
+        <script src="zepto.min.js"></script>
+        <script src="zepto.touch.js"></script>
+    </head>
+
+    <body>
+        <!-- Messages -->
+        <div class="messages">
+            <!-- About -->
+            <div class="about">
+                <!-- <h2>Mastermind<br>by Joseph and Richard Sime</h2> -->
+                <h2>Mastermind<br>by Joseph & Richard Sime<br></h2>
+                <h1><a href="http://www.analog.co.nz/apps">More ’appiness from Analog</a></h1>
+                <button class='close'>Let me play already</button>
+            </div>
+            <!-- Rules -->
+            <div class="rules">
+                <h2>Can you guess the four secret colours in their correct locations?</h2>
+                <h1>White is right; red not quite.</h1>
+                <button class='close'>Ok, got it!</button>
+            </div>
+            <!-- Lost -->
+            <div class="lost">
+                <button class='replay'>Play again</button>
+            </div>
+            <!-- Score -->
+            <div class="score">
+                <h1>Congratulations!</h1>
+                <h2>You just won the game in <span></span> turns.</h2>
+                <!-- <h2>Your rank: Austrian Patent Clerk.</h2>
+                <h2>What a fluke! 1 chance in 4096 to be precise.</h2> -->
+                <button class='replay'>Play again</button>
+            </div>
+        </div>
+        <!-- /Messages -->
+        
+        <h1 class='heading'><a href="">Mastermind</a><span class="glyph-help-circled-alt"></span></h1>
+
+        <div class="board">
+
+            <a href="" class='revealSecret'>Code</a>
+            <ul class='secret'>
+                <li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li>
+            </ul>
+            
+            <div class="guess-box  active">
+                <ul class='guess'>
+                    <li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li>
+                </ul>
+                <ul class='results'>
+                    <li></li><li></li><li></li><li></li>
+                </ul>
+            </div>
+            
+            <ul class='palette'>
+                <li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li><li><span></span></li>
+            </ul>
+
+            <!-- submit guess button -->
+            <button class='submit'>How&rsquo;s that?</button>
+
+        </div>
+        <!-- /board -->
+
+        <!-- touch cursor (floating peg) -->
+        <ul class="touch-cursor"><li><span></span></li></ul>
+        <p class="console"></p>
+
+        <!-- eye-dropper -->
+        <img src="eye-dropper.png" class="eye-dropper" width='40' height='40' alt='pass validation'>
+        
+        <script src="mastermind.js"></script>
+
+        <!-- analog.co.nz tracking code -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-50448076-1', 'analog.co.nz');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+</html>

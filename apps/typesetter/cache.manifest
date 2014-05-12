@@ -1,0 +1,37 @@
+CACHE MANIFEST
+
+#version 0.1.0 2014-05
+
+CACHE:
+
+#INLINE IMAGES
+touch-icons/AppIcon76x76.png
+touch-icons/AppIcon60x60@2x.png
+touch-icons/AppIcon76x76@2x.png
+
+#CSS IMAGES
+affordance-select.gif
+
+#FONTS
+fonts/elusive.eot
+fonts/elusive.svg
+fonts/elusive.ttf
+fonts/elusive.woff
+fonts/NHaasGroteskDSStd-75Bd.eot
+fonts/NHaasGroteskDSStd-75Bd.ttf
+fonts/NHaasGroteskDSStd-75Bd.woff
+
+#HTML FILES
+# index.html // caching this is implied
+
+#CSS FILES
+typesetter.css
+
+
+#JAVASCRIPT FILES
+jquery-2.1.0.min.js
+fonts.js
+font-test.js
+text-samples.js
+touch.js
+typesetter.min.js

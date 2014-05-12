@@ -1,0 +1,139 @@
+/*!
+ * $HELPERS */
+ // --------------------------------------------------
+
+
+/*
+ * Since v22, Chrome makes fat sausage horrible web typography. Fix it with 
+ * these properties right here. Maybe consider scoping this to a class for
+ * chrome/mac osx only at some point?
+ */
+%fix-webkit-font-rendering {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+%inline-block{
+    display: inline-block;
+    // *zoom:1;
+    // *display: inline;
+}
+
+
+
+/**
+ * Sprites
+ * ----------------------------------------------------------------------------
+ */
+.i {
+    @extend %inline-block;
+    overflow: hidden; /* for IE6 */
+    vertical-align: middle;
+}
+// eg. <i class="i  s_icons_icon_social_twitter">Twitter</i>
+
+
+
+/**
+ * Lists
+ * ----------------------------------------------------------------------------
+ */
+%list-reset {
+    margin-top: 0;
+    margin-left: 0;
+    list-style: none;
+    //padding: 0;
+
+    li {
+        padding-bottom: 0;
+        list-style-image: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+
+
+
+/**
+ * Render fonts more sharply in Chrome (lose the fuzzy sausage type).
+ * Only apply to light text on dark backgrounds
+ */
+%fix-webkit-font-rendering {
+    -webkit-font-smoothing: antialiased;
+    // text-rendering: optimizeLegibility; // doesn't appear to do anything any more or be in any way supported
+}
+
+
+
+
+
+/*
+ * Distribute elements evenly (equidistant)
+ * ----------------------------------------------------------------------------
+ */
+.distribute {
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+}
+.distribute:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+    .distribute > * {
+      vertical-align: top;
+      display: inline-block;
+      // width: 100%; what?!
+      text-align: left;
+      font-size: medium;
+    }
+    .ie7 .distribute > * {
+      display: inline;
+      // zoom: 1;
+    }
+    .distribute--middle > * {
+      vertical-align: middle;
+    }
+    .distribute--bottom > * {
+      vertical-align: bottom;
+    }
+
+
+
+
+/**
+ * Hide/show helpers
+ * ----------------------------------------------------------------------------
+ */
+
+.hide_mobile {
+    @include media-query(mobile) {
+        display: none !important;
+    }
+}
+.hide_desktop {
+    // display: none !important;
+    @include media-query(desktop) {
+        display: none !important;
+    }
+    // @include media-query(mobile) {
+    //     display: inherit !important;
+    // }
+}
+// .show_mobile {
+//     display: none;
+//     @include media-query(mobile) {
+//         display: block;
+//     }
+// }
+// .show_desktop {
+//     @include media-query(desktop) {
+//         display: none;
+//     }
+// }

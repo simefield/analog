@@ -1,0 +1,562 @@
+/*!
+ * Analog CSS | Richard Sime | March 2014 */
+ // --------------------------------------------------*/
+
+
+/***************************************
+ * $CONTENTS
+ ***************************************/
+
+/***************************************
+ * CONTENTS.................you're reading it
+ * FONTS....................
+ * FONT EXTENDORS...........
+ * TYPOGRAPHY DEFAULTS......
+ * HEADINGS & PARAGRAPHS....
+ * HERO IMAGE...............
+
+ ***************************************/
+
+
+
+/***************************************
+ * $FONTS
+ ***************************************/
+/*!
+ * @license
+ * MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Neue Haas Grotesk Std Display 75 Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-display-75-bold/
+ * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715
+ * 
+ * © 2014 MyFonts Inc
+*/
+@font-face {
+    font-family: 'NHaasGroteskDSStd-75Bd';
+    src: url('../fonts/NHaasGroteskDSStd-75Bd.eot');
+    src: url('../fonts/NHaasGroteskDSStd-75Bd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NHaasGroteskDSStd-75Bd.woff') format('woff'),
+        url('../fonts/NHaasGroteskDSStd-75Bd.ttf') format('truetype');
+    // the following beautifies rendering
+    font-weight: 700;
+}
+
+
+/***************************************
+ * $FONT EXTENDORS
+ ***************************************/
+/* headings */
+%neueHaasGrotesk {
+  font-family: 'NHaasGroteskDSStd-75Bd', 'Helvetica-Bold', 'HelveticaNeue-Bold', sans-serif;
+  // font-weight:  700;
+  // font-style:   normal;
+}
+/* para */
+%sansSerif {
+    font-family: 'Helvetica-Light', 'HelveticaNeue-Light', Helvetica, sans-serif;
+    font-weight: normal;
+}
+/*i*/
+%sansSerif-italic {
+    font-family: 'Helvetica-LightOblique', 'HelveticaNeue-LightItalic', Helvetica-Oblique, 'Helvetica-Light', 'HelveticaNeue-Light', Helvetica, sans-serif;
+    font-weight: normal;
+}
+/*b*/
+%sansSerif-bold {
+    font-family: 'Helvetica-Medium', 'Helvetica-Regular', Helvetica, sans-serif;
+    font-weight: normal;
+}
+// e.g. h6 {@extend %neueHaasGrotesk;}
+
+
+
+/***************************************
+ * $TYPOGRAPHY DEFAULTS
+ ***************************************/
+html {
+    font-size: 16px; // set for REM calculations
+}
+body {
+    @include font-size(16px, 24px);
+    @extend %sansSerif;
+    // background-color: $black;
+    // background-color: rgb(40,40,40);
+    background-color: white;
+}
+.content {
+    color: $black;
+    @media (max-width: $screen-sm-max) {
+        @include font-size(14px, 24px);
+    }
+}
+
+.lt-ie9 * {
+    font-family: comic-sans !important;
+}
+
+i, cite, em, var, address, dfn {
+    @extend %sansSerif-italic;
+}
+
+b, dd {
+    @extend %sansSerif-bold;
+}
+
+/***************************************
+ * $HEADINGS & PARAGRAPHS
+ ***************************************/
+h1, h2, h3 {
+    @extend %neueHaasGrotesk;
+    @extend %fix-webkit-font-rendering;
+}
+// heading sizes
+// 37
+// 28
+// 21
+// 16
+// 12
+h1 { @include font-size(37px, 48px); }
+h1 { @include font-size(28px, 32px); }
+h2 { @include font-size(21px, 24px); }
+h3 { @include font-size(17px, 24px); }
+h4 { @include font-size(15px, 24px); }
+h5 { @include font-size(12px, 18px); }
+
+@media (min-width: $screen-md) {
+    h1 { @include font-size(37px, 48px); }
+    h2 { @include font-size(28px, 32px); }
+    h3 { @include font-size(21px, 24px); }
+    h4 { @include font-size(16px, 24px); }
+    h5 { @include font-size(12px, 18px); }
+}
+
+
+h1 { margin-top: 33px; }
+h2 { margin-top: 27px; }
+h3 { margin-top: 24px; }
+h4 { margin-top: 22px; }
+h5 { margin-top: 16px; }
+
+
+/**
+ * Typographic relationships
+ * ----------------------------------------------------------------------------
+ */
+// h1 + p, .h1 + p,
+// h2 + p, .h2 + p,
+// h3 + p, .h3 + p,
+// h4 + p, .h4 + p,
+// h5 + p, .h5 + p,
+// h6 + p, .h6 + p {
+//     //margin-top: .25em;
+// }
+// p {
+//     //margin-top: 0.75em;
+//     /* Nudge p closer to adjacent p elements */
+//     & + p {
+//         // ...
+//     }
+// }
+h1 + p {
+    // margin-top: 1.0625em; // 17px
+    margin-top: 15px;
+    // margin-top: 1em; // this is the default for p's anyway
+}
+// h2 + p { margin-top: 1.0625em; } // 17px
+// h3 + p { margin-top: 1.0625em; } // 17px
+
+p { margin-top: 1em; } // 16px
+
+p + h1 { margin-top: 1.10714285714286em; } // 31px
+p + h2 { margin-top: 1.52380952380952em; } // 32px
+p + h3 { margin-top: 1.9375em; } // 31px
+
+
+// h1 {
+//     @include font-size(24px, 32px);
+//     @media (min-width: $screen-md) {
+//         @include font-size(28px, 32px);
+//     }
+// }
+// h2 {
+//     @include font-size(16px, 24px);
+//     @media (min-width: $screen-md) {
+//         @include font-size(21px, 28px);
+//     }
+// }
+// h3 {
+//     @include font-size(15px, 24px);
+//     @media (min-width: $screen-md) {
+//         @include font-size(16px, 24px);
+//     }
+// }
+
+// h4 {
+//     @include font-size(16px, 32px);
+// }
+// h5 {
+//     @include font-size(16px, 32px);
+// }
+// h4, h5, h6 { 
+//     @include font-size(13px, 24px);
+// }
+
+// h3 + h4,
+// h3 + h5 {
+//     margin-top: 0;
+// }
+// h2 + h5 {
+//     margin-top: 24px;
+// }
+// h5 + h3 {
+//     margin-top: 8px;
+// }
+
+// dl {
+//     @extend %cf;
+//     margin-top: 0;
+// }
+
+dt {
+    float: left;
+    margin-right: 0.25em;
+}
+dd {
+    margin-left: 0;
+    // font-weight: 900;
+}
+
+
+
+/**
+ * Links
+ * ----------------------------------------------------------------------------
+ */
+a {
+    color: $red;
+    text-decoration:none;
+    outline: 0;
+}
+a:focus,
+a:hover,
+a:active {
+    color: $black;
+    outline: 0;
+    // text-decoration: underline;
+}
+
+// when a-tags wrap around a group of block level elements
+// NOTE: span-tag is absent. to create illusion of a red text link within
+// a linkable block simply leave a span un-nested from following elements
+// e.g. <a><h1>...</h1><p>...</p><span>Read more<span><a>
+a {
+    p, h1, h2, h3, h4, h5 { color: $black; }
+}
+
+
+
+
+/***************************************
+ * $HEADER
+ ***************************************/
+ // * Any css in this header.scss file will target the website header section only
+ // * this will include the utility navigation, search, logo and main navigation.
+ 
+.hide {display: none;}
+
+body {  
+//  overflow-y: scroll; /* has to be scroll, not auto */
+//  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+    max-width: 56em;
+    max-width: 56rem;
+    background-color: $paper;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $grid-unit/2 $grid-unit*1.5 $grid-unit*3;
+
+    @media (min-width: $screen-md) {
+        padding: $grid-unit*3 $grid-unit*3 $grid-unit*4;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin-top: $grid-unit*3;
+        margin-bottom: $grid-unit*3;
+        border: 1px solid rgba(100,100,100,0.07);
+    }
+}
+
+button, %button {
+    border: none;
+    @extend %fix-webkit-font-rendering;
+    color: $paper;
+    background-color: $red;
+    padding-right: $grid-unit;
+    padding-left: $grid-unit;
+    margin-right: $grid-unit/2;
+    text-align: center;
+    @include font-size(14px, 24px);
+
+    @media (min-width: $screen-md) {
+        @include font-size(16px, 32px);
+        padding-right: $grid-unit*1.5;
+        padding-left: $grid-unit*1.5;
+        margin-right: $grid-unit;
+        min-width: $grid-unit*5.5; // 88
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: $black;
+    }
+
+    &.block {
+        width: 100%;
+    }
+}
+
+/*ul*/.main-nav {
+
+    // @extend .nav;
+
+    // a {
+    //     @extend %fix-webkit-font-rendering;
+    //     color: $paper;
+    //     background-color: $red;
+
+    //     @include font-size(9px, 32px);
+    //     padding-right: $grid-unit;
+    //     padding-left: $grid-unit;
+    //     margin-right: $grid-unit/2;
+    //     text-align: center;
+
+    //     @media (min-width: $screen-md) {
+    //         @include font-size(12px, 48px);
+    //         padding-right: $grid-unit*1.5;
+    //         padding-left: $grid-unit*1.5;
+    //         margin-right: $grid-unit;
+    //         min-width: $grid-unit*5.5; // 88
+    //     }
+
+    //     &:focus,
+    //     &:hover,
+    //     &:active {
+    //         background-color: $black;
+    //     }
+    // }
+
+    a {
+        @extend %button;
+        @include font-size(9px, 32px);
+
+        @media (min-width: $screen-md) {
+            @include font-size(12px, 48px);
+        }
+    }
+}
+
+/*ul*/.contact {
+    position: relative;
+    top: 5px;
+    // @include font-size(9px, 16px);
+    @include font-size(9px, 16px);
+    text-align: right;
+
+    // display: none; // temporary hide until i fix mobile positioning
+    @media (min-width: $screen-md) {
+        @include font-size(12px, 16px);
+        top: 7px;
+        display: block;
+    }
+}
+
+/*a*/.logo {
+    display: inline-block;
+    // margin-top: 45px;
+    // margin-bottom: 15px;
+    margin-top: 53px;
+    margin-bottom: 8px;
+    @media (min-width: $screen-md) {
+        // margin-top: 75px;
+        margin-top: 84px;
+        margin-bottom: 15px;
+    }
+    
+    img {
+        width: 148px;
+        // width: 158px;
+        @media (min-width: $screen-md) {
+            // width: 179px;
+            // width: 197px;
+            // width: 187px;
+            width: 179px;
+        }
+    }
+}
+
+
+
+
+/***************************************
+ * $HERO IMAGE
+ ***************************************/
+
+// wrapper to crop image on mobile
+.hero {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    // maintain image ratio
+    padding-bottom: 100%; // square
+    @media (min-width: $screen-md) {
+        padding-bottom: 66.666666666%; // 1.5 : 1
+    }
+}
+
+    .hero__image {
+        width: 100%;
+        height: 100%;
+        background-color: $paper;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        // background-blend-mode: multiply;
+        background-position: 0 0;
+        
+        &.stella { background-image: url('../images/stella.jpg'); }
+        &.laffare { background-image: url('../images/laffare.jpg'); }
+        &.sky { background-image: url('../images/sky.jpg'); }
+        &.lyall-bay { background-image: url('../images/lyall-bay.jpg'); }
+    }
+
+    .photo-credit {
+        @include font-size(9px, $grid-unit);
+        @include transform(rotate(270deg), 100% 0);
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0;
+        @media (min-width: $screen-md) {
+            width: 66.666666666%;
+        }
+    }
+
+
+
+/***************************************
+ * $ASIDES
+ ***************************************/
+/*div*/.aside {
+
+    margin-top: 50px;
+    margin-bottom: $grid-unit;
+    @include font-size(14px, 24px);
+
+    & > * {
+        margin-top: 0;
+    }
+}
+
+/*img*/.app-icon {
+    margin-top: $grid-unit/2;
+    border-radius: 15px;
+
+    &.outline {
+        box-shadow: 0 0 1px rgba(0,0,0,0.25);
+    }
+}
+
+/*img*/.app-iphone {
+    margin-top: 6px;
+}
+
+
+
+/***************************************
+ * $CURRICULUM VITAE
+ ***************************************/
+/*div*/.cv {
+
+    ul {
+        @extend %list-reset;
+
+        li {
+            position: relative;
+        }
+    }
+
+    h3, h5 {
+        text-transform: uppercase;
+    }
+
+    // @media (min-width: $screen-lg) {
+    //     h5 {
+    //         position: absolute;
+    //         left: -33.33%;
+    //         top: -43px;
+    //         text-align: right;
+    //         width: 27.5%;
+    //     }
+    // }
+
+    h2 {
+        @extend .m-t-xx;
+        border-bottom: 1px solid $black;
+    }
+
+    h5 {
+        @extend .m-t-xx;
+    }
+
+    h3 {
+        @extend .m-t-xx;
+        // @extend .m-t-xl-desktop;
+
+        span { // date range
+            @include font-size(10px, 9px);
+            display: inline-block;
+            border-left: 1px solid $black;
+            margin-left: 10px;
+            padding-left: 8px;
+            @extend %sansSerif-bold;
+            vertical-align: 4px;
+            height: 12px;
+            letter-spacing: 0.5px;
+
+            @media (min-width: $screen-lg) {
+                @include font-size(11px, 10px);
+                vertical-align: 7px;
+                height: 16px;
+                letter-spacing: 0.2px;
+            }
+        }
+
+    }
+
+    h4 {
+        @extend .m-t-xl;
+    }
+
+    // h3 + h4,
+    h4 + dl {
+        @extend .m-t-sm;
+    }
+}
+

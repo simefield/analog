@@ -1,0 +1,63 @@
+<html manifest='cache.manifest'>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel='stylesheet' href='typesetter.css' media='all'>
+    <meta name="apple-mobile-web-app-title" content="Typesetter">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icons/AppIcon76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icons/AppIcon60x60@2x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icons/AppIcon76x76@2x.png">
+</head>
+
+<body>
+    <div class="loading-msg">
+        <h1>Typesetter</h1>
+        <h2>Rapid typeface prototyping<br>for web designers</h2>
+        <p>Detecting fonts<em>…</em></p>
+    </div>
+    <div class='text-block  active  hide' spellcheck="false">
+        <p contenteditable='true'>A Case of Identity</p>
+        <code>
+            <a class='button  button--small  remove' href="#"><i class="glyph-trash"></i></a>
+            <a class='button  button--small  close' href="#"><i class="glyph-cancel"></i></a>
+<pre>
+<a class='show-additional  open' href='#'>Font <i class="glyph"></i></a><div class='additional  show'><span>typeface       </span><select data-property='font-family' id='font-families'></select>
+<span>colour         </span><input type='text' data-property='color' size="22" autocorrect="off" autocapitalize="off" maxlength="22" value='000000'>
+<span>font size      </span><input type='number' data-property='font-size' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='28'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>line height    </span><input type='number' data-property='line-height' autocorrect="off" autocapitalize="off" size="5" maxlength="5" value='1.50'><a data-increment='-0.05' href=""><i class="glyph-minus"></i></a><a data-increment='0.05' href=""><i class="glyph-plus"></i></a></div><!-- /additional --><a class='show-additional  scroll-to' href='#'>Font Plus <i class="glyph"></i></a><div class='additional'><span>bg colour      </span><input type='text' data-property='background-color' autocorrect="off" autocapitalize="off" size="22" maxlength="22" value='white'>
+<span>text indent    </span><input type='number' data-property='text-indent' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>letter spacing </span><input type='number' data-property='letter-spacing' autocorrect="off" autocapitalize="off" size="5" maxlength="5" value='0.0'><a data-increment='-0.1' href=""><i class="glyph-minus"></i></a><a data-increment='0.1' href=""><i class="glyph-plus"></i></a>
+<span>text align     </span><select data-property='text-align'><option value='left' selected='true'>left</option><option value='right'>right</option><option value='center'>center</option><option value='justify'>justify</option></select>
+<span>text transform </span><select data-property='text-transform'><option value='none' selected='true'>none</option><option value='uppercase'>uppercase</option><option value='lowercase'>lowercase</option><option value='capitalize'>capitalize</option></select>
+<span>font smoothing </span><select data-property='-webkit-font-smoothing'><option value='antialiased'selected='true'>antialiased</option><option value='subpixel-antialiased'>subpixel-antialiased</option><option value='none'>none</option></select></div><!-- /additional --><a class='show-additional' href='#'>Margins <i class="glyph"></i></a><div class='additional'><span>top            </span><input type='number' data-property='margin-top' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='18'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>bottom         </span><input type='number' data-property='margin-bottom' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>left           </span><input type='number' data-property='margin-left' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>right          </span><input type='number' data-property='margin-right' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a></div><!-- /additional --><a class='show-additional' href='#'>Padding <i class="glyph"></i></a><div class='additional'><span>top            </span><input type='number' data-property='padding-top' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>bottom         </span><input type='number' data-property='padding-bottom' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>left           </span><input type='number' data-property='padding-left' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='24'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>right          </span><input type='number' data-property='padding-right' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='24'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a></div><!-- /additional --><a class='show-additional' href='#'>Borders <i class="glyph"></i></a><div class='additional'><span>top width      </span><input type='number' data-property='border-top-width' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>bottom width   </span><input type='number' data-property='border-bottom-width' autocorrect="off" autocapitalize="off" size="3" maxlength="3" value='0'><a data-increment='-1' href=""><i class="glyph-minus"></i></a><a data-increment='1' href=""><i class="glyph-plus"></i></a>
+<span>color          </span><input type='text' data-property='border-color' size="22" autocorrect="off" autocapitalize="off" maxlength="22" value='000000'>
+<span>style          </span><select data-property='border-style'><option value='none'>none</option><option value='solid' selected='true'>solid</option><option value='dotted'>dotted</option><option value='dashed'>dashed</option></select></div><!-- /additional --></pre>
+        </code>
+    </div><!-- /text-block  -->
+
+        <a href="#" class='hide  button  button--large  add-text'><i class="glyph-plus"></i> Text</a>
+<!-- 
+    SAVE button?
+ -->
+
+<!-- <p id="array"></p> -->
+
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="fonts.js"></script>
+    <script src="font-test.js"></script>
+    <script src="text-samples.js"></script>
+    <script src="touch.js"></script>
+    <script src="typesetter.min.js"></script>
+
+</body>
+
+</html>

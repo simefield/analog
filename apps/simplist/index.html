@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<!-- <html manifest='cache.manifest'> -->
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="apple-touch-icon" sizes="76x76" href="app-icons/AppIcon76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="app-icons/AppIcon60x60@2x.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="app-icons/AppIcon76x76@2x.png">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <script src="js/zepto.min.js"></script>
+        <title>Super Mark It!</title>
+    </head>
+
+    <body>
+
+        <div class="list-wrapper">
+
+        <ul class='list'>
+            <li class='title'>
+                <h1 contenteditable="true"><i class='glyph-left-thin'></i> Groceries</h1>
+                <span></span>
+            </li>
+            <!-- <li class="item" contenteditable="true" oninput=""><span><i class="check"  contenteditable="false"></i></span></li> -->
+            <!-- 
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Banana"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Oranges"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Kiwifruit"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Potatos"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Kumera"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Celery"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Tomatos"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Spinach"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Carrots"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Garlic"></span></li>
+            <li class="item"><span><i class="check"></i><input type="text" spellcheck="false" autocorrect="off" autocomplete="off" value="Mince"></span></li>
+             -->
+            <li class="new-item"><button><i class="glyph-plus-circled"></i> Item</button><textarea class='button-focus'></textarea>
+                <a class='btn' id='save' href=""><i class='glyph-floppy'></i> Save</a>
+                <a class='btn' id='clear-cache' href=""><i class='glyph-flash'></i> Clear</a>
+                <a class='btn' href=""><i class='glyph-cw'></i> Reload</a>
+            </li>
+        </ul>
+        </div>
+        <div class="console"></div>
+
+<!--         <div class="app">
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div> -->
+        
+        <!--
+        <button class='add-item'>+ NEW ITEM</button>
+
+        <script src="phonegap.js"></script>
+        
+
+        <script src="js/data.js"></script>
+        <script src="js/touch-dnd.min.js"></script>
+        <script src="js/nestable.js"></script>
+
+
+        <script src="js/gestures.js"></script>
+        -->
+
+        <script src="js/index.js"></script>
+        
+        <script src="js/touch.js"></script>
+        
+        <script src="js/common.js"></script>
+
+        <script>
+            app.initialize();
+        </script>
+
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+        <!--
+        -->
+    </body>
+</html>

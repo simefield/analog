@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# This is a comment.
+# Cache manifest version 0.1.1
+# If you change the version number in this comment,
+# the cache manifest is no longer byte-for-byte
+# identical.
+
+# Touch icons
+app-icons/AppIcon76x76.png
+app-icons/AppIcon60x60@2x.png
+app-icons/AppIcon76x76@2x.png
+
+# Fonts
+fonts/fontello.eot
+fonts/fontello.svg
+fonts/fontello.ttf
+fonts/fontello.woff
+
+# Images
+bg-noise.png
+eye-dropper.png
+
+# HTML
+# index.html // caching this is implied
+
+# CSS
+mastermind.css
+
+# JS
+zepto.min.js
+zepto.touch.js
+mastermind.js

@@ -1,0 +1,39 @@
+/*!
+ * JS responsive media-queries */
+ // --------------------------------------------------
+ // Reg, Feb 2014
+
+
+/**
+ * Media query "hooks" for responsive JS
+ * ----------------------------------------------------------------------------
+ */
+
+// body:after {
+//     // display: none; /* comment this line out for debugging purposes */
+//     content: "mobile";
+//     position: fixed; z-index: 999999999; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0.85); border-radius: 2px; line-height: 1.563; margin-bottom: 0;
+// }
+
+// @media (min-width: $screen-md-min) { body:after {content: "tablet";} }
+// @media (min-width: $screen-lg-min) { body:after {content: "desktop";} }
+
+
+#viewport {
+    /* comment this line out for debugging purposes (can't be display: none;) */
+    // opacity: 0 !important; z-index: -999999999 !important;
+    
+    position: fixed; z-index: 999999999; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0.85); border-radius: 2px; line-height: 1.563; margin-bottom: 0;
+    // for IE8 (can't get content property of :after element)
+    .lt-ie9 & {
+        font-family: mobile;
+        @media (min-width: $screen-md) { font-family: tablet; }
+        @media (min-width: $screen-lg) { font-family: desktop; }
+    }
+    // for every other browser
+    &:after {
+        content: "mobile";
+        @media (min-width: $screen-md) { content: "tablet"; }
+        @media (min-width: $screen-lg) { content: "desktop"; }
+    }
+}

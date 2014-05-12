@@ -1,0 +1,1273 @@
+@charset "UTF-8";
+/*------------------------------------*\ STYLE.CSS
+\*------------------------------------*/
+/** Setup */
+/*------------------------------------*\ $WIDTHS
+\*------------------------------------*/
+.m-t-0 { margin-top: 0; }
+
+.m-t-xs { margin-top: 4px; }
+
+.m-t-sm, .cv h4 + dl { margin-top: 8px; }
+
+.m-t-md { margin-top: 16px; }
+
+.m-t-lg { margin-top: 24px; }
+
+.m-t-xl, .cv h4 { margin-top: 32px; }
+
+.m-t-xx, .cv h2, .cv h5, .cv h3 { margin-top: 48px; }
+
+.m-b-0 { margin-bottom: 0; }
+
+.m-b-xs { margin-bottom: 4px; }
+
+.m-b-sm { margin-bottom: 8px; }
+
+.m-b-md { margin-bottom: 16px; }
+
+.m-b-lg { margin-bottom: 24px; }
+
+.m-b-xl { margin-bottom: 32px; }
+
+.m-b-xx { margin-bottom: 48px; }
+
+@media (max-width: 47.9375em) { .m-t-0-mobile { margin-top: 0; }
+  .m-t-xs-mobile { margin-top: 4px; }
+  .m-t-sm-mobile { margin-top: 8px; }
+  .m-t-md-mobile { margin-top: 16px; }
+  .m-t-lg-mobile { margin-top: 24px; }
+  .m-t-xl-mobile { margin-top: 32px; }
+  .m-t-xx-mobile { margin-top: 48px; }
+  .m-b-0-mobile { margin-bottom: 0; }
+  .m-b-xs-mobile { margin-bottom: 4px; }
+  .m-b-sm-mobile { margin-bottom: 8px; }
+  .m-b-md-mobile { margin-bottom: 16px; }
+  .m-b-lg-mobile { margin-bottom: 24px; }
+  .m-b-xl-mobile { margin-bottom: 32px; }
+  .m-b-xx-mobile { margin-bottom: 48px; } }
+@media (min-width: 48em) { .m-t-0-tablet { margin-top: 0; }
+  .m-t-xs-tablet { margin-top: 4px; }
+  .m-t-sm-tablet { margin-top: 8px; }
+  .m-t-md-tablet { margin-top: 16px; }
+  .m-t-lg-tablet { margin-top: 24px; }
+  .m-t-xl-tablet { margin-top: 32px; }
+  .m-t-xx-tablet { margin-top: 48px; }
+  .m-b-0-tablet { margin-bottom: 0; }
+  .m-b-xs-tablet { margin-bottom: 4px; }
+  .m-b-sm-tablet { margin-bottom: 8px; }
+  .m-b-md-tablet { margin-bottom: 16px; }
+  .m-b-lg-tablet { margin-bottom: 24px; }
+  .m-b-xl-tablet { margin-bottom: 32px; }
+  .m-b-xx-tablet { margin-bottom: 48px; } }
+@media (min-width: 56.0625em) { .m-t-0-desktop { margin-top: 0; }
+  .m-t-xs-desktop { margin-top: 4px; }
+  .m-t-sm-desktop { margin-top: 8px; }
+  .m-t-md-desktop { margin-top: 16px; }
+  .m-t-lg-desktop { margin-top: 24px; }
+  .m-t-xl-desktop { margin-top: 32px; }
+  .m-t-xx-desktop { margin-top: 48px; }
+  .m-b-0-desktop { margin-bottom: 0; }
+  .m-b-xs-desktop { margin-bottom: 4px; }
+  .m-b-sm-desktop { margin-bottom: 8px; }
+  .m-b-md-desktop { margin-bottom: 16px; }
+  .m-b-lg-desktop { margin-bottom: 24px; }
+  .m-b-xl-desktop { margin-bottom: 32px; }
+  .m-b-xx-desktop { margin-bottom: 48px; } }
+/*!
+ * $HELPERS */
+/* Since v22, Chrome makes fat sausage horrible web typography. Fix it with  these properties right here. Maybe consider scoping this to a class for chrome/mac osx only at some point? */
+.temp-page-nav a, h1, h2, h3, button, .main-nav a { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+.i { display: inline-block; }
+
+/** Sprites ---------------------------------------------------------------------------- */
+.i { overflow: hidden; /* for IE6 */ vertical-align: middle; }
+
+/** Lists ---------------------------------------------------------------------------- */
+.cv ul { margin-top: 0; margin-left: 0; list-style: none; }
+.cv ul li { padding-bottom: 0; list-style-image: none; padding-left: 0; margin-left: 0; }
+
+/** Render fonts more sharply in Chrome (lose the fuzzy sausage type). Only apply to light text on dark backgrounds */
+.temp-page-nav a, h1, h2, h3, button, .main-nav a { -webkit-font-smoothing: antialiased; }
+
+/* Distribute elements evenly (equidistant) ---------------------------------------------------------------------------- */
+.distribute { text-align: justify !important; text-justify: distribute-all-lines; font-size: 0 !important; }
+
+.distribute:after { content: ""; display: inline-block; width: 100%; }
+
+.distribute > * { vertical-align: top; display: inline-block; text-align: left; font-size: medium; }
+
+.ie7 .distribute > * { display: inline; }
+
+.distribute--middle > * { vertical-align: middle; }
+
+.distribute--bottom > * { vertical-align: bottom; }
+
+/** Hide/show helpers ---------------------------------------------------------------------------- */
+@media only screen and (max-width: 47.9375em) { .hide_mobile { display: none !important; } }
+
+@media only screen and (min-width: 56.0625em) { .hide_desktop { display: none !important; } }
+
+/*!
+ * JS responsive media-queries */
+/** Media query "hooks" for responsive JS ---------------------------------------------------------------------------- */
+#viewport { /* comment this line out for debugging purposes (can't be display: none;) */ position: fixed; z-index: 999999999; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0.85); border-radius: 2px; line-height: 1.563; margin-bottom: 0; }
+.lt-ie9 #viewport { font-family: mobile; }
+@media (min-width: 48em) { .lt-ie9 #viewport { font-family: tablet; } }
+@media (min-width: 56.0625em) { .lt-ie9 #viewport { font-family: desktop; } }
+#viewport:after { content: "mobile"; }
+@media (min-width: 48em) { #viewport:after { content: "tablet"; } }
+@media (min-width: 56.0625em) { #viewport:after { content: "desktop"; } }
+
+/** Dev tools */
+/*!
+ * Dev tools
+ // --------------------------------------------------
+ // Reg, Feb 2014
+
+
+/* Overlay grid - visual helper */
+#grid-toggle { cursor: pointer; position: fixed; z-index: 99999999999; width: 43px; height: 18px; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: transparent; border-radius: 2px; line-height: 1.563; margin-bottom: 0; }
+
+#grid-overlay { display: none; position: fixed; margin: 0 auto; width: 100%; height: 100%; z-index: 99; background-repeat: repeat-y; background-position: 50% 0; background-image: url("../images/_grid-mobile.png"); }
+@media (min-width: 48em) { #grid-overlay { background-image: url("../images/_grid.png"); } }
+
+/* Greybox - blue boxes to give columns visibility assistance during dev */
+/*p*/
+.greybox { background-color: #0067a8; line-height: 160px; color: white; text-align: center; }
+
+/* Temporary page navigation helper */
+.temp-page-nav { position: absolute; z-index: 99999999999999; left: 0; top: 0; margin: 0; padding: 10px 0; background-color: rgba(0, 0, 0, 0.85); font-size: 13px; }
+.temp-page-nav a { color: white; padding: 2px 1em; display: block; }
+.temp-page-nav a:hover { background-color: #ff391e; }
+
+/** Inuit */
+/*------------------------------------*\ INUIT.CSS
+\*------------------------------------*/
+/*!*
+ * inuitcss.com -- @inuitcss -- @csswizardry
+ */
+/* LICENSE  Copyright 2013 Harry Roberts  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. */
+/* inuit.css, being an OO framework, works in keeping with the open/closed principle. The variables you set previously are now being used throughout inuit.css to style everything we need for a base. Any custom styles SHOULD NOT be added or modified in inuit.css directly, but added via your theme stylesheet as per the open/closed principle:  csswizardry.com/2012/06/the-open-closed-principle-applied-to-css  Try not to edit any CSS beyond this point; if you find you need to do so it is a failing of the framework so please tweet at @inuitcss. */
+/** Generic utility styles etc. */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/* Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/* Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/* Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/* Address styling not present in IE 8/9. */
+[hidden] { display: none; }
+
+/* ========================================================================== Base ========================================================================== */
+/* 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
+
+/* Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/* Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/* Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/* Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/* Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/* Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/* Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/* Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/* Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/* Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/* Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/* Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/* Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/* 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/* 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/* Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/* Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/* Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/* 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/* 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/* Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/* Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*------------------------------------*\ $RESET
+\*------------------------------------*/
+/** A more considered reset; more of a restart... As per: csswizardry.com/2011/10/reset-restarted */
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+
+/** The usual... */
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr { margin: 0; padding: 0; }
+
+/** Give a help cursor to elements that give extra info on `:hover`. */
+abbr[title], dfn[title] { cursor: help; }
+
+/** Remove underlines from potentially troublesome elements. */
+u, ins { text-decoration: none; }
+
+/** Apply faux underline via `border-bottom`. */
+ins { border-bottom: 1px solid; }
+
+/** So that `alt` text is visually offset if images don’t load. */
+img { font-style: italic; }
+
+/** Give form elements some cursor interactions... */
+label, input, textarea, button, select, option { cursor: pointer; }
+
+.text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
+
+/*------------------------------------*\ $CLEARFIX
+\*------------------------------------*/
+/** Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php Extend the clearfix class with Sass to avoid the `.cf` class appearing over and over in your markup. */
+.nav:after, .media:after, .cf:after { content: ""; display: table; clear: both; }
+
+/*------------------------------------*\ $SHARED
+\*------------------------------------*/
+/** Where `margin-top` is concerned, this value will be the same as the base line-height. This allows us to keep a consistent vertical rhythm. As per: csswizardry.com/2012/06/single-direction-margin-declarations */
+/** Base elements */
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .media, .island, .islet { margin-top: 16px; margin-top: 1rem; }
+.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .media, .islet .island, .islet .islet { margin-top: 8px; margin-top: 0.5rem; }
+
+/** Doubled up `margin-top` helper class. */
+.landmark { margin-top: 32px; margin-top: 2rem; }
+
+/** `hr` elements only take up a few pixels, so we need to give them special treatment regarding vertical rhythm. */
+hr { margin-top: 14px; margin-top: 0.875rem; }
+
+/** Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. Define that amount once, here. */
+ul, ol, dd { margin-left: 32px; margin-left: 2rem; }
+
+/** Base styles; unclassed HTML elements etc. */
+/** Objects and abstractions */
+/*------------------------------------*\ $GRIDS
+\*------------------------------------*/
+/** Fluid and nestable grid system, e.g.:  <div class="grid">
+ <div class="grid__item  one-third"> <p>One third grid</p> </div><!--
+ --><div class="grid__item  two-thirds"> <p>Two thirds grid</p> </div><!--
+ --><div class="grid__item  one-half"> <p>One half grid</p> </div><!--
+ --><div class="grid__item  one-quarter"> <p>One quarter grid</p> </div><!--
+ --><div class="grid__item  one-quarter"> <p>One quarter grid</p> </div>
+ </div>  Demo: jsfiddle.net/inuitcss/CLYUC  */
+/** Grid wrapper */
+.grid { margin-left: -32px; list-style: none; margin-bottom: 0; }
+
+/** Very infrequently occuring grid wrappers as children of grid wrappers. */
+.grid > .grid { margin-left: 0; }
+
+/** Grid */
+.grid__item { display: inline-block; width: 100%; padding-left: 32px; vertical-align: top; box-sizing: border-box; }
+
+.skinny-left > :first-child { margin-left: 16px; }
+
+.skinny-right > :first-child { margin-right: 16px; }
+
+@media (max-width: 47.9375em) { .skinny-left-mobile > :first-child { margin-left: 16px; }
+  .skinny-right-mobile > :first-child { margin-right: 16px; } }
+@media (min-width: 48em) { .skinny-left-tablet > :first-child { margin-left: 16px; }
+  .skinny-right-tablet > :first-child { margin-right: 16px; } }
+@media (min-width: 56.0625em) { .skinny-left-desktop > :first-child { margin-left: 16px; }
+  .skinny-right-desktop > :first-child { margin-right: 16px; } }
+/* generates:  .skinny-left > :first-child { margin-left: 16px; } .skinny-right > :first-child { margin-right: 16px; }  @media (max-width: 47.9375em) { .skinny-left-mobile > :first-child { margin-left: 16px; }  etc... */
+/*------------------------------------*\ $NAV
+\*------------------------------------*/
+/** Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction When used on an `ol` or `ul`, this class throws the list into horizontal mode e.g.:  <ul class=nav> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Demo: jsfiddle.net/inuitcss/Vnph4  */
+.nav { list-style: none; margin-left: 0; }
+.nav > li, .nav > li > a { display: inline-block; *display: inline; zoom: 1; }
+
+/** `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:  <ul class="nav  nav--stacked"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
+.nav--stacked > li { display: list-item; }
+.nav--stacked > li > a { display: block; }
+
+/** `.nav--banner` extends `.nav` and centres the list, e.g.:  <ul class="nav  nav--banner"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
+.nav--banner { text-align: center; }
+
+/** Give nav links a big, blocky hit area. Extends `.nav`, e.g.:  <ul class="nav  nav--block"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
+.nav--block { line-height: 1; /** Remove whitespace caused by `inline-block`. */ letter-spacing: -0.31em; word-spacing: -0.43em; white-space: nowrap; }
+.nav--block > li { letter-spacing: normal; word-spacing: normal; }
+.nav--block > li > a { padding: 8px; }
+
+/** Force a nav to occupy 100% of the available width of its parent. Extends `.nav`, e.g.:  <ul class="nav  nav--fit"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Thanks to @pimpl for this idea! */
+.nav--fit { display: table; width: 100%; }
+.nav--fit > li { display: table-cell; }
+.nav--fit > li > a { display: block; }
+
+/** Make a list of keywords. Extends `.nav`, e.g.:  `<ul class="nav  nav--keywords>`  */
+.nav--keywords > li:after { content: "\002C" "\00A0"; }
+.nav--keywords > li:last-child:after { display: none; }
+
+/*------------------------------------*\ $MEDIA
+\*------------------------------------*/
+/** Place any image- and text-like content side-by-side, as per: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code E.g.:  <div class=media> <img src=http://placekitten.com/200/300 alt="" class=media__img> <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  Demo: jsfiddle.net/inuitcss/cf4Qs  */
+.media { display: block; }
+
+.media__img { float: left; margin-right: 16px; }
+
+/** Reversed image location (right instead of left). */
+.media__img--rev { float: right; margin-left: 16px; }
+
+.media__img img, .media__img--rev img { display: block; }
+
+.media__body { overflow: hidden; }
+
+.media__body, .media__body > :last-child { margin-bottom: 0; }
+
+/** `.img`s in `.islet`s need an appropriately sized margin. */
+.islet .media__img { margin-right: 8px; }
+
+.islet .media__img--rev { margin-left: 8px; }
+
+/** Style trumps; helper and brand classes */
+/*------------------------------------*\ $WIDTHS
+\*------------------------------------*/
+/** Sizes in human readable format. These are used in conjunction with other objects and abstractions found in inuit.css, most commonly the grid system and faux flexbox.  We have a mixin to generate our widths and their breakpoint-specific variations. */
+/**
+* Whole
+*/
+.one-whole { width: 100%; }
+
+/**
+* Halves
+*/
+.one-half, .two-quarters { width: 50%; }
+
+/**
+* Thirds
+*/
+.one-third { width: 33.333%; }
+
+.two-thirds { width: 66.666%; }
+
+/**
+* Quarters
+*/
+.one-quarter { width: 25%; }
+
+.three-quarters { width: 75%; }
+
+/**
+* Fifths
+*/
+/**
+* Sixths
+*/
+/**
+* Eighths
+*/
+/**
+* Tenths
+*/
+/**
+* Twelfths
+*/
+/**
+* Eighteenths
+*/
+/**
+* Twentieths
+*/
+/** If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have access to these classes. You can define at which breakpoint you’d like an element to be a certain size, e.g.:  `<div class="g  one-whole  tablet-one-half  desktop-one-quarter"> ... </div>`  This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the horizontal space, a half of that space at ‘tablet’ sizes, and goes full width at ‘mobile’ sizes.  Demo: jsfiddle.net/inuitcss/WS4Ge  */
+@media only screen and (max-width: 47.9375em) { /** Whole */
+  .mobile-one-whole { width: 100%; }
+  /** Halves */
+  .mobile-one-half, .mobile-two-quarters { width: 50%; }
+  /** Thirds */
+  .mobile-one-third { width: 33.333%; }
+  .mobile-two-thirds { width: 66.666%; }
+  /** Quarters */
+  .mobile-one-quarter { width: 25%; }
+  .mobile-three-quarters { width: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */
+  /** Eighteenths */
+  /** Twentieths */ }
+@media only screen and (min-width: 48em) { /** Whole */
+  .tablet-one-whole { width: 100%; }
+  /** Halves */
+  .tablet-one-half, .tablet-two-quarters { width: 50%; }
+  /** Thirds */
+  .tablet-one-third { width: 33.333%; }
+  .tablet-two-thirds { width: 66.666%; }
+  /** Quarters */
+  .tablet-one-quarter { width: 25%; }
+  .tablet-three-quarters { width: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */
+  /** Eighteenths */
+  /** Twentieths */ }
+@media only screen and (min-width: 56.0625em) { /** Whole */
+  .desktop-one-whole { width: 100%; }
+  /** Halves */
+  .desktop-one-half, .desktop-two-quarters { width: 50%; }
+  /** Thirds */
+  .desktop-one-third { width: 33.333%; }
+  .desktop-two-thirds { width: 66.666%; }
+  /** Quarters */
+  .desktop-one-quarter { width: 25%; }
+  .desktop-three-quarters { width: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */
+  /** Eighteenths */
+  /** Twentieths */ }
+/* endif */
+/*------------------------------------*\ $PUSH
+\*------------------------------------*/
+/** Push classes, to move grid items over to the right by certain amounts. */
+/** Whole */
+.push--one-whole { left: 100%; }
+
+/** Halves */
+.push--one-half, .push--two-quarters { left: 50%; }
+
+/** Thirds */
+/** Quarters */
+.push--one-quarter { left: 25%; }
+
+.push--three-quarters { left: 75%; }
+
+/** Fifths */
+/** Sixths */
+/** Eighths */
+/** Tenths */
+/** Twelfths */
+/** Not a particularly great selector, but the DRYest way to do things. */
+[class*="push--"] { position: relative; }
+
+@media only screen and (max-width: 47.9375em) { /** Whole */
+  .push--mobile-one-whole { left: 100%; }
+  /** Halves */
+  .push--mobile-one-half, .push--mobile-two-quarters { left: 50%; }
+  /** Thirds */
+  /** Quarters */
+  .push--mobile-one-quarter { left: 25%; }
+  .push--mobile-three-quarters { left: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */ }
+@media only screen and (min-width: 48em) { /** Whole */
+  .push--tablet-one-whole { left: 100%; }
+  /** Halves */
+  .push--tablet-one-half, .push--tablet-two-quarters { left: 50%; }
+  /** Thirds */
+  /** Quarters */
+  .push--tablet-one-quarter { left: 25%; }
+  .push--tablet-three-quarters { left: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */ }
+@media only screen and (min-width: 56.0625em) { /** Whole */
+  .push--desktop-one-whole { left: 100%; }
+  /** Halves */
+  .push--desktop-one-half, .push--desktop-two-quarters { left: 50%; }
+  /** Thirds */
+  /** Quarters */
+  .push--desktop-one-quarter { left: 25%; }
+  .push--desktop-three-quarters { left: 75%; }
+  /** Fifths */
+  /** Sixths */
+  /** Eighths */
+  /** Tenths */
+  /** Twelfths */ }
+/*------------------------------------*\ $PULL
+\*------------------------------------*/
+/** Pull classes, to move grid items over to the right by certain amounts. */
+/** Analog */
+/*!
+ * Icon fonts */
+/** Elusive Downloaded from http://fontello.com/ An icon font set by Aristeides Stathopoulos | license: SIL  HOW TO USE <i class='glyph-paper-plane'></i> */
+@font-face { font-family: 'glyph'; src: url("/fonts/elusive.eot"); src: url("/fonts/elusive.eot?#iefix") format("embedded-opentype"), url("/fonts/elusive.woff") format("woff"), url("/fonts/elusive.ttf") format("truetype"), url("/fonts/elusive.svg#glyph") format("svg"); font-weight: normal; font-style: normal; }
+*[class^="glyph"] { font-size: 10px; font-size: 0.625rem; line-height: 2.8; font-family: "glyph"; font-style: normal; font-weight: normal; speak: none; /* For safety - reset parent styles, that can break glyph codes*/ font-variant: normal; text-transform: none; display: inline-block; text-decoration: inherit; text-align: center; vertical-align: middle; }
+
+.glyph-glass:before { content: '\e800'; }
+
+.glyph-youtube:before { content: '\e90e'; }
+
+.glyph-search:before { content: '\e802'; }
+
+.glyph-search-circled:before { content: '\e803'; }
+
+.glyph-mail:before { content: '\e804'; }
+
+.glyph-mail-circled:before { content: '\e805'; }
+
+.glyph-heart:before { content: '\e806'; }
+
+.glyph-heart-circled:before { content: '\e807'; }
+
+.glyph-heart-empty:before { content: '\e808'; }
+
+.glyph-star:before { content: '\e809'; }
+
+.glyph-star-circled:before { content: '\e80a'; }
+
+.glyph-star-empty:before { content: '\e80b'; }
+
+.glyph-user:before { content: '\e80c'; }
+
+.glyph-group:before { content: '\e80d'; }
+
+.glyph-group-circled:before { content: '\e80e'; }
+
+.glyph-torso:before { content: '\e80f'; }
+
+.glyph-video:before { content: '\e810'; }
+
+.glyph-video-circled:before { content: '\e811'; }
+
+.glyph-video-alt:before { content: '\e812'; }
+
+.glyph-videocam:before { content: '\e813'; }
+
+.glyph-video-chat:before { content: '\e814'; }
+
+.glyph-picture:before { content: '\e815'; }
+
+.glyph-camera:before { content: '\e816'; }
+
+.glyph-photo:before { content: '\e817'; }
+
+.glyph-photo-circled:before { content: '\e818'; }
+
+.glyph-th-large:before { content: '\e819'; }
+
+.glyph-th:before { content: '\e81a'; }
+
+.glyph-th-list:before { content: '\e81b'; }
+
+.glyph-view-mode:before { content: '\e81c'; }
+
+.glyph-ok:before { content: '\e81d'; }
+
+.glyph-ok-circled:before { content: '\e81e'; }
+
+.glyph-ok-circled2:before { content: '\e81f'; }
+
+.glyph-cancel:before { content: '\e820'; }
+
+.glyph-cancel-circled:before { content: '\e821'; }
+
+.glyph-cancel-circled2:before { content: '\e822'; }
+
+.glyph-plus:before { content: '\e823'; }
+
+.glyph-plus-circled:before { content: '\e824'; }
+
+.glyph-minus:before { content: '\e825'; }
+
+.glyph-minus-circled:before { content: '\e826'; }
+
+.glyph-help:before { content: '\e827'; }
+
+.glyph-help-circled:before { content: '\e828'; }
+
+.glyph-info-circled:before { content: '\e829'; }
+
+.glyph-home:before { content: '\e82a'; }
+
+.glyph-home-circled:before { content: '\e82b'; }
+
+.glyph-website:before { content: '\e82c'; }
+
+.glyph-website-circled:before { content: '\e82d'; }
+
+.glyph-attach:before { content: '\e82e'; }
+
+.glyph-attach-circled:before { content: '\e82f'; }
+
+.glyph-lock:before { content: '\e830'; }
+
+.glyph-lock-circled:before { content: '\e831'; }
+
+.glyph-lock-open:before { content: '\e832'; }
+
+.glyph-lock-open-alt:before { content: '\e833'; }
+
+.glyph-eye:before { content: '\e834'; }
+
+.glyph-eye-off:before { content: '\e835'; }
+
+.glyph-tag:before { content: '\e836'; }
+
+.glyph-tags:before { content: '\e837'; }
+
+.glyph-bookmark:before { content: '\e838'; }
+
+.glyph-bookmark-empty:before { content: '\e839'; }
+
+.glyph-flag:before { content: '\e83a'; }
+
+.glyph-flag-circled:before { content: '\e83b'; }
+
+.glyph-thumbs-up:before { content: '\e83c'; }
+
+.glyph-thumbs-down:before { content: '\e83d'; }
+
+.glyph-download:before { content: '\e83e'; }
+
+.glyph-download-alt:before { content: '\e83f'; }
+
+.glyph-upload:before { content: '\e840'; }
+
+.glyph-share:before { content: '\e841'; }
+
+.glyph-quote:before { content: '\e842'; }
+
+.glyph-quote-circled:before { content: '\e843'; }
+
+.glyph-export:before { content: '\e844'; }
+
+.glyph-pencil:before { content: '\e845'; }
+
+.glyph-pencil-circled:before { content: '\e846'; }
+
+.glyph-edit:before { content: '\e847'; }
+
+.glyph-edit-circled:before { content: '\e848'; }
+
+.glyph-edit-alt:before { content: '\e849'; }
+
+.glyph-print:before { content: '\e84a'; }
+
+.glyph-retweet:before { content: '\e84b'; }
+
+.glyph-comment:before { content: '\e84c'; }
+
+.glyph-comment-alt:before { content: '\e84d'; }
+
+.glyph-bell:before { content: '\e84e'; }
+
+.glyph-warning:before { content: '\e84f'; }
+
+.glyph-exclamation:before { content: '\e850'; }
+
+.glyph-error:before { content: '\e851'; }
+
+.glyph-error-alt:before { content: '\e852'; }
+
+.glyph-location:before { content: '\e853'; }
+
+.glyph-location-circled:before { content: '\e854'; }
+
+.glyph-compass:before { content: '\e855'; }
+
+.glyph-compass-circled:before { content: '\e856'; }
+
+.glyph-trash:before { content: '\e857'; }
+
+.glyph-trash-circled:before { content: '\e858'; }
+
+.glyph-doc:before { content: '\e859'; }
+
+.glyph-doc-circled:before { content: '\e85a'; }
+
+.glyph-doc-new:before { content: '\e85b'; }
+
+.glyph-doc-new-circled:before { content: '\e85c'; }
+
+.glyph-folder:before { content: '\e85d'; }
+
+.glyph-folder-circled:before { content: '\e85e'; }
+
+.glyph-folder-close:before { content: '\e85f'; }
+
+.glyph-folder-open:before { content: '\e860'; }
+
+.glyph-rss:before { content: '\e861'; }
+
+.glyph-phone:before { content: '\e862'; }
+
+.glyph-phone-circled:before { content: '\e863'; }
+
+.glyph-cog:before { content: '\e864'; }
+
+.glyph-cog-circled:before { content: '\e865'; }
+
+.glyph-cogs:before { content: '\e866'; }
+
+.glyph-wrench:before { content: '\e867'; }
+
+.glyph-wrench-circled:before { content: '\e868'; }
+
+.glyph-basket:before { content: '\e869'; }
+
+.glyph-basket-circled:before { content: '\e86a'; }
+
+.glyph-calendar:before { content: '\e86b'; }
+
+.glyph-calendar-circled:before { content: '\e86c'; }
+
+.glyph-mic:before { content: '\e86d'; }
+
+.glyph-mic-circled:before { content: '\e86e'; }
+
+.glyph-volume-off:before { content: '\e86f'; }
+
+.glyph-volume-down:before { content: '\e870'; }
+
+.glyph-volume:before { content: '\e871'; }
+
+.glyph-volume-up:before { content: '\e872'; }
+
+.glyph-headphones:before { content: '\e873'; }
+
+.glyph-clock:before { content: '\e874'; }
+
+.glyph-clock-circled:before { content: '\e875'; }
+
+.glyph-lightbulb:before { content: '\e876'; }
+
+.glyph-lightbulb-alt:before { content: '\e877'; }
+
+.glyph-block:before { content: '\e878'; }
+
+.glyph-resize-full:before { content: '\e879'; }
+
+.glyph-resize-full-alt:before { content: '\e87a'; }
+
+.glyph-resize-small:before { content: '\e87b'; }
+
+.glyph-resize-vertical:before { content: '\e87c'; }
+
+.glyph-resize-horizontal:before { content: '\e87d'; }
+
+.glyph-move:before { content: '\e87e'; }
+
+.glyph-zoom-in:before { content: '\e87f'; }
+
+.glyph-zoom-out:before { content: '\e880'; }
+
+.glyph-down-open:before { content: '\e881'; }
+
+.glyph-left-open:before { content: '\e882'; }
+
+.glyph-right-open:before { content: '\e883'; }
+
+.glyph-up-open:before { content: '\e884'; }
+
+.glyph-down:before { content: '\e885'; }
+
+.glyph-left:before { content: '\e886'; }
+
+.glyph-music:before { content: '\e801'; }
+
+.glyph-up:before { content: '\e888'; }
+
+.glyph-down-circled:before { content: '\e889'; }
+
+.glyph-left-circled:before { content: '\e88a'; }
+
+.glyph-right-circled:before { content: '\e88b'; }
+
+.glyph-up-circled:before { content: '\e88c'; }
+
+.glyph-down-hand:before { content: '\e88d'; }
+
+.glyph-left-hand:before { content: '\e88e'; }
+
+.glyph-right-hand:before { content: '\e88f'; }
+
+.glyph-up-hand:before { content: '\e890'; }
+
+.glyph-cw:before { content: '\e891'; }
+
+.glyph-cw-circled:before { content: '\e892'; }
+
+.glyph-arrows-cw:before { content: '\e893'; }
+
+.glyph-shuffle:before { content: '\e894'; }
+
+.glyph-play:before { content: '\e895'; }
+
+.glyph-play-circled:before { content: '\e896'; }
+
+.glyph-play-circled2:before { content: '\e897'; }
+
+.glyph-stop:before { content: '\e898'; }
+
+.glyph-stop-circled:before { content: '\e899'; }
+
+.glyph-pause:before { content: '\e89a'; }
+
+.glyph-pause-circled:before { content: '\e89b'; }
+
+.glyph-record:before { content: '\e89c'; }
+
+.glyph-eject:before { content: '\e89d'; }
+
+.glyph-backward:before { content: '\e89e'; }
+
+.glyph-backward-circled:before { content: '\e89f'; }
+
+.glyph-fast-backward:before { content: '\e8a0'; }
+
+.glyph-fast-forward:before { content: '\e8a1'; }
+
+.glyph-forward:before { content: '\e8a2'; }
+
+.glyph-forward-circled:before { content: '\e8a3'; }
+
+.glyph-step-backward:before { content: '\e8a4'; }
+
+.glyph-step-forward:before { content: '\e8a5'; }
+
+.glyph-target:before { content: '\e8a6'; }
+
+.glyph-signal:before { content: '\e8a7'; }
+
+.glyph-desktop:before { content: '\e8a8'; }
+
+.glyph-desktop-circled:before { content: '\e8a9'; }
+
+.glyph-laptop:before { content: '\e8aa'; }
+
+.glyph-laptop-circled:before { content: '\e8ab'; }
+
+.glyph-network:before { content: '\e8ac'; }
+
+.glyph-inbox:before { content: '\e8ad'; }
+
+.glyph-inbox-circled:before { content: '\e8ae'; }
+
+.glyph-inbox-alt:before { content: '\e8af'; }
+
+.glyph-globe:before { content: '\e8b0'; }
+
+.glyph-globe-alt:before { content: '\e8b1'; }
+
+.glyph-cloud:before { content: '\e8b2'; }
+
+.glyph-cloud-circled:before { content: '\e8b3'; }
+
+.glyph-flight:before { content: '\e8b4'; }
+
+.glyph-leaf:before { content: '\e8b5'; }
+
+.glyph-font:before { content: '\e8b6'; }
+
+.glyph-fontsize:before { content: '\e8b7'; }
+
+.glyph-bold:before { content: '\e8b8'; }
+
+.glyph-italic:before { content: '\e8b9'; }
+
+.glyph-text-height:before { content: '\e8ba'; }
+
+.glyph-text-width:before { content: '\e8bb'; }
+
+.glyph-align-left:before { content: '\e8bc'; }
+
+.glyph-align-center:before { content: '\e8bd'; }
+
+.glyph-align-right:before { content: '\e8be'; }
+
+.glyph-align-justify:before { content: '\e8bf'; }
+
+.glyph-list:before { content: '\e8c0'; }
+
+.glyph-indent-left:before { content: '\e8c1'; }
+
+.glyph-indent-right:before { content: '\e8c2'; }
+
+.glyph-briefcase:before { content: '\e8c3'; }
+
+.glyph-off:before { content: '\e8c4'; }
+
+.glyph-road:before { content: '\e8c5'; }
+
+.glyph-qrcode:before { content: '\e8c6'; }
+
+.glyph-barcode:before { content: '\e8c7'; }
+
+.glyph-braille:before { content: '\e8c8'; }
+
+.glyph-book:before { content: '\e8c9'; }
+
+.glyph-adjust:before { content: '\e8ca'; }
+
+.glyph-tint:before { content: '\e8cb'; }
+
+.glyph-check:before { content: '\e8cc'; }
+
+.glyph-check-empty:before { content: '\e8cd'; }
+
+.glyph-asterisk:before { content: '\e8ce'; }
+
+.glyph-gift:before { content: '\e8cf'; }
+
+.glyph-fire:before { content: '\e8d0'; }
+
+.glyph-magnet:before { content: '\e8d1'; }
+
+.glyph-chart:before { content: '\e8d2'; }
+
+.glyph-chart-circled:before { content: '\e8d3'; }
+
+.glyph-credit-card:before { content: '\e8d4'; }
+
+.glyph-megaphone:before { content: '\e8d5'; }
+
+.glyph-clipboard:before { content: '\e8d6'; }
+
+.glyph-hdd:before { content: '\e8d7'; }
+
+.glyph-key:before { content: '\e8d8'; }
+
+.glyph-certificate:before { content: '\e8d9'; }
+
+.glyph-tasks:before { content: '\e8da'; }
+
+.glyph-filter:before { content: '\e8db'; }
+
+.glyph-gauge:before { content: '\e8dc'; }
+
+.glyph-smiley:before { content: '\e8dd'; }
+
+.glyph-smiley-circled:before { content: '\e8de'; }
+
+.glyph-address-book:before { content: '\e8df'; }
+
+.glyph-address-book-alt:before { content: '\e8e0'; }
+
+.glyph-asl:before { content: '\e8e1'; }
+
+.glyph-glasses:before { content: '\e8e2'; }
+
+.glyph-hearing-impaired:before { content: '\e8e3'; }
+
+.glyph-iphone-home:before { content: '\e8e4'; }
+
+.glyph-person:before { content: '\e8e5'; }
+
+.glyph-adult:before { content: '\e8e6'; }
+
+.glyph-child:before { content: '\e8e7'; }
+
+.glyph-blind:before { content: '\e8e8'; }
+
+.glyph-guidedog:before { content: '\e8e9'; }
+
+.glyph-accessibility:before { content: '\e8ea'; }
+
+.glyph-universal-access:before { content: '\e8eb'; }
+
+.glyph-male:before { content: '\e8ec'; }
+
+.glyph-female:before { content: '\e8ed'; }
+
+.glyph-behance:before { content: '\e8ee'; }
+
+.glyph-blogger:before { content: '\e8ef'; }
+
+.glyph-cc:before { content: '\e8f0'; }
+
+.glyph-css:before { content: '\e8f1'; }
+
+.glyph-delicious:before { content: '\e8f2'; }
+
+.glyph-deviantart:before { content: '\e8f3'; }
+
+.glyph-digg:before { content: '\e8f4'; }
+
+.glyph-dribbble:before { content: '\e8f5'; }
+
+.glyph-facebook:before { content: '\e8f6'; }
+
+.glyph-flickr:before { content: '\e8f7'; }
+
+.glyph-foursquare:before { content: '\e8f8'; }
+
+.glyph-friendfeed:before { content: '\e8f9'; }
+
+.glyph-friendfeed-rect:before { content: '\e8fa'; }
+
+.glyph-github:before { content: '\e8fb'; }
+
+.glyph-github-text:before { content: '\e8fc'; }
+
+.glyph-googleplus:before { content: '\e8fd'; }
+
+.glyph-instagram:before { content: '\e8fe'; }
+
+.glyph-linkedin:before { content: '\e8ff'; }
+
+.glyph-path:before { content: '\e900'; }
+
+.glyph-picasa:before { content: '\e901'; }
+
+.glyph-pinterest:before { content: '\e902'; }
+
+.glyph-reddit:before { content: '\e903'; }
+
+.glyph-skype:before { content: '\e904'; }
+
+.glyph-slideshare:before { content: '\e905'; }
+
+.glyph-stackoverflow:before { content: '\e906'; }
+
+.glyph-stumbleupon:before { content: '\e907'; }
+
+.glyph-twitter:before { content: '\e908'; }
+
+.glyph-tumblr:before { content: '\e909'; }
+
+.glyph-vimeo:before { content: '\e90a'; }
+
+.glyph-vkontakte:before { content: '\e90b'; }
+
+.glyph-w3c:before { content: '\e90c'; }
+
+.glyph-wordpress:before { content: '\e90d'; }
+
+.glyph-right:before { content: '\e887'; }
+
+/*!
+ * Analog CSS | Richard Sime | March 2014 */
+/*************************************** $CONTENTS **************************************/
+/*************************************** CONTENTS.................you're reading it FONTS.................... FONT EXTENDORS........... TYPOGRAPHY DEFAULTS...... HEADINGS & PARAGRAPHS.... HERO IMAGE...............
+ **************************************/
+/*************************************** $FONTS **************************************/
+/*!
+ * @license
+ * MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Neue Haas Grotesk Std Display 75 Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-display-75-bold/
+ * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715
+ * 
+ * © 2014 MyFonts Inc
+*/
+@font-face { font-family: 'NHaasGroteskDSStd-75Bd'; src: url("../fonts/NHaasGroteskDSStd-75Bd.eot"); src: url("../fonts/NHaasGroteskDSStd-75Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/NHaasGroteskDSStd-75Bd.woff") format("woff"), url("../fonts/NHaasGroteskDSStd-75Bd.ttf") format("truetype"); font-weight: 700; }
+/*************************************** $FONT EXTENDORS **************************************/
+/* headings */
+h1, h2, h3 { font-family: 'NHaasGroteskDSStd-75Bd', 'Helvetica-Bold', 'HelveticaNeue-Bold', sans-serif; }
+
+/* para */
+body { font-family: 'Helvetica-Light', 'HelveticaNeue-Light', Helvetica, sans-serif; font-weight: normal; }
+
+/*i*/
+i, cite, em, var, address, dfn { font-family: 'Helvetica-LightOblique', 'HelveticaNeue-LightItalic', Helvetica-Oblique, 'Helvetica-Light', 'HelveticaNeue-Light', Helvetica, sans-serif; font-weight: normal; }
+
+/*b*/
+b, dd, .cv h3 span { font-family: 'Helvetica-Medium', 'Helvetica-Regular', Helvetica, sans-serif; font-weight: normal; }
+
+/*************************************** $TYPOGRAPHY DEFAULTS **************************************/
+html { font-size: 16px; }
+
+body { font-size: 16px; font-size: 1rem; line-height: 1.5; background-color: white; }
+
+.content { color: black; }
+@media (max-width: 47.9375em) { .content { font-size: 14px; font-size: 0.875rem; line-height: 1.71429; } }
+
+.lt-ie9 * { font-family: comic-sans !important; }
+
+/*************************************** $HEADINGS & PARAGRAPHS **************************************/
+h1 { font-size: 37px; font-size: 2.3125rem; line-height: 1.2973; }
+
+h1 { font-size: 28px; font-size: 1.75rem; line-height: 1.14286; }
+
+h2 { font-size: 21px; font-size: 1.3125rem; line-height: 1.14286; }
+
+h3 { font-size: 17px; font-size: 1.0625rem; line-height: 1.41176; }
+
+h4 { font-size: 15px; font-size: 0.9375rem; line-height: 1.6; }
+
+h5 { font-size: 12px; font-size: 0.75rem; line-height: 1.5; }
+
+@media (min-width: 48em) { h1 { font-size: 37px; font-size: 2.3125rem; line-height: 1.2973; }
+  h2 { font-size: 28px; font-size: 1.75rem; line-height: 1.14286; }
+  h3 { font-size: 21px; font-size: 1.3125rem; line-height: 1.14286; }
+  h4 { font-size: 16px; font-size: 1rem; line-height: 1.5; }
+  h5 { font-size: 12px; font-size: 0.75rem; line-height: 1.5; } }
+h1 { margin-top: 33px; }
+
+h2 { margin-top: 27px; }
+
+h3 { margin-top: 24px; }
+
+h4 { margin-top: 22px; }
+
+h5 { margin-top: 16px; }
+
+/** Typographic relationships ---------------------------------------------------------------------------- */
+h1 + p { margin-top: 15px; }
+
+p { margin-top: 1em; }
+
+p + h1 { margin-top: 1.10714285714286em; }
+
+p + h2 { margin-top: 1.52380952380952em; }
+
+p + h3 { margin-top: 1.9375em; }
+
+dt { float: left; margin-right: 0.25em; }
+
+dd { margin-left: 0; }
+
+/** Links ---------------------------------------------------------------------------- */
+a { color: #ff391e; text-decoration: none; outline: 0; }
+
+a:focus, a:hover, a:active { color: black; outline: 0; }
+
+a p, a h1, a h2, a h3, a h4, a h5 { color: black; }
+
+/*************************************** $HEADER **************************************/
+.hide { display: none; }
+
+.content { max-width: 56em; max-width: 56rem; background-color: #ffffef; margin-left: auto; margin-right: auto; padding: 8px 24px 48px; }
+@media (min-width: 48em) { .content { padding: 48px 48px 64px; } }
+@media (min-width: 56.0625em) { .content { margin-top: 48px; margin-bottom: 48px; border: 1px solid rgba(100, 100, 100, 0.07); } }
+
+button, .main-nav a { border: none; color: #ffffef; background-color: #ff391e; padding-right: 16px; padding-left: 16px; margin-right: 8px; text-align: center; font-size: 14px; font-size: 0.875rem; line-height: 1.71429; }
+@media (min-width: 48em) { button, .main-nav a { font-size: 16px; font-size: 1rem; line-height: 2; padding-right: 24px; padding-left: 24px; margin-right: 16px; min-width: 88px; } }
+button:focus, button:hover, button:active, .main-nav a:focus, .main-nav a:hover, .main-nav a:active { background-color: black; }
+button.block, .main-nav a.block { width: 100%; }
+
+/*ul*/
+.main-nav a { font-size: 9px; font-size: 0.5625rem; line-height: 3.55556; }
+@media (min-width: 48em) { .main-nav a { font-size: 12px; font-size: 0.75rem; line-height: 4; } }
+
+/*ul*/
+.contact { position: relative; top: 5px; font-size: 9px; font-size: 0.5625rem; line-height: 1.77778; text-align: right; }
+@media (min-width: 48em) { .contact { font-size: 12px; font-size: 0.75rem; line-height: 1.33333; top: 7px; display: block; } }
+
+/*a*/
+.logo { display: inline-block; margin-top: 53px; margin-bottom: 8px; }
+@media (min-width: 48em) { .logo { margin-top: 84px; margin-bottom: 15px; } }
+.logo img { width: 148px; }
+@media (min-width: 48em) { .logo img { width: 179px; } }
+
+/*************************************** $HERO IMAGE **************************************/
+.hero { position: relative; width: 100%; height: 200px; padding-bottom: 100%; }
+@media (min-width: 48em) { .hero { padding-bottom: 66.666666666%; } }
+
+.hero__image { width: 100%; height: 100%; background-color: #ffffef; position: absolute; top: 0; left: 0; z-index: 10; background-size: auto 100%; background-repeat: no-repeat; background-position: 0 0; }
+.hero__image.stella { background-image: url("../images/stella.jpg"); }
+.hero__image.laffare { background-image: url("../images/laffare.jpg"); }
+.hero__image.sky { background-image: url("../images/sky.jpg"); }
+.hero__image.lyall-bay { background-image: url("../images/lyall-bay.jpg"); }
+
+.photo-credit { font-size: 9px; font-size: 0.5625rem; line-height: 1.77778; -webkit-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg); -webkit-transform-origin: 100% 0; -ms-transform-origin: 100% 0; transform-origin: 100% 0; position: absolute; width: 100%; right: 0; top: 0; }
+@media (min-width: 48em) { .photo-credit { width: 66.666666666%; } }
+
+/*************************************** $ASIDES **************************************/
+/*div*/
+.aside { margin-top: 50px; margin-bottom: 16px; font-size: 14px; font-size: 0.875rem; line-height: 1.71429; }
+.aside > * { margin-top: 0; }
+
+/*img*/
+.app-icon { margin-top: 8px; border-radius: 15px; }
+.app-icon.outline { box-shadow: 0 0 1px rgba(0, 0, 0, 0.25); }
+
+/*img*/
+.app-iphone { margin-top: 6px; }
+
+/*************************************** $CURRICULUM VITAE **************************************/
+/*div*/
+.cv ul li { position: relative; }
+.cv h3, .cv h5 { text-transform: uppercase; }
+.cv h2 { border-bottom: 1px solid black; }
+.cv h3 span { font-size: 10px; font-size: 0.625rem; line-height: 0.9; display: inline-block; border-left: 1px solid black; margin-left: 10px; padding-left: 8px; vertical-align: 4px; height: 12px; letter-spacing: 0.5px; }
+@media (min-width: 56.0625em) { .cv h3 span { font-size: 11px; font-size: 0.6875rem; line-height: 0.90909; vertical-align: 7px; height: 16px; letter-spacing: 0.2px; } }

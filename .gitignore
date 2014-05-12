@@ -1,0 +1,11 @@
+# comment - this is ignored
+
+# ignore versioned apps
+/apps/mastermind-*
+/apps/simplist-*
+/apps/typesetter-*
+
+.DS_Store
+.sass-cache/
+index-orig.html
+sprite_test_page.html
