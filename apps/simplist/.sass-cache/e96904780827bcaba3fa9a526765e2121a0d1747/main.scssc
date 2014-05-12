@@ -1,718 +1,0 @@
-3.2.5 (Media Mark)
-97e8889bacc92926765fe28284f636437accba6b
-o:Sass::Tree::RootNode
-:@has_childrenT:
-@linei:@template",@charset "UTF-8";
-
-
-@import "icon-fonts";
-
-/**
- * Variables
- */
-$link: #3ae3e9;
-$link-medium: rgba($link, 0.55);
-// $link-light: rgba($link, 0.2); // #d5f6f5
-$link-light: #d5f6f5;
-// $black: #070706;
-$white: #fbfbf8;
-// $brown: #4e4c48;
-$brown: #433f38;
-$brown-medium: rgba($brown, 0.7);
-$brown-light: rgba($brown, 0.3);
-$brown-extra-light: rgba($brown, 0.15);
-// $brown-light: rgba($brown, 0.4);
-$padding: 20px;
-$padding-large: 60px;
-$padding-large: 56px;
-// $item-height: 67px; // 9 list items
-$item-height: 50px; // 11 list items
-$transition-speed: 0.35s;
-
-
-/**
- * Helpers
- */
-.console {Xdisplay: none; background: $brown; height: 16px; line-height: 16px; padding-left: $padding; @extend %border-box; position: fixed; left: 0; bottom: 0; color: $white; white-space: nowrap; width: 100%; z-index: 50; font-size: 10px;}
-
-%reset {
-    padding: 0;
-    margin: 0;
-}
-%border-box {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-%din {
-    font-family: 'DIN Alternate', sans-serif;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    color: $brown;
-}
-%thin {
-    font-family: 'DIN Condensed', AppleSDGothicNeo-Thin, AppleSDGothicNeo-Light;
-}
-%fix-webkit-font-rendering {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    -webkit-text-size-adjust: none; /* http://rakaz.nl/2009/09/iphone-webapps-101-getting-safari-out-of-the-way.html */
-    // -webkit-user-select: none;
-}
-
-::-webkit-input-placeholder { /* WebKit browsers */
-    color: $link;
-}
-
-body {
-    @extend %reset;
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-attachment:fixed;
-    // font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    @extend %din;
-    font-weight: normal;
-    text-transform: uppercase;
-
-    background-color: $white;
-    height:100%;
-    width:100%;
-}
-
-a, a:visited, a:focus, a:active, a:hover {
-    text-decoration: none;
-    color: $link;
-}
-
-
-
-
-
-
-
-
-
-
-
-body {
-    overflow: hidden;
-}
-
-/*li*/.title {
-    background-color: $brown;
-
-    h1 {
-        @extend %din;
-        // color: $white;
-        color: #dddcd9;
-        font-weight: normal;
-        text-transform: uppercase;
-        margin: 0;
-        padding-left: $padding;
-
-        + span {
-            position: absolute;
-            font-size: 9px;
-            top: 28px;
-            line-height: 1rem;
-            left: $padding;
-            letter-spacing: 0;
-            // color: $brown-light;
-            color: #c2c0bc;
-        }
-    }
-}
-
-ul {
-    @extend %reset;
-    list-style: none;
-
-    li {
-        @extend %fix-webkit-font-rendering; // doesn't appear to make a difference
-        @extend %reset;
-        @extend %border-box;
-        padding-right: $padding;
-        width: 100%;
-        height: $item-height; // for 'hide' animation purposes
-        position: relative;
-        padding-top: 0;
-        // background-color: orange;
-
-        // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/ 
-        @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
-            background-image: linear-gradient(0deg, $brown-light, $brown-light 50%, transparent 50%);
-            background-size: 100% 1px;
-            background-repeat: no-repeat;
-            background-position: bottom;
-        }
-        // desktop
-        @media (-webkit-device-pixel-ratio: 1), (max-resolution: 72dpi) { 
-            border-bottom: 1px solid $brown-light;
-        }
-
-        &:last-child, &:nth-last-child(2) {
-            background-image: none;
-        }
-
-        span {
-            display: block;
-        }
-
-        input {
-            padding-bottom: 4px;
-            height: $item-height - 4;
-            width: calc(100% - $padding-large); // left indent for check boxes - see comment under .new-item below
-            // transition: all $transition-speed ease-in-out;
-            @extend %reset;
-            @extend %din;
-            border: none;
-            text-transform: uppercase;
-            background-color: transparent;
-
-            &:focus {
-                outline: none;
-            }
-        }
-
-        &.hide {
-            transition: all $transition-speed ease-in-out;
-            height: 0;
-            overflow: hidden;
-            left: -50%;
-            background-image: none;
-        }
-
-        &.new-item {
-            // background-color: $link-medium;
-            background-color: $link;
-            color: $white;
-            // padding-left: $padding-large; // the new item would register 'tap' event when hiding list-item directly above it: https://github.com/madrobby/zepto/issues/511
-            padding-left: $padding;
-            @extend %border-box;
-
-            button {
-                @extend %reset;
-                @extend %din;
-                // padding-left: $padding-large;
-                // @extend %border-box;
-                border: none;
-                line-height: $item-height;
-                outline: none;
-                width: 100%;
-                color: $white;
-                background-color: transparent;
-                text-align: left;
-                text-transform: uppercase;
-            }
-        }
-
-        &.dragging {
-            background-color: $link-light;
-            position: absolute;
-            // @extend %border-box;
-            background-image: none;
-            z-index: 100;
-
-            pointer-events: none;
-            
-            // temporarily hide the item number / checkbox during drag
-            .check {
-                opacity: 0;
-            }
-        }
-        &.clone {
-            position: relative;
-            z-index: 50;
-            background-color: transparent;
-            // background-color: $brown;
-            // hide inner elements while this is acting as a placeholder for dragged item
-            i, input {
-                opacity: 0;
-            }
-            @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
-                background-image: linear-gradient(0deg, $brown-light, $brown-light 50%, transparent 50%);
-                background-size: 100% 1px;
-                background-repeat: no-repeat;
-                background-position: bottom;
-            }
-
-        }
-        &.moved {
-            background-color: orange;
-        }
-        
-        // // animate items while dragging moving down
-        // &.move-up {
-        //     // animation: bounce-up 300ms;
-        //     -webkit-animation: bounce-down 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        // }
-        // // animate items while dragging moving up
-        // &.move-down {
-        //     // animation: bounce-up 300ms;
-        //     -webkit-animation: bounce-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        // }
-
-        // animate items while dragging moving down
-        &.move {
-            // -webkit-animation: spring 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
-            -webkit-animation: spring 300ms cubic-bezier(0.420, 0.000, 1.000, 0.500); 
-            background-color: $brown;
-        }
-    }
-}
-// @-webkit-keyframes spring {
-//     from {
-//         // height: $item-height;
-//         margin-top: 0;
-//         margin-bottom: 0;
-//          // background-color: yellow;
-//     }
-//     to {
-//         // height: $item-height*0.8;
-//         margin-top: $item-height;
-//         margin-bottom: $item-height;
-//     }
-// }
-
-// @keyframes bounce-up {
-//     from { opacity: 1.0; }
-//     50% { opacity: 0.4; }
-//     to { opacity: 1.0; }
-// }
- 
-// @-webkit-keyframes bounce-up {
-//     from {
-//         height: $item-height*2;
-//         padding-top: $item-height;
-//     }
-//     to {
-//         height: $item-height;
-//         padding-top: 0;
-//          // background-color: yellow;
-//     }
-// }
-// @-webkit-keyframes bounce-down {
-//     from {
-//         height: $item-height*2;
-//         padding-bottom: 0;
-//     }
-//     to {
-//         height: $item-height;
-//         padding-top: 0;
-//         // background-color: red;
-//     }
-// }
-
-
-
-
-.list-wrapper {
-    line-height: $item-height;
-}
-
-.check {
-    font-style: normal;
-    text-align: center;
-    // line-height: 28px; // don't know why!?
-    color: $brown-extra-light;
-    // color: red;
-    display: inline-block;
-    float: left;
-    position: relative;
-    width: $padding-large;
-    height: $item-height;
-    // padding-left: 6px;
-    letter-spacing: 0;
-    // padding-right: $padding;
-    
-    // background: pink;
-    // z-index: 30;
-
-    font-size: 9px;
-    color: $brown-medium;
-    text-indent: 3px;
-
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 12px;
-        left: 17px;
-
-        width: 26px;
-        height: 26px;
-        border-radius: 100%;
-        // top: 13px;
-        background: radial-gradient(circle, rgba($brown, 0) 12px, rgba($brown, 1) 100%), radial-gradient(circle, rgba($brown, 0) 12px, rgba($brown, 1) 100%);
-    }
-    
-    &.remove {
-        color: $white;
-        &::after {
-            background: none;
-            background-color: $link-medium;
-        }
-    }
-}
-
-/*textarea*/.button-focus {
-    // display: none;
-    position: absolute;
-    opacity: 0;
-    background: transparent;
-    // line-height: 0;
-    @extend %border-box;
-    border-radius: 0;
-    outline: 0;
-    border: none;
-    height: $item-height;
-    line-height: 0;
-    font-size: 0;
-    width: calc(100% - $padding-large);
-    left: $padding-large;
-    top: 0;
-}
-
-/*a*/.save {
-    color: $white !important;
-    position: absolute;
-    right: 0;
-    // z-index: 40;
-    // float: right;
-    padding: 0 $padding;
-    // background: red;
-    // opacity: 0.5;
-    line-height: $item-height;
-
-    // // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/ 
-        @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
-            border-left: none;
-            background-image: linear-gradient(90deg, $white, $white 50%, transparent 50%);
-            background-size: 1px 100%;
-            background-repeat: no-repeat;
-            background-position: bottom left;
-        }
-
-    i {
-        font-style: normal;
-    }
-}
-
-
-
-:@children[3o:Sass::Tree::CharsetNode	:
-@name"
-UTF-8;i;	[ :@options{ o:Sass::Tree::ImportNode:@imported_filename"icon-fonts;i	;0:@imported_file0;	[ ;@o:Sass::Tree::CommentNode
-:
-@type:normal:@value["/**
- * Variables
- */;i;	[ ;@o:Sass::Tree::VariableNode:
-@expro:Sass::Script::Color	;0:@attrs{	:	blueié:redi?:
-alphai:
-greeniã;i;@;"	link;i;	[ :@guarded0;@o;;o:Sass::Script::Funcall:@keywords{ ;"	rgba;i:@splat0;@:
-@args[o:Sass::Script::Variable	;"	link:@underscored_name"	link;i;@o:Sass::Script::Number:@numerator_units[ ;f0.55000000000000004 ™š:@original"	0.55;i;@:@denominator_units[ ;"link-medium;i;	[ ;0;@o;
-;:silent;["4/* $link-light: rgba($link, 0.2); // #d5f6f5 */;i;	[ ;@o;;o;	;0;{	;iõ;iÕ;i;iö;i;@;"link-light;i;	[ ;0;@o;
-;;';["/* $black: #070706; */;i;	[ ;@o;;o;	;0;{	;iø;iû;i;iû;i;@;"
-white;i;	[ ;0;@o;
-;;';["/* $brown: #4e4c48; */;i;	[ ;@o;;o;	;0;{	;i=;iH;i;iD;i;@;"
-brown;i;	[ ;0;@o;;o;;{ ;"	rgba;i;0;@; [o;!	;"
-brown;""
-brown;i;@o;#;$[ ;f0.69999999999999996 ff;%"0.7;i;@;&@$;"brown-medium;i;	[ ;0;@o;;o;;{ ;"	rgba;i;0;@; [o;!	;"
-brown;""
-brown;i;@o;#;$[ ;f0.29999999999999999 33;%"0.3;i;@;&@$;"brown-light;i;	[ ;0;@o;;o;;{ ;"	rgba;i;0;@; [o;!	;"
-brown;""
-brown;i;@o;#;$[ ;f0.14999999999999999 33;%"	0.15;i;@;&@$;"brown-extra-light;i;	[ ;0;@o;
-;;';["+/* $brown-light: rgba($brown, 0.4); */;i;	[ ;@o;;o;#;$["px;i;%"	20px;i;@;&[ ;"padding;i;	[ ;0;@o;;o;#;$["px;iA;%"	60px;i;@;&[ ;"padding-large;i;	[ ;0;@o;;o;#;$["px;i=;%"	56px;i;@;&[ ;"padding-large;i;	[ ;0;@o;
-;;';["./* $item-height: 67px; // 9 list items */;i;	[ ;@o;;o;#;$["px;i7;%"	50px;i;@;&[ ;"item-height;i;	[ ;0;@o;
-;;';["/* 11 list items */;i;	[ ;@o;;o;#;$["s;f0.34999999999999998 ff;%"
-0.35s;i;@;&[ ;"transition-speed;i;	[ ;0;@o;
-;;;["/**
- * Helpers
- */;i";	[ ;@o:Sass::Tree::RuleNode:
-@rule[".console:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;,[o:#Sass::Selector::SimpleSequence
-;,[o:Sass::Selector::Class;["console:@filename" ;i%;0@¬:@sourceso:Set:
-@hash{ ;i%:@subject0;0@¬;i%;T;i%:
-@tabsi ;	[o:Sass::Tree::PropNode;["Xdisplay;o:Sass::Script::String;:identifier;"	none;@;i%:@prop_syntax:new;5i ;	[ ;@o;6;["background;o;!	;"
-brown;""
-brown;i%;@;i%;9;:;5i ;	[ ;@o;6;["height;o;7;;8;"	16px;@;i%;9;:;5i ;	[ ;@o;6;["line-height;o;7;;8;"	16px;@;i%;9;:;5i ;	[ ;@o;6;["padding-left;o;!	;"padding;""padding;i%;@;i%;9;:;5i ;	[ ;@o:Sass::Tree::ExtendNode
-:@selector["%"border-box:@optionalF;i%;	[ ;@o;6;["position;o;7;;8;"
-fixed;@;i%;9;:;5i ;	[ ;@o;6;["	left;o;7;;8;"0;@;i%;9;:;5i ;	[ ;@o;6;["bottom;o;7;;8;"0;@;i%;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"
-white;""
-white;i%;@;i%;9;:;5i ;	[ ;@o;6;["white-space;o;7;;8;"nowrap;@;i%;9;:;5i ;	[ ;@o;6;["
-width;o;7;;8;"	100%;@;i%;9;:;5i ;	[ ;@o;6;["z-index;o;7;;8;"50;@;i%;9;:;5i ;	[ ;@o;6;["font-size;o;7;;8;"	10px;@;i%;9;:;5i ;	[ ;@;@o;(;)["%reset;*o;+;,[o;-;,[o;.
-;,[o: Sass::Selector::Placeholder;["
-reset;0" ;i';0@;1o;2;3{ ;i';40;0@;i';T;i';5i ;	[o;6;["padding;o;7;;8;"0;@;i(;9;:;5i ;	[ ;@o;6;["margin;o;7;;8;"0;@;i);9;:;5i ;	[ ;@;@o;(;)["%border-box;*o;+;,[o;-;,[o;.
-;,[o;>;["border-box;0" ;i+;0@.;1o;2;3{ ;i+;40;0@.;i+;T;i+;5i ;	[o;6;["box-sizing;o;7;;8;"border-box;@;i,;9;:;5i ;	[ ;@o;6;["-moz-box-sizing;o;7;;8;"border-box;@;i-;9;:;5i ;	[ ;@;@o;(;)["	%din;*o;+;,[o;-;,[o;.
-;,[o;>;["din;0" ;i/;0@J;1o;2;3{ ;i/;40;0@J;i/;T;i/;5i ;	[	o;6;["font-family;o:Sass::Script::List	;[o;7	;:string;"DIN Alternate;i0;@o;7	;;8;"sans-serif;i0;@;i0:@separator:
-comma;@;i0;9;:;5i ;	[ ;@o;6;["font-size;o;7;;8;"	12px;@;i1;9;:;5i ;	[ ;@o;6;["letter-spacing;o;7;;8;"
-1.5px;@;i2;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"
-brown;""
-brown;i3;@;i3;9;:;5i ;	[ ;@;@o;(;)["
-%thin;*o;+;,[o;-;,[o;.
-;,[o;>;["	thin;0" ;i5;0@w;1o;2;3{ ;i5;40;0@w;i5;T;i5;5i ;	[o;6;["font-family;o;?	;[o;7	;;@;"DIN Condensed;i6;@o;7	;;8;"AppleSDGothicNeo-Thin;i6;@o;7	;;8;"AppleSDGothicNeo-Light;i6;@;i6;A;B;@;i6;9;:;5i ;	[ ;@;@o;(;)["%fix-webkit-font-rendering;*o;+;,[o;-;,[o;.
-;,[o;>;["fix-webkit-font-rendering;0" ;i8;0@“;1o;2;3{ ;i8;40;0@“;i8;T;i8;5i ;	[o;6;["-webkit-font-smoothing;o;7;;8;"antialiased;@;i9;9;:;5i ;	[ ;@o;6;["text-rendering;o;7;;8;"optimizeLegibility;@;i:;9;:;5i ;	[ ;@;@o;(;)["*;*o;+;,[o;-;,[o;.
-;,[o:Sass::Selector::Universal:@namespace0;0" ;i=;0@­;1o;2;3{ ;i=;40;0@­;i=;T;i=;5i ;	[
-o;6;[" -webkit-tap-highlight-color;o;;{ ;"	rgba;i>;0;@; [	o;#;$[ ;i ;%"0;i>;@;&@$o;#;$[ ;i ;%"0;i>;@;&@$o;#;$[ ;i ;%"0;i>;@;&@$o;#;$[ ;i ;%"0;i>;@;&@$;i>;9;:;5i ;	[ ;@o;
-;;;["N/* make transparent link selection, adjust last value opacity 0 to 1.0 */;i>;	[ ;@o;6;["-webkit-text-size-adjust;o;7;;8;"	none;@;i?;9;:;5i ;	[ ;@o;
-;;;["X/* http://rakaz.nl/2009/09/iphone-webapps-101-getting-safari-out-of-the-way.html */;i?;	[ ;@o;
-;;';["%/* -webkit-user-select: none; */;i@;	[ ;@;@o;(;)[" ::-webkit-input-placeholder;*o;+;,[o;-;,[o;.
-;,[o:Sass::Selector::Pseudo
-:	@arg0;["-webkit-input-placeholder;:element;0" ;iC;0@ã;1o;2;3{ ;iC;40;0@ã;iC;T;iC;5i ;	[o;
-;;;["/* WebKit browsers */;iC;	[ ;@o;6;["
-color;o;!	;"	link;""	link;iD;@;iD;9;:;5i ;	[ ;@;@o;(;)["	body;*o;+;,[o;-;,[o;.
-;,[o:Sass::Selector::Element	;D0;["	body;0" ;iG;0@þ;1o;2;3{ ;iG;40;0@þ;iG;T;iG;5i ;	[o;;
-;<["%"
-reset;=F;iH;	[ ;@o;6;["-webkit-touch-callout;o;7;;8;"	none;@;iI;9;:;5i ;	[ ;@o;
-;;;[">/* prevent callout to copy image, etc when tap to hold */;iI;	[ ;@o;6;["-webkit-text-size-adjust;o;7;;8;"	none;@;iJ;9;:;5i ;	[ ;@o;
-;;;["3/* prevent webkit from resizing text to fit */;iJ;	[ ;@o;6;["-webkit-user-select;o;7;;8;"	none;@;iK;9;:;5i ;	[ ;@o;
-;;;["@/* prevent copy paste, to allow, change 'none' to 'text' */;iK;	[ ;@o;6;["background-attachment;o;7;;8;"
-fixed;@;iL;9;:;5i ;	[ ;@o;
-;;';["]/* font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; */;iM;	[ ;@o;;
-;<["%"din;=F;iN;	[ ;@o;6;["font-weight;o;7;;8;"normal;@;iO;9;:;5i ;	[ ;@o;6;["text-transform;o;7;;8;"uppercase;@;iP;9;:;5i ;	[ ;@o;6;["background-color;o;!	;"
-white;""
-white;iR;@;iR;9;:;5i ;	[ ;@o;6;["height;o;7;;8;"	100%;@;iS;9;:;5i ;	[ ;@o;6;["
-width;o;7;;8;"	100%;@;iT;9;:;5i ;	[ ;@;@o;(;)["-a, a:visited, a:focus, a:active, a:hover;*o;+;,[
-o;-;,[o;.
-;,[o;H	;D0;["a;0" ;iW;0@_;1o;2;3{ ;iW;40o;-;,[o;.
-;,[o;H	;D0;["a;0@_;iWo;E
-;F0;["visited;:
-class;0@_;iW;0@_;1o;2;3{ ;iW;40o;-;,[o;.
-;,[o;H	;D0;["a;0@_;iWo;E
-;F0;["
-focus;;I;0@_;iW;0@_;1o;2;3{ ;iW;40o;-;,[o;.
-;,[o;H	;D0;["a;0@_;iWo;E
-;F0;["active;;I;0@_;iW;0@_;1o;2;3{ ;iW;40o;-;,[o;.
-;,[o;H	;D0;["a;0@_;iWo;E
-;F0;["
-hover;;I;0@_;iW;0@_;1o;2;3{ ;iW;40;0@_;iW;T;iW;5i ;	[o;6;["text-decoration;o;7;;8;"	none;@;iX;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"	link;""	link;iY;@;iY;9;:;5i ;	[ ;@;@o;(;)["	body;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["	body;0" ;if;0@¬;1o;2;3{ ;if;40;0@¬;if;T;if;5i ;	[o;6;["overflow;o;7;;8;"hidden;@;ig;9;:;5i ;	[ ;@;@o;
-;;;["/*li*/;ij;	[ ;@o;(;)[".title;*o;+;,[o;-;,[o;.
-;,[o;/;["
-title;0" ;ij;0@Æ;1o;2;3{ ;ij;40;0@Æ;ij;T;ij;5i ;	[o;6;["background-color;o;!	;"
-brown;""
-brown;ik;@;ik;9;:;5i ;	[ ;@o;(;)["h1;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["h1;0" ;im;0@Ý;1o;2;3{ ;im;40;0@Ý;im;T;im;5i ;	[o;;
-;<["%"din;=F;in;	[ ;@o;
-;;';["/* color: $white; */;io;	[ ;@o;6;["
-color;o;7;;8;"#dddcd9;@;ip;9;:;5i ;	[ ;@o;6;["font-weight;o;7;;8;"normal;@;iq;9;:;5i ;	[ ;@o;6;["text-transform;o;7;;8;"uppercase;@;ir;9;:;5i ;	[ ;@o;6;["margin;o;7;;8;"0;@;is;9;:;5i ;	[ ;@o;6;["padding-left;o;!	;"padding;""padding;it;@;it;9;:;5i ;	[ ;@o;(;)["+ span;*o;+;,[o;-;,["+o;.
-;,[o;H	;D0;["	span;0" ;iv;0@;1o;2;3{ ;iv;40;0@;iv;T;iv;5i ;	[o;6;["position;o;7;;8;"absolute;@;iw;9;:;5i ;	[ ;@o;6;["font-size;o;7;;8;"9px;@;ix;9;:;5i ;	[ ;@o;6;["top;o;7;;8;"	28px;@;iy;9;:;5i ;	[ ;@o;6;["line-height;o;7;;8;"	1rem;@;iz;9;:;5i ;	[ ;@o;6;["	left;o;!	;"padding;""padding;i{;@;i{;9;:;5i ;	[ ;@o;6;["letter-spacing;o;7;;8;"0;@;i|;9;:;5i ;	[ ;@o;
-;;';["/* color: $brown-light; */;i};	[ ;@o;6;["
-color;o;7;;8;"#c2c0bc;@;i~;9;:;5i ;	[ ;@;@;@;@o;(;)["ul;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["ul;0" ;i~;0@U;1o;2;3{ ;i~;40;0@U;i~;T;i~;5i ;	[o;;
-;<["%"
-reset;=F;i;	[ ;@o;6;["list-style;o;7;;8;"	none;@;i€;9;:;5i ;	[ ;@o;(;)["li;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["li;0" ;i‚;0@p;1o;2;3{ ;i‚;40;0@p;i‚;T;i‚;5i ;	[o;;
-;<["%"fix-webkit-font-rendering;=F;iƒ;	[ ;@o;
-;;';["./* doesn't appear to make a difference */;iƒ;	[ ;@o;;
-;<["%"
-reset;=F;i„;	[ ;@o;;
-;<["%"border-box;=F;i…;	[ ;@o;6;["padding-right;o;!	;"padding;""padding;i†;@;i†;9;:;5i ;	[ ;@o;6;["
-width;o;7;;8;"	100%;@;i‡;9;:;5i ;	[ ;@o;6;["height;o;!	;"item-height;""item_height;iˆ;@;iˆ;9;:;5i ;	[ ;@o;
-;;';["(/* for 'hide' animation purposes */;iˆ;	[ ;@o;6;["position;o;7;;8;"relative;@;i‰;9;:;5i ;	[ ;@o;6;["padding-top;o;7;;8;"0;@;iŠ;9;:;5i ;	[ ;@o;
-;;';["$/* background-color: orange; */;i‹;	[ ;@o;
-;;';["„/* 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/  */;i;	[ ;@o:Sass::Tree::MediaNode;" ;T;iŽ:@query[@"	only" "screen"
- and "(o;7	;;8;"#-webkit-min-device-pixel-ratio;iŽ;@": o;#;$[ ;f2;%"2;iŽ;@;&@$")", "	only" "screen"
- and "(o;7	;;8;" min--moz-device-pixel-ratio;iŽ;@": o;#;$[ ;f2;%"2;iŽ;@;&@$")@Ã"	only" "screen"
- and "(o;7	;;8;"-o-min-device-pixel-ratio;iŽ;@": o:Sass::Script::Operation
-:@operator:div:@operand2o;#;$[ ;i;%"1;iŽ;@;&@$;iŽ:@operand1o;#;$[ ;f2;%"2;iŽ;@;&@$;@")@Ã"	only" "screen"
- and "(o;7	;;8;"min-device-pixel-ratio;iŽ;@": o;#;$[ ;f2;%"2;iŽ;@;&@$")@Ã"	only" "screen"
- and "(o;7	;;8;"min-resolution;iŽ;@": o;#;$["dpi;iÀ;%"192dpi;iŽ;@;&[ ")@Ã"	only" "screen"
- and "(o;7	;;8;"min-resolution;iŽ;@": o;#;$["	dppx;f2;%"
-2dppx;iŽ;@;&[ ");5i ;	[	o;6;["background-image;o;;{ ;"linear-gradient;i;0;@; [	o;#;$["deg;i ;%"	0deg;i;@;&[ o;!	;"brown-light;""brown_light;i;@o;?	;[o;!	;"brown-light;""brown_light;i;@o;#;$["%;i7;%"50%;i;@;&[ ;i;A:
-space;@o;?	;[o;7	;;8;"transparent;i;@o;#;$["%;i7;%"50%;i;@;&[ ;i;A;Q;@;i;9;:;5i ;	[ ;@o;6;["background-size;o;?	;[o;#;$["%;ii;%"	100%;i;@;&[ o;#;$["px;i;%"1px;i;@;&[ ;i;A;Q;@;i;9;:;5i ;	[ ;@o;6;["background-repeat;o;7;;8;"no-repeat;@;i‘;9;:;5i ;	[ ;@o;6;["background-position;o;7;;8;"bottom;@;i’;9;:;5i ;	[ ;@;@o;
-;;';["/* desktop */;i”;	[ ;@o;J;" ;T;i•;K["(o;7	;;8;"-webkit-device-pixel-ratio;i•;@": o;#;$[ ;i;%"1;i•;@;&@$")", "(o;7	;;8;"max-resolution;i•;@": o;#;$["dpi;iM;%"
-72dpi;i•;@;&[ ");5i ;	[o;6;["border-bottom;o;?	;[o;#;$["px;i;%"1px;i–;@;&[ o;7	;;8;"
-solid;i–;@o;!	;"brown-light;""brown_light;i–;@;i–;A;Q;@;i–;9;:;5i ;	[ ;@;@o;(;)["&&:last-child, &:nth-last-child(2);*o;+;,[o;-;,[o;.
-;,[o:Sass::Selector::Parent;0" ;i™o;E
-;F0;["last-child;;I;0@;i™;0@;1o;2;3{ ;i™;40o;-;,[o;.
-;,[o;R;0@;i™o;E
-;F["2;["nth-last-child;;I;0@;i™;0@;1o;2;3{ ;i™;40;0@;i™;T;i™;5i ;	[o;6;["background-image;o;7;;8;"	none;@;iš;9;:;5i ;	[ ;@;@o;(;)["	span;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["	span;0" ;i;0@¦;1o;2;3{ ;i;40;0@¦;i;T;i;5i ;	[o;6;["display;o;7;;8;"
-block;@;iž;9;:;5i ;	[ ;@;@o;(;)["
-input;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["
-input;0" ;i¡;0@¼;1o;2;3{ ;i¡;40;0@¼;i¡;T;i¡;5i ;	[o;6;["padding-bottom;o;7;;8;"4px;@;i¢;9;:;5i ;	[ ;@o;6;["height;o;L
-;M:
-minus;Oo;#;$[ ;i	;%"4;i£;@;&@$;i£;Po;!	;"item-height;""item_height;i£;@;@;i£;9;:;5i ;	[ ;@o;6;["
-width;o;7	;;8;" calc(100% - $padding-large);i¤;@;i¤;9;:;5i ;	[ ;@o;
-;;';["|/* left indent for check boxes - see comment under .new-item below
- * transition: all $transition-speed ease-in-out; */;i¤;	[ ;@o;;
-;<["%"
-reset;=F;i¦;	[ ;@o;;
-;<["%"din;=F;i§;	[ ;@o;6;["border;o;7;;8;"	none;@;i¨;9;:;5i ;	[ ;@o;6;["text-transform;o;7;;8;"uppercase;@;i©;9;:;5i ;	[ ;@o;6;["background-color;o;7;;8;"transparent;@;iª;9;:;5i ;	[ ;@o;(;)["&:focus;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i¬o;E
-;F0;["
-focus;;I;0@;i¬;0@;1o;2;3{ ;i¬;40;0@;i¬;T;i¬;5i ;	[o;6;["outline;o;7;;8;"	none;@;i­;9;:;5i ;	[ ;@;@;@o;(;)["&.hide;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i±o;/;["	hide;0@;i±;0@;1o;2;3{ ;i±;40;0@;i±;T;i±;5i ;	[
-o;6;["transition;o;?	;[o;7	;;8;"all;i²;@o;!	;"transition-speed;""transition_speed;i²;@o;7	;;8;"ease-in-out;i²;@;i²;A;Q;@;i²;9;:;5i ;	[ ;@o;6;["height;o;7;;8;"0;@;i³;9;:;5i ;	[ ;@o;6;["overflow;o;7;;8;"hidden;@;i´;9;:;5i ;	[ ;@o;6;["	left;o;7;;8;"	-50%;@;iµ;9;:;5i ;	[ ;@o;6;["background-image;o;7;;8;"	none;@;i¶;9;:;5i ;	[ ;@;@o;(;)["&.new-item;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i¹o;/;["new-item;0@N;i¹;0@N;1o;2;3{ ;i¹;40;0@N;i¹;T;i¹;5i ;	[o;
-;;';["*/* background-color: $link-medium; */;iº;	[ ;@o;6;["background-color;o;!	;"	link;""	link;i»;@;i»;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"
-white;""
-white;i¼;@;i¼;9;:;5i ;	[ ;@o;
-;;';["¤/* padding-left: $padding-large; // the new item would register 'tap' event when hiding list-item directly above it: https://github.com/madrobby/zepto/issues/511 */;i½;	[ ;@o;6;["padding-left;o;!	;"padding;""padding;i¾;@;i¾;9;:;5i ;	[ ;@o;;
-;<["%"border-box;=F;i¿;	[ ;@o;(;)["button;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["button;0" ;iÁ;0@ƒ;1o;2;3{ ;iÁ;40;0@ƒ;iÁ;T;iÁ;5i ;	[o;;
-;<["%"
-reset;=F;iÂ;	[ ;@o;;
-;<["%"din;=F;iÃ;	[ ;@o;
-;;';["@/* padding-left: $padding-large;
- * @extend %border-box; */;iÄ;	[ ;@o;6;["border;o;7;;8;"	none;@;iÆ;9;:;5i ;	[ ;@o;6;["line-height;o;!	;"item-height;""item_height;iÇ;@;iÇ;9;:;5i ;	[ ;@o;6;["outline;o;7;;8;"	none;@;iÈ;9;:;5i ;	[ ;@o;6;["
-width;o;7;;8;"	100%;@;iÉ;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"
-white;""
-white;iÊ;@;iÊ;9;:;5i ;	[ ;@o;6;["background-color;o;7;;8;"transparent;@;iË;9;:;5i ;	[ ;@o;6;["text-align;o;7;;8;"	left;@;iÌ;9;:;5i ;	[ ;@o;6;["text-transform;o;7;;8;"uppercase;@;iÍ;9;:;5i ;	[ ;@;@;@o;(;)["&.dragging;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;iÑo;/;["dragging;0@Ñ;iÑ;0@Ñ;1o;2;3{ ;iÑ;40;0@Ñ;iÑ;T;iÑ;5i ;	[o;6;["background-color;o;!	;"link-light;""link_light;iÒ;@;iÒ;9;:;5i ;	[ ;@o;6;["position;o;7;;8;"absolute;@;iÓ;9;:;5i ;	[ ;@o;
-;;';["/* @extend %border-box; */;iÔ;	[ ;@o;6;["background-image;o;7;;8;"	none;@;iÕ;9;:;5i ;	[ ;@o;6;["z-index;o;7;;8;"100;@;iÖ;9;:;5i ;	[ ;@o;6;["pointer-events;o;7;;8;"	none;@;iØ;9;:;5i ;	[ ;@o;
-;;';["B/* temporarily hide the item number / checkbox during drag */;iÚ;	[ ;@o;(;)[".check;*o;+;,[o;-;,[o;.
-;,[o;/;["
-check;0" ;iÛ;0@;1o;2;3{ ;iÛ;40;0@;iÛ;T;iÛ;5i ;	[o;6;["opacity;o;7;;8;"0;@;iÜ;9;:;5i ;	[ ;@;@;@o;(;)["&.clone;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;ißo;/;["
-clone;0@;iß;0@;1o;2;3{ ;iß;40;0@;iß;T;iß;5i ;	[o;6;["position;o;7;;8;"relative;@;ià;9;:;5i ;	[ ;@o;6;["z-index;o;7;;8;"50;@;iá;9;:;5i ;	[ ;@o;6;["background-color;o;7;;8;"transparent;@;iâ;9;:;5i ;	[ ;@o;
-;;';["r/* background-color: $brown;
- * hide inner elements while this is acting as a placeholder for dragged item */;iã;	[ ;@o;(;)["i, input;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["i;0" ;iå;0@H;1o;2;3{ ;iå;40o;-;,[o;.
-;,[o;H	;D0;["
-input;0@H;iå;0@H;1o;2;3{ ;iå;40;0@H;iå;T;iå;5i ;	[o;6;["opacity;o;7;;8;"0;@;iæ;9;:;5i ;	[ ;@;@o;J;" ;T;iè;K[@"	only" "screen"
- and "(o;7	;;8;"#-webkit-min-device-pixel-ratio;iè;@": o;#;$[ ;f2;%"2;iè;@;&@$")", "	only" "screen"
- and "(o;7	;;8;" min--moz-device-pixel-ratio;iè;@": o;#;$[ ;f2;%"2;iè;@;&@$")@k"	only" "screen"
- and "(o;7	;;8;"-o-min-device-pixel-ratio;iè;@": o;L
-;M;N;Oo;#;$[ ;i;%"1;iè;@;&@$;iè;Po;#;$[ ;f2;%"2;iè;@;&@$;@")@k"	only" "screen"
- and "(o;7	;;8;"min-device-pixel-ratio;iè;@": o;#;$[ ;f2;%"2;iè;@;&@$")@k"	only" "screen"
- and "(o;7	;;8;"min-resolution;iè;@": o;#;$["dpi;iÀ;%"192dpi;iè;@;&[ ")@k"	only" "screen"
- and "(o;7	;;8;"min-resolution;iè;@": o;#;$["	dppx;f2;%"
-2dppx;iè;@;&[ ");5i ;	[	o;6;["background-image;o;;{ ;"linear-gradient;ié;0;@; [	o;#;$["deg;i ;%"	0deg;ié;@;&[ o;!	;"brown-light;""brown_light;ié;@o;?	;[o;!	;"brown-light;""brown_light;ié;@o;#;$["%;i7;%"50%;ié;@;&[ ;ié;A;Q;@o;?	;[o;7	;;8;"transparent;ié;@o;#;$["%;i7;%"50%;ié;@;&[ ;ié;A;Q;@;ié;9;:;5i ;	[ ;@o;6;["background-size;o;?	;[o;#;$["%;ii;%"	100%;iê;@;&[ o;#;$["px;i;%"1px;iê;@;&[ ;iê;A;Q;@;iê;9;:;5i ;	[ ;@o;6;["background-repeat;o;7;;8;"no-repeat;@;ië;9;:;5i ;	[ ;@o;6;["background-position;o;7;;8;"bottom;@;iì;9;:;5i ;	[ ;@;@;@o;(;)["&.moved;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;iðo;/;["
-moved;0@þ;ið;0@þ;1o;2;3{ ;ið;40;0@þ;ið;T;ið;5i ;	[o;6;["background-color;o;7;;8;"orange;@;iñ;9;:;5i ;	[ ;@;@o;
-;;';["v/* // animate items while dragging moving down
- * &.move-up {
- *     // animation: bounce-up 300ms;
- *     -webkit-animation: bounce-down 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
- * }
- * // animate items while dragging moving up
- * &.move-down {
- *     // animation: bounce-up 300ms;
- *     -webkit-animation: bounce-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
- * } */;iô;	[ ;@o;
-;;';["3/* animate items while dragging moving down */;iÿ;	[ ;@o;(;)["&.move;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i o;/;["	move;0@;i ;0@;1o;2;3{ ;i ;40;0@;i ;T;i ;5i ;	[o;
-;;';["P/* -webkit-animation: spring 1000ms cubic-bezier(0.075, 0.82, 0.165, 1); */;i;	[ ;@o;6;["-webkit-animation;o;?	;[o;7	;;8;"spring;i;@o;#;$["ms;i,;%"
-300ms;i;@;&[ o;;{ ;"cubic-bezier;i;0;@; [	o;#;$[ ;f0.41999999999999998 zá;%"	0.42;i;@;&@$o;#;$[ ;f0;%"0;i;@;&@$o;#;$[ ;f1;%"1;i;@;&@$o;#;$[ ;f0.5;%"0.5;i;@;&@$;i;A;Q;@;i;9;:;5i ;	[ ;@o;6;["background-color;o;!	;"
-brown;""
-brown;i;@;i;9;:;5i ;	[ ;@;@;@;@o;
-;;';["K/* @-webkit-keyframes spring {
- *     from {
- *         // height: $item-height;
- *         margin-top: 0;
- *         margin-bottom: 0;
- *          // background-color: yellow;
- *     }
- *     to {
- *         // height: $item-height*0.8;
- *         margin-top: $item-height;
- *         margin-bottom: $item-height;
- *     }
- * } */;i;	[ ;@o;
-;;';["}/* @keyframes bounce-up {
- *     from { opacity: 1.0; }
- *     50% { opacity: 0.4; }
- *     to { opacity: 1.0; }
- * } */;i;	[ ;@o;
-;;';["ú/* @-webkit-keyframes bounce-up {
- *     from {
- *         height: $item-height*2;
- *         padding-top: $item-height;
- *     }
- *     to {
- *         height: $item-height;
- *         padding-top: 0;
- *          // background-color: yellow;
- *     }
- * }
- * @-webkit-keyframes bounce-down {
- *     from {
- *         height: $item-height*2;
- *         padding-bottom: 0;
- *     }
- *     to {
- *         height: $item-height;
- *         padding-top: 0;
- *         // background-color: red;
- *     }
- * } */;i;	[ ;@o;(;)[".list-wrapper;*o;+;,[o;-;,[o;.
-;,[o;/;["list-wrapper;0" ;i5;0@h;1o;2;3{ ;i5;40;0@h;i5;T;i5;5i ;	[o;6;["line-height;o;!	;"item-height;""item_height;i6;@;i6;9;:;5i ;	[ ;@;@o;(;)[".check;*o;+;,[o;-;,[o;.
-;,[o;/;["
-check;0" ;i9;0@;1o;2;3{ ;i9;40;0@;i9;T;i9;5i ;	[o;6;["font-style;o;7;;8;"normal;@;i:;9;:;5i ;	[ ;@o;6;["text-align;o;7;;8;"center;@;i;;9;:;5i ;	[ ;@o;
-;;';["1/* line-height: 28px; // don't know why!? */;i<;	[ ;@o;6;["
-color;o;!	;"brown-extra-light;""brown_extra_light;i=;@;i=;9;:;5i ;	[ ;@o;
-;;';["/* color: red; */;i>;	[ ;@o;6;["display;o;7;;8;"inline-block;@;i?;9;:;5i ;	[ ;@o;6;["
-float;o;7;;8;"	left;@;i@;9;:;5i ;	[ ;@o;6;["position;o;7;;8;"relative;@;iA;9;:;5i ;	[ ;@o;6;["
-width;o;!	;"padding-large;""padding_large;iB;@;iB;9;:;5i ;	[ ;@o;6;["height;o;!	;"item-height;""item_height;iC;@;iC;9;:;5i ;	[ ;@o;
-;;';["/* padding-left: 6px; */;iD;	[ ;@o;6;["letter-spacing;o;7;;8;"0;@;iE;9;:;5i ;	[ ;@o;
-;;';["#/* padding-right: $padding; */;iF;	[ ;@o;
-;;';[",/* background: pink;
- * z-index: 30; */;iH;	[ ;@o;6;["font-size;o;7;;8;"9px;@;iK;9;:;5i ;	[ ;@o;6;["
-color;o;!	;"brown-medium;""brown_medium;iL;@;iL;9;:;5i ;	[ ;@o;6;["text-indent;o;7;;8;"3px;@;iM;9;:;5i ;	[ ;@o;(;)["&::after;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;iPo;E
-;F0;["
-after;;G;0@í;iP;0@í;1o;2;3{ ;iP;40;0@í;iP;T;iP;5i ;	[o;6;["content;o;7;;8;"'';@;iQ;9;:;5i ;	[ ;@o;6;["position;o;7;;8;"absolute;@;iR;9;:;5i ;	[ ;@o;6;["bottom;o;7;;8;"	12px;@;iS;9;:;5i ;	[ ;@o;6;["	left;o;7;;8;"	17px;@;iT;9;:;5i ;	[ ;@o;6;["
-width;o;7;;8;"	26px;@;iV;9;:;5i ;	[ ;@o;6;["height;o;7;;8;"	26px;@;iW;9;:;5i ;	[ ;@o;6;["border-radius;o;7;;8;"	100%;@;iX;9;:;5i ;	[ ;@o;
-;;';["/* top: 13px; */;iY;	[ ;@o;6;["background;o;?	;[o;;{ ;"radial-gradient;iZ;0;@; [o;7	;;8;"circle;iZ;@o;?	;[o;;{ ;"	rgba;iZ;0;@; [o;!	;"
-brown;""
-brown;iZ;@o;#;$[ ;i ;%"0;iZ;@;&@$o;#;$["px;i;%"	12px;iZ;@;&[ ;iZ;A;Q;@o;?	;[o;;{ ;"	rgba;iZ;0;@; [o;!	;"
-brown;""
-brown;iZ;@o;#;$[ ;i;%"1;iZ;@;&@$o;#;$["%;ii;%"	100%;iZ;@;&[ ;iZ;A;Q;@o;;{ ;"radial-gradient;iZ;0;@; [o;7	;;8;"circle;iZ;@o;?	;[o;;{ ;"	rgba;iZ;0;@; [o;!	;"
-brown;""
-brown;iZ;@o;#;$[ ;i ;%"0;iZ;@;&@$o;#;$["px;i;%"	12px;iZ;@;&[ ;iZ;A;Q;@o;?	;[o;;{ ;"	rgba;iZ;0;@; [o;!	;"
-brown;""
-brown;iZ;@o;#;$[ ;i;%"1;iZ;@;&@$o;#;$["%;ii;%"	100%;iZ;@;&[ ;iZ;A;Q;@;iZ;A;B;@;iZ;9;:;5i ;	[ ;@;@o;(;)["&.remove;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i]o;/;["remove;0@‚;i];0@‚;1o;2;3{ ;i];40;0@‚;i];T;i];5i ;	[o;6;["
-color;o;!	;"
-white;""
-white;i^;@;i^;9;:;5i ;	[ ;@o;(;)["&::after;*o;+;,[o;-;,[o;.
-;,[o;R;0" ;i_o;E
-;F0;["
-after;;G;0@š;i_;0@š;1o;2;3{ ;i_;40;0@š;i_;T;i_;5i ;	[o;6;["background;o;7;;8;"	none;@;i`;9;:;5i ;	[ ;@o;6;["background-color;o;!	;"link-medium;""link_medium;ia;@;ia;9;:;5i ;	[ ;@;@;@;@o;
-;;;["/*textarea*/;if;	[ ;@o;(;)[".button-focus;*o;+;,[o;-;,[o;.
-;,[o;/;["button-focus;0" ;if;0@¾;1o;2;3{ ;if;40;0@¾;if;T;if;5i ;	[o;
-;;';["/* display: none; */;ig;	[ ;@o;6;["position;o;7;;8;"absolute;@;ih;9;:;5i ;	[ ;@o;6;["opacity;o;7;;8;"0;@;ii;9;:;5i ;	[ ;@o;6;["background;o;7;;8;"transparent;@;ij;9;:;5i ;	[ ;@o;
-;;';["/* line-height: 0; */;ik;	[ ;@o;;
-;<["%"border-box;=F;il;	[ ;@o;6;["border-radius;o;7;;8;"0;@;im;9;:;5i ;	[ ;@o;6;["outline;o;7;;8;"0;@;in;9;:;5i ;	[ ;@o;6;["border;o;7;;8;"	none;@;io;9;:;5i ;	[ ;@o;6;["height;o;!	;"item-height;""item_height;ip;@;ip;9;:;5i ;	[ ;@o;6;["line-height;o;7;;8;"0;@;iq;9;:;5i ;	[ ;@o;6;["font-size;o;7;;8;"0;@;ir;9;:;5i ;	[ ;@o;6;["
-width;o;7	;;8;" calc(100% - $padding-large);is;@;is;9;:;5i ;	[ ;@o;6;["	left;o;!	;"padding-large;""padding_large;it;@;it;9;:;5i ;	[ ;@o;6;["top;o;7;;8;"0;@;iu;9;:;5i ;	[ ;@;@o;
-;;;["
-/*a*/;ix;	[ ;@o;(;)["
-.save;*o;+;,[o;-;,[o;.
-;,[o;/;["	save;0" ;ix;0@)	;1o;2;3{ ;ix;40;0@)	;ix;T;ix;5i ;	[o;6;["
-color;o;?	;[o;!	;"
-white;""
-white;iy;@o;7	;;8;"!important;iy;@;iy;A;Q;@;iy;9;:;5i ;	[ ;@o;6;["position;o;7;;8;"absolute;@;iz;9;:;5i ;	[ ;@o;6;["
-right;o;7;;8;"0;@;i{;9;:;5i ;	[ ;@o;
-;;';["(/* z-index: 40;
- * float: right; */;i|;	[ ;@o;6;["padding;o;?	;[o;#;$[ ;i ;%"0;i~;@;&@$o;!	;"padding;""padding;i~;@;i~;A;Q;@;i~;9;:;5i ;	[ ;@o;
-;;';[",/* background: red;
- * opacity: 0.5; */;i;	[ ;@o;6;["line-height;o;!	;"item-height;""item_height;i;@;i;9;:;5i ;	[ ;@o;
-;;';["‡/* // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/  */;iƒ;	[ ;@o;J;" ;T;i„;K[@"	only" "screen"
- and "(o;7	;;8;"#-webkit-min-device-pixel-ratio;i„;@": o;#;$[ ;f2;%"2;i„;@;&@$")", "	only" "screen"
- and "(o;7	;;8;" min--moz-device-pixel-ratio;i„;@": o;#;$[ ;f2;%"2;i„;@;&@$")@s	"	only" "screen"
- and "(o;7	;;8;"-o-min-device-pixel-ratio;i„;@": o;L
-;M;N;Oo;#;$[ ;i;%"1;i„;@;&@$;i„;Po;#;$[ ;f2;%"2;i„;@;&@$;@")@s	"	only" "screen"
- and "(o;7	;;8;"min-device-pixel-ratio;i„;@": o;#;$[ ;f2;%"2;i„;@;&@$")@s	"	only" "screen"
- and "(o;7	;;8;"min-resolution;i„;@": o;#;$["dpi;iÀ;%"192dpi;i„;@;&[ ")@s	"	only" "screen"
- and "(o;7	;;8;"min-resolution;i„;@": o;#;$["	dppx;f2;%"
-2dppx;i„;@;&[ ");5i ;	[
-o;6;["border-left;o;7;;8;"	none;@;i…;9;:;5i ;	[ ;@o;6;["background-image;o;;{ ;"linear-gradient;i†;0;@; [	o;#;$["deg;i_;%"
-90deg;i†;@;&[ o;!	;"
-white;""
-white;i†;@o;?	;[o;!	;"
-white;""
-white;i†;@o;#;$["%;i7;%"50%;i†;@;&[ ;i†;A;Q;@o;?	;[o;7	;;8;"transparent;i†;@o;#;$["%;i7;%"50%;i†;@;&[ ;i†;A;Q;@;i†;9;:;5i ;	[ ;@o;6;["background-size;o;?	;[o;#;$["px;i;%"1px;i‡;@;&[ o;#;$["%;ii;%"	100%;i‡;@;&[ ;i‡;A;Q;@;i‡;9;:;5i ;	[ ;@o;6;["background-repeat;o;7;;8;"no-repeat;@;iˆ;9;:;5i ;	[ ;@o;6;["background-position;o;?	;[o;7	;;8;"bottom;i‰;@o;7	;;8;"	left;i‰;@;i‰;A;Q;@;i‰;9;:;5i ;	[ ;@;@o;(;)["i;*o;+;,[o;-;,[o;.
-;,[o;H	;D0;["i;0" ;iŒ;0@
-;1o;2;3{ ;iŒ;40;0@
-;iŒ;T;iŒ;5i ;	[o;6;["font-style;o;7;;8;"normal;@;i;9;:;5i ;	[ ;@;@;@;@
