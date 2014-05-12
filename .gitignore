@@ -5,7 +5,13 @@
 /apps/simplist-*
 /apps/typesetter-*
 
+# pesky dot files
 .DS_Store
-.sass-cache/
+.sass-cache
+
+# random leftover pages
 index-orig.html
 sprite_test_page.html
+
+# ignore visual design (photoshop) folders
+_visual*
