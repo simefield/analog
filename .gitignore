@@ -9,9 +9,10 @@
 .DS_Store
 .sass-cache
 
-# random leftover pages
-index-orig.html
-sprite_test_page.html
-
-# ignore visual design (photoshop) folders
+# ignore visual design
 _visual*
+*.psd
+*.ai
+
+# others
+sprite_test_page.html
