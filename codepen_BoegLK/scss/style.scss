@@ -1,0 +1,81 @@
+/**
+ * CSS SPINNER (IE10+)
+ */
+
+/*
+  1. in seconds
+  2. '-' = clockwise, '+' = anti-clockwise. counterintuitive, but we use negative delay values
+  3. NOTE: this must be an even number and the html requires half as many <i> or <span> elements ($spinner-steps / 2)
+*/
+
+$spinner-duration: 1.2; // 1
+$spinner-direction: '-'; // 2
+$spinner-steps: 64; // 3
+$spinner-arm-length: 2px;
+$spinner-arm-width: 2px;
+$spinner-diameter: 24px;
+$spinner-colour: black;
+$spinner-fade-to-opacity: 0;
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  75%, 100% { opacity: $spinner-fade-to-opacity; }
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+.Spinner {
+  position: relative;
+  width: $spinner-diameter;
+  height: $spinner-diameter;
+
+  * {
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: $spinner-diameter;
+    width: $spinner-diameter;
+
+    &::before,
+    &::after {
+      @include prefix(animation-name, pulse, webkit);
+      @include prefix(animation-duration, #{$spinner-duration}s, webkit);
+      @include prefix(animation-iteration-count, infinite, webkit);
+      content: '';
+      position: absolute;
+      left: #{($spinner-diameter - $spinner-arm-width) / 2};
+      height: $spinner-arm-length;
+      width: $spinner-arm-width;
+      border-radius: $spinner-arm-width / 2;
+      background-color: $spinner-colour;
+    }
+    &::before { top: 0; }
+    &::after { bottom: 0; }
+  }
+}
+
+@for $i from 1 through ($spinner-steps / 2) {
+  $spinner-angle: #{$spinner-direction}#{(360 / $spinner-steps ) * $i}deg;
+
+  .Spinner *:nth-child(#{$i}) {
+    -ms-transform: rotate($spinner-angle);
+    -webkit-transform: rotate($spinner-angle);
+    transform: rotate($spinner-angle);
+
+    // by making these delay values negative (which is valid) the animation begins immediately
+    &::before {
+      -webkit-animation-delay: -#{($i * $spinner-duration) / $spinner-steps}s;
+      animation-delay: -#{($i * $spinner-duration) / $spinner-steps}s;
+    }
+    &::after {
+      -webkit-animation-delay: -#{(($spinner-steps / 2) + $i) * $spinner-duration / $spinner-steps}s;
+      animation-delay: -#{(($spinner-steps / 2) + $i) * $spinner-duration / $spinner-steps}s;
+    }
+  }
+}

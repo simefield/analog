@@ -105,7 +105,7 @@ body {
     font-family: comic-sans !important;
 }
 
-i, cite, em, var, address, dfn {
+i, cite, /*em, */var, address, dfn {
     @extend %sansSerif-italic;
 }
 
@@ -168,6 +168,16 @@ h5 { margin-top: 16px; }
 //         // ...
 //     }
 // }
+h1 span {
+    float: left;
+    // @extend %sansSerif;
+    @include font-size(16px);
+
+    em {
+        @extend %sansSerif;
+        font-style: normal;
+    }
+}
 h1 + p {
     // margin-top: 1.0625em; // 17px
     margin-top: 15px;
@@ -281,8 +291,10 @@ body {
 }
 
 .content {
-    max-width: 56em;
-    max-width: 56rem;
+    // max-width: 56em; // 896
+    // max-width: 56rem;
+    max-width: 63.625em; // 1018
+    max-width: 63.625rem;
     background-color: $paper;
     margin-left: auto;
     margin-right: auto;
@@ -299,71 +311,53 @@ body {
     }
 }
 
-button, %button {
+button, .button, %button {
     border: none;
     @extend %fix-webkit-font-rendering;
     color: $paper;
     background-color: $red;
-    padding-right: $grid-unit;
-    padding-left: $grid-unit;
-    margin-right: $grid-unit/2;
+    padding-right: $v-grid-unit;
+    padding-left: $v-grid-unit;
+    margin-right: $v-grid-unit/2;
     text-align: center;
     @include font-size(14px, 24px);
 
+    a > & {
+        margin-right: 0;
+    }
+
     @media (min-width: $screen-md) {
         @include font-size(16px, 32px);
-        padding-right: $grid-unit*1.5;
-        padding-left: $grid-unit*1.5;
-        margin-right: $grid-unit;
-        min-width: $grid-unit*5.5; // 88
+        padding-right: $v-grid-unit*1.5;
+        padding-left: $v-grid-unit*1.5;
+        margin-right: $v-grid-unit;
     }
 
     &:focus,
     &:hover,
-    &:active {
+    &:active,
+    &.active {
         background-color: $black;
+        color: $white;
     }
 
     &.block {
         width: 100%;
     }
+
+    &.small {
+        padding: 0 11px; // small square
+    }
 }
 
 /*ul*/.main-nav {
-
-    // @extend .nav;
-
-    // a {
-    //     @extend %fix-webkit-font-rendering;
-    //     color: $paper;
-    //     background-color: $red;
-
-    //     @include font-size(9px, 32px);
-    //     padding-right: $grid-unit;
-    //     padding-left: $grid-unit;
-    //     margin-right: $grid-unit/2;
-    //     text-align: center;
-
-    //     @media (min-width: $screen-md) {
-    //         @include font-size(12px, 48px);
-    //         padding-right: $grid-unit*1.5;
-    //         padding-left: $grid-unit*1.5;
-    //         margin-right: $grid-unit;
-    //         min-width: $grid-unit*5.5; // 88
-    //     }
-
-    //     &:focus,
-    //     &:hover,
-    //     &:active {
-    //         background-color: $black;
-    //     }
-    // }
-
     a {
         @extend %button;
         @include font-size(9px, 32px);
+        min-width: $grid-unit*4.5; // 72
 
         @media (min-width: $screen-md) {
+            min-width: $grid-unit*6.5; // 104
             @include font-size(12px, 48px);
         }
     }
@@ -386,14 +380,11 @@ button, %button {
 
 /*a*/.logo {
     display: inline-block;
-    // margin-top: 45px;
-    // margin-bottom: 15px;
     margin-top: 53px;
     margin-bottom: 8px;
     @media (min-width: $screen-md) {
-        // margin-top: 75px;
         margin-top: 84px;
-        margin-bottom: 15px;
+        margin-bottom: 17px;
     }
     
     img {
@@ -402,8 +393,8 @@ button, %button {
         @media (min-width: $screen-md) {
             // width: 179px;
             // width: 197px;
-            // width: 187px;
-            width: 179px;
+            width: 187px;
+            // width: 179px;
         }
     }
 }
@@ -437,8 +428,8 @@ button, %button {
         z-index: 10;
         background-size: auto 100%;
         background-repeat: no-repeat;
-        // background-blend-mode: multiply;
         background-position: 0 0;
+        // background-blend-mode: multiply;
         
         &.stella { background-image: url('../images/stella.jpg'); }
         &.laffare { background-image: url('../images/laffare.jpg'); }
@@ -447,7 +438,7 @@ button, %button {
     }
 
     .photo-credit {
-        @include font-size(9px, $grid-unit);
+        @include font-size(9px, $v-grid-unit);
         @include transform(rotate(270deg), 100% 0);
         position: absolute;
         width: 100%;
@@ -535,7 +526,6 @@ button, %button {
 
     h3 {
         @extend .m-t-xx;
-        // @extend .m-t-xl-desktop;
 
         span { // date range
             @include font-size(10px, 9px);
@@ -562,9 +552,119 @@ button, %button {
         @extend .m-t-xl;
     }
 
-    // h3 + h4,
     h4 + dl {
         @extend .m-t-sm;
     }
 }
+
+
+
+
+/***************************************
+ * $SLIDER /portfolio
+ ***************************************/
+
+/*ul*/.carousel__items {
+    margin-left: 0;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s, height, cubic-bezier(0, .25, .75, 1);
+
+    li {
+        position: absolute;
+        transition-duration: .2s;
+        transition-property: opacity, transform;
+        // transition-timing-function: cubic-bezier(0, .25, .75, 1);
+        // transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+        // -webkit-transform: translate3d(100px, 0 ,0);
+        transition-timing-function: cubic-bezier(.5, .5, .5, 1);
+        transform: translate3d(150px, 0 ,0);
+        opacity: 0;
+        z-index: 0;
+
+        &.slideOut {
+            transform: translate3d(-150px, 0 ,0);
+        }
+
+        &.current {
+            z-index: 10; // in front of other slide items
+            opacity: 1;
+            // -webkit-transform: translate3d(0, 0 ,0) !important;
+            transform: translate3d(0, 0 ,0) !important;
+        }
+    }
+
+    dl {
+        @extend %cf;
+    }
+    dt {
+        float: left;
+        clear: left;
+    }
+
+    /*div*/.copy {
+        @include font-size(15px, 24px);
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        @extend .p-b-lg;
+
+        & > *:first-child {
+            margin-top: 0;
+            @include font-size(16px);
+        }
+    }
+}
+
+/* Carousel navigation */
+/*ul*/.carousel__thumbnails {
+    display: none; // show in JS after images loaded
+    @extend .m-t-0;
+
+    li {
+        @extend .m-t-md;
+    }
+
+    a {
+        display: block;
+        padding-bottom: 100%; // maintain aspect ratio
+        position: relative;
+        overflow: hidden;
+
+        &:hover h5,
+        &:active h5,
+        &:focus h5,
+        &.active h5 {
+            left: 0;
+        }
+    }
+
+    h5 {
+        // hide and animate in on hover
+        transition: 0.15s, left, cubic-bezier(.5, .5, .5, 1);
+        left: -100%;
+        top: 0;
+        margin-top: 0;
+        position: absolute;
+        z-index: 10;
+
+        span {
+            color: $white;
+            background-color: $red;
+            // color: $red;
+            // background-color: $white;
+            @extend %fix-webkit-font-rendering;
+            padding: 4px 8px;
+            display: table-caption;
+        }
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+    }
+
+}
+
 

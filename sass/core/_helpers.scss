@@ -76,11 +76,78 @@
  * Distribute elements evenly (equidistant)
  * ----------------------------------------------------------------------------
  */
+// unlike grid__item's distribute grid items must have white-space between them,
+// and a mobile width declaration. see template.php for examples
+// .distribute {
+//   text-align: justify !important;
+//   text-justify: distribute-all-lines;
+//   font-size: 0 !important;
+
+//     // analog site specific (due to skinny side columns)
+//     margin-left: -$v-grid-unit*2;
+//     @include media-query(tablet) {
+//         margin-left: -$v-grid-unit;
+//     }
+//     // end analog specific
+
+// }
+//     // analog site specific (due to skinny side columns)
+//     .distribute--small-margins {
+//         margin-left: -$v-grid-unit;
+//         @include media-query(tablet) {
+//             margin-left: 0;
+//         }
+//     }
+//     // end analog specific
+
+// .distribute:after {
+//   content: "";
+//   display: inline-block;
+//   width: 100%;
+// }
+//     .distribute > * {
+//       vertical-align: top;
+//       display: inline-block;
+//       // width: 100%; what?!
+//       text-align: left;
+//       font-size: medium;
+
+//         // analog site specific (due to skinny side columns)
+//         padding-left: $v-grid-unit*2;
+//         // end analog specific
+
+//     }
+//     // analog site specific (due to skinny side columns)
+//     .distribute--small-margins > * {
+//         padding-left: $v-grid-unit;
+//     }
+//     // end analog specific
+
+//     .ie7 .distribute > * {
+//       display: inline;
+//       // zoom: 1;
+//     }
+//     .distribute--middle > * {
+//       vertical-align: middle;
+//     }
+//     .distribute--bottom > * {
+//       vertical-align: bottom;
+//     }
+
 .distribute {
   text-align: justify !important;
   text-justify: distribute-all-lines;
   font-size: 0 !important;
+
+    // analog site specific (due to skinny side columns)
+    margin-left: -$v-grid-unit;
+    @include media-query(tablet) {
+        margin-left: 0;
+    }
+    // end analog specific
+
 }
+
 .distribute:after {
   content: "";
   display: inline-block;
@@ -92,7 +159,13 @@
       // width: 100%; what?!
       text-align: left;
       font-size: medium;
+
+        // analog site specific (due to skinny side columns)
+        padding-left: $v-grid-unit;
+        // end analog specific
+
     }
+
     .ie7 .distribute > * {
       display: inline;
       // zoom: 1;

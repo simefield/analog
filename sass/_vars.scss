@@ -52,11 +52,13 @@ $use-media:         true;
 $black: #000;
 $paper: #ffffef;
 $white: $paper;
-$red: #ff391e;
+// $red: #ff391e;
+$red: #ff3908;
 
 
 
-$grid-unit: 16px!default;
+$grid-unit: 16px !default;
+$v-grid-unit: 20px !default; // vertical grid unit
 
 
 

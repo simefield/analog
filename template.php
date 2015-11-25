@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8">
         <title>Analog</title>
         <meta name="description" content="Analog. Freelance front end web development. Wellington, New Zealand.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
         <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icons/AppIcon76x76.png">
         <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icons/AppIcon60x60@2x.png">
         <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icons/AppIcon76x76@2x.png">
         <link rel="stylesheet" href="/css/style.css">
         <script src='/js/jquery-2.1.0.js'></script>
+        <script src='/js/mustache.js'></script>
+        <script src='/js/imagesloaded.pkgd.js'></script>
     </head>
 
     <body>
@@ -18,39 +21,76 @@
 
             <?php /*
 
-            <div class="hide  grid">
+            // example grids
+
+            <div class="grid">
                <div class="grid__item  tablet-one-quarter  skinny-left-tablet">
-                   <p class='greybox'>One quarter grid</p>
+                   <p class='greybox'>One quarter</p>
                </div><!-- /grid__item
             --><div class="grid__item  tablet-one-half">
-                   <p class=greybox>One half grid</p>
+                   <p class=greybox>One half</p>
                </div><!-- /grid__item
             --><div class="grid__item  tablet-one-quarter  skinny-right-tablet">
-                   <p class='greybox'>One quarter grid</p>
+                   <p class='greybox'>One quarter</p>
                </div><!-- /grid__item
             --><div class="grid__item  tablet-one-half  skinny-left-tablet">
-                   <p class=greybox>One half grid</p>
+                   <p class=greybox>One half</p>
                </div><!-- /grid__item
             --><div class="grid__item  tablet-one-half  skinny-right-tablet">
-                   <p class=greybox>One half grid</p>
+                   <p class=greybox>One half</p>
                </div><!-- /grid__item
             --><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
-                   <p class=greybox>One whole grid</p>
-               </div><!-- /grid__item -->
+                   <p class=greybox>One whole</p>
+               </div><!-- /grid__item
+            --><div class="grid__item  skinny-right-tablet">
+                   <div class='distribute'>
+                        <!-- unlike grid__item's distribute grid items must have white-space between them, and a mobile width declaration -->
+                        <div class="mobile-one-half  tablet-one-fifth">
+                           <p class='greybox'>One fifth</p>
+                       </div>
+                       <div class="mobile-one-half  tablet-one-fifth">
+                           <p class='greybox'>One fifth</p>
+                       </div>
+                       <div class="mobile-one-half  tablet-one-fifth">
+                           <p class='greybox'>One fifth</p>
+                       </div>
+                       <div class="mobile-one-half  tablet-one-fifth">
+                           <p class='greybox'>One fifth</p>
+                       </div>
+                       <div class="mobile-one-half  tablet-one-fifth">
+                           <p class='greybox'>One fifth</p>
+                       </div>
+                    </div><!-- /distribute -->
+               </div><!-- /grid__item
+            --><div class="grid__item  skinny-right-tablet">
+                   <div class='distribute'>
+                        <!-- unlike grid__item's distribute grid items must have white-space between them, and a mobile width declaration -->
+                        <div class="mobile-one-whole  tablet-two-fifths">
+                           <p class='greybox'>Two fifths</p>
+                       </div>
+                       <div class="mobile-one-whole  tablet-three-fifths">
+                           <p class='greybox'>Three fifths</p>
+                       </div>
+                    </div><!-- /distribute -->
+               </div><!-- /grid__item
+            -->
             </div><!-- /grid -->
-            
             */ ?>
+
 
             <div class="grid">
 
                <div class="grid__item  mobile-two-thirds  tablet-one-half  skinny-left-tablet">
                    <ul class='nav  main-nav'>
                         <?php /*
-                        <!-- <li><a href="/projects/">Projects</a>
+                        <!-- 
                         <li><a href="/articles/">Articles</a> -->
                         <li><a href="/apps/">Apps</a>
-                        */ ?>
                         <li><a href="http://www.richardsime.com/">Portfolio</a>
+                        <li><a href="/cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
+                        */ ?>
+                        <li><a href="/projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>">Projects</a>
+                        <li><a href="/apps/" class="<?php echo ($content == 'apps.php') ? 'active' : ''?>">Apps</a>
                     </ul>
                </div><!-- /grid__item
             --><div class="grid__item  p-l-0-mobile  mobile-one-third  tablet-one-half  skinny-right-tablet">
@@ -63,14 +103,14 @@
             --><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
                     <a class='logo' href="/"><img src='/images/analog.png' alt='Analog logo'></a>
                </div><!-- /grid__item
-            --><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
+            --><?php if (isset($photoClass)) { ?><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
                     <div><!-- must nest for skinny- type margins -->
                         <div class="hero">
                             <div class="hero__image  <?= $photoClass ?>"></div>
                             <span class='photo-credit'><i><?= $photoCredit[1] ?></i> by <?= $photoCredit[0] ?>, <?= $photoCredit[2] ?></span>
                         </div>
                     </div>
-                </div><!-- /grid__item -->
+                </div><?php } ?><!-- /grid__item -->
 
             </div><!-- /grid -->
 
@@ -82,8 +122,6 @@
 
         <script src='/js/common.js'></script>
 
-        <!-- analog.co.nz tracking code
-        -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
