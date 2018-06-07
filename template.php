@@ -17,70 +17,8 @@
     </head>
 
     <body>
-
         <div class='content'>
-
-            <?php /*
-
-            // example grids
-
             <div class="grid">
-               <div class="grid__item  tablet-one-quarter  skinny-left-tablet">
-                   <p class='greybox'>One quarter</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  tablet-one-half">
-                   <p class=greybox>One half</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  tablet-one-quarter  skinny-right-tablet">
-                   <p class='greybox'>One quarter</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  tablet-one-half  skinny-left-tablet">
-                   <p class=greybox>One half</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  tablet-one-half  skinny-right-tablet">
-                   <p class=greybox>One half</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
-                   <p class=greybox>One whole</p>
-               </div><!-- /grid__item
-            --><div class="grid__item  skinny-right-tablet">
-                   <div class='distribute'>
-                        <!-- unlike grid__item's distribute grid items must have white-space between them, and a mobile width declaration -->
-                        <div class="mobile-one-half  tablet-one-fifth">
-                           <p class='greybox'>One fifth</p>
-                       </div>
-                       <div class="mobile-one-half  tablet-one-fifth">
-                           <p class='greybox'>One fifth</p>
-                       </div>
-                       <div class="mobile-one-half  tablet-one-fifth">
-                           <p class='greybox'>One fifth</p>
-                       </div>
-                       <div class="mobile-one-half  tablet-one-fifth">
-                           <p class='greybox'>One fifth</p>
-                       </div>
-                       <div class="mobile-one-half  tablet-one-fifth">
-                           <p class='greybox'>One fifth</p>
-                       </div>
-                    </div><!-- /distribute -->
-               </div><!-- /grid__item
-            --><div class="grid__item  skinny-right-tablet">
-                   <div class='distribute'>
-                        <!-- unlike grid__item's distribute grid items must have white-space between them, and a mobile width declaration -->
-                        <div class="mobile-one-whole  tablet-two-fifths">
-                           <p class='greybox'>Two fifths</p>
-                       </div>
-                       <div class="mobile-one-whole  tablet-three-fifths">
-                           <p class='greybox'>Three fifths</p>
-                       </div>
-                    </div><!-- /distribute -->
-               </div><!-- /grid__item
-            -->
-            </div><!-- /grid -->
-            */ ?>
-
-
-            <div class="grid">
-
                <div class="grid__item  mobile-two-thirds  tablet-one-half  skinny-left-tablet">
                    <ul class='nav  main-nav'>
                         <?php /*
