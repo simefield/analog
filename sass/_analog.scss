@@ -308,11 +308,13 @@ body {
     background-color: $paper;
     margin-left: auto;
     margin-right: auto;
-    padding: $grid-unit/2 $grid-unit*1.5 $grid-unit*3;
+    // padding: $grid-unit/2 $grid-unit*1.5 $grid-unit*3;
+    padding: $grid-unit/2 $grid-unit*1 $grid-unit*3;
 
     @media (min-width: $screen-md) {
       // padding: $grid-unit*3 $grid-unit*3 $grid-unit*4;
-      padding: $grid-unit $grid-unit*3 $grid-unit*4;
+      // padding: $grid-unit $grid-unit*3 $grid-unit*4;
+      padding: $grid-unit $grid-unit*1 $grid-unit*4;
     }
 
     @media (min-width: $screen-lg) {

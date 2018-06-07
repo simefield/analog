@@ -4,30 +4,30 @@
 /*!*
  * inuitcss.com -- @inuitcss -- @csswizardry
  */
-// 
+//
 // inuit.css acts as a base stylesheet which you should extend with your own
 // theme stylesheet.
-// 
+//
 // inuit.css aims to do the heavy lifting; sorting objects and abstractions,
 // design patterns and fiddly bits of CSS, whilst leaving as much design as
 // possible to you. inuit.css is the scaffolding to your decorator.
-// 
+//
 // This stylesheet is heavily documented and contains lots of comments, please
 // take care to read and refer to them as you build. For further support please
 // tweet at @inuitcss.
-// 
+//
 // Owing to the amount of comments please only ever use minified CSS in
 // production. This file is purely a dev document.
-// 
+//
 // The table of contents below maps to section titles of the same name, to jump
 // to any section simply run a find for $[SECTION-TITLE].
-// 
+//
 // Most objects and abstractions come with a chunk of markup that you should be
 // able to paste into any view to quickly see how the CSS works in conjunction
 // with the correct HTML.
-// 
+//
 // inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines
-// 
+//
 /* LICENSE
  *
  * Copyright 2013 Harry Roberts
@@ -54,17 +54,17 @@
 // ------------------------------------
 // $CONTENTS
 // ------------------------------------
-// 
+//
 // CONTENTS............You’re reading it!
 // WARNING.............Here be dragons!
 // IMPORTS.............Begin importing the sections below
-// 
+//
 // MIXINS..............Super-simple Sass stuff
 // NORMALIZE...........normalize.css
 // RESET...............Set some defaults
 // CLEARFIX............
 // SHARED..............Shared declarations
-// 
+//
 // MAIN................High-level elements like `html`, `body`, etc.
 // HEADINGS............Double-stranded heading hierarchy
 // PARAGRAPHS..........
@@ -75,7 +75,7 @@
 // IMAGES..............
 // TABLES..............
 // FORMS...............
-// 
+//
 // GRIDS...............Fluid, proportional and nestable grids
 // FLEXBOX.............Crudely emulate flexbox
 // COLUMNS.............CSS3 columns
@@ -100,14 +100,14 @@
 // RULES...............Horizontal rules
 // STATS...............Simple stats object
 // GREYBOX.............Wireframing styles
-// 
+//
 // WIDTHS..............Width classes for use alongside the grid system etc.
 // PUSH................Push classes for manipulating grids
 // PULL................Pull classes for manipulating grids
 // BRAND...............Helper class to apply brand treatment to elements
 // HELPER..............A series of helper classes to use arbitrarily
 // DEBUG...............Enable to add visual flags for debugging purposes
-// 
+//
 
 
 
