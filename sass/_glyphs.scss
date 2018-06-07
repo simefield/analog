@@ -13,12 +13,8 @@
  */
 
 @font-face {
-    font-family: 'glyph';
-    src: url('/fonts/elusive.eot');
-    src: url('/fonts/elusive.eot?#iefix') format('embedded-opentype'), 
-         url('/fonts/elusive.woff') format('woff'),
-         url('/fonts/elusive.ttf') format('truetype'),
-         url('/fonts/elusive.svg#glyph') format('svg');
+    font-family: "glyph";
+    src: url("../fonts/elusive.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
