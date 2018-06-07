@@ -3075,9 +3075,9 @@ h1::first-letter {
       border-right: 1px solid rgba(100, 100, 100, 0.07); } }
 
 button, .button, .main-nav a {
-  border: none;
-  color: #ffffef;
-  background-color: #ff443d;
+  color: #ff443d;
+  background-color: transparent;
+  border: 1px solid #ff443d;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: 10px;
@@ -3096,7 +3096,7 @@ button, .button, .main-nav a {
       padding-left: 30px;
       margin-right: 20px; } }
   button:focus, button:hover, button:active, button.active, .button:focus, .button:hover, .button:active, .button.active, .main-nav a:focus, .main-nav a:hover, .main-nav a:active, .main-nav a.active {
-    background-color: #000;
+    background-color: #ff443d;
     color: #ffffef; }
   button.block, .button.block, .main-nav a.block {
     width: 100%; }
@@ -3135,12 +3135,10 @@ button, .button, .main-nav a {
 /*a*/
 .logo {
   display: inline-block;
-  margin-top: 14px;
-  margin-bottom: 23px; }
+  margin-top: 14px; }
   @media (min-width: 48em) {
     .logo {
-      margin-top: 20px;
-      margin-bottom: 29px; } }
+      margin-top: 20px; } }
   .logo img {
     width: 148px; }
     @media (min-width: 48em) {
@@ -3157,7 +3155,7 @@ button, .button, .main-nav a {
   padding-bottom: 100%; }
   @media (min-width: 48em) {
     .hero {
-      padding-bottom: 66.666666666%; } }
+      padding-bottom: 56.25%; } }
 
 .hero__image {
   width: 100%;
@@ -3167,9 +3165,10 @@ button, .button, .main-nav a {
   top: 0;
   left: 0;
   z-index: 10;
-  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-position: 0 0; }
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center; }
   .hero__image.stella {
     background-image: url("../images/stella.jpg"); }
   .hero__image.laffare {
@@ -3195,7 +3194,7 @@ button, .button, .main-nav a {
   top: 0; }
   @media (min-width: 48em) {
     .photo-credit {
-      width: 66.666666666%; } }
+      width: 56.25%; } }
 
 /***************************************
  * $ASIDES

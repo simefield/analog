@@ -324,10 +324,12 @@ body {
 }
 
 button, .button, %button {
-    border: none;
+    // border: none;
     @extend %fix-webkit-font-rendering;
-    color: $paper;
-    background-color: $red;
+    // color: $paper;
+    color: $red;
+    background-color: transparent;
+    border: 1px solid $red;
     padding-right: $v-grid-unit;
     padding-left: $v-grid-unit;
     margin-right: $v-grid-unit/2;
@@ -349,8 +351,8 @@ button, .button, %button {
     &:hover,
     &:active,
     &.active {
-        background-color: $black;
-        color: $white;
+        background-color: $red;
+        color: $paper;;
     }
 
     &.block {
@@ -393,10 +395,10 @@ button, .button, %button {
 /*a*/.logo {
     display: inline-block;
     margin-top: 14px;
-    margin-bottom: 23px;
+    // margin-bottom: 23px;
     @media (min-width: $screen-md) {
         margin-top: 20px;
-        margin-bottom: 29px;
+        // margin-bottom: 29px;
     }
 
     img {
@@ -426,7 +428,8 @@ button, .button, %button {
     // maintain image ratio
     padding-bottom: 100%; // square
     @media (min-width: $screen-md) {
-        padding-bottom: 66.666666666%; // 1.5 : 1
+        // padding-bottom: 66.666666666%; // 1.5 : 1
+        padding-bottom: 56.25%; // 16:9
     }
 }
 
@@ -438,10 +441,14 @@ button, .button, %button {
         top: 0;
         left: 0;
         z-index: 10;
-        background-size: auto 100%;
+        // background-size: auto 100%;
         background-repeat: no-repeat;
-        background-position: 0 0;
+        // background-position: 0 0;
         // background-blend-mode: multiply;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+
 
         &.stella { background-image: url('../images/stella.jpg'); }
         &.laffare { background-image: url('../images/laffare.jpg'); }
@@ -457,7 +464,8 @@ button, .button, %button {
         right: 0;
         top: 0;
         @media (min-width: $screen-md) {
-            width: 66.666666666%;
+            // width: 66.666666666%;
+            width: 56.25%;
         }
     }
 
