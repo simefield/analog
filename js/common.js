@@ -69,7 +69,7 @@ $(document).ready(function () {
      ------------------------*/
 
     // $(function() {
-        $.getJSON('/data.json', function(data) {
+        $.getJSON('data.json', function(data) {
             var template1 = $('#carousel-tmpl').html();
             Mustache.parse(template1); // optional, speeds up future uses
             var rendered1 = Mustache.to_html(template1, data);

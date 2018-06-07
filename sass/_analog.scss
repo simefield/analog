@@ -25,29 +25,26 @@
 /*!
  * @license
  * MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: Neue Haas Grotesk Std Display 75 Bold by Linotype
  * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-display-75-bold/
  * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
  * Licensed pageviews: 250,000
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715
- * 
+ *
  * © 2014 MyFonts Inc
 */
 @font-face {
     font-family: 'NHaasGroteskDSStd-75Bd';
-    src: url('../fonts/NHaasGroteskDSStd-75Bd.eot');
-    src: url('../fonts/NHaasGroteskDSStd-75Bd.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NHaasGroteskDSStd-75Bd.woff') format('woff'),
-        url('../fonts/NHaasGroteskDSStd-75Bd.ttf') format('truetype');
+    src: url('../fonts/NHaasGroteskDSStd-75Bd.woff') format('woff');
     // the following beautifies rendering
     font-weight: 700;
 }
@@ -218,7 +215,7 @@ p + h3 { margin-top: 1.9375em; } // 31px
 // h5 {
 //     @include font-size(16px, 32px);
 // }
-// h4, h5, h6 { 
+// h4, h5, h6 {
 //     @include font-size(13px, 24px);
 // }
 
@@ -282,10 +279,10 @@ a {
  ***************************************/
  // * Any css in this header.scss file will target the website header section only
  // * this will include the utility navigation, search, logo and main navigation.
- 
+
 .hide {display: none;}
 
-body {  
+body {
 //  overflow-y: scroll; /* has to be scroll, not auto */
 //  -webkit-overflow-scrolling: touch;
 }
@@ -386,7 +383,7 @@ button, .button, %button {
         margin-top: 84px;
         margin-bottom: 17px;
     }
-    
+
     img {
         width: 148px;
         // width: 158px;
@@ -430,7 +427,7 @@ button, .button, %button {
         background-repeat: no-repeat;
         background-position: 0 0;
         // background-blend-mode: multiply;
-        
+
         &.stella { background-image: url('../images/stella.jpg'); }
         &.laffare { background-image: url('../images/laffare.jpg'); }
         &.sky { background-image: url('../images/sky.jpg'); }
@@ -510,7 +507,7 @@ button, .button, %button {
     h2 {
         @extend .m-t-xx;
         border-bottom: 1px solid $black;
-        // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/ 
+        // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/
         @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
             border-bottom: none;
             background-image: linear-gradient(0deg, $paper, transparent 50%, $black 50%);
@@ -666,5 +663,3 @@ button, .button, %button {
     }
 
 }
-
-

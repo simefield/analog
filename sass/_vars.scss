@@ -77,4 +77,3 @@ $screen-lg:                     56.0625em !default; // 897px
 $one-pixel:                     1/16 + 0em; // 1px = 0.0625ems (1/16)
 $screen-sm-max:                 ($screen-md - $one-pixel) !default;
 $screen-md-max:                 ($screen-lg - $one-pixel) !default;
-

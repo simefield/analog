@@ -13,12 +13,7 @@ touch-icons/AppIcon76x76@2x.png
 affordance-select.gif
 
 #FONTS
-fonts/elusive.eot
-fonts/elusive.svg
-fonts/elusive.ttf
 fonts/elusive.woff
-fonts/NHaasGroteskDSStd-75Bd.eot
-fonts/NHaasGroteskDSStd-75Bd.ttf
 fonts/NHaasGroteskDSStd-75Bd.woff
 
 #HTML FILES
@@ -26,7 +21,6 @@ fonts/NHaasGroteskDSStd-75Bd.woff
 
 #CSS FILES
 typesetter.css
-
 
 #JAVASCRIPT FILES
 jquery-2.1.0.min.js

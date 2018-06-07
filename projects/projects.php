@@ -1,5 +1,5 @@
 <script id='carousel-tmpl' type='text/template'>
-{{#apps}}<li class='distribute'>
+{{#websites}}<li class='distribute'>
          <div class="one-whole  p-r-md-tablet">
             <h1 class="m-t-0">{{{title}}}
             {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}</span>{{/site}}
@@ -10,7 +10,7 @@
         </div>
         <div class="mobile-one-whole  tablet-two-fifths  p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
             <div class='copy'>
-                <p><b>Designer / developer</b><br>
+                <p><b>Lead front-end</b><br>
                 Produced at <a href="{{productionUrl}}">{{production}}</a>
                     {{#partner}}<br>{{partnerRole}} by <a href="{{partnerUrl}}">{{partner}}</a>{{/partner}}
                 </p>
@@ -19,7 +19,7 @@
                 {{{blurb}}}
             </div>
         </div>
-    </li>{{/apps}}
+    </li>{{/websites}}
 </script>
 <?php /*
     <dl>
@@ -31,14 +31,14 @@
 */ ?>
 
 <script id='carousel-thumbnails-tmpl' type='text/template'>
-{{#apps}}
+{{#websites}}
     <li class="mobile-one-half  tablet-one-fifth">
         <a href="" onclick='return false;'>
             <h5><span>{{{title}}}</span></h5>
             <img src="images/portfolio/thumb-{{image}}" alt="screenshot of {{site}} website">
         </a>
     </li>
-{{/apps}}
+{{/websites}}
 </script>
 
 <div class="grid">
@@ -109,8 +109,6 @@
                             <dt>Awards: </dt><dd>Best, bronze</dd>
                         </dl>
                         <p>Gibson Sheat on life for deaf New Zealanders, deaf culture and New Zealand Sign Language to help strengthen the rights of Deaf people and give them the confidence to be an active part of society.</p>
-                        <p>Once a year the website switches themes to put on an entirely new look for New Zealand Sign Language week.</p>
-                        <p>Once a year the website switches themes to put on an entirely new look for New Zealand Sign Language week.</p>
                         <p>Once a year the website switches themes to put on an entirely new look for New Zealand Sign Language week.</p>
                     </div><!-- /copy -->
                 </div>

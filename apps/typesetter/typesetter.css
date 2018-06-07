@@ -1154,27 +1154,26 @@
 /*!
  * @license
  * MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: Neue Haas Grotesk Std Display 75 Bold by Linotype
  * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-display-75-bold/
  * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
  * Licensed pageviews: 250,000
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715
- * 
+ *
  * © 2014 MyFonts Inc
 */
 @font-face {
   font-family: 'NHaasGroteskDSStd-75Bd';
-  src: url("fonts/NHaasGroteskDSStd-75Bd.eot");
-  src: url("fonts/NHaasGroteskDSStd-75Bd.eot?#iefix") format("embedded-opentype"), url("fonts/NHaasGroteskDSStd-75Bd.woff") format("woff"), url("fonts/NHaasGroteskDSStd-75Bd.ttf") format("truetype");
+  src: url("fonts/NHaasGroteskDSStd-75Bd.woff") format("woff");
   font-weight: 700; }
 /***************************************
  * $FONT EXTENDERS
