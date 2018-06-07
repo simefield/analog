@@ -39,7 +39,7 @@
                         <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
                     </ul>
                </div><!-- /grid__item
-            --><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
+            --><div class="grid__item  skinny-left-tablet  skinny-right-tablet text--right">
                     <a class="logo" href=""><img src="images/analog.png" alt="Analog logo"></a>
                </div><!-- /grid__item
             --><?php if (isset($photoClass)) { ?><div class="grid__item  skinny-left-tablet  skinny-right-tablet">

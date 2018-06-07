@@ -24,7 +24,7 @@
 <?php /*
     <dl>
         <dt></dt><dd>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{site}}{{#siteUrl}}</a>{{/siteUrl}}</dd>
-        <dt></dt><dd>Lead front-end</dd>
+        <dt></dt><dd>Lead Front End</dd>
         <dt>Produced at </dt><dd><a href="{{productionUrl}}">{{production}}</a></dd>
         {{#partner}}<dt>{{partnerRole}} by </dt><dd><a href="{{partnerUrl}}">{{partner}}</a></dd>{{/partner}}
     </dl>

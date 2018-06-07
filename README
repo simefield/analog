@@ -8,4 +8,4 @@ And `Sites` is [configured to be Apache served](https://discussions.apple.com/do
 
 `sass --watch sass/style.scss:css/style.css`
 
-Browse to http://localhost/~apple/analog/
+Browse to http://localhost/~<short-user-name($ whoami)>/analog/

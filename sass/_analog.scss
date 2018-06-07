@@ -273,6 +273,19 @@ a {
 
 
 
+/**
+ * Links
+ * ----------------------------------------------------------------------------
+ */
+h1 {
+  // text-transform: lowercase !important;
+  &::first-letter {
+    color: $red;
+  }
+  // &::after { content: '.'; }
+}
+
+
 
 /***************************************
  * $HEADER
@@ -298,13 +311,15 @@ body {
     padding: $grid-unit/2 $grid-unit*1.5 $grid-unit*3;
 
     @media (min-width: $screen-md) {
-        padding: $grid-unit*3 $grid-unit*3 $grid-unit*4;
+      // padding: $grid-unit*3 $grid-unit*3 $grid-unit*4;
+      padding: $grid-unit $grid-unit*3 $grid-unit*4;
     }
 
     @media (min-width: $screen-lg) {
-        margin-top: $grid-unit*3;
-        margin-bottom: $grid-unit*3;
-        border: 1px solid rgba(100,100,100,0.07);
+        // margin-top: $grid-unit*3;
+        // margin-bottom: $grid-unit*3;
+        border-left: 1px solid rgba(100,100,100,0.07);
+        border-right: 1px solid rgba(100,100,100,0.07);
     }
 }
 
@@ -377,11 +392,11 @@ button, .button, %button {
 
 /*a*/.logo {
     display: inline-block;
-    margin-top: 53px;
-    margin-bottom: 8px;
+    margin-top: 14px;
+    margin-bottom: 23px;
     @media (min-width: $screen-md) {
-        margin-top: 84px;
-        margin-bottom: 17px;
+        margin-top: 20px;
+        margin-bottom: 29px;
     }
 
     img {

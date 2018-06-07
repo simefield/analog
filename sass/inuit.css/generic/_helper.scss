@@ -27,6 +27,11 @@
 .text--center   { text-align:center!important; }
 .text--right    { text-align:right !important; }
 
+/**
+ * White space
+ */
+.whiteSpace--nowrap { white-space:nowrap !important; }
+
 
 /**
  * Font weights
@@ -182,4 +187,3 @@
         }
     }
 }
-

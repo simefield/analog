@@ -1,9 +1,14 @@
 <div class="grid">
    <div class="grid__item  tablet-one-half  push--tablet-one-quarter">
      <!-- <h1>Welcome</h1> -->
-     <h1>A bit about me and what I&nbsp;do</h1>
-     <p>I remember the day a friend first explained to me the power of a thing called a “stylesheet”. It sounds silly now, but I was gob-smacked to learn I could change the colours of <i>all</i> the links on a website by defining it in just one place.</p>
-     <p>Fortunately I've come a wee way since knowing a-bit-less-than-nothing. Today I’m proud to say I have embraced the power of CSS and enjoy the challenges of wielding this somewhat cumbersome language with grace.</p>
+     <h1>About what I&nbsp;do</h1>
+     <p>I remember the day a friend first told me of something called a “stylesheet”. It sounds silly now, but I was gob-smacked to learn I could change the colour of <i>all</i> the links on a website by defining it in just one place.</p>
+     <p>Since then, both CSS and myself have come a long way. This once beastly lanuage has been domesticated, and I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code.</p>
+     <p>My background was in the more artistic realm of digital multimedia (3D modelling, animation, &c.). I then went on to work in print and digital design, and desktop publishing. It was around the same time I practised web design and development in earnest.</p>
+     <p>My appetite for beautiful web design and typography was largely satisfied during my tenure at Springload, though it also spoiled me in the same way teaching your enemies about bad ke<span style="letter-spacing: -.05em;">r</span>n<span style="letter-spacing: .1em;">i</span>ng can do.</p>
+     <p>During this period, my inner OOCSS (object-oriented CSS) self was awakened through the musings of the rockstars of front-end development such as Paul Irish, Doug Bowman, Ethan Marcotte and Harry Roberts, to name but a few.</p>
+     <p>More recently, while working at Alphero, I have developed AINT – a lean SASS framework designed for rapid development, lightweight stylesheets, and robust and maintainable code. It incorporates BEM-esque naming (we call it “Better-than-BEM”) and has been influenced by frameworks such as INUITCSS, ITCSS, and SUITCSS.</p>
+
     <!-- <h1>This Gun for Hire</h1>
     <p>Howdy. This is my equine friend Stella and I’m Richard Sime, a freelance front end web developer. I've been wrangling websites for more than ten years now. In fact you’re probably familiar with some of my handiwork.</p>
     <p>Having worked with some of Wellington’s top design agencies, I have lead the front end build on sites including: Kiwibank, Wellington Airport, NZ International Arts Festival, CreativeNZ, the Australian School of Business and numerous other high profile clients. <a href="projects/">Mosey on over to my projects</a>.</p>
