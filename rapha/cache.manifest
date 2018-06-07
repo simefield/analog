@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# Cache manifest version 0.0.1
+
+
+# Touch icons
+AppIcon76x76.png
+AppIcon60x60@2x.png
+AppIcon76x76@2x.png
+
+
+# Files
+common.js
+data.json
+g.bar.js
+g.pie.js
+main.css
+# index.html // caching this is implied
+
+# CDN files
+//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js
+//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js
+//cdnjs.cloudflare.com/ajax/libs/graphael/0.5.1/g.raphael-min.js

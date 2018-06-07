@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    overflow: hidden;
+}
+
+/*
+#f03f35  red
+#b7e3e4  duck egg
+#518086  mid-green
+#275c6c  dark-green
+*/
+
+body {
+    font-family: 'DINCondensed-Bold';
+    color: #275c6c;
+    background-color: #b7e3e4;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+h2 {
+    color: #518086;
+    text-transform: lowercase;
+    padding: 18px 20px 16px;
+    letter-spacing: 1px;
+    background: white;
+}
+
+/*ul*/
+.nav {
+    list-style: none;
+    width: 100%;
+    background: white;
+}
+    /* li */
+    .nav__item {
+        width: 50%;
+        display: inline-block;
+    }
+    .current {
+        background-color: #b7e3e4;
+    }
+        .current a {
+            color: #fff;
+        }
+        a {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            color: #b7e3e4;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            padding: 18px 0 16px;
+            letter-spacing: 2px;
+        }
+
+/* Pie chart text */
+/*h3*/
+.percent {
+    display: none; /* show in JS */
+    position: absolute;
+    top: 265px;
+    color: #f03f35;
+    font-size: 20px;
+    line-height: 38px;
+    width: 156px;
+    left: 82px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.percent b {
+    display: block;
+    font-weight: normal;
+    font-size: 76px;
+    letter-spacing: 0;
+    text-indent: 5px;
+}
+
+.percent sup {
+    font-size: 36px;
+    text-align: top;
+}

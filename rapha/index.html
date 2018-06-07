@@ -1,0 +1,33 @@
+<html manifest='cache.manifest'>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel='stylesheet' href='main.css' media='all'>
+        <meta name="apple-mobile-web-app-title" content="gRaphaël">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" sizes="76x76" href="AppIcon76x76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="AppIcon60x60@2x.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="AppIcon76x76@2x.png">
+        <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/graphael/0.5.1/g.raphael-min.js'></script>
+        <!--script src='//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.0/fastclick.min.js'></script-->
+        <script src='g.bar.js'></script>
+        <script src='g.pie.js'></script>
+    </head>
+
+    <body>
+        <h2>analog.co.nz stats</h2>
+        <ul class='nav'>
+            <li class='nav__item  current'><a data-show="chart1" href="#">Users</a>
+            <li class='nav__item'><a data-show="chart2" href="#">Country</a>
+        </ul>
+        <div id="holder1" class='needsclick'></div>
+        <div id="holder2">
+            <h3 class='percent'><span class='country'>United States</span><b><span class='value'>21</span><sup>%<sup></b></h3>
+        </div>
+        <script src='common.js'></script>
+    </body>
+
+</html>
