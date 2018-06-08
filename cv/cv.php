@@ -1,7 +1,11 @@
 <div class="grid">
-  <div class="grid__item  desktop-one-half  push--desktop-one-quarter">
+  <div class="grid__item  tablet-three-quarters  push--tablet-one-quarter">
+    <h1>Curriculum&nbsp;Vitæ of Richard&nbsp;Sime</h1>
+  </div>
+</div>
+<div class="grid">
+  <div class="grid__item  tablet-one-half  push--tablet-one-quarter">
     <div><!-- must nest hero image to respect skinny- type margins -->
-      <h1>Curriculum&nbsp;Vitæ of Richard&nbsp;Sime</h1>
       <div class="cv">
         <h2>Employment</h2>
         <ul>
@@ -12,7 +16,7 @@
               <dt>Role:</dt><dd>Front End Developer</dd>
             </dl>
             <p>Alphero are a fast-growing design-led digital development company offering end-to-end solutions for Android, iOS and web.</p>
-            <p>As a member of the web team, I led the front-end build on a number of projects including—in no particular order: The <span class="whiteSpace--nowrap">Co-operative</span> Bank, FMG, MFAT, MyMSD, Overseer, and Paymark (got you! they’re alphabetical).</p>
+            <p>As a member of the web team, I led the front-end build on a number of projects including—in no particular order: The <span class="whiteSpace--nowrap">Co-operative</span> Bank, FMG, MFAT, MyMSD, Overseer, and Paymark (jokes! they’re alphabetical).</p>
             <p>After a couple of years at Alphero working with a mix of my favourite CSS frameworks I decided to put my hand to formalising an in-house boilerplate. Out of my jumble of experience, development, and borrowed code I wrote what was to become Alphero‘s standard SASS framework, AINT (Alphero’s Inverted Triangle). AINT gives our web developers a running start on our projects and has proven quick and lean, with our average CSS files weighing in at anywhere from 4,000-7,000 lines of compiled code. It has been used on every web project since early 2016, and it continues to be refined and improved upon.</p>
           </li>
           <!-- <li>
@@ -82,7 +86,7 @@
             </dl>
           </li>
         </ul>
-        <h2>Technologies</h2>
+        <!-- <h2>Technologies</h2>
         <ul>
           <li>
             <p class='m-t-xl'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
@@ -103,15 +107,40 @@
               <a href="mailto:carl@springload.co.nz">carl@springload.co.nz</a><br>
               <a href="tel:+64-4-801-8205">+64 4 801 8205</a>
             </p>
-            <!-- <p class='m-t-lg'>
+            <p class='m-t-lg'>
               <b>Mark Delaney</b><br>
               Intergen, UX Design Team Practice Lead<br>
               <a href="mailto:mark.delaney@intergen.co.nz">mark.delaney@intergen.co.nz</a><br>
               <a href="tel:+64-4-472-2021">+64 4 472 2021</a>
-            </p> -->
+            </p>
           </li>
-        </ul>
+        </ul> -->
       </div><!-- /cv -->
     </div><!-- /skinny nested element -->
-  </div><!-- /grid__item-->
+  </div><!-- /grid__item
+  --><div class="grid__item  tablet-one-quarter  skinny-right-tablet  push--tablet-one-quarter">
+    <h3 class='m-t-xx'>Technologies</h3>
+      <ul class="u-listReset">
+        <li>
+          <p>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
+        </li>
+      </ul>
+      <h3 class='m-t-xl'>Referees</h3>
+      <ul class="u-listReset">
+        <li>
+          <p>
+            <b>Craig Eades</b><br>
+            Alphero, Principal Consultant<br>
+            <a href="mailto:craig@alphero.com">craig@alphero.com</a><br>
+            <a href="tel:+64-21-611-800">+64 21 611 800</a>
+          </p>
+          <p class='m-t-lg'>
+            <b>Carl Steward</b><br>
+            Springload, Director<br>
+            <a href="mailto:carl@springload.co.nz">carl@springload.co.nz</a><br>
+            <a href="tel:+64-4-801-8205">+64 4 801 8205</a>
+          </p>
+        </li>
+      </ul>
+  </div><!-- /grid__item
 </div><!-- /grid -->

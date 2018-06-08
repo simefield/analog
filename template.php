@@ -19,8 +19,8 @@
     <body>
         <div class='content'>
             <div class="grid">
-               <div class="grid__item  mobile-two-thirds  tablet-one-half  skinny-left-tablet">
-                   <ul class='nav  main-nav'>
+               <div class="grid__item  mobile-one-half  tablet-one-half  skinny-left-tablet">
+                   <ul class='main-nav'>
                         <?php /*
                         <!--
                         <li><a href="articles/">Articles</a> -->
@@ -28,11 +28,11 @@
                         <li><a href="http://www.richardsime.com/">Portfolio</a>
                         <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
                         */ ?>
-                        <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>">Projects</a>
-                        <li><a href="apps/" class="<?php echo ($content == 'apps.php') ? 'active' : ''?>">Apps</a>
+                        <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
+                        <li><a href="apps/" class="<?php echo ($content == 'apps.php') ? 'active' : ''?>"><span>Apps</span></a>
                     </ul>
                </div><!-- /grid__item
-            --><div class="grid__item  p-l-0-mobile  mobile-one-third  tablet-one-half  skinny-right-tablet">
+            --><div class="grid__item  p-l-0-mobile  mobile-one-half  tablet-one-half  skinny-right-tablet">
                    <ul class='nav  nav--stacked  contact'>
                         <li class='hide_mobile'>Say g’day
                         <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
@@ -46,7 +46,9 @@
                     <div><!-- must nest for skinny- type margins -->
                         <div class="hero">
                             <div class="hero__image  <?= $photoClass ?>"></div>
-                            <span class='photo-credit'><i><?= $photoCredit[1] ?></i> by <?= $photoCredit[0] ?>, <?= $photoCredit[2] ?></span>
+                            <span class='photo-credit'>
+                              <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
+                            </span>
                         </div>
                     </div>
                 </div><?php } ?><!-- /grid__item -->

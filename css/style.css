@@ -526,7 +526,7 @@
 /*!
  * $HELPERS */
 /*
- * Since v22, Chrome makes fat sausage horrible web typography. Fix it with 
+ * Since v22, Chrome makes fat sausage horrible web typography. Fix it with
  * these properties right here. Maybe consider scoping this to a class for
  * chrome/mac osx only at some point?
  */
@@ -553,12 +553,12 @@
  * Lists
  * ----------------------------------------------------------------------------
  */
-.cv ul {
+.cv ul, .u-listReset {
   margin-top: 0;
   margin-left: 0;
   list-style: none;
 }
-.cv ul li {
+.cv ul li, .u-listReset li {
   padding-bottom: 0;
   list-style-image: none;
   padding-left: 0;
@@ -3775,8 +3775,6 @@ h1::first-letter {
 }
 
 button, .button, .main-nav a {
-  color: #ff443d;
-  background-color: transparent;
   border: 1px solid #ff443d;
   padding-right: 20px;
   padding-left: 20px;
@@ -3785,6 +3783,8 @@ button, .button, .main-nav a {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.7142857143;
+  background-color: #ff443d;
+  color: #ffffef;
 }
 a > button, a > .button, .main-nav a > a {
   margin-right: 0;
@@ -3800,8 +3800,8 @@ a > button, a > .button, .main-nav a > a {
   }
 }
 button:focus, button:hover, button:active, button.active, .button:focus, .button:hover, .button:active, .button.active, .main-nav a:focus, .main-nav a:hover, .main-nav a:active, .main-nav a.active {
-  background-color: #ff443d;
-  color: #ffffef;
+  background-color: transparent;
+  color: #ff443d;
 }
 button.block, .button.block, .main-nav a.block {
   width: 100%;
@@ -3810,26 +3810,50 @@ button.small, .button.small, .main-nav a.small {
   padding: 0 11px;
 }
 
-/*ul*/
+.main-nav {
+  margin-top: 8px;
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+}
+@media (min-width: 48em) {
+  .main-nav {
+    margin-top: 16px;
+  }
+}
 .main-nav a {
-  font-size: 9px;
-  font-size: 0.5625rem;
-  line-height: 3.5555555556;
-  min-width: 72px;
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 2.4;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: #ff443d;
 }
 @media (min-width: 48em) {
   .main-nav a {
-    min-width: 104px;
+    margin-right: 35px;
     font-size: 12px;
     font-size: 0.75rem;
-    line-height: 4;
+    line-height: 2;
+    width: 80px;
+    height: 80px;
   }
 }
+.main-nav a:focus, .main-nav a:hover, .main-nav a:active, .main-nav a.active {
+  background-color: #ff443d;
+  color: #ffffef;
+}
 
-/*ul*/
 .contact {
+  margin-top: 0;
   position: relative;
-  top: 5px;
+  top: 9px;
   font-size: 9px;
   font-size: 0.5625rem;
   line-height: 1.7777777778;
@@ -3840,7 +3864,7 @@ button.small, .button.small, .main-nav a.small {
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 1.3333333333;
-    top: 7px;
+    top: 20px;
     display: block;
   }
 }
@@ -3852,7 +3876,7 @@ button.small, .button.small, .main-nav a.small {
 }
 @media (min-width: 48em) {
   .logo {
-    margin-top: 20px;
+    margin-top: 2px;
   }
 }
 .logo img {
@@ -3909,21 +3933,19 @@ button.small, .button.small, .main-nav a.small {
   font-size: 9px;
   font-size: 0.5625rem;
   line-height: 2.2222222222;
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg);
-  -webkit-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
-  transform-origin: 100% 0;
   position: absolute;
-  width: 100%;
   right: 0;
-  top: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 20px;
 }
-@media (min-width: 48em) {
-  .photo-credit {
-    width: 56.25%;
-  }
+.photo-credit span {
+  display: inline-block;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #ffffef;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /***************************************

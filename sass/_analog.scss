@@ -326,35 +326,30 @@ body {
 }
 
 button, .button, %button {
-    // border: none;
     @extend %fix-webkit-font-rendering;
-    // color: $paper;
-    color: $red;
-    background-color: transparent;
     border: 1px solid $red;
     padding-right: $v-grid-unit;
     padding-left: $v-grid-unit;
     margin-right: $v-grid-unit/2;
     text-align: center;
     @include font-size(14px, 24px);
-
+    background-color: $red;
+    color: $paper;
     a > & {
         margin-right: 0;
     }
-
     @media (min-width: $screen-md) {
         @include font-size(16px, 32px);
         padding-right: $v-grid-unit*1.5;
         padding-left: $v-grid-unit*1.5;
         margin-right: $v-grid-unit;
     }
-
     &:focus,
     &:hover,
     &:active,
     &.active {
-        background-color: $red;
-        color: $paper;;
+      background-color: transparent;
+      color: $red;
     }
 
     &.block {
@@ -366,22 +361,55 @@ button, .button, %button {
     }
 }
 
-/*ul*/.main-nav {
+
+// <ul>
+.main-nav {
+  margin-top: 8px;
+  @media (min-width: $screen-md) { margin-top: 16px; }
+  list-style:none;
+  margin-left:0;
+  display: flex;
+  // li { display: inline; }
     a {
         @extend %button;
-        @include font-size(9px, 32px);
-        min-width: $grid-unit*4.5; // 72
+        // @include font-size(9px, 32px);
+        @include font-size(10px);
+        // min-width: $grid-unit*4.5; // 72
+        width: 64px;
+        height: 64px;
+        // margin-right: 20px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
 
         @media (min-width: $screen-md) {
-            min-width: $grid-unit*6.5; // 104
-            @include font-size(12px, 48px);
+            // min-width: $grid-unit*6.5; // 104
+            // @include font-size(12px, 48px);
+            margin-right: 35px;
+            @include font-size(12px);
+            width: 80px;
+            height: 80px;
+        }
+
+        background-color: transparent;
+        color: $red;
+        &:focus,
+        &:hover,
+        &:active,
+        &.active {
+          background-color: $red;
+          color: $paper;
         }
     }
 }
 
-/*ul*/.contact {
+// <ul>
+.contact {
+    margin-top: 0;
     position: relative;
-    top: 5px;
+    top: 9px;
     // @include font-size(9px, 16px);
     @include font-size(9px, 16px);
     text-align: right;
@@ -389,7 +417,7 @@ button, .button, %button {
     // display: none; // temporary hide until i fix mobile positioning
     @media (min-width: $screen-md) {
         @include font-size(12px, 16px);
-        top: 7px;
+        top: 20px;
         display: block;
     }
 }
@@ -399,7 +427,7 @@ button, .button, %button {
     margin-top: 14px;
     // margin-bottom: 23px;
     @media (min-width: $screen-md) {
-        margin-top: 20px;
+        margin-top: 2px;
         // margin-bottom: 29px;
     }
 
@@ -460,15 +488,24 @@ button, .button, %button {
 
     .photo-credit {
         @include font-size(9px, $v-grid-unit);
-        @include transform(rotate(270deg), 100% 0);
+        // @include transform(rotate(270deg), 100% 0);
         position: absolute;
-        width: 100%;
         right: 0;
-        top: 0;
-        @media (min-width: $screen-md) {
-            // width: 66.666666666%;
-            width: 56.25%;
+        bottom: 0;
+        z-index: 10;
+        height: 20px;
+        span {
+          display: inline-block;
+          height: 20px;
+          padding-left: 5px;
+          padding-right: 5px;
+          // background-color: $paper;
+          color: $paper;
+          background-color: rgba($black, .5);
         }
+        // @media (min-width: $screen-md) {
+        //     width: 56.25%;
+        // }
     }
 
 
