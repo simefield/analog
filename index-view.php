@@ -22,14 +22,12 @@
 --><div class="grid__item  tablet-one-quarter  skinny-right-tablet  push--tablet-one-quarter">
     <div><!-- nest skinny- type margins -->
       <div class='aside'>
-        <h3>For fun</h3>
-        <a href="apps/typesetter/">
-          <h4>Typesetter</h4>
+        <h3>For kicks</h3>
+          <h4><a href="apps/typesetter/">Typesetter</a></h4>
           <!-- <img class='app-icon  outline' src="apps/typesetter/touch-icons/AppIcon76x76@2x.png" alt="Typesetter touch icon" width='76'> -->
-          <p class='m-t-0'>Rapid typeface prototyping.</p>
-          <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'><br>
-          <span>Check it out <i class='glyph-right-open'></i></span>
-        </a>
+          <p class='m-t-0'>Live typeface prototyping.</p>
+          <a href="apps/typesetter/"><img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'></a>
+          <!-- <span>Check it out <i class='glyph-right-open'></i></span> -->
       </div><!-- /aside -->
       <a href="apps/"><button class='block'>More apps <span class="glyph  glyph-right-open"></span></button></a>
     </div>

@@ -328,20 +328,28 @@ body {
 button, .button, %button {
     @extend %fix-webkit-font-rendering;
     border: 1px solid $red;
-    padding-right: $v-grid-unit;
-    padding-left: $v-grid-unit;
+    border: 1px solid rgba($red, .5);
+    // padding-right: $v-grid-unit;
+    // padding-left: $v-grid-unit;
     margin-right: $v-grid-unit/2;
     text-align: center;
     @include font-size(14px, 24px);
     background-color: $red;
     color: $paper;
+
+    display: flex;
+    align-items: center;
+    padding: 0 $v-grid-unit/2;
+    min-height: 32px;
+
     a > & {
         margin-right: 0;
     }
+    .glyph { margin-left: auto; }
     @media (min-width: $screen-md) {
-        @include font-size(16px, 32px);
-        padding-right: $v-grid-unit*1.5;
-        padding-left: $v-grid-unit*1.5;
+        // @include font-size(16px, 32px);
+        // padding-right: $v-grid-unit*1.5;
+        // padding-left: $v-grid-unit*1.5;
         margin-right: $v-grid-unit;
     }
     &:focus,
@@ -387,7 +395,7 @@ button, .button, %button {
         @media (min-width: $screen-md) {
             // min-width: $grid-unit*6.5; // 104
             // @include font-size(12px, 48px);
-            margin-right: 35px;
+            margin-right: 40px;
             @include font-size(12px);
             width: 80px;
             height: 80px;
@@ -514,14 +522,12 @@ button, .button, %button {
  * $ASIDES
  ***************************************/
 /*div*/.aside {
-
     margin-top: 50px;
     margin-bottom: $grid-unit;
     @include font-size(14px, 24px);
-
-    & > * {
-        margin-top: 0;
-    }
+    // & > * {
+    //     margin-top: 0;
+    // }
 }
 
 /*img*/.app-icon {
@@ -568,7 +574,7 @@ button, .button, %button {
 
     h2 {
         @extend .m-t-xx;
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid rgba($black, .5);
         // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/
         @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
             border-bottom: none;

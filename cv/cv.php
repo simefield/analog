@@ -69,7 +69,7 @@
             <h3>Energy Intellect<span>Dec. 2001 - Sep. 2008</span></h3>
             <!-- <h4>Springload</h4> -->
             <dl>
-              <dt>Role:</dt><dd>Desktop Publisher</dd>
+              <dt>Role:</dt><dd>Designer / Developer / Desktop Publisher</dd>
             </dl>
             <p>Energy Intellect was a Wellington-based metering company who developed smart electricity meters and wireless communication products. I was responsible for design and layouts of reports, presentations, brochures, &c., and of their corporate website and customer data portals.<p>
             <p>Here I became adept in many desktop publishing sofware packages – particularly around image creation and editing, and learnt the intricacies—and evils—of print.</p>
@@ -119,28 +119,31 @@
     </div><!-- /skinny nested element -->
   </div><!-- /grid__item
   --><div class="grid__item  tablet-one-quarter  skinny-right-tablet  push--tablet-one-quarter">
-    <h3 class='m-t-xx'>Technologies</h3>
-      <ul class="u-listReset">
-        <li>
-          <p>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
-        </li>
-      </ul>
-      <h3 class='m-t-xl'>Referees</h3>
-      <ul class="u-listReset">
-        <li>
-          <p>
-            <b>Craig Eades</b><br>
-            Alphero, Principal Consultant<br>
-            <a href="mailto:craig@alphero.com">craig@alphero.com</a><br>
-            <a href="tel:+64-21-611-800">+64 21 611 800</a>
-          </p>
-          <p class='m-t-lg'>
-            <b>Carl Steward</b><br>
-            Springload, Director<br>
-            <a href="mailto:carl@springload.co.nz">carl@springload.co.nz</a><br>
-            <a href="tel:+64-4-801-8205">+64 4 801 8205</a>
-          </p>
-        </li>
-      </ul>
+  <div class="cv">
+    <h2 class="hide_desktop">… and finally</h2>
+      <h3 class='m-t-xx'>Technologies</h3>
+        <ul class="u-listReset">
+          <li>
+            <p>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
+          </li>
+        </ul>
+        <h3 class='m-t-xl'>Referees</h3>
+        <ul class="u-listReset">
+          <li>
+            <p>
+              <b>Craig Eades</b><br>
+              Alphero, Principal Consultant<br>
+              <a href="mailto:craig@alphero.com">craig@alphero.com</a><br>
+              <a href="tel:+64-21-611-800">+64 21 611 800</a>
+            </p>
+            <p class='m-t-lg'>
+              <b>Carl Steward</b><br>
+              Springload, Director<br>
+              <a href="mailto:carl@springload.co.nz">carl@springload.co.nz</a><br>
+              <a href="tel:+64-4-801-8205">+64 4 801 8205</a>
+            </p>
+          </li>
+        </ul>
+      </div>
   </div><!-- /grid__item
 </div><!-- /grid -->

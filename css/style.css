@@ -2388,9 +2388,9 @@ ul, ol, dd {
   font-style: normal;
 }
 *[class^=glyph] {
-  font-size: 10px;
-  font-size: 0.625rem;
-  line-height: 2.8;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
   font-family: "glyph";
   font-style: normal;
   font-weight: normal;
@@ -3776,8 +3776,7 @@ h1::first-letter {
 
 button, .button, .main-nav a {
   border: 1px solid #ff443d;
-  padding-right: 20px;
-  padding-left: 20px;
+  border: 1px solid rgba(255, 68, 61, 0.5);
   margin-right: 10px;
   text-align: center;
   font-size: 14px;
@@ -3785,17 +3784,19 @@ button, .button, .main-nav a {
   line-height: 1.7142857143;
   background-color: #ff443d;
   color: #ffffef;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 32px;
 }
 a > button, a > .button, .main-nav a > a {
   margin-right: 0;
 }
+button .glyph, .button .glyph, .main-nav a .glyph {
+  margin-left: auto;
+}
 @media (min-width: 48em) {
   button, .button, .main-nav a {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 2;
-    padding-right: 30px;
-    padding-left: 30px;
     margin-right: 20px;
   }
 }
@@ -3837,7 +3838,7 @@ button.small, .button.small, .main-nav a.small {
 }
 @media (min-width: 48em) {
   .main-nav a {
-    margin-right: 35px;
+    margin-right: 40px;
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 2;
@@ -3959,9 +3960,6 @@ button.small, .button.small, .main-nav a.small {
   font-size: 0.875rem;
   line-height: 1.7142857143;
 }
-.aside > * {
-  margin-top: 0;
-}
 
 /*img*/
 .app-icon {
@@ -3988,7 +3986,7 @@ button.small, .button.small, .main-nav a.small {
   text-transform: uppercase;
 }
 .cv h2 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .cv h2 {
