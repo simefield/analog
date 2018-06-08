@@ -6,8 +6,11 @@
      <p>Since then, both CSS and myself have come a long way. This once beastly lanuage has been domesticated, and I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code.</p>
      <p>My background was in the more artistic realm of digital multimedia (3D modelling, animation, &c.). I then went on to work in print and digital design, and desktop publishing. It was around the same time I practised web design and development in earnest.</p>
      <p>My appetite for beautiful web design and typography was largely satisfied during my tenure at Springload, though it also spoiled me in the same way teaching your enemies about bad ke<span style="letter-spacing: -.05em;">r</span>n<span style="letter-spacing: .1em;">i</span>ng can do.</p>
-     <p>During this period, my inner OOCSS (object-oriented CSS) self was awakened through the musings of the rockstars of front-end development such as Paul Irish, Doug Bowman, Ethan Marcotte and Harry Roberts, to name but a few.</p>
+     <p>During this period, my inner OOCSS (Object Oriented CSS) self was awakened through the musings of the rockstars of front-end development such as Doug Bowman, Stubbornella, Ethan Marcotte, Paul Irish and Harry Roberts, to name but a few.</p>
      <p>More recently, while working at Alphero, I have developed AINT – a lean SASS framework designed for rapid development, lightweight stylesheets, and robust and maintainable code. It incorporates BEM-esque naming (we call it “Better-than-BEM”) and has been influenced by frameworks such as INUITCSS, ITCSS, and SUITCSS.</p>
+     <h3>Hire me</h3>
+     <p>I’m available for short-term contracts to build websites, or I’m available for hire as a consultant to assess your current methods or to help teach your staff how to write lean CSS.</p>
+     <p>Get in touch by <a href="mailto:reg@analog.co.nz">email</a> or <a href="tel:+64-04-022-568-8907">phone</a>.</p>
 
     <!-- <h1>This Gun for Hire</h1>
     <p>Howdy. This is my equine friend Stella and I’m Richard Sime, a freelance front end web developer. I've been wrangling websites for more than ten years now. In fact you’re probably familiar with some of my handiwork.</p>

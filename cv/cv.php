@@ -33,7 +33,7 @@
               <dt>URL:</dt><dd><a href="https://www.business.unsw.edu.au/">business.unsw.edu.au</a></dd>
             </dl>
             <p>When Intergen called and asked if I’d be interested in heading a small team of front end developers to build a new responsive website for the UNSW’s Business School I jumped at the chance. I was looking forward to both working alongside the Intergen crew and to the challenges of building a large scale site.</p>
-            <p>Some of the curlier aspects of the build were brought about by the technological constraints of Sharepoint and Internet Explorer 8. Because the code base is to be maintained by the client, we aimed to employ object-oriented CSS as a means of delivering readable and compact code. And the (near) end result is an engaging, mobile-first experience that the school is very excited about.</p>
+            <p>Some of the curlier aspects of the build were brought about by the technological constraints of Sharepoint and Internet Explorer 8. Because the code base is to be maintained by the client, we aimed to employ Object Oriented CSS as a means of delivering readable and compact code. And the (near) end result is an engaging, mobile-first experience that the school is very excited about.</p>
             <h4>Showtools</h4>
             <dl>
               <dt>Project type:</dt><dd>Website</dd>
@@ -42,7 +42,7 @@
               <dt>URL:</dt><dd><a href="https://www.showtools.com/">showtools.com</a></dd>
             </dl>
             <p>Showtools provide a suite of online tools for the film and television industry, facilitating the booking of crew and rental equipment, as well as production planning for shoots. I’d performed a lot of work on the booking tools in the application itself, now the whole suite required a public web face to allow the client to market the services.</p>
-            <p>For their new site I took a mobile first approach implementing the best in object-oriented CSS with SASS to keep the code base clean. The site features a custom drawn set of vector glyphs, CSS animations and a delightful responsiveness across devices.</p>
+            <p>For their new site I took a mobile first approach implementing the best in Object Oriented CSS with SASS to keep the code base clean. The site features a custom drawn set of vector glyphs, CSS animations and a delightful responsiveness across devices.</p>
             <h4>Typesetter</h4>
             <dl>
               <dt>Project type:</dt><dd>Web app</dd>
@@ -63,7 +63,7 @@
               <dt>Role:</dt><dd>Lead/Senior Front End Developer</dd>
             </dl>
             <p>Springload values their clients and staff highly, while also placing an emphasis on top calibre code. And so do I. This made for an enjoyable and creative tenure that enabled me to hone my front end skills on some wondrously designed projects, including websites for: Kiwibank, Wellington Airport, NZ International Arts Festival, CreativeNZ, Chamber Music,&nbsp;&c.</p>
-            <p>My time with Springload honed my pixel-eye for design, and was invaluable in my path to becoming a fully-fledged object-oriented CSS developer.</p>
+            <p>My time with Springload honed my pixel-eye for design, and was invaluable in my path to becoming a fully-fledged Object Oriented CSS developer.</p>
           </li>
           <li>
             <h3>Energy Intellect<span>Dec. 2001 - Sep. 2008</span></h3>

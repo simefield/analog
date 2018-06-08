@@ -10,7 +10,7 @@
         </div>
         <div class="mobile-one-whole  tablet-two-fifths  p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
             <div class='copy'>
-                <p><b>Lead front-end</b><br>
+                <p><b>{{#role}}{{role}}{{/role}}{{^role}}Lead front-end{{/role}}</b><br>
                 Produced at <a href="{{productionUrl}}">{{production}}</a>
                     {{#partner}}<br>{{partnerRole}} by <a href="{{partnerUrl}}">{{partner}}</a>{{/partner}}
                 </p>

@@ -1671,7 +1671,8 @@ pre span {
   font-weight: normal;
 }
 .loading-msg .Spinner {
-  margin-top: 9em;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
 }
 .loading-msg p {
   color: black;
