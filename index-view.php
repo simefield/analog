@@ -2,7 +2,7 @@
    <div class="grid__item  tablet-one-half  push--tablet-one-quarter">
      <!-- <h1>Welcome</h1> -->
      <h1>About what I&nbsp;do</h1>
-     <p>I remember the day a friend first told me of something called a “stylesheet”. It sounds silly now, but I was gob-smacked to learn I could change the colour of <i>all</i> the links on a website by defining it in just one place.</p>
+     <p class="lead">I remember the day a friend first told me of something called a “stylesheet”. It sounds silly now, but I was gob-smacked to learn I could change the colour of <i>all</i> the links on a website by defining it in just one place.</p>
      <p>Both myself and CSS have come a long way since then. I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code, while this beastly lanuage has been domesticated by CSS pre-processing.</p>
      <p>My background was in the more artistic realm of digital multimedia (3D modelling, animation, &c.). I then went on to work in print and digital design, and desktop publishing. It was around the same time I practised web design and development in earnest.</p>
      <p>My appetite for beautiful web design and typography was largely satisfied during my tenure at Springload, though it also spoiled me in the same way teaching your enemies about bad ke<span style="letter-spacing: -.05em;">r</span>n<span style="letter-spacing: .1em;">i</span>ng can do.</p>
