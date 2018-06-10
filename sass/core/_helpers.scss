@@ -186,18 +186,19 @@
  */
 
 .hide_mobile {
-    @include media-query(mobile) {
-        display: none !important;
-    }
+  @include media-query(mobile) {
+    display: none !important;
+  }
+}
+.hide_tablet {
+  @include media-query(tablet) {
+    display: none !important;
+  }
 }
 .hide_desktop {
-    // display: none !important;
-    @include media-query(desktop) {
-        display: none !important;
-    }
-    // @include media-query(mobile) {
-    //     display: inherit !important;
-    // }
+  @include media-query(desktop) {
+    display: none !important;
+  }
 }
 // .show_mobile {
 //     display: none;

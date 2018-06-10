@@ -277,13 +277,11 @@ a {
  * Links
  * ----------------------------------------------------------------------------
  */
-h1 {
+// h1 {
   // text-transform: lowercase !important;
-  &::first-letter {
-    color: $red;
-  }
-  // &::after { content: '.'; }
-}
+  // &::first-letter { color: $red; }
+  // &::after { content: '.'; font-family: serif; color: $red; } // round dot
+// }
 
 
 
@@ -562,16 +560,6 @@ button, .button, %button {
         text-transform: uppercase;
     }
 
-    // @media (min-width: $screen-lg) {
-    //     h5 {
-    //         position: absolute;
-    //         left: -33.33%;
-    //         top: -43px;
-    //         text-align: right;
-    //         width: 27.5%;
-    //     }
-    // }
-
     h2 {
         @extend .m-t-xx;
         border-bottom: 1px solid rgba($black, .5);
@@ -629,105 +617,98 @@ button, .button, %button {
  * $SLIDER /portfolio
  ***************************************/
 
-/*ul*/.carousel__items {
-    margin-left: 0;
+// <ul>
+.carousel__items {
+  margin-left: 0;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s, height, cubic-bezier(0, .25, .75, 1);
+  li {
+    position: absolute;
+    transition-duration: .2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(.5, .5, .5, 1);
+    transform: translate3d(150px, 0 ,0);
+    opacity: 0;
+    z-index: 0;
+    &.slideOut { transform: translate3d(-150px, 0 ,0); }
+    &.current {
+      z-index: 10; // in front of other slide items
+      opacity: 1;
+      transform: translate3d(0, 0 ,0) !important;
+    }
+  }
+  dl { @extend %cf; }
+  dt {
+    float: left;
+    clear: left;
+  }
+  // <div>
+  .copy {
+    @include font-size(15px, 24px);
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
     position: relative;
-    overflow: hidden;
-    height: 0;
-    transition: 0.5s, height, cubic-bezier(0, .25, .75, 1);
-
-    li {
-        position: absolute;
-        transition-duration: .2s;
-        transition-property: opacity, transform;
-        // transition-timing-function: cubic-bezier(0, .25, .75, 1);
-        // transition-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-        // -webkit-transform: translate3d(100px, 0 ,0);
-        transition-timing-function: cubic-bezier(.5, .5, .5, 1);
-        transform: translate3d(150px, 0 ,0);
-        opacity: 0;
-        z-index: 0;
-
-        &.slideOut {
-            transform: translate3d(-150px, 0 ,0);
-        }
-
-        &.current {
-            z-index: 10; // in front of other slide items
-            opacity: 1;
-            // -webkit-transform: translate3d(0, 0 ,0) !important;
-            transform: translate3d(0, 0 ,0) !important;
-        }
+    @extend .p-b-lg;
+    & > *:first-child {
+      margin-top: 0;
+      @include font-size(16px);
     }
-
-    dl {
-        @extend %cf;
-    }
-    dt {
-        float: left;
-        clear: left;
-    }
-
-    /*div*/.copy {
-        @include font-size(15px, 24px);
-        overflow-y: scroll; /* has to be scroll, not auto */
-        -webkit-overflow-scrolling: touch;
-        position: relative;
-        @extend .p-b-lg;
-
-        & > *:first-child {
-            margin-top: 0;
-            @include font-size(16px);
-        }
-    }
+  }
 }
 
-/* Carousel navigation */
-/*ul*/.carousel__thumbnails {
-    display: none; // show in JS after images loaded
-    @extend .m-t-0;
-
-    li {
-        @extend .m-t-md;
+// Carousel navigation ==========
+// <ul>
+.carousel__thumbnails {
+  display: none; // show in JS after images loaded
+  margin-top: 0;
+  li { @extend .m-t-md; }
+  a {
+    display: block;
+    padding-bottom: 100%; // maintain aspect ratio
+    position: relative;
+    overflow: hidden;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      h5 { left: 0; }
     }
-
-    a {
-        display: block;
-        padding-bottom: 100%; // maintain aspect ratio
-        position: relative;
-        overflow: hidden;
-
-        &:hover h5,
-        &:active h5,
-        &:focus h5,
-        &.active h5 {
-            left: 0;
-        }
-    }
-
-    h5 {
-        // hide and animate in on hover
-        transition: 0.15s, left, cubic-bezier(.5, .5, .5, 1);
-        left: -100%;
+    // Grey scale un-selected images
+    &:not(.active):not(:hover):not(:focus) {
+      img { mix-blend-mode: luminosity; }
+      // Yellow page tone
+      &::after {
+        content: '';
+        position: absolute;
         top: 0;
-        margin-top: 0;
-        position: absolute;
-        z-index: 10;
-
-        span {
-            color: $white;
-            background-color: $red;
-            // color: $red;
-            // background-color: $white;
-            @extend %fix-webkit-font-rendering;
-            padding: 4px 8px;
-            display: table-caption;
-        }
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $paper;
+        mix-blend-mode: multiply;
+      }
     }
-
-    img {
-        width: 100%;
-        position: absolute;
+  }
+  h5 {
+    // Hide title and animate in on hover
+    // left: -100%;
+    left: -150%; // Ensure well out of view as on 320px screen these titles can be wider than the parent thumbnail
+    top: 0;
+    margin-top: 0;
+    position: absolute;
+    z-index: 10;
+    span {
+      color: $white;
+      background-color: $red;
+      @extend %fix-webkit-font-rendering;
+      padding: 4px 8px;
+      display: table-caption;
     }
-
+  }
+  img {
+    width: 100%;
+    position: absolute;
+  }
 }

@@ -32,7 +32,7 @@
 
 <script id='carousel-thumbnails-tmpl' type='text/template'>
 {{#websites}}
-    <li class="mobile-one-half  tablet-one-fifth">
+    <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
         <a href="" onclick='return false;'>
             <h5><span>{{{title}}}</span></h5>
             <img src="images/portfolio/thumb-{{image}}" alt="screenshot of {{site}} website">
@@ -160,47 +160,47 @@
  --><div class="grid__item  skinny-right-tablet">
        <ul class='distribute  carousel__thumbnails'>
             <!-- distribute grid items must have white-space between them, and a mobile width declaration -->
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <h5>Gibson Sheat</h5>
                     <img src="images/pf-gibson-sheat.jpg" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <h5>Showtools</h5>
                     <img src="images/pf-showtools.png" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <h5>Deaf Association</h5>
                     <img src="images/pf-deaf.jpg" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <p class='greybox'>One fifth</p>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <p class='greybox'>One fifth</p>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <img src="images/pf-gibson-sheat.jpg" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <img src="images/pf-showtools.png" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth">
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth">
                 <a href="">
                     <img src="images/pf-deaf.jpg" alt="">
                 </a>
             </li>
-            <li class="mobile-one-half  tablet-one-fifth"></li>
-            <li class="mobile-one-half  tablet-one-fifth"></li>
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth"></li>
+            <li class="mobile-one-third tablet-one-fifth desktop-one-sixth"></li>
         </ul><!-- /distribute -->
     </div><!-- /grid__item -->
 </div><!-- /grid -->

@@ -33,12 +33,12 @@
     /* Fifths */
     .#{$namespace}one-fifth         { width:20%; }
     .#{$namespace}two-fifths        { width:40%; }
-    .#{$namespace}three-fifths      { width:60%; } 
+    .#{$namespace}three-fifths      { width:60%; }
     .#{$namespace}four-fifths       { width:80%; }
 
 
     /* Sixths */
-    // .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}one-sixth         { width:16.666%; }
     // .#{$namespace}two-sixths        { @extend .#{$namespace}one-third; }
     // .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
     // .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }

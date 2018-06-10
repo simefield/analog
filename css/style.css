@@ -8,7 +8,7 @@
 /*------------------------------------*\
     $SPACING
 \*------------------------------------*/
-.m-t-0, .carousel__thumbnails {
+.m-t-0 {
   margin-top: 0 !important;
 }
 
@@ -621,6 +621,12 @@
  */
 @media only screen and (max-width: 47.9375em) {
   .hide_mobile {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .hide_tablet {
     display: none !important;
   }
 }
@@ -1676,6 +1682,10 @@ ul, ol, dd {
 }
 
 /* Sixths */
+.one-sixth {
+  width: 16.666%;
+}
+
 /* Eighths */
 /* Tenths */
 /* Twelfths */
@@ -1742,6 +1752,10 @@ ul, ol, dd {
   }
 
   /* Sixths */
+  .mobile-one-sixth {
+    width: 16.666%;
+  }
+
   /* Eighths */
   /* Tenths */
   /* Twelfths */
@@ -1795,6 +1809,10 @@ ul, ol, dd {
   }
 
   /* Sixths */
+  .tablet-one-sixth {
+    width: 16.666%;
+  }
+
   /* Eighths */
   /* Tenths */
   /* Twelfths */
@@ -1848,6 +1866,10 @@ ul, ol, dd {
   }
 
   /* Sixths */
+  .desktop-one-sixth {
+    width: 16.666%;
+  }
+
   /* Eighths */
   /* Tenths */
   /* Twelfths */
@@ -3743,10 +3765,6 @@ a p, a h1, a h2, a h3, a h4, a h5 {
  * Links
  * ----------------------------------------------------------------------------
  */
-h1::first-letter {
-  color: #ff443d;
-}
-
 /***************************************
  * $HEADER
  ***************************************/
@@ -4022,14 +4040,12 @@ button.small, .button.small, .main-nav a.small {
 /***************************************
  * $SLIDER /portfolio
  ***************************************/
-/*ul*/
 .carousel__items {
   margin-left: 0;
   position: relative;
   overflow: hidden;
   height: 0;
   transition: 0.5s, height, cubic-bezier(0, 0.25, 0.75, 1);
-  /*div*/
 }
 .carousel__items li {
   position: absolute;
@@ -4068,10 +4084,9 @@ button.small, .button.small, .main-nav a.small {
   line-height: 1.5;
 }
 
-/* Carousel navigation */
-/*ul*/
 .carousel__thumbnails {
   display: none;
+  margin-top: 0;
 }
 .carousel__thumbnails a {
   display: block;
@@ -4082,9 +4097,21 @@ button.small, .button.small, .main-nav a.small {
 .carousel__thumbnails a:hover h5, .carousel__thumbnails a:active h5, .carousel__thumbnails a:focus h5, .carousel__thumbnails a.active h5 {
   left: 0;
 }
+.carousel__thumbnails a:not(.active):not(:hover):not(:focus) img {
+  mix-blend-mode: luminosity;
+}
+.carousel__thumbnails a:not(.active):not(:hover):not(:focus)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffef;
+  mix-blend-mode: multiply;
+}
 .carousel__thumbnails h5 {
-  transition: 0.15s, left, cubic-bezier(0.5, 0.5, 0.5, 1);
-  left: -100%;
+  left: -150%;
   top: 0;
   margin-top: 0;
   position: absolute;

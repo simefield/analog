@@ -1,10 +1,10 @@
 {
 "websites" : [
   {
-      "title": "The Co-operative Bank",
-      "site": "co-operativebank.co.nz",
-      "siteUrl": "https://www.co-operativebank.co.nz/",
-      "image": "coop.jpg",
+      "title": "FMG Connect",
+      "site": "",
+      "siteUrl": "",
+      "image": "fmg.png",
       "role": "Front-end",
       "production": "Alphero",
       "productionUrl": "http://www.alphero.com/",
@@ -12,6 +12,34 @@
       "partnerUrl": "",
       "partnerRole": "",
       "awards": "",
+      "blurb": "<p>********** TODO **********</p>"
+  },
+  {
+      "title": "Paymark",
+      "site": "paymark.co.nz",
+      "siteUrl": "https://www.paymark.co.nz/",
+      "image": "paymark.jpg",
+      "role": "Front-end",
+      "production": "Alphero",
+      "productionUrl": "http://www.alphero.com/",
+      "partner": "",
+      "partnerUrl": "",
+      "partnerRole": "",
+      "awards": "",
+      "blurb": "<p>********** TODO **********</p>"
+  },
+  {
+      "title": "The <strong class='whiteSpace--nowrap'>Co-operative</strong> Bank",
+      "site": "co-operativebank.co.nz",
+      "siteUrl": "https://www.co-operativebank.co.nz/",
+      "image": "co-op.jpg",
+      "role": "Front-end",
+      "production": "Alphero",
+      "productionUrl": "http://www.alphero.com/",
+      "partner": "",
+      "partnerUrl": "",
+      "partnerRole": "",
+      "awards": "• Best Awards: Value of Design, Bronze",
       "blurb": "<p>********** TODO **********</p>"
   },
   {
@@ -42,7 +70,7 @@
       "blurb": "<p>As well as promoting and developing the arts, Creative NZ’s new website was designed to better facilitate artists in identifying and applying for funds.</p><p>This project was spread across three organisations: Optimal Usability, Springload and 3Months. The teams all came together to produce a website that exceeded the client’s expectations.</p>"
   },
   {
-      "title": "NZ International Arts Festival, 2010",
+      "title": "NZ International Arts Festival",
       "site": "2010.nzfestival.co.nz",
       "siteUrl": "http://2010.nzfestival.co.nz/",
       "image": "nz-festival.jpg",
@@ -241,6 +269,6 @@
       "image": "typesetter.png",
       "production": "Analog",
       "productionUrl": "http://www.analog.co.nz/",
-      "blurb": "<p>Typesetter provides quick and simple in-the-browser typeface prototyping for web designers. Fine-tune your typography on the device of your choice, with control over font-family, point size, spacing, leading, kerning, colour and more.</p><p>The app was born from my desire to preview and test fonts—particularly on iOS—without the faff of fiddling about with stylesheets.</p><p><a href='apps/typesetter/'><button class='block'>Give it a whirl <span class='glyph  glyph-right-open'></span></button></a></p>"
+      "blurb": "<p>Typesetter provides quick and simple in-the-browser typeface prototyping for web designers. Fine-tune your typography on the device of your choice, with control over font-family, point size, spacing, leading, kerning, colour and more.</p><p>The app was born from my desire to preview and test fonts—particularly on iOS—without the faff of fiddling about with stylesheets.</p><p><a href='apps/typesetter/'><button class='block'>Set some type <span class='glyph  glyph-right-open'></span></button></a></p>"
   }
 ]}

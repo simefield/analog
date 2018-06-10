@@ -159,7 +159,7 @@ $(document).ready(function () {
                 // for each emptyItemsReqd add an empty list item
                 for ( var i = 0; i < emptyItemsReqd; i++ ) {
                     console.log('emptyItemsReqd: ' + emptyItemsReqd);
-                    slider.nav.append('<li class="mobile-one-half  tablet-one-fifth">');
+                    slider.nav.append('<li class="mobile-one-third tablet-one-fifth desktop-one-sixth">');
                 }
             }
 

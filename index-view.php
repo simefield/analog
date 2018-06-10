@@ -3,7 +3,7 @@
      <!-- <h1>Welcome</h1> -->
      <h1>About what I&nbsp;do</h1>
      <p>I remember the day a friend first told me of something called a “stylesheet”. It sounds silly now, but I was gob-smacked to learn I could change the colour of <i>all</i> the links on a website by defining it in just one place.</p>
-     <p>Since then, both CSS and myself have come a long way. This once beastly lanuage has been domesticated, and I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code.</p>
+     <p>Both myself and CSS have come a long way since then. I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code, while this beastly lanuage has been domesticated by CSS pre-processing.</p>
      <p>My background was in the more artistic realm of digital multimedia (3D modelling, animation, &c.). I then went on to work in print and digital design, and desktop publishing. It was around the same time I practised web design and development in earnest.</p>
      <p>My appetite for beautiful web design and typography was largely satisfied during my tenure at Springload, though it also spoiled me in the same way teaching your enemies about bad ke<span style="letter-spacing: -.05em;">r</span>n<span style="letter-spacing: .1em;">i</span>ng can do.</p>
      <p>During this period, my inner OOCSS (Object Oriented CSS) self was awakened through the musings of the rockstars of front-end development such as Doug Bowman, Stubbornella, Ethan Marcotte, Paul Irish and Harry Roberts, to name but a few.</p>
@@ -29,8 +29,11 @@
           <h4><a href="apps/typesetter/">Typesetter</a></h4>
           <!-- <img class='app-icon  outline' src="apps/typesetter/touch-icons/AppIcon76x76@2x.png" alt="Typesetter touch icon" width='76'> -->
           <p class='m-t-0'>Live typeface prototyping.</p>
-          <a href="apps/typesetter/"><img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'></a>
-          <!-- <span>Check it out <i class='glyph-right-open'></i></span> -->
+          <a href="apps/typesetter/">
+            <div class="text--center m-t-lg m-b-lg">
+              <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'>
+            </div>
+          </a>
       </div><!-- /aside -->
       <a href="apps/"><button class='block'>More apps <span class="glyph  glyph-right-open"></span></button></a>
     </div>
