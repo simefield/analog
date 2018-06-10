@@ -525,7 +525,7 @@ button, .button, %button {
  * $ASIDES
  ***************************************/
 /*div*/.aside {
-    margin-top: 50px;
+    // margin-top: 50px;
     margin-bottom: $grid-unit;
     @include font-size(14px, 24px);
     // & > * {
