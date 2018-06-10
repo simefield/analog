@@ -26,9 +26,9 @@
                         <li><a href="articles/">Articles</a> -->
                         <li><a href="apps/">Apps</a>
                         <li><a href="http://www.richardsime.com/">Portfolio</a>
+                        <li><a href="apps/" class="<?php echo ($content == 'apps.php') ? 'active' : ''?>"><span>Apps</span></a>
                         */ ?>
                         <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
-                        <li><a href="apps/" class="<?php echo ($content == 'apps.php') ? 'active' : ''?>"><span>Apps</span></a>
                         <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
                     </ul>
                </div><!-- /grid__item
