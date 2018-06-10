@@ -1,13 +1,8 @@
-/*!
- * JS responsive media-queries */
- // --------------------------------------------------
- // Reg, Feb 2014
+// JS responsive media-queries
+// --------------------------------------------------
 
-
-/**
- * Media query "hooks" for responsive JS
- * ----------------------------------------------------------------------------
- */
+// Media query "hooks" for responsive JS
+// ----------------------------------------------------------------------------
 
 // body:after {
 //     // display: none; /* comment this line out for debugging purposes */
@@ -22,7 +17,7 @@
 #viewport {
     /* comment this line out for debugging purposes (can't be display: none;) */
     // opacity: 0 !important; z-index: -999999999 !important;
-    
+
     position: fixed; z-index: 999999999; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0.85); border-radius: 2px; line-height: 1.563; margin-bottom: 0;
     // for IE8 (can't get content property of :after element)
     .lt-ie9 & {

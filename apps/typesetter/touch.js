@@ -1,7 +1,7 @@
 // /*
 //  * intercept "click" with "tap" where supported
 //  * https://coderwall.com/p/dc2dbq
-//  */
+
 // /*global define: false, window: false */
 // define(['jquery'], function ($) {
 // // $(function () {

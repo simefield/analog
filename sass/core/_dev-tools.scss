@@ -1,22 +1,18 @@
-/*!
- * Dev tools
- // --------------------------------------------------
- // Reg, Feb 2014
+// --------------------------------------------------
+// Dev tools
+// --------------------------------------------------
 
-
-/* Overlay grid - visual helper */
+// Overlay grid - visual helper
 #grid-toggle { cursor: pointer; position: fixed; z-index: 99999999999; width: 43px; height: 18px; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0); border-radius: 2px; line-height: 1.563; margin-bottom: 0; }
 #grid-overlay { display: none; position: fixed; pointer-events: none; margin: 0 auto; width: 100%; height: 100%; z-index: 99; background-repeat: repeat-y; background-position: 50% 0;
-    background-image: url('../images/_grid-mobile.png');
-    @media (min-width: $screen-md) {
-        background-image: url('../images/_grid.png');
-    }
+  background-image: url('../images/_grid-mobile.png');
+  @media (min-width: $screen-md) {
+    background-image: url('../images/_grid.png');
+  }
 }
 
+// Greybox - blue boxes to give columns visibility assistance during dev
+.greybox { background-color: #0067a8; line-height: $grid-unit*10; color: white; text-align: center; }
 
-/* Greybox - blue boxes to give columns visibility assistance during dev */
-/*p*/.greybox { background-color: #0067a8; line-height: $grid-unit*10; color: white; text-align: center; }
-
-
-/* Temporary page navigation helper */
+// Temporary page navigation helper
 .temp-page-nav { position: absolute; z-index: 99999999999999; left: 0; top: 0; margin: 0; padding: 10px 0; background-color: rgba(0,0,0,0.85); font-size: 13px; a { color: white; @extend %fix-webkit-font-rendering; padding: 2px 1em; display: block; &:hover { background-color: $red;} } }

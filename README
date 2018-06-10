@@ -6,6 +6,6 @@ Ensure PHP is installed `php --version`
 
 And `Sites` is [configured to be Apache served](https://discussions.apple.com/docs/DOC-12034)
 
-`sass --watch sass/style.scss:css/style.css`
+`sass --watch sass/style.scss:css/style.css --style compressed`
 
 Browse to http://localhost/~<short-user-name($ whoami)>/analog/

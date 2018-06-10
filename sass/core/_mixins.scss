@@ -1,6 +1,6 @@
-// ------------------------------------*\
-//     $MIXINS
-// \*------------------------------------
+// ------------------------------------
+// $MIXINS
+// ------------------------------------
 
 
 
@@ -34,8 +34,8 @@
 
 
 
- // Border Radius
- //  ==========================================================================
+// Border Radius
+//  ==========================================================================
 
 // @mixin border-radius($radius) {
 //     -webkit-border-radius: $radius;
@@ -90,11 +90,11 @@
 
 
 
-// *
+//
 //  * Bleed to viewport edges on mobiles / tablets
 //  * NOTE: for a complete bleed on desktop remove the element from a div class=container
 //  * ----------------------------------------------------------------------------
- 
+
 @mixin bleed($screen-size) {
     @media (max-width: $screen-size) {
         margin-right: -$grid-unit !important;
@@ -113,9 +113,9 @@
 
 
 
-// ------------------------------------*\
-//     $FONT SIZE / LINE HEIGHT
-// \*------------------------------------
+// ------------------------------------
+// $FONT SIZE / LINE HEIGHT
+// ------------------------------------
 
 @mixin font-size($font-size: $base-font-size, $line-height: $base-line-height) { // default: 16px / 24px
     font-size: $font-size;
@@ -129,86 +129,71 @@
 
 
 
-/*------------------------------------*\
-    $SPACING
-\*------------------------------------*/
+// ------------------------------------
+// SPACING
+// ------------------------------------
 
 // margin & padding top/bottom
 // -------------------------
 @mixin margin-and-padding($namespace: "") {
-    // *
-    // * margin top
-    .m-t-0#{$namespace}  { margin-top: 0 !important; }
-    .m-t-xs#{$namespace} { margin-top: $grid-unit/4 !important; }
-    .m-t-sm#{$namespace} { margin-top: $grid-unit/2 !important; }
-    .m-t-md#{$namespace} { margin-top: $grid-unit !important; }
-    .m-t-lg#{$namespace} { margin-top: $grid-unit*1.5 !important; }
-    .m-t-xl#{$namespace} { margin-top: $grid-unit*2 !important; }
-    .m-t-xx#{$namespace} { margin-top: $grid-unit*3 !important; }
-
-    // *
-    // * margin bottom
-    .m-b-0#{$namespace}  { margin-bottom: 0 !important; }
-    .m-b-xs#{$namespace} { margin-bottom: $grid-unit/4 !important; }
-    .m-b-sm#{$namespace} { margin-bottom: $grid-unit/2 !important; }
-    .m-b-md#{$namespace} { margin-bottom: $grid-unit !important; }
-    .m-b-lg#{$namespace} { margin-bottom: $grid-unit*1.5 !important; }
-    .m-b-xl#{$namespace} { margin-bottom: $grid-unit*2 !important; }
-    .m-b-xx#{$namespace} { margin-bottom: $grid-unit*3 !important; }
-
-    // *
-    // * margin right
-    // .m-r-0#{$namespace}  { margin-right: 0 !important; }
-    // .m-r-xs#{$namespace} { margin-right: $grid-unit/4 !important; }
-    // .m-r-sm#{$namespace} { margin-right: $grid-unit/2 !important; }
-    // .m-r-md#{$namespace} { margin-right: $grid-unit !important; }
-    // .m-r-lg#{$namespace} { margin-right: $grid-unit*1.5 !important; }
-    // .m-r-xl#{$namespace} { margin-right: $grid-unit*2 !important; }
-
-    // *
-    // * margin left
-    // .m-l-0#{$namespace}  { margin-left: 0 !important; }
-    // .m-l-xs#{$namespace} { margin-left: $grid-unit/4 !important; }
-    // .m-l-sm#{$namespace} { margin-left: $grid-unit/2 !important; }
-    // .m-l-md#{$namespace} { margin-left: $grid-unit !important; }
-    // .m-l-lg#{$namespace} { margin-left: $grid-unit*1.5 !important; }
-    // .m-l-xl#{$namespace} { margin-left: $grid-unit*2 !important; }
-
-    // *
-    // * padding top
-    // .p-t-0#{$namespace}  { padding-top: 0 !important; }
-    // .p-t-xs#{$namespace} { padding-top: $grid-unit/4 !important; }
-    // .p-t-sm#{$namespace} { padding-top: $grid-unit/2 !important; }
-    // .p-t-md#{$namespace} { padding-top: $grid-unit !important; }
-    // .p-t-lg#{$namespace} { padding-top: $grid-unit*1.5 !important; }
-    // .p-t-xl#{$namespace} { padding-top: $grid-unit*2 !important; }
-
-    // *
-    // * padding bottom
-    .p-b-0#{$namespace}  { padding-bottom: 0 !important; }
-    .p-b-xs#{$namespace} { padding-bottom: $grid-unit/4 !important; }
-    .p-b-sm#{$namespace} { padding-bottom: $grid-unit/2 !important; }
-    .p-b-md#{$namespace} { padding-bottom: $grid-unit !important; }
-    .p-b-lg#{$namespace} { padding-bottom: $grid-unit*1.5 !important; }
-    .p-b-xl#{$namespace} { padding-bottom: $grid-unit*2 !important; }
-
-    // *
-    // * padding right
-    .p-r-0#{$namespace}  { padding-right: 0 !important; } 
-    .p-r-xs#{$namespace} { padding-right: $v-grid-unit/4 !important; }
-    .p-r-sm#{$namespace} { padding-right: $v-grid-unit/2 !important; }
-    .p-r-md#{$namespace} { padding-right: $v-grid-unit !important; } 
-    .p-r-lg#{$namespace} { padding-right: $v-grid-unit*1.5 !important; }
-    .p-r-xl#{$namespace} { padding-right: $v-grid-unit*2 !important; }
-
-    // *
-    // * padding left
-    .p-l-0#{$namespace}  { padding-left: 0 !important; }
-    .p-l-xs#{$namespace} { padding-left: $grid-unit/4 !important; }
-    .p-l-sm#{$namespace} { padding-left: $grid-unit/2 !important; }
-    .p-l-md#{$namespace} { padding-left: $grid-unit !important; }
-    .p-l-lg#{$namespace} { padding-left: $grid-unit*1.5 !important; }
-    .p-l-xl#{$namespace} { padding-left: $grid-unit*2 !important; }
+  // margin top
+  .m-t-0#{$namespace}  { margin-top: 0 !important; }
+  .m-t-xs#{$namespace} { margin-top: $grid-unit/4 !important; }
+  .m-t-sm#{$namespace} { margin-top: $grid-unit/2 !important; }
+  .m-t-md#{$namespace} { margin-top: $grid-unit !important; }
+  .m-t-lg#{$namespace} { margin-top: $grid-unit*1.5 !important; }
+  .m-t-xl#{$namespace} { margin-top: $grid-unit*2 !important; }
+  .m-t-xx#{$namespace} { margin-top: $grid-unit*3 !important; }
+  // margin bottom
+  .m-b-0#{$namespace}  { margin-bottom: 0 !important; }
+  .m-b-xs#{$namespace} { margin-bottom: $grid-unit/4 !important; }
+  .m-b-sm#{$namespace} { margin-bottom: $grid-unit/2 !important; }
+  .m-b-md#{$namespace} { margin-bottom: $grid-unit !important; }
+  .m-b-lg#{$namespace} { margin-bottom: $grid-unit*1.5 !important; }
+  .m-b-xl#{$namespace} { margin-bottom: $grid-unit*2 !important; }
+  .m-b-xx#{$namespace} { margin-bottom: $grid-unit*3 !important; }
+  // margin right
+  // .m-r-0#{$namespace}  { margin-right: 0 !important; }
+  // .m-r-xs#{$namespace} { margin-right: $grid-unit/4 !important; }
+  // .m-r-sm#{$namespace} { margin-right: $grid-unit/2 !important; }
+  // .m-r-md#{$namespace} { margin-right: $grid-unit !important; }
+  // .m-r-lg#{$namespace} { margin-right: $grid-unit*1.5 !important; }
+  // .m-r-xl#{$namespace} { margin-right: $grid-unit*2 !important; }
+  // margin left
+  // .m-l-0#{$namespace}  { margin-left: 0 !important; }
+  // .m-l-xs#{$namespace} { margin-left: $grid-unit/4 !important; }
+  // .m-l-sm#{$namespace} { margin-left: $grid-unit/2 !important; }
+  // .m-l-md#{$namespace} { margin-left: $grid-unit !important; }
+  // .m-l-lg#{$namespace} { margin-left: $grid-unit*1.5 !important; }
+  // .m-l-xl#{$namespace} { margin-left: $grid-unit*2 !important; }
+  // padding top
+  // .p-t-0#{$namespace}  { padding-top: 0 !important; }
+  // .p-t-xs#{$namespace} { padding-top: $grid-unit/4 !important; }
+  // .p-t-sm#{$namespace} { padding-top: $grid-unit/2 !important; }
+  // .p-t-md#{$namespace} { padding-top: $grid-unit !important; }
+  // .p-t-lg#{$namespace} { padding-top: $grid-unit*1.5 !important; }
+  // .p-t-xl#{$namespace} { padding-top: $grid-unit*2 !important; }
+  // padding bottom
+  .p-b-0#{$namespace}  { padding-bottom: 0 !important; }
+  .p-b-xs#{$namespace} { padding-bottom: $grid-unit/4 !important; }
+  .p-b-sm#{$namespace} { padding-bottom: $grid-unit/2 !important; }
+  .p-b-md#{$namespace} { padding-bottom: $grid-unit !important; }
+  .p-b-lg#{$namespace} { padding-bottom: $grid-unit*1.5 !important; }
+  .p-b-xl#{$namespace} { padding-bottom: $grid-unit*2 !important; }
+  // padding right
+  .p-r-0#{$namespace}  { padding-right: 0 !important; }
+  .p-r-xs#{$namespace} { padding-right: $v-grid-unit/4 !important; }
+  .p-r-sm#{$namespace} { padding-right: $v-grid-unit/2 !important; }
+  .p-r-md#{$namespace} { padding-right: $v-grid-unit !important; }
+  .p-r-lg#{$namespace} { padding-right: $v-grid-unit*1.5 !important; }
+  .p-r-xl#{$namespace} { padding-right: $v-grid-unit*2 !important; }
+  // padding left
+  .p-l-0#{$namespace}  { padding-left: 0 !important; }
+  .p-l-xs#{$namespace} { padding-left: $grid-unit/4 !important; }
+  .p-l-sm#{$namespace} { padding-left: $grid-unit/2 !important; }
+  .p-l-md#{$namespace} { padding-left: $grid-unit !important; }
+  .p-l-lg#{$namespace} { padding-left: $grid-unit*1.5 !important; }
+  .p-l-xl#{$namespace} { padding-left: $grid-unit*2 !important; }
 }
 
 @include margin-and-padding();
@@ -226,32 +211,28 @@
 }
 
 // generates:
-// 
+//
 // .m-t-0-mobile { margin-top: 0; }
 // .m-t-xs-mobile { margin-top: 4px; }
 // .m-t-sm-mobile { margin-top: 8px; }
 // .m-t-md-mobile { margin-top: 16px; }
 // ...
-// 
+//
 // @media (min-width: 48em) {
 //     .m-t-0-tablet { margin-top: 0; }
 //     .m-t-xs-tablet { margin-top: 4px; }
 //     ...
 // }
-// 
+//
 // etc...
 
 
 
- 
 
 
-// /**
-//  * Create vendor-prefixed CSS in one go, e.g.
-//  *
-//    `@include vendor(border-radius, 4px);`
-//  *
-//  */
+
+//  Create vendor-prefixed CSS in one go, e.g.
+//  `@include vendor(border-radius, 4px);`
 @mixin vendor($property, $value...){
     -webkit-#{$property}:$value;
        -moz-#{$property}:$value;

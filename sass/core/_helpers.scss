@@ -1,151 +1,66 @@
-/*!
- * $HELPERS */
- // --------------------------------------------------
+// HELPERS
+// --------------------------------------------------
 
+// Since v22, Chrome makes fat sausage horrible web typography. Fix it with
+// these properties right here. Maybe consider scoping this to a class for
+// chrome/mac osx only at some point?
 
-/*
- * Since v22, Chrome makes fat sausage horrible web typography. Fix it with
- * these properties right here. Maybe consider scoping this to a class for
- * chrome/mac osx only at some point?
- */
 %fix-webkit-font-rendering {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
-
-
-
 
 %inline-block{
-    display: inline-block;
-    // *zoom:1;
-    // *display: inline;
+  display: inline-block;
 }
 
-
-
-/**
- * Sprites
- * ----------------------------------------------------------------------------
- */
+// Sprites
+// ----------------------------------------------------------------------------
 .i {
-    @extend %inline-block;
-    overflow: hidden; /* for IE6 */
-    vertical-align: middle;
+  @extend %inline-block;
+  overflow: hidden; //r IE6
 }
+// le;
 // eg. <i class="i  s_icons_icon_social_twitter">Twitter</i>
 
-
-
-/**
- * Lists
- * ----------------------------------------------------------------------------
- */
+// Lists
+// ----------------------------------------------------------------------------
 %list-reset {
-    margin-top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  list-style: none;
+  li {
+    padding-bottom: 0;
+    list-style-image: none;
+    padding-left: 0;
     margin-left: 0;
-    list-style: none;
-
-    li {
-        padding-bottom: 0;
-        list-style-image: none;
-        padding-left: 0;
-        margin-left: 0;
-    }
+  }
 }
 
 .u-listReset { @extend %list-reset; }
 
-
-
-/**
- * Render fonts more sharply in Chrome (lose the fuzzy sausage type).
- * Only apply to light text on dark backgrounds
- */
+// Render fonts more sharply in Chrome (lose the fuzzy sausage type).
+// Only apply to light text on dark backgrounds
 %fix-webkit-font-rendering {
-    -webkit-font-smoothing: antialiased;
-    // text-rendering: optimizeLegibility; // doesn't appear to do anything any more or be in any way supported
+  -webkit-font-smoothing: antialiased;
+  // text-rendering: optimizeLegibility; // doesn't appear to do anything any more or be in any way supported
 }
 
-
-
-
-
-/*
- * Distribute elements evenly (equidistant)
- * ----------------------------------------------------------------------------
- */
+// Distribute elements evenly (equidistant)
+// ----------------------------------------------------------------------------
 // unlike grid__item's distribute grid items must have white-space between them,
 // and a mobile width declaration. see template.php for examples
-// .distribute {
-//   text-align: justify !important;
-//   text-justify: distribute-all-lines;
-//   font-size: 0 !important;
-
-//     // analog site specific (due to skinny side columns)
-//     margin-left: -$v-grid-unit*2;
-//     @include media-query(tablet) {
-//         margin-left: -$v-grid-unit;
-//     }
-//     // end analog specific
-
-// }
-//     // analog site specific (due to skinny side columns)
-//     .distribute--small-margins {
-//         margin-left: -$v-grid-unit;
-//         @include media-query(tablet) {
-//             margin-left: 0;
-//         }
-//     }
-//     // end analog specific
-
-// .distribute:after {
-//   content: "";
-//   display: inline-block;
-//   width: 100%;
-// }
-//     .distribute > * {
-//       vertical-align: top;
-//       display: inline-block;
-//       // width: 100%; what?!
-//       text-align: left;
-//       font-size: medium;
-
-//         // analog site specific (due to skinny side columns)
-//         padding-left: $v-grid-unit*2;
-//         // end analog specific
-
-//     }
-//     // analog site specific (due to skinny side columns)
-//     .distribute--small-margins > * {
-//         padding-left: $v-grid-unit;
-//     }
-//     // end analog specific
-
-//     .ie7 .distribute > * {
-//       display: inline;
-//       // zoom: 1;
-//     }
-//     .distribute--middle > * {
-//       vertical-align: middle;
-//     }
-//     .distribute--bottom > * {
-//       vertical-align: bottom;
-//     }
 
 .distribute {
   text-align: justify !important;
   text-justify: distribute-all-lines;
   font-size: 0 !important;
-
-    // analog site specific (due to skinny side columns)
-    margin-left: -$v-grid-unit;
-    @include media-query(tablet) {
-        margin-left: 0;
-    }
-    // end analog specific
-
+  // analog site specific (due to skinny side columns)
+  margin-left: -$v-grid-unit;
+  @include media-query(tablet) {
+    margin-left: 0;
+  }
+  // end analog specific
 }
 
 .distribute:after {
@@ -153,53 +68,34 @@
   display: inline-block;
   width: 100%;
 }
-    .distribute > * {
-      vertical-align: top;
-      display: inline-block;
-      // width: 100%; what?!
-      text-align: left;
-      font-size: medium;
 
-        // analog site specific (due to skinny side columns)
-        padding-left: $v-grid-unit;
-        // end analog specific
-
-    }
-
-    .ie7 .distribute > * {
-      display: inline;
-      // zoom: 1;
-    }
-    .distribute--middle > * {
-      vertical-align: middle;
-    }
-    .distribute--bottom > * {
-      vertical-align: bottom;
-    }
-
-
-
-
-/**
- * Hide/show helpers
- * ----------------------------------------------------------------------------
- */
-
-.hide_mobile {
-  @include media-query(mobile) {
-    display: none !important;
-  }
+.distribute > * {
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  font-size: medium;
+  // analog site specific (due to skinny side columns)
+  padding-left: $v-grid-unit;
+  // end analog specific
 }
-.hide_tablet {
-  @include media-query(tablet) {
-    display: none !important;
-  }
+
+.ie7 .distribute > * {
+  display: inline;
 }
-.hide_desktop {
-  @include media-query(desktop) {
-    display: none !important;
-  }
+.distribute--middle > * {
+  vertical-align: middle;
 }
+.distribute--bottom > * {
+  vertical-align: bottom;
+}
+
+// Hide/show helpers
+// ----------------------------------------------------------------------------
+
+.hide_mobile { @include media-query(mobile) { display: none !important; } }
+.hide_tablet { @include media-query(tablet) { display: none !important; } }
+.hide_desktop { @include media-query(desktop) { display: none !important; } }
+
 // .show_mobile {
 //     display: none;
 //     @include media-query(mobile) {

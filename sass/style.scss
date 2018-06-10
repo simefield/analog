@@ -1,35 +1,32 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
-\*------------------------------------*/
+
+/*!
+ * Analog CSS
+ * © 2014 Richard Sime
+ *
+ */
+
+// ------------------------------------
+// STYLE.CSS
+// ------------------------------------
 
 // sass --watch sass/style.scss:css/style.css --style compressed
 
 // Here we pull in some variables, include the inuit.css framework, then add our
 // project-specific components afterwards.
 
-
-
-/**
- * Setup
- */
+// Setup ==========
 @import "vars";
 @import "core/mixins";
 @import "core/helpers";
 @import "core/js-rmq";
 
-/**
- * Dev tools
- */
+// Dev tools ==========
 @import "core/dev-tools";
 
-/**
- * Inuit
- */
+// Inuit ==========
 @import "inuit.css/inuit";
 
-/**
- * Analog
- */
+// Analog ==========
 @import "glyphs";
 @import "analog";

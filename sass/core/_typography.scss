@@ -1,13 +1,8 @@
-// /*!
-//  * Fonts */
-//  // --------------------------------------------------
-//  // Reg, Oct 2013
+//  Fonts
+// --------------------------------------------------
 
-
-// /**
-//  * Font declarations
-//  * ----------------------------------------------------------------------------
-//  */
+// Font declarations
+// ----------------------------------------------------------------------------
 
 // @font-face {
 //   font-family: 'graphik';
@@ -42,10 +37,8 @@
 //   font-style:   normal;
 // }
 
-// /**
-//  * Convenient extend objects for typography
-//  * ----------------------------------------------------------------------------
-//  */
+// Convenient extend objects for typography
+// ----------------------------------------------------------------------------
 
 // %graphik-regular {
 //   font-family: 'graphik', sans-serif;
@@ -67,45 +60,32 @@
 
 // // e.g. h6 {@extend %graphik-bold;}
 
+// Typography helper classes
+// ----------------------------------------------------------------------------
 
-
-
-
-// /**
-//  * Typography helper classes
-//  * ----------------------------------------------------------------------------
-//  */
-
-// /**
-//  * Small text, such as in the footer
-//  */
+// Small text, such as in the footer
 // .small {
 //     font-size: .875em !important;
 // }
 
-// /**
-//  * Centers the child inline/inline-block nodes (obviously).
-//  */
+// Centers the child inline/inline-block nodes (obviously).
 // .center {
 //     text-align: center;
 // }
 
 // *
-//  * Since v22, Chrome makes fat sausage horrible web typography. Fix it with 
-//  * these properties right here. Maybe consider scoping this to a class for
-//  * chrome/mac osx only at some point?
- 
+// Since v22, Chrome makes fat sausage horrible web typography. Fix it with
+// these properties right here. Maybe consider scoping this to a class for
+// chrome/mac osx only at some point?
+
 // %fix-webkit-font-rendering {
 //     -webkit-font-smoothing: antialiased;
 //     text-rendering: optimizeLegibility;
 // }
 
 
-
-// /**
-//  * Typography defaults
-//  * ----------------------------------------------------------------------------
-//  */
+// Typography defaults
+// ----------------------------------------------------------------------------
 // html,
 // body {
 //     color: $black;
@@ -114,22 +94,17 @@
 //     @include font-size(16px, 24px);
 //     // text-align: justify;
 
-
 // }
 
 // .lt-ie9 * {
 //     font-family: comic-sans !important;
 // }
 
-
-
-// /**
-//  * Heading styles
-//  * ----------------------------------------------------------------------------
-//  * Try and define these only once in your stylesheet.
-//  */
+// Heading styles
+// ----------------------------------------------------------------------------
+// Try and define these only once in your stylesheet.
 // h1, h2, h3
-// // , h4, h5, h6 
+// // , h4, h5, h6
 // {
 //     // @extend %graphik-bold;
 //     font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -155,16 +130,12 @@
 // //     @include font-size(32px, 32px);
 // // }
 
-// // h6 { 
+// // h6 {
 // //     @include font-size(32px, 32px);
 // // }
 
-
-
-// /**
-//  * Paragraph styles
-//  * ----------------------------------------------------------------------------
-//  */
+// Paragraph styles
+// ----------------------------------------------------------------------------
 // p, .para {
 //     // font-size: .875em;
 //     // line-height: 1.785714286;
@@ -179,7 +150,7 @@
 //     font-size: .875em;
 // }
 
-// .small { 
+// .small {
 //     font-size: .8125em;
 // }
 
@@ -195,12 +166,8 @@
 //     text-transform: none;
 // }
 
-
-
-// /**
-//  * Typographic relationships
-//  * ----------------------------------------------------------------------------
-//  */
+// Typographic relationships
+// ----------------------------------------------------------------------------
 // h1 + p, .h1 + p,
 // h2 + p, .h2 + p,
 // h3 + p, .h3 + p,
@@ -219,12 +186,8 @@
 //     }
 // }
 
-
-
-// /**
-//  * Links
-//  * ----------------------------------------------------------------------------
-//  */
+// Links
+// ----------------------------------------------------------------------------
 // a {
 //     text-decoration:none;
 //     outline: 0;
@@ -236,13 +199,9 @@
 //     text-decoration: underline;
 // }
 
-
-
-// /**
-//  * Resets
-//  * ----------------------------------------------------------------------------
-//  */
-// strong { 
+// Resets
+// ----------------------------------------------------------------------------
+// strong {
 //     font-weight: bold;
 // }
 
