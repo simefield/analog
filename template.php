@@ -40,7 +40,11 @@
                     </ul>
                </div><!-- /grid__item
             --><div class="grid__item  skinny-left-tablet  skinny-right-tablet text--right">
-                    <a class="logo" href=""><img src="images/analog.png" alt="Analog logo"></a>
+                    <a class="logo" href="">
+                      <span class="logo-ana">ana</span>
+                      <span class="logo-log">log</span>
+                      <!-- <img src="images/analog.png" alt="Analog logo"> -->
+                    </a>
                </div><!-- /grid__item
             --><?php if (isset($photoClass)) { ?><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
                     <div><!-- must nest for skinny- type margins -->
