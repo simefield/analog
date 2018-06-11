@@ -33,19 +33,28 @@
                     </ul>
                </div><!-- /grid__item
             --><div class="grid__item  p-l-0-mobile  mobile-one-half  tablet-one-half  skinny-right-tablet">
-                   <ul class='nav  nav--stacked  contact'>
-                        <li class='hide_mobile'>Say g’day
-                        <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
-                        <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
-                    </ul>
+              <!-- <div class="logo-wrapper"> -->
+                  <a class="logo" href="">
+                    <span class="logo-ana">ana</span>
+                    <span class="logo-log">log</span>
+                    <!-- <img src="images/analog.png" alt="Analog logo"> -->
+                  </a>
+                  <!-- <ul class='nav  nav--stacked  contact'>
+                    <li class='hide_mobile'>Say g’day
+                    <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
+                    <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
+                  </ul> -->
+                <!-- </div> -->
                </div><!-- /grid__item
-            --><div class="grid__item  skinny-left-tablet  skinny-right-tablet text--right">
-                    <a class="logo" href="">
-                      <span class="logo-ana">ana</span>
-                      <span class="logo-log">log</span>
-                      <!-- <img src="images/analog.png" alt="Analog logo"> -->
-                    </a>
-               </div><!-- /grid__item
+            -->
+            <!-- <div class="grid__item  skinny-left-tablet  skinny-right-tablet text--right">
+                <ul class='nav  nav--stacked  contact'>
+                  <li class='hide_mobile'>Say g’day
+                  <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
+                  <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
+                </ul>
+               </div> -->
+               <!-- /grid__item
             --><?php if (isset($photoClass)) { ?><div class="grid__item  skinny-left-tablet  skinny-right-tablet">
                     <div><!-- must nest for skinny- type margins -->
                         <div class="hero">
