@@ -27,7 +27,7 @@
 --><div class="grid__item  tablet-one-quarter  skinny-right-tablet  push--tablet-one-quarter">
     <div><!-- nest skinny- type margins -->
       <div class='aside'>
-        <!-- <h3>For kicks</h3> -->
+        <h2 class="hide_tablet">Apps</h2>
           <h4><a href="apps/typesetter/">Typesetter</a></h4>
           <!-- <img class='app-icon  outline' src="apps/typesetter/touch-icons/AppIcon76x76@2x.png" alt="Typesetter touch icon" width='76'> -->
           <p class='m-t-0'>Live typeface prototyping.</p>

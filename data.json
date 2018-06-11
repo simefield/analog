@@ -12,7 +12,7 @@
     "partnerUrl": "",
     "partnerRole": "",
     "awards": "■ Best Awards: Value of Design Award, Bronze<br>■ Best Awards: Best Effect Award, Finalist",
-    "blurb": "<p>The Co-operative Bank have been working for the prosperity of their customers since 1928. Their digital offerings are beautifully designed and experientially superior to many of their competitors. This project was a complete redesign and rewrite, combining their public marketing site with their online banking.</p><p>Interestingly, the site was built mobile-last, following assurances it would never supplant their native apps. Not surprisingly, Co-op made a u-turn on this decision and I had retrospectively incorporate mobile-responsive layouts across the sites. Fortunately, our CSS framework made this relatively painless, and it was testament to the power of OOCSS.</p>"
+    "blurb": "<p>The Co-operative Bank’s digital offerings have a reputation for being user friendly and gorgeous. This project was no different and encompassed their public marketing site and their online banking.</p><p>Interestingly, the site was built mobile-last, following assurances it would never supplant their native mobile apps. Not surprisingly, Co-op made a u-turn on this decision, so retrospectively incorporated mobile-responsive layouts across the sites. Thankfully, our SASS framework made this relatively painless, proving its flexibility and strength.</p>"
   },
   {
     "title": "FMG Connect",

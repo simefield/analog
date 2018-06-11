@@ -67,11 +67,11 @@
             </p>
           </li>
         </ul>
-        <h2>Say g’day</h2>
+        <h2>Contact me</h2>
         <ul class='m-t-sm'>
           <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a></li>
           <li><a href="tel:+64-04-022-568-8907">022.568.8907</a></li>
         </ul>
       </div>
-  </div><!-- /grid__item
+  </div><!-- /grid__item -->
 </div><!-- /grid -->
