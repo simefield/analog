@@ -7,7 +7,7 @@
   {{^hide}}<li class='distribute'>
          <div class="one-whole  p-r-md-tablet">
             <h1 class="m-t-0">{{{title}}}
-            {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{#loginRequired}}<em> (Requires client login)</em>{{/loginRequired}}{{/siteUrl}}</span>{{/site}}
+            {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{#loginRequired}}<em> <small>(Requires client login)</small></em>{{/loginRequired}}{{/siteUrl}}</span>{{/site}}
             </h1>
         </div>
         <div class="mobile-one-whole  tablet-three-fifths  m-t-md-mobile  m-t-lg-tablet  float--right">
@@ -15,11 +15,12 @@
         </div>
         <div class="mobile-one-whole  tablet-two-fifths  p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
             <div class='copy'>
-                <p><b>{{#role}}{{role}}{{/role}}{{^role}}Lead front-end{{/role}}</b><br>
+                <p>
+                  <!-- <b>{{#role}}{{role}}{{/role}}{{^role}}Lead front-end{{/role}}</b><br> -->
                 Produced at <a href="{{productionUrl}}">{{production}}</a>
                     {{#partner}}<br>{{partnerRole}} by <a href="{{partnerUrl}}">{{partner}}</a>{{/partner}}
                 </p>
-                {{#awards}}<p><i>{{{awards}}}</i></p>{{/awards}}
+                {{#awards}}<p><b>{{{awards}}}</b></p>{{/awards}}
 
                 {{{blurb}}}
             </div>

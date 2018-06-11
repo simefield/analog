@@ -48,7 +48,7 @@
   <div class="cv">
       <h2>Technologies</h2>
         <p class='m-t-sm'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
-        <h2>Referees</h2>
+        <h2>Referee</h2>
         <ul class="m-t-sm">
           <li>
             <!-- <p>

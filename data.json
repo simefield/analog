@@ -11,7 +11,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Best Awards: Value of Design Award, Bronze<br>• Best Awards: Best Effect Award, Finalist",
+    "awards": "■ Best Awards: Value of Design Award, Bronze<br>■ Best Awards: Best Effect Award, Finalist",
     "blurb": "<p>The Co-operative Bank have been working for the prosperity of their customers since 1928. Their digital offerings are beautifully designed and experientially superior to many of their competitors. This project was a complete redesign and rewrite, combining their public marketing site with their online banking.</p><p>Interestingly, the site was built mobile-last, following assurances it would never supplant their native apps. Not surprisingly, Co-op made a u-turn on this decision and I had retrospectively incorporate mobile-responsive layouts across the sites. Fortunately, our CSS framework made this relatively painless, and it was testament to the power of OOCSS.</p>"
   },
   {
@@ -55,8 +55,8 @@
     "partner": "Fronde",
     "partnerUrl": "https://www.fronde.co.nz/",
     "partnerRole": "Development",
-    "awards": "• Best Awards: Large Scale Websites, Finalist",
-    "blurb": "<p>********** TODO **********</p>"
+    "awards": "■ Best Awards: Large Scale Websites, Finalist",
+    "blurb": "<p>We developed this responsive site in conjunction with Fronde and Ministry of Social Development to provide customers with a simple and convenient way to manage their appointments, check payments, notify MSD of changes, and apply for a benefit or NZ Super, all in one place.</p><p>The site is not just beautiful on the surface, it had to pass stringent accessibility standards. Many hours were spent traversing the site using my screen reader and refining the user experience.</p><p>Uptake was explosive and massive. Praise flowed in from case workers reporting it was much quicker and easier for them to do their jobs through the site rather than their standard systems.</p> "
   },
   {
     "hide": true,
@@ -82,7 +82,7 @@
     "partner": "3Months",
     "partnerUrl": "http://www.3months.com/",
     "partnerRole": "Development",
-    "awards": "• Awwwards: Honorable Mention",
+    "awards": "■ Awwwards: Honorable Mention",
     "blurb": "<p>As well as promoting and developing the arts, Creative NZ’s new website was designed to better facilitate artists in identifying and applying for funds.</p><p>This project was spread across three organisations: Optimal Usability, Springload and 3Months. The teams all came together to produce a website that exceeded the client’s expectations.</p>"
   },
   {
@@ -95,7 +95,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Interactive Media Awards: Best in class<br>• Onya Awards: Best visual design<br>• Best Awards: Large Scale Websites, Silver",
+    "awards": "■ Interactive Media Awards: Best in class<br>■ Onya Awards: Best visual design<br>■ Best Awards: Large Scale Websites, Silver",
     "blurb": "<p>The 2010 International Arts Festival was a huge success with over 300,000 attendees and 300 events over 24 days.</p><p>The 2010 Festival website was Springload’s first to be built in HTML5. The crew at the festival office were encouraging of our desire to delve into emerging technologies, so we also implemented microformats. With a microformat extension for their browsers visitors were able to open venue locations in their mapping app of choice, and directly export events to their calendars.</p>"
   },
   {
@@ -134,7 +134,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Best Awards: Large Scale Websites, Silver",
+    "awards": "■ Best Awards: Large Scale Websites, Silver",
     "blurb": "<p>Kiwibank have been thinking up ways to give Kiwis better banking experience since 2002. But it wasn’t until they partnered with Springload that a modern website was designed and launched in 2008.</p><p>The build was a huge undertaking, but the results spoke for themselves. Kiwibank has since gone on to win numerous “Bank of the Year” awards, and membership has sky-rocketed with kiwis joining in the hundreds of thousands.</p>"
   },
   {
@@ -147,7 +147,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Webby Awards: Official Honoree",
+    "awards": "■ Webby Awards: Official Honoree",
     "blurb": "<p>Wellington Airport are so proud of their award winning terminal “Our Rock” that they just wanted to show it off. And thanks to some stunning photography this elegant microsite does a superb job of doing just that.</p>"
   },
   {
@@ -173,7 +173,7 @@
     "partner": "Kiwibank",
     "partnerUrl": "http://www.kiwibank.co.nz/",
     "partnerRole": "Development",
-    "awards": "• Onya Awards: Best Mobile Website<br>• TUANZ Awards: Mobile Application of the Year",
+    "awards": "■ Onya Awards: Best Mobile Website<br>■ TUANZ Awards: Mobile Application of the Year",
     "blurb": "<p>New Zealand’s first mobile banking web app was designed and built to work on modern smart phones, with a simplified version for “second tier” devices. The site allows Kiwibank customers to view transactions and payments, and perform money transfers.</p><p>This was Springload’s foray into mobile design and development. The experimental nature of this job and the wide range of target devices meant testing was paramount. Many hours were spent tweaking code and refreshing mobile browsers littered across my desk.</p>"
   },
   {
@@ -186,7 +186,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Webby Awards: Official Honoree",
+    "awards": "■ Webby Awards: Official Honoree",
     "blurb": "<p>After getting some fresh new branding Gibson Sheat wanted a website to promote themselves as down-to-earth and approachable lawyers.</p><p>Springload’s design and build were very pleasing to the client. So much so in fact, they went on to get an in-house web app designed and built by Springload to track jobs.</p>"
   },
   {
@@ -225,7 +225,7 @@
     "partner": "",
     "partnerUrl": "",
     "partnerRole": "",
-    "awards": "• Webby Awards: Official Honoree",
+    "awards": "■ Webby Awards: Official Honoree",
     "blurb": "<p>More than 75 artists from 11 countries descended on Wellington for a four day jazztravaganza like no other.</p><p>This elegantly designed website <i>drummed</i> up enthusiasm for the performances, as well as providing <i>key</i> information on the events.</p>"
   },
   {
@@ -264,7 +264,7 @@
     "partner": "Creature",
     "partnerUrl": "http://www.creature.co.nz/",
     "partnerRole": "Design",
-    "awards": "• Best Awards: Large Scale Websites, Bronze",
+    "awards": "■ Best Awards: Large Scale Websites, Bronze",
     "blurb": "<p>Deaf Aotearoa provides information and resources on life for deaf New Zealanders, deaf culture and New Zealand Sign Language to help strengthen the rights of Deaf people and give them the confidence to be an active part of society.</p><p>Once a year the website switches themes to put on an entirely new look for New Zealand Sign Language week.</p>"
   }
 ],
