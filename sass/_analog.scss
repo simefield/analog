@@ -43,7 +43,7 @@
 // ------------------------------------
 
 html {
-    font-size: 16px; // set for REM calculations
+  font-size: 16px; // set for REM calculations
 }
 
 body {
@@ -112,6 +112,7 @@ h5 { margin-top: 16px; }
 h1 span {
   float: left;
   @include font-size(16px);
+  // @extend %sansSerif;
   em {
     @extend %sansSerif;
     font-style: normal;

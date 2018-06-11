@@ -99,10 +99,15 @@ $(document).ready(function () {
 
     // Initiate slider start state
     function initSlider() {
-        slider.container.find('li').eq(0).addClass('current');
+        var currentSlide = slider.container.find('li').eq(0).addClass('current');
         slider.nav.show();
         slider.nav.find('li').eq(0).find('a').addClass('active');
         setSlideHeight();
+
+        setTimeout(function () {
+          // scroll copy to top to show it has overflow
+          currentSlide.find('.copy').animate({scrollTop: 0}, 300);
+        }, 150);
     }
 
     // Slider nav functionality
