@@ -35,7 +35,7 @@
             <!-- <ul class='nav  nav--stacked  contact'>
               <li class='hide_mobile'>Say g’day
               <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
-              <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
+              <li><a href="tel:04-022-568-8907">022.568.8907</a>
             </ul> -->
           <!-- </div> -->
          </div><!-- /grid__item
@@ -61,7 +61,7 @@
         <ul class='Footer-list'>
           <li class='hide_mobile'>Say g’day
           <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
-          <li><a href="tel:+64-04-022-568-8907">022.568.8907</a>
+          <li><a href="tel:04-022-568-8907">022.568.8907</a>
         </ul>
         <p class="Footer-copyright">
           <small>Richard Sime © 2018</small>
