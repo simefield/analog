@@ -7,7 +7,7 @@
   {{^hide}}<li class='distribute'>
          <div class="one-whole  p-r-md-tablet">
             <h1 class="m-t-0">{{{title}}}
-            {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{#loginRequired}}<em> <small>(Requires client login)</small></em>{{/loginRequired}}{{/siteUrl}}</span>{{/site}}
+            {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}{{#siteNote}}<em> <small>[{{siteNote}}]</small></em>{{/siteNote}}</span>{{/site}}
             </h1>
         </div>
         <div class="mobile-one-whole  tablet-three-fifths  m-t-md-mobile  m-t-lg-tablet  float--right">

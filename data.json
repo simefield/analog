@@ -18,7 +18,7 @@
     "title": "FMG Connect",
     "site": "fmgconnect.co.nz",
     "siteUrl": "https://www.fmgconnect.co.nz/login",
-    "loginRequired": true,
+    "siteNote": "Client login required",
     "image": "fmg.png",
     "role": "Front-end",
     "production": "Alphero",
@@ -126,7 +126,8 @@
   },
   {
     "title": "Kiwibank",
-    "site": "kiwibank.co.nz <em>[archived]</em>",
+    "site": "kiwibank.co.nz",
+    "siteNote": "Archived",
     "siteUrl": "http://web.archive.org/web/20110227172309/http://www.kiwibank.co.nz/",
     "image": "kiwibank.jpg",
     "production": "Springload",
@@ -217,7 +218,8 @@
   },
   {
     "title": "Wellington Jazz Festival",
-    "site": "jazzfestival.co.nz <em>[archived]</em>",
+    "site": "jazzfestival.co.nz",
+    "siteNote": "Archived",
     "siteUrl": "http://web.archive.org/web/20090324031804/http://www.jazzfestival.co.nz/programme/",
     "image": "jazz-festival.jpg",
     "production": "Springload",
@@ -230,7 +232,8 @@
   },
   {
     "title": "REAL NZ&nbsp;2011 Festival",
-    "site": "nz2011.govt.nz <em>[site deleted]</em>",
+    "site": "nz2011.govt.nz",
+    "siteNote": "Deleted",
     "siteUrl": "",
     "image": "nz2011.jpg",
     "production": "Springload",
