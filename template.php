@@ -5,6 +5,7 @@
     <title>Analog</title>
     <meta name="description" content="Analog. Freelance front end web development. Wellington, New Zealand.">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <base href="<?php echo $baseHref ?>">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icons/AppIcon76x76.png">
