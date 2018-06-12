@@ -48,29 +48,27 @@
   <div class="cv">
       <h2>Technologies</h2>
         <p class='m-t-sm'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
-        <h2>Referee</h2>
+        <h2>Referees</h2>
         <ul class="m-t-sm">
           <li>
-            <!-- <p>
+            <p>
               <b>Craig Eades</b><br>
               Alphero, Principal Consultant<br>
               <a href="mailto:craig@alphero.com">craig@alphero.com</a><br>
-              <a href="tel:+64-21-611-800">021.611.800</a>
+              <a href="tel:021-611-800">021.611.800</a>
             </p>
-            <p class='m-t-lg'>
-          -->
-            <p class='m-t-0'>
+            <p class='m-t-md'>
               <b>Carl Steward</b><br>
               Springload, Director<br>
               <a href="mailto:carl@springload.co.nz">carl@springload.co.nz</a><br>
-              <a href="tel:+64-4-801-8205">04.801.8205</a>
+              <a href="tel:04-801-8205">04.801.8205</a>
             </p>
           </li>
         </ul>
         <h2>Contact me</h2>
         <ul class='m-t-sm'>
           <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a></li>
-          <li><a href="tel:+64-04-022-568-8907">022.568.8907</a></li>
+          <li><a href="tel:022-568-8907">022.568.8907</a></li>
         </ul>
       </div>
   </div><!-- /grid__item -->
