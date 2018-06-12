@@ -73,12 +73,12 @@ $(document).ready(function () {
             var template1 = $('#carousel-tmpl').html();
             Mustache.parse(template1); // optional, speeds up future uses
             var rendered1 = Mustache.to_html(template1, data);
-            $('.carousel__items').html(rendered1);
+            $('.Carousel').html(rendered1);
 
             var template2 = $('#carousel-thumbnails-tmpl').html();
             Mustache.parse(template2);
             var rendered2 = Mustache.to_html(template2, data);
-            $('.carousel__thumbnails').html(rendered2);
+            $('.CarouselNav').html(rendered2);
 
             initSlider();
         });
@@ -95,7 +95,7 @@ $(document).ready(function () {
         this.current = 0; // start with the first slide active
     }
 
-    var slider = new Carousel( $('ul.carousel__items'), $('ul.carousel__thumbnails') );
+    var slider = new Carousel( $('.Carousel'), $('.CarouselNav') );
 
     // Initiate slider start state
     function initSlider() {
@@ -158,16 +158,16 @@ $(document).ready(function () {
             });
         } else {
 
-            // must make number of list items a mutiple of 5 to fill the distributed grid
-            var emptyItemsReqd = (slider.nav.find('li').length) % 5;
-            if (emptyItemsReqd !== 0) {
-                emptyItemsReqd = 5 - emptyItemsReqd;
-                // for each emptyItemsReqd add an empty list item
-                for ( var i = 0; i < emptyItemsReqd; i++ ) {
-                    console.log('emptyItemsReqd: ' + emptyItemsReqd);
-                    slider.nav.append('<li class="mobile-one-third tablet-one-fifth desktop-one-sixth">');
-                }
-            }
+            // // must make number of list items a mutiple of 5 to fill the distributed grid
+            // var emptyItemsReqd = (slider.nav.find('li').length) % 5;
+            // if (emptyItemsReqd !== 0) {
+            //     emptyItemsReqd = 5 - emptyItemsReqd;
+            //     // for each emptyItemsReqd add an empty list item
+            //     for ( var i = 0; i < emptyItemsReqd; i++ ) {
+            //         console.log('emptyItemsReqd: ' + emptyItemsReqd);
+            //         slider.nav.append('<li class="CarouselNav-item">');
+            //     }
+            // }
 
             if (analog.vars.mediaQuery !== 'mobile') {
                 slideCopy.each(function() {
