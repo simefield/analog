@@ -25,7 +25,7 @@
             </div>
           </a>
       </div><!-- /aside -->
-      <a href="apps/"><button class='block'>More apps <span class="glyph  glyph-right-open"></span></button></a>
+      <a href="apps/" class='button block'><span>More apps</span><span class="glyph  glyph-right-open"></span></a>
     </div>
   </div><!-- /grid__item -->
 </div><!-- /grid -->

@@ -279,7 +279,7 @@
     "image": "mastermind.jpg",
     "production": "Analog",
     "productionUrl": "http://www.analog.co.nz/",
-    "blurb": "<p>Can you crack the secret code?</p><p>Mastermind is an old favourite of mine and to turn it into a striking app that I could enjoy and share was a small, but rewarding, labour of love.</p><p>This features drag’n’drop on touch devices, and leverages offline storage so you can play this anywhere, anytime.</p><p><a href='apps/mastermind/'><button class='block'>Bust a code <span class='glyph  glyph-right-open'></span></button></a></p>"
+    "blurb": "<p>Can you crack the secret code?</p><p>Mastermind is an old favourite of mine and to turn it into a striking app that I could enjoy and share was a small, but rewarding, labour of love.</p><p>This features drag’n’drop on touch devices, and leverages offline storage so you can play this anywhere, anytime.</p><p><a href='apps/mastermind/' class='button block'><span>Bust a code</span><span class='glyph  glyph-right-open'></span></a></p>"
   },
   {
     "title": "Typesetter",
@@ -288,6 +288,6 @@
     "image": "typesetter.png",
     "production": "Analog",
     "productionUrl": "http://www.analog.co.nz/",
-    "blurb": "<p>Typesetter provides quick and simple in-the-browser typeface prototyping for web designers. Fine-tune your typography on the device of your choice, with control over font-family, point size, spacing, leading, kerning, colour and more.</p><p>The app was born from my desire to preview and test fonts—particularly on iOS—without the faff of fiddling about with stylesheets.</p><p><a href='apps/typesetter/'><button class='block'>Set some type <span class='glyph  glyph-right-open'></span></button></a></p>"
+    "blurb": "<p>Typesetter provides quick and simple in-the-browser typeface prototyping for web designers. Fine-tune your typography on the device of your choice, with control over font-family, point size, spacing, leading, kerning, colour and more.</p><p>The app was born from my desire to preview and test fonts—particularly on iOS—without the faff of fiddling about with stylesheets.</p><p><a href='apps/typesetter/' class='button block'><span>Set some type</span><span class='glyph  glyph-right-open'></span></a></p>"
   }
 ]}
