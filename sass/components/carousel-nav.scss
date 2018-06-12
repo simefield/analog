@@ -58,7 +58,8 @@
     margin-top: 0;
     position: absolute;
     z-index: 10;
-    > span {
+    span {
+      strong { @extend %sansSerif; } // necessary. trust me
       color: $white;
       background-color: $red;
       @extend %fix-webkit-font-rendering;

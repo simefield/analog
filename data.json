@@ -1,7 +1,7 @@
 {
 "websites" : [
   {
-    "title": "The <span class='whiteSpace--nowrap'>Co-operative</span> Bank",
+    "title": "The <strong class='whiteSpace--nowrap'>Co-operative</strong> Bank",
     "site": "co-operativebank.co.nz",
     "siteUrl": "https://www.co-operativebank.co.nz/",
     "image": "co-op.jpg",
