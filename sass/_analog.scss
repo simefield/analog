@@ -547,7 +547,7 @@ $nav-button-lg: 68px;
 .carousel__thumbnails {
   display: none; // show in JS after images loaded
   margin-top: 0;
-  li { @extend .m-t-md; }
+  li { margin-top: $grid-unit; }
   a {
     display: block;
     padding-bottom: 100%; // maintain aspect ratio

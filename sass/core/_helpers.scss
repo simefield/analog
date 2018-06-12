@@ -10,14 +10,10 @@
   text-rendering: optimizeLegibility;
 }
 
-%inline-block{
-  display: inline-block;
-}
-
 // Sprites
 // ----------------------------------------------------------------------------
 .i {
-  @extend %inline-block;
+  display: inline-block;
   overflow: hidden; //r IE6
 }
 // le;

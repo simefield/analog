@@ -46,15 +46,4 @@
             margin-bottom:0;
         }
 
-
-    /**
-     * `.img`s in `.islet`s need an appropriately sized margin.
-     */
-    .islet .media__img{
-        margin-right:$half-spacing-unit;
-    }
-    .islet .media__img--rev{
-        margin-left:$half-spacing-unit;
-    }
-
 }//endif
