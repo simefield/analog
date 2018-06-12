@@ -112,29 +112,30 @@ $(document).ready(function () {
 
     // Slider nav functionality
     slider.nav.on('click', 'li', function() {
-        var pos = $(this).index();
-        var outItem = slider.container.find('li.current');
+      var pos = $(this).index();
+      var outItem = slider.container.find('li.current');
 
-        // remove any instance of active thumbnail, then add class to selected
-        slider.nav.find('a').removeClass('active');
-        $(this).find('a').addClass('active');
+      // remove any instance of active thumbnail, then add class to selected
+      slider.nav.find('a').removeClass('active');
+      $(this).find('a').addClass('active');
 
-        if ( outItem.index() !== pos ) { // only animate if a different item than current is selected
-            // outItem.removeClass('current').css('transform', 'translate3d(-150px, 0, 0)');
-            outItem.removeClass('current').addClass('slideOut');
-            setTimeout(function () {
-                // outItem.css('transform', 'translate3d(150px, 0, 0)'); // reset position
-                outItem.removeClass('slideOut'); // reset position
-                // animate in the new slide
-                var inItem = $(slider.container).find('li').eq(pos).addClass('current');
-                // scroll copy to top to show it has overflow
-                inItem.find('.copy').animate({scrollTop: 0}, 300);
-            }, 150);
-        }
-        if (analog.vars.mediaQuery === 'mobile') {
-            setSlideHeight(pos); //reset each slide's height if in mobile view
-            scrollToPos(slider.container); // and scroll the page up to show new item
-        }
+      if ( outItem.index() !== pos ) { // only animate if a different item than current is selected
+        // outItem.removeClass('current').css('transform', 'translate3d(-150px, 0, 0)');
+        outItem.removeClass('current').addClass('slideOut');
+        setTimeout(function () {
+          // outItem.css('transform', 'translate3d(150px, 0, 0)'); // reset position
+          outItem.removeClass('slideOut'); // reset position
+          // animate in the new slide
+          var inItem = $(slider.container).find('li').eq(pos).addClass('current');
+          // scroll copy to top to show it has overflow
+          inItem.find('.copy').animate({scrollTop: 0}, 300);
+        }, 150);
+      }
+
+      if (analog.vars.mediaQuery === 'mobile') {
+        setSlideHeight(pos); //reset each slide's height if in mobile view
+        scrollToPos(slider.container); // and scroll the page up to show new item
+      }
     });
 
 
@@ -194,7 +195,7 @@ $(document).ready(function () {
     var scrollToPos = function (target) {
         $('html, body').animate({
             scrollTop: target.offset().top
-        }, 650);
+        }, 750);
     };
 
 
