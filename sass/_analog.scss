@@ -39,6 +39,30 @@
 // e.g. h6 {@extend %neueHaasGrotesk;}
 
 // ------------------------------------
+// LAYOUT – Sticky footer
+// ------------------------------------
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer-wrapper {
+  margin-top: auto;
+}
+
+// ------------------------------------
 // TYPOGRAPHY DEFAULTS
 // ------------------------------------
 
