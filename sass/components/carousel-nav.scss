@@ -1,0 +1,78 @@
+// ------------------------------------
+// CAROUSEL NAV
+// ------------------------------------
+
+// <ul>
+.CarouselNav {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-left: -$grid-unit/2;
+  @include media-query(tablet) {
+    margin-top: $grid-unit*2;
+    margin-left: $grid-unit/2;
+  }
+}
+
+.CarouselNav-item {
+  margin-top: $grid-unit/2;
+  padding-left: $grid-unit/2;
+  width: #{1/4 * 100%};
+  @include media-query(tablet) { width: #{1/6 * 100%}; }
+  @include media-query(desktop) { width: #{1/8 * 100%}; }
+  a {
+    display: block;
+    padding-bottom: 100%; // maintain aspect ratio
+    position: relative;
+    overflow: hidden;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      h5 { left: 0; } // Reveal title
+    }
+    // Grey-scale unselected images
+    &:not(.active):not(:hover):not(:focus) {
+      img { mix-blend-mode: luminosity; }
+      // Yellow-tone unselected images
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $paper;
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+  h5 {
+    @extend %sansSerif;
+    @media (max-width: $screen-sm-max) {
+      @include font-size(10px, 15px);
+    }
+    // Hide title and show on hover
+    left: -200%; // Ensure well out of view as on 320px screen these titles can be wider than the parent thumbnail
+    top: 0;
+    margin-top: 0;
+    position: absolute;
+    z-index: 10;
+    span {
+      strong { @extend %sansSerif; } // necessary. trust me
+      color: $white;
+      background-color: $red;
+      @extend %fix-webkit-font-rendering;
+      display: table-caption;
+      padding: 4px;
+      @media (min-width: $screen-md) {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    position: absolute;
+  }
+}

@@ -73,12 +73,12 @@ $(document).ready(function () {
             var template1 = $('#carousel-tmpl').html();
             Mustache.parse(template1); // optional, speeds up future uses
             var rendered1 = Mustache.to_html(template1, data);
-            $('.carousel__items').html(rendered1);
+            $('.Carousel').html(rendered1);
 
             var template2 = $('#carousel-thumbnails-tmpl').html();
             Mustache.parse(template2);
             var rendered2 = Mustache.to_html(template2, data);
-            $('.carousel__thumbnails').html(rendered2);
+            $('.CarouselNav').html(rendered2);
 
             initSlider();
         });
@@ -95,41 +95,47 @@ $(document).ready(function () {
         this.current = 0; // start with the first slide active
     }
 
-    var slider = new Carousel( $('ul.carousel__items'), $('ul.carousel__thumbnails') );
+    var slider = new Carousel( $('.Carousel'), $('.CarouselNav') );
 
     // Initiate slider start state
     function initSlider() {
-        slider.container.find('li').eq(0).addClass('current');
+        var currentSlide = slider.container.find('li').eq(0).addClass('current');
         slider.nav.show();
         slider.nav.find('li').eq(0).find('a').addClass('active');
         setSlideHeight();
+
+        setTimeout(function () {
+          // scroll copy to top to show it has overflow
+          currentSlide.find('.copy').animate({scrollTop: 0}, 300);
+        }, 150);
     }
 
     // Slider nav functionality
     slider.nav.on('click', 'li', function() {
-        var pos = $(this).index();
-        var outItem = slider.container.find('li.current');
+      var pos = $(this).index();
+      var outItem = slider.container.find('li.current');
 
-        // remove any instance of active thumbnail, then add class to selected
-        slider.nav.find('a').removeClass('active');
-        $(this).find('a').addClass('active');
+      // remove any instance of active thumbnail, then add class to selected
+      slider.nav.find('a').removeClass('active');
+      $(this).find('a').addClass('active');
 
-        if ( outItem.index() !== pos ) { // only animate if a different item than current is selected
-            // outItem.removeClass('current').css('transform', 'translate3d(-150px, 0, 0)');
-            outItem.removeClass('current').addClass('slideOut');
-            setTimeout(function () {
-                // outItem.css('transform', 'translate3d(150px, 0, 0)'); // reset position
-                outItem.removeClass('slideOut'); // reset position
-                // animate in the new slide
-                var inItem = $(slider.container).find('li').eq(pos).addClass('current');
-                // scroll copy to top to show it has overflow
-                inItem.find('.copy').animate({scrollTop: 0}, 300);
-            }, 150);
-        }
-        if (analog.vars.mediaQuery === 'mobile') {
-            setSlideHeight(pos); //reset each slide's height if in mobile view
-            scrollToPos(slider.container); // and scroll the page up to show new item
-        }
+      if ( outItem.index() !== pos ) { // only animate if a different item than current is selected
+        // outItem.removeClass('current').css('transform', 'translate3d(-150px, 0, 0)');
+        outItem.removeClass('current').addClass('slideOut');
+        setTimeout(function () {
+          // outItem.css('transform', 'translate3d(150px, 0, 0)'); // reset position
+          outItem.removeClass('slideOut'); // reset position
+          // animate in the new slide
+          var inItem = $(slider.container).find('li').eq(pos).addClass('current');
+          // scroll copy to top to show it has overflow
+          inItem.find('.copy').animate({scrollTop: 0}, 300);
+        }, 150);
+      }
+
+      if (analog.vars.mediaQuery === 'mobile') {
+        setSlideHeight(pos); //reset each slide's height if in mobile view
+        scrollToPos(slider.container); // and scroll the page up to show new item
+      }
     });
 
 
@@ -152,16 +158,16 @@ $(document).ready(function () {
             });
         } else {
 
-            // must make number of list items a mutiple of 5 to fill the distributed grid
-            var emptyItemsReqd = (slider.nav.find('li').length) % 5;
-            if (emptyItemsReqd !== 0) {
-                emptyItemsReqd = 5 - emptyItemsReqd;
-                // for each emptyItemsReqd add an empty list item
-                for ( var i = 0; i < emptyItemsReqd; i++ ) {
-                    console.log('emptyItemsReqd: ' + emptyItemsReqd);
-                    slider.nav.append('<li class="mobile-one-third tablet-one-fifth desktop-one-sixth">');
-                }
-            }
+            // // must make number of list items a mutiple of 5 to fill the distributed grid
+            // var emptyItemsReqd = (slider.nav.find('li').length) % 5;
+            // if (emptyItemsReqd !== 0) {
+            //     emptyItemsReqd = 5 - emptyItemsReqd;
+            //     // for each emptyItemsReqd add an empty list item
+            //     for ( var i = 0; i < emptyItemsReqd; i++ ) {
+            //         console.log('emptyItemsReqd: ' + emptyItemsReqd);
+            //         slider.nav.append('<li class="CarouselNav-item">');
+            //     }
+            // }
 
             if (analog.vars.mediaQuery !== 'mobile') {
                 slideCopy.each(function() {
@@ -189,7 +195,7 @@ $(document).ready(function () {
     var scrollToPos = function (target) {
         $('html, body').animate({
             scrollTop: target.offset().top
-        }, 650);
+        }, 750);
     };
 
 

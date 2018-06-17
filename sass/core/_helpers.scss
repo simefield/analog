@@ -10,14 +10,10 @@
   text-rendering: optimizeLegibility;
 }
 
-%inline-block{
-  display: inline-block;
-}
-
 // Sprites
 // ----------------------------------------------------------------------------
 .i {
-  @extend %inline-block;
+  display: inline-block;
   overflow: hidden; //r IE6
 }
 // le;
@@ -56,8 +52,9 @@
   text-justify: distribute-all-lines;
   font-size: 0 !important;
   // analog site specific (due to skinny side columns)
-  margin-left: -$v-grid-unit;
+  margin-left: -$grid-unit/2;
   @include media-query(tablet) {
+    margin-left: -$grid-unit;
     margin-left: 0;
   }
   // end analog specific
@@ -75,18 +72,11 @@
   text-align: left;
   font-size: medium;
   // analog site specific (due to skinny side columns)
-  padding-left: $v-grid-unit;
+  padding-left: $grid-unit/2;
+  @include media-query(tablet) {
+    padding-left: $grid-unit;
+  }
   // end analog specific
-}
-
-.ie7 .distribute > * {
-  display: inline;
-}
-.distribute--middle > * {
-  vertical-align: middle;
-}
-.distribute--bottom > * {
-  vertical-align: bottom;
 }
 
 // Hide/show helpers
@@ -97,15 +87,11 @@
 .hide_desktop { @include media-query(desktop) { display: none !important; } }
 
 // .show_mobile {
-//     display: none;
-//     @include media-query(mobile) {
-//         display: block;
-//     }
+//   display: none;
+//   @include media-query(mobile) { display: block; }
 // }
 // .show_desktop {
-//     @include media-query(desktop) {
-//         display: none;
-//     }
+//   @include media-query(desktop) { display: none; }
 // }
 
 

@@ -20,22 +20,9 @@ pre,
  */
 %sass-margin-top,
 .media,
-.island,
-.islet{
+.island {
   margin-top:$grid-unit;
   margin-top:($grid-unit / $base-font-size)*1rem;
-  .islet &{
-    margin-top:$grid-unit / 2;
-    margin-top:(($grid-unit / $base-font-size) / 2)*1rem;
-  }
-}
-
-/**
- * Doubled up `margin-top` helper class.
- */
-.landmark{
-  margin-top:2 * $grid-unit;
-  margin-top:(2 * $grid-unit / $base-font-size)*1rem;
 }
 
 /**

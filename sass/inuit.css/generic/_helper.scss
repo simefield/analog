@@ -82,10 +82,6 @@
 .full-bleed{
   margin-right:-$grid-unit!important;
   margin-left: -$grid-unit!important;
-  .islet & {
-    margin-right:-($half-spacing-unit)!important;
-    margin-left: -($half-spacing-unit)!important;
-  }
 }
 
 // Add a help cursor to any element that gives the user extra information on

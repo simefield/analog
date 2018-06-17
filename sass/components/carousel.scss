@@ -1,0 +1,44 @@
+// ------------------------------------
+// CAROUSEL
+// ------------------------------------
+
+// <ul>
+.Carousel {
+  margin-left: 0;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s, height, cubic-bezier(0, .25, .75, 1);
+  li {
+    position: absolute;
+    transition-duration: .2s;
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(.5, .5, .5, 1);
+    transform: translate3d(150px, 0 ,0);
+    opacity: 0;
+    z-index: 0;
+    &.slideOut { transform: translate3d(-150px, 0 ,0); }
+    &.current {
+      z-index: 10; // in front of other slide items
+      opacity: 1;
+      transform: translate3d(0, 0 ,0) !important;
+    }
+  }
+  dl { @extend %cf; }
+  dt {
+    float: left;
+    clear: left;
+  }
+  // <div>
+  .copy {
+    @include font-size(15px, 24px);
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding-bottom: $v-grid-unit/2;
+    & > *:first-child {
+      margin-top: 0;
+      @include font-size(16px);
+    }
+  }
+}
