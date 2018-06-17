@@ -107,3 +107,36 @@
 //         display: none;
 //     }
 // }
+
+
+// ============
+// PLACEHOLDER
+// ============
+
+// Usage
+//
+//.Input {
+//  input {
+//    // long way
+//    @include placeholder {
+//      color: transparent;
+//    }
+//    // Shorthand for just colour
+//    @include placeholder(transparent);
+//  }
+//}
+
+@mixin placeholder($colour: null) {
+  &::-webkit-input-placeholder {
+    @if $colour { color: $colour }
+  }
+  &:-moz-placeholder {
+    @if $colour { color: $colour }
+  }
+  &::-moz-placeholder {
+    @if $colour { color: $colour }
+  }
+  &:-ms-input-placeholder {
+    @if $colour { color: $colour }
+  }
+}
