@@ -62,7 +62,7 @@ th,
 td{
     padding:$h / 4;
     @media screen and (min-width:480px){
-        padding:$half-spacing-unit;
+        padding:$h/2;
     }
     text-align:left;
 }
@@ -127,7 +127,7 @@ td{
 
     th,
     td{
-        border:1px solid $base-ui-color;
+        border:1px solid #ccc;
 
         &:empty{
             border:none;

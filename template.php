@@ -21,13 +21,13 @@
   <body>
     <div class='content'>
       <div class="grid">
-         <div class="grid__item  mobile-one-half  tablet-one-half  skinny-left-tablet">
+         <div class="grid__item u-sm-width1of2 u-md-width1of2 skinny-left-tablet">
            <ul class='main-nav'>
               <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
          </div><!-- /grid__item
-      --><div class="grid__item  p-l-0-mobile  mobile-one-half  tablet-one-half  skinny-right-tablet">
+      --><div class="grid__item  p-l-0-mobile u-sm-width1of2 u-md-width1of2 skinny-right-tablet">
         <!-- <div class="logo-wrapper"> -->
             <a class="logo" href="">
               <span class="logo-ana">ana</span>

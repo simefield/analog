@@ -5,42 +5,17 @@
 // in the inuit.css-web-template) to override them.
 
 // ------------------------------------
-// BORDER-BOX
-// ------------------------------------
-// Do you want all elements to adopt `box-sizing:border-box;` as per
-// paulirish.com/2012/box-sizing-border-box-ftw ?
-
-$global-border-box: true!default;
-
-// ------------------------------------
 // BASE
 // ------------------------------------
 
-// Base stuff
-
+// Base font
 $base-font-size:    16px!default;
 $base-line-height:  24px!default;
-
-// Base font-family.
-
 $base-font-family:  sans-serif!default;
-
-// Default colour for objects’ borders etc.
-
-$base-ui-color:     #ccc!default;
 
 // ------------------------------------
 // RESPONSIVE
 // ------------------------------------
-// Responsiveness?
-
-$responsive:        true!default;
-
-// Responsiveness for widescreen/high resolution desktop monitors and beyond?
-// Note: `$responsive` variable above must be set to true before enabling this.
-
-$responsive-extra:  false!default;
-
 // Responsive push and pull produce a LOT of code, only turn them on if you
 // definitely need them.
 

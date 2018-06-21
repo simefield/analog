@@ -4,15 +4,15 @@
   {{#hide}}
   {{/hide}}
   {{^hide}}<li class='distribute'>
-     <div class="one-whole  p-r-md-tablet">
+     <div class="u-width1of1 p-r-md-tablet">
       <h1 class="m-t-0">{{{title}}}
         {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}{{#siteNote}}<em> <small>[{{siteNote}}]</small></em>{{/siteNote}}</span>{{/site}}
       </h1>
     </div>
-    <div class="mobile-one-whole  tablet-three-fifths  m-t-md-mobile  m-t-lg-tablet  float--right">
+    <div class="u-sm-width1of1 u-md-width3of5 m-t-md-mobile  m-t-lg-tablet  float--right">
       <img src="images/portfolio/{{image}}" width='100%' alt="screenshot of {{site}} website">
     </div>
-    <div class="mobile-one-whole  tablet-two-fifths  p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
+    <div class="u-sm-width1of1 u-md-width2of5 p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
       <div class='copy'>
         <p>
           <!-- <b>{{#role}}{{role}}{{/role}}{{^role}}Lead front-end{{/role}}</b><br> -->

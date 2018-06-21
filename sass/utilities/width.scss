@@ -1,0 +1,28 @@
+// ============
+// WIDTH
+// ============
+
+// NOTE
+// 1. Specify numerators (required divisions). These generate numerous lines – use with care.
+// 2. Obey widths when elements is a flex child
+
+$widths: ( 1, 2, 3, 4, 5 ); // 1
+
+@mixin widths($namespace: "") {
+  [class*=u-#{$namespace}width] { flex-basis: auto !important; } // 2
+  @each $width in $widths {
+    @for $i from 1 through $width {
+      .u-#{$namespace}width#{$i}of#{$width} { width: calc(100% * #{$i} / #{$width}) !important; }
+    }
+  }
+}
+
+@include widths();
+@include media-query(mobile)  { @include widths("sm-"); }
+@include media-query(tablet)  { @include widths("md-"); }
+@include media-query(desktop) { @include widths("lg-"); }
+
+// OUTPUT
+// .u-lg-width1of3 { width: calc(100% * 1 / 3) !important; }
+// .u-lg-width2of3 { width: calc(100% * 2 / 3) !important; }
+// ...
