@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /*!
- * Analog CSS
- * © 2014 Richard Sime
+ * ProCSS
+ * © 2018 Richard Sime
  *
  */
 
@@ -12,8 +12,8 @@
 
 // sass --watch sass/style.scss:css/style.css --style compressed
 
-// Here we pull in some variables, include the inuit.css framework, then add our
-// project-specific components afterwards.
+// Here we pull in some variables, include the inuit.css framework,
+// then add our project-specific components
 
 // Setup ==========
 @import "vars";
