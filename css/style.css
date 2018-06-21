@@ -4,521 +4,6 @@
  * © 2018 Richard Sime
  *
  */
-.m-t-0 {
-  margin-top: 0 !important;
-}
-
-.m-t-xs {
-  margin-top: 4px !important;
-}
-
-.m-t-sm {
-  margin-top: 8px !important;
-}
-
-.m-t-md {
-  margin-top: 16px !important;
-}
-
-.m-t-lg {
-  margin-top: 24px !important;
-}
-
-.m-t-xl {
-  margin-top: 32px !important;
-}
-
-.m-t-xx {
-  margin-top: 48px !important;
-}
-
-.m-b-0 {
-  margin-bottom: 0 !important;
-}
-
-.m-b-xs {
-  margin-bottom: 4px !important;
-}
-
-.m-b-sm {
-  margin-bottom: 8px !important;
-}
-
-.m-b-md {
-  margin-bottom: 16px !important;
-}
-
-.m-b-lg {
-  margin-bottom: 24px !important;
-}
-
-.m-b-xl {
-  margin-bottom: 32px !important;
-}
-
-.m-b-xx {
-  margin-bottom: 48px !important;
-}
-
-.p-b-0 {
-  padding-bottom: 0 !important;
-}
-
-.p-b-xs {
-  padding-bottom: 4px !important;
-}
-
-.p-b-sm {
-  padding-bottom: 8px !important;
-}
-
-.p-b-md {
-  padding-bottom: 16px !important;
-}
-
-.p-b-lg {
-  padding-bottom: 24px !important;
-}
-
-.p-b-xl {
-  padding-bottom: 32px !important;
-}
-
-.p-r-0 {
-  padding-right: 0 !important;
-}
-
-.p-r-xs {
-  padding-right: 5px !important;
-}
-
-.p-r-sm {
-  padding-right: 10px !important;
-}
-
-.p-r-md {
-  padding-right: 20px !important;
-}
-
-.p-r-lg {
-  padding-right: 30px !important;
-}
-
-.p-r-xl {
-  padding-right: 40px !important;
-}
-
-.p-l-0 {
-  padding-left: 0 !important;
-}
-
-.p-l-xs {
-  padding-left: 4px !important;
-}
-
-.p-l-sm {
-  padding-left: 8px !important;
-}
-
-.p-l-md {
-  padding-left: 16px !important;
-}
-
-.p-l-lg {
-  padding-left: 24px !important;
-}
-
-.p-l-xl {
-  padding-left: 32px !important;
-}
-
-@media (max-width: 47.9375em) {
-  .m-t-0-mobile {
-    margin-top: 0 !important;
-  }
-
-  .m-t-xs-mobile {
-    margin-top: 4px !important;
-  }
-
-  .m-t-sm-mobile {
-    margin-top: 8px !important;
-  }
-
-  .m-t-md-mobile {
-    margin-top: 16px !important;
-  }
-
-  .m-t-lg-mobile {
-    margin-top: 24px !important;
-  }
-
-  .m-t-xl-mobile {
-    margin-top: 32px !important;
-  }
-
-  .m-t-xx-mobile {
-    margin-top: 48px !important;
-  }
-
-  .m-b-0-mobile {
-    margin-bottom: 0 !important;
-  }
-
-  .m-b-xs-mobile {
-    margin-bottom: 4px !important;
-  }
-
-  .m-b-sm-mobile {
-    margin-bottom: 8px !important;
-  }
-
-  .m-b-md-mobile {
-    margin-bottom: 16px !important;
-  }
-
-  .m-b-lg-mobile {
-    margin-bottom: 24px !important;
-  }
-
-  .m-b-xl-mobile {
-    margin-bottom: 32px !important;
-  }
-
-  .m-b-xx-mobile {
-    margin-bottom: 48px !important;
-  }
-
-  .p-b-0-mobile {
-    padding-bottom: 0 !important;
-  }
-
-  .p-b-xs-mobile {
-    padding-bottom: 4px !important;
-  }
-
-  .p-b-sm-mobile {
-    padding-bottom: 8px !important;
-  }
-
-  .p-b-md-mobile {
-    padding-bottom: 16px !important;
-  }
-
-  .p-b-lg-mobile {
-    padding-bottom: 24px !important;
-  }
-
-  .p-b-xl-mobile {
-    padding-bottom: 32px !important;
-  }
-
-  .p-r-0-mobile {
-    padding-right: 0 !important;
-  }
-
-  .p-r-xs-mobile {
-    padding-right: 5px !important;
-  }
-
-  .p-r-sm-mobile {
-    padding-right: 10px !important;
-  }
-
-  .p-r-md-mobile {
-    padding-right: 20px !important;
-  }
-
-  .p-r-lg-mobile {
-    padding-right: 30px !important;
-  }
-
-  .p-r-xl-mobile {
-    padding-right: 40px !important;
-  }
-
-  .p-l-0-mobile {
-    padding-left: 0 !important;
-  }
-
-  .p-l-xs-mobile {
-    padding-left: 4px !important;
-  }
-
-  .p-l-sm-mobile {
-    padding-left: 8px !important;
-  }
-
-  .p-l-md-mobile {
-    padding-left: 16px !important;
-  }
-
-  .p-l-lg-mobile {
-    padding-left: 24px !important;
-  }
-
-  .p-l-xl-mobile {
-    padding-left: 32px !important;
-  }
-}
-@media (min-width: 48em) {
-  .m-t-0-tablet {
-    margin-top: 0 !important;
-  }
-
-  .m-t-xs-tablet {
-    margin-top: 4px !important;
-  }
-
-  .m-t-sm-tablet {
-    margin-top: 8px !important;
-  }
-
-  .m-t-md-tablet {
-    margin-top: 16px !important;
-  }
-
-  .m-t-lg-tablet {
-    margin-top: 24px !important;
-  }
-
-  .m-t-xl-tablet {
-    margin-top: 32px !important;
-  }
-
-  .m-t-xx-tablet {
-    margin-top: 48px !important;
-  }
-
-  .m-b-0-tablet {
-    margin-bottom: 0 !important;
-  }
-
-  .m-b-xs-tablet {
-    margin-bottom: 4px !important;
-  }
-
-  .m-b-sm-tablet {
-    margin-bottom: 8px !important;
-  }
-
-  .m-b-md-tablet {
-    margin-bottom: 16px !important;
-  }
-
-  .m-b-lg-tablet {
-    margin-bottom: 24px !important;
-  }
-
-  .m-b-xl-tablet {
-    margin-bottom: 32px !important;
-  }
-
-  .m-b-xx-tablet {
-    margin-bottom: 48px !important;
-  }
-
-  .p-b-0-tablet {
-    padding-bottom: 0 !important;
-  }
-
-  .p-b-xs-tablet {
-    padding-bottom: 4px !important;
-  }
-
-  .p-b-sm-tablet {
-    padding-bottom: 8px !important;
-  }
-
-  .p-b-md-tablet {
-    padding-bottom: 16px !important;
-  }
-
-  .p-b-lg-tablet {
-    padding-bottom: 24px !important;
-  }
-
-  .p-b-xl-tablet {
-    padding-bottom: 32px !important;
-  }
-
-  .p-r-0-tablet {
-    padding-right: 0 !important;
-  }
-
-  .p-r-xs-tablet {
-    padding-right: 5px !important;
-  }
-
-  .p-r-sm-tablet {
-    padding-right: 10px !important;
-  }
-
-  .p-r-md-tablet {
-    padding-right: 20px !important;
-  }
-
-  .p-r-lg-tablet {
-    padding-right: 30px !important;
-  }
-
-  .p-r-xl-tablet {
-    padding-right: 40px !important;
-  }
-
-  .p-l-0-tablet {
-    padding-left: 0 !important;
-  }
-
-  .p-l-xs-tablet {
-    padding-left: 4px !important;
-  }
-
-  .p-l-sm-tablet {
-    padding-left: 8px !important;
-  }
-
-  .p-l-md-tablet {
-    padding-left: 16px !important;
-  }
-
-  .p-l-lg-tablet {
-    padding-left: 24px !important;
-  }
-
-  .p-l-xl-tablet {
-    padding-left: 32px !important;
-  }
-}
-@media (min-width: 56.0625em) {
-  .m-t-0-desktop {
-    margin-top: 0 !important;
-  }
-
-  .m-t-xs-desktop {
-    margin-top: 4px !important;
-  }
-
-  .m-t-sm-desktop {
-    margin-top: 8px !important;
-  }
-
-  .m-t-md-desktop {
-    margin-top: 16px !important;
-  }
-
-  .m-t-lg-desktop {
-    margin-top: 24px !important;
-  }
-
-  .m-t-xl-desktop {
-    margin-top: 32px !important;
-  }
-
-  .m-t-xx-desktop {
-    margin-top: 48px !important;
-  }
-
-  .m-b-0-desktop {
-    margin-bottom: 0 !important;
-  }
-
-  .m-b-xs-desktop {
-    margin-bottom: 4px !important;
-  }
-
-  .m-b-sm-desktop {
-    margin-bottom: 8px !important;
-  }
-
-  .m-b-md-desktop {
-    margin-bottom: 16px !important;
-  }
-
-  .m-b-lg-desktop {
-    margin-bottom: 24px !important;
-  }
-
-  .m-b-xl-desktop {
-    margin-bottom: 32px !important;
-  }
-
-  .m-b-xx-desktop {
-    margin-bottom: 48px !important;
-  }
-
-  .p-b-0-desktop {
-    padding-bottom: 0 !important;
-  }
-
-  .p-b-xs-desktop {
-    padding-bottom: 4px !important;
-  }
-
-  .p-b-sm-desktop {
-    padding-bottom: 8px !important;
-  }
-
-  .p-b-md-desktop {
-    padding-bottom: 16px !important;
-  }
-
-  .p-b-lg-desktop {
-    padding-bottom: 24px !important;
-  }
-
-  .p-b-xl-desktop {
-    padding-bottom: 32px !important;
-  }
-
-  .p-r-0-desktop {
-    padding-right: 0 !important;
-  }
-
-  .p-r-xs-desktop {
-    padding-right: 5px !important;
-  }
-
-  .p-r-sm-desktop {
-    padding-right: 10px !important;
-  }
-
-  .p-r-md-desktop {
-    padding-right: 20px !important;
-  }
-
-  .p-r-lg-desktop {
-    padding-right: 30px !important;
-  }
-
-  .p-r-xl-desktop {
-    padding-right: 40px !important;
-  }
-
-  .p-l-0-desktop {
-    padding-left: 0 !important;
-  }
-
-  .p-l-xs-desktop {
-    padding-left: 4px !important;
-  }
-
-  .p-l-sm-desktop {
-    padding-left: 8px !important;
-  }
-
-  .p-l-md-desktop {
-    padding-left: 16px !important;
-  }
-
-  .p-l-lg-desktop {
-    padding-left: 24px !important;
-  }
-
-  .p-l-xl-desktop {
-    padding-left: 32px !important;
-  }
-}
 .CarouselNav-item h5 span, .logo, button, .button, .main-nav a, h1, h2, h3, .temp-page-nav a {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -1439,73 +924,6 @@ ul, ol, dd {
 .media__body,
 .media__body > :last-child {
   margin-bottom: 0;
-}
-
-/**
- * Quickly throw together greybox wireframes. Use in conjunction with other
- * inuit.css objects to create simple greybox prototypes, e.g.:
- *
-   <div class="island  greybox  greybox--medium">Header</div>
-
-   <ul class="nav  nav--fit  nav--block  greybox">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * The beauty of combining the greyboxing with inuit.css objects is that any
- * prototyping can quickly be converted into/used as production code.
- *
- * For a more complete prototyping framework, consider Adam Whitcroft’s Proto:
- * adamwhitcroft.com/proto
- *
- * Demo: jsfiddle.net/inuitcss/qCXfh/
- *
- */
-.greybox,
-.graybox {
-  font-size: 0.75rem;
-  line-height: 2;
-  font-family: sans-serif;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #fff;
-}
-
-.greybox a,
-.graybox a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/**
- * All greyboxes will occupy 100% of their parent’s width, but to alter their
- * heights we apply incrementally larger line-heights:
- */
-.greybox--small,
-.graybox--small {
-  line-height: 48px;
-}
-
-.greybox--medium,
-.graybox--medium {
-  line-height: 96px;
-}
-
-.greybox--large,
-.graybox--large {
-  line-height: 192px;
-}
-
-.greybox--huge,
-.graybox--huge {
-  line-height: 384px;
-}
-
-.greybox--gigantic,
-.graybox--gigantic {
-  line-height: 768px;
 }
 
 /**
@@ -3941,6 +3359,138 @@ button.small, .button.small, .main-nav a.small {
 .CarouselNav-item img {
   width: 100%;
   position: absolute;
+}
+
+.m-t-0 {
+  margin-top: 0 !important;
+}
+
+.m-t-sm {
+  margin-top: 8px !important;
+}
+
+.m-t-md {
+  margin-top: 16px !important;
+}
+
+.m-t-lg {
+  margin-top: 24px !important;
+}
+
+.m-t-xl {
+  margin-top: 32px !important;
+}
+
+.m-b-lg {
+  margin-bottom: 24px !important;
+}
+
+.p-r-md {
+  padding-right: 20px !important;
+}
+
+.p-l-0 {
+  padding-left: 0 !important;
+}
+
+@media (max-width: 47.9375em) {
+  .m-t-0-mobile {
+    margin-top: 0 !important;
+  }
+
+  .m-t-sm-mobile {
+    margin-top: 8px !important;
+  }
+
+  .m-t-md-mobile {
+    margin-top: 16px !important;
+  }
+
+  .m-t-lg-mobile {
+    margin-top: 24px !important;
+  }
+
+  .m-t-xl-mobile {
+    margin-top: 32px !important;
+  }
+
+  .m-b-lg-mobile {
+    margin-bottom: 24px !important;
+  }
+
+  .p-r-md-mobile {
+    padding-right: 20px !important;
+  }
+
+  .p-l-0-mobile {
+    padding-left: 0 !important;
+  }
+}
+@media (min-width: 48em) {
+  .m-t-0-tablet {
+    margin-top: 0 !important;
+  }
+
+  .m-t-sm-tablet {
+    margin-top: 8px !important;
+  }
+
+  .m-t-md-tablet {
+    margin-top: 16px !important;
+  }
+
+  .m-t-lg-tablet {
+    margin-top: 24px !important;
+  }
+
+  .m-t-xl-tablet {
+    margin-top: 32px !important;
+  }
+
+  .m-b-lg-tablet {
+    margin-bottom: 24px !important;
+  }
+
+  .p-r-md-tablet {
+    padding-right: 20px !important;
+  }
+
+  .p-l-0-tablet {
+    padding-left: 0 !important;
+  }
+}
+@media (min-width: 56.0625em) {
+  .m-t-0-desktop {
+    margin-top: 0 !important;
+  }
+
+  .m-t-sm-desktop {
+    margin-top: 8px !important;
+  }
+
+  .m-t-md-desktop {
+    margin-top: 16px !important;
+  }
+
+  .m-t-lg-desktop {
+    margin-top: 24px !important;
+  }
+
+  .m-t-xl-desktop {
+    margin-top: 32px !important;
+  }
+
+  .m-b-lg-desktop {
+    margin-bottom: 24px !important;
+  }
+
+  .p-r-md-desktop {
+    padding-right: 20px !important;
+  }
+
+  .p-l-0-desktop {
+    padding-left: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=css/style.css.map */

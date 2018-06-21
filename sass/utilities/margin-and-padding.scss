@@ -1,0 +1,35 @@
+// ------------------------------------
+// MARGIN & PADDING
+// -------------------------
+@mixin margin-and-padding($namespace: "") {
+  // margin top
+  .m-t-0#{$namespace}  { margin-top: 0 !important; }
+  .m-t-sm#{$namespace} { margin-top: $h/2 !important; }
+  .m-t-md#{$namespace} { margin-top: $h !important; }
+  .m-t-lg#{$namespace} { margin-top: $h*1.5 !important; }
+  .m-t-xl#{$namespace} { margin-top: $h*2 !important; }
+  // margin bottom
+  .m-b-lg#{$namespace} { margin-bottom: $h*1.5 !important; }
+  // padding right
+  .p-r-md#{$namespace} { padding-right: $v !important; }
+  // padding left
+  .p-l-0#{$namespace}  { padding-left: 0 !important; }
+}
+
+@include margin-and-padding();
+@media (max-width: $screen-sm-max) { @include margin-and-padding("-mobile"); }
+@media (min-width: $screen-md) { @include margin-and-padding("-tablet"); }
+@media (min-width: $screen-lg) { @include margin-and-padding("-desktop"); }
+
+// OUTPUTS:
+// .m-t-0-mobile { margin-top: 0; }
+// .m-t-xs-mobile { margin-top: 4px; }
+// .m-t-sm-mobile { margin-top: 8px; }
+// .m-t-md-mobile { margin-top: 16px; }
+// ...
+// @media (min-width: 48em) {
+//  .m-t-0-tablet { margin-top: 0; }
+//  .m-t-xs-tablet { margin-top: 4px; }
+//  ...
+// }
+// etc...

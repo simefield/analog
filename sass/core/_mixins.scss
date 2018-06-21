@@ -4,16 +4,16 @@
 
 @mixin media-query($media-query){
   @if $media-query == mobile {
-      @media only screen and (max-width:$screen-sm-max) { @content; }
+    @media only screen and (max-width:$screen-sm-max) { @content; }
   }
   @if $media-query == tablet {
-      @media only screen and (min-width:$screen-md) { @content; }
+    @media only screen and (min-width:$screen-md) { @content; }
   }
   @if $media-query == tablet-only {
-      @media only screen and (min-width:$screen-md) and (max-width:$screen-md-max) { @content; }
+    @media only screen and (min-width:$screen-md) and (max-width:$screen-md-max) { @content; }
   }
   @if $media-query == desktop {
-      @media only screen and (min-width:$screen-lg) { @content; }
+    @media only screen and (min-width:$screen-lg) { @content; }
   }
 }
 
@@ -36,88 +36,3 @@
   font-size: px-to-rem($font-size);
   line-height: $line-height / $font-size;
 }
-
-// ------------------------------------
-// SPACING
-// ------------------------------------
-
-// margin & padding top/bottom
-// -------------------------
-@mixin margin-and-padding($namespace: "") {
-  // margin top
-  .m-t-0#{$namespace}  { margin-top: 0 !important; }
-  .m-t-xs#{$namespace} { margin-top: $h/4 !important; }
-  .m-t-sm#{$namespace} { margin-top: $h/2 !important; }
-  .m-t-md#{$namespace} { margin-top: $h !important; }
-  .m-t-lg#{$namespace} { margin-top: $h*1.5 !important; }
-  .m-t-xl#{$namespace} { margin-top: $h*2 !important; }
-  .m-t-xx#{$namespace} { margin-top: $h*3 !important; }
-  // margin bottom
-  .m-b-0#{$namespace}  { margin-bottom: 0 !important; }
-  .m-b-xs#{$namespace} { margin-bottom: $h/4 !important; }
-  .m-b-sm#{$namespace} { margin-bottom: $h/2 !important; }
-  .m-b-md#{$namespace} { margin-bottom: $h !important; }
-  .m-b-lg#{$namespace} { margin-bottom: $h*1.5 !important; }
-  .m-b-xl#{$namespace} { margin-bottom: $h*2 !important; }
-  .m-b-xx#{$namespace} { margin-bottom: $h*3 !important; }
-  // margin right
-  // .m-r-0#{$namespace}  { margin-right: 0 !important; }
-  // .m-r-xs#{$namespace} { margin-right: $h/4 !important; }
-  // .m-r-sm#{$namespace} { margin-right: $h/2 !important; }
-  // .m-r-md#{$namespace} { margin-right: $h !important; }
-  // .m-r-lg#{$namespace} { margin-right: $h*1.5 !important; }
-  // .m-r-xl#{$namespace} { margin-right: $h*2 !important; }
-  // margin left
-  // .m-l-0#{$namespace}  { margin-left: 0 !important; }
-  // .m-l-xs#{$namespace} { margin-left: $h/4 !important; }
-  // .m-l-sm#{$namespace} { margin-left: $h/2 !important; }
-  // .m-l-md#{$namespace} { margin-left: $h !important; }
-  // .m-l-lg#{$namespace} { margin-left: $h*1.5 !important; }
-  // .m-l-xl#{$namespace} { margin-left: $h*2 !important; }
-  // padding top
-  // .p-t-0#{$namespace}  { padding-top: 0 !important; }
-  // .p-t-xs#{$namespace} { padding-top: $h/4 !important; }
-  // .p-t-sm#{$namespace} { padding-top: $h/2 !important; }
-  // .p-t-md#{$namespace} { padding-top: $h !important; }
-  // .p-t-lg#{$namespace} { padding-top: $h*1.5 !important; }
-  // .p-t-xl#{$namespace} { padding-top: $h*2 !important; }
-  // padding bottom
-  .p-b-0#{$namespace}  { padding-bottom: 0 !important; }
-  .p-b-xs#{$namespace} { padding-bottom: $h/4 !important; }
-  .p-b-sm#{$namespace} { padding-bottom: $h/2 !important; }
-  .p-b-md#{$namespace} { padding-bottom: $h !important; }
-  .p-b-lg#{$namespace} { padding-bottom: $h*1.5 !important; }
-  .p-b-xl#{$namespace} { padding-bottom: $h*2 !important; }
-  // padding right
-  .p-r-0#{$namespace}  { padding-right: 0 !important; }
-  .p-r-xs#{$namespace} { padding-right: $v/4 !important; }
-  .p-r-sm#{$namespace} { padding-right: $v/2 !important; }
-  .p-r-md#{$namespace} { padding-right: $v !important; }
-  .p-r-lg#{$namespace} { padding-right: $v*1.5 !important; }
-  .p-r-xl#{$namespace} { padding-right: $v*2 !important; }
-  // padding left
-  .p-l-0#{$namespace}  { padding-left: 0 !important; }
-  .p-l-xs#{$namespace} { padding-left: $h/4 !important; }
-  .p-l-sm#{$namespace} { padding-left: $h/2 !important; }
-  .p-l-md#{$namespace} { padding-left: $h !important; }
-  .p-l-lg#{$namespace} { padding-left: $h*1.5 !important; }
-  .p-l-xl#{$namespace} { padding-left: $h*2 !important; }
-}
-
-@include margin-and-padding();
-@media (max-width: $screen-sm-max) { @include margin-and-padding("-mobile"); }
-@media (min-width: $screen-md) { @include margin-and-padding("-tablet"); }
-@media (min-width: $screen-lg) { @include margin-and-padding("-desktop"); }
-
-// OUTPUTS:
-// .m-t-0-mobile { margin-top: 0; }
-// .m-t-xs-mobile { margin-top: 4px; }
-// .m-t-sm-mobile { margin-top: 8px; }
-// .m-t-md-mobile { margin-top: 16px; }
-// ...
-// @media (min-width: 48em) {
-//  .m-t-0-tablet { margin-top: 0; }
-//  .m-t-xs-tablet { margin-top: 4px; }
-//  ...
-// }
-// etc...
