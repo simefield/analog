@@ -23,14 +23,14 @@
 }
     .media__img{
         float:left;
-        margin-right:$grid-unit;
+        margin-right:$h;
     }
     /**
      * Reversed image location (right instead of left).
      */
     .media__img--rev{
         float:right;
-        margin-left:$grid-unit;
+        margin-left:$h;
     }
 
         .media__img img,

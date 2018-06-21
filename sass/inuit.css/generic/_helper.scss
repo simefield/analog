@@ -29,13 +29,13 @@
 .weight--semibold   { font-weight:600!important; }
 
 // Add/remove margins
-.push           { margin:       $grid-unit!important; }
-.push--top      { margin-top:   $grid-unit!important; }
-.push--right    { margin-right: $grid-unit!important; }
-.push--bottom   { margin-bottom:$grid-unit!important; }
-.push--left     { margin-left:  $grid-unit!important; }
-.push--ends     { margin-top:   $grid-unit!important; margin-bottom:$grid-unit!important; }
-.push--sides    { margin-right: $grid-unit!important; margin-left:  $grid-unit!important; }
+.push           { margin:       $h!important; }
+.push--top      { margin-top:   $h!important; }
+.push--right    { margin-right: $h!important; }
+.push--bottom   { margin-bottom:$h!important; }
+.push--left     { margin-left:  $h!important; }
+.push--ends     { margin-top:   $h!important; margin-bottom:$h!important; }
+.push--sides    { margin-right: $h!important; margin-left:  $h!important; }
 
 .push-half          { margin:       $half-spacing-unit!important; }
 .push-half--top     { margin-top:   $half-spacing-unit!important; }
@@ -54,13 +54,13 @@
 .flush--sides   { margin-right: 0!important; margin-left:  0!important; }
 
 // Add/remove paddings
-.soft           { padding:       $grid-unit!important; }
-.soft--top      { padding-top:   $grid-unit!important; }
-.soft--right    { padding-right: $grid-unit!important; }
-.soft--bottom   { padding-bottom:$grid-unit!important; }
-.soft--left     { padding-left:  $grid-unit!important; }
-.soft--ends     { padding-top:   $grid-unit!important; padding-bottom:$grid-unit!important; }
-.soft--sides    { padding-right: $grid-unit!important; padding-left:  $grid-unit!important; }
+.soft           { padding:       $h!important; }
+.soft--top      { padding-top:   $h!important; }
+.soft--right    { padding-right: $h!important; }
+.soft--bottom   { padding-bottom:$h!important; }
+.soft--left     { padding-left:  $h!important; }
+.soft--ends     { padding-top:   $h!important; padding-bottom:$h!important; }
+.soft--sides    { padding-right: $h!important; padding-left:  $h!important; }
 
 .soft-half           { padding:       $half-spacing-unit!important; }
 .soft-half--top      { padding-top:   $half-spacing-unit!important; }
@@ -80,8 +80,8 @@
 
 // Pull items full width of `.island` parents.
 .full-bleed{
-  margin-right:-$grid-unit!important;
-  margin-left: -$grid-unit!important;
+  margin-right:-$h!important;
+  margin-left: -$h!important;
 }
 
 // Add a help cursor to any element that gives the user extra information on

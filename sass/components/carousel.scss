@@ -35,7 +35,7 @@
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
     position: relative;
-    padding-bottom: $v-grid-unit/2;
+    padding-bottom: $v/2;
     & > *:first-child {
       margin-top: 0;
       @include font-size(16px);

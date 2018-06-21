@@ -57,5 +57,5 @@ $desktop-push:      true!default;
 // inuit.css will work these next ones out for use within the framework.
 // Assign our `$base-line-height` to a new spacing var for more transparency.
 
-$half-spacing-unit: $grid-unit / 2!default;
+$half-spacing-unit: $h / 2!default;
 $line-height-ratio: $base-line-height / $base-font-size;

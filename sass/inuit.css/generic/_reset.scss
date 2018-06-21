@@ -1,22 +1,15 @@
 // ------------------------------------
 // RESET
 // ------------------------------------
-/**
- * A more considered reset; more of a restart...
- * As per: csswizardry.com/2011/10/reset-restarted
- */
 
-@if $global-border-box == true{
-    /**
-    * Let’s make the box model all nice, shall we...?
-    */
-    *{
-        &,
-        &:before,
-        &:after{
-            @include vendor(box-sizing, border-box);
-        }
-    }
+// ============
+// Apply a natural box layout model to all elements, but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+html { box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 /**

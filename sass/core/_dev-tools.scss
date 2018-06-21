@@ -12,7 +12,7 @@
 }
 
 // Greybox - blue boxes to give columns visibility assistance during dev
-.greybox { background-color: #0067a8; line-height: $grid-unit*10; color: white; text-align: center; }
+.greybox { background-color: #0067a8; line-height: $h*10; color: white; text-align: center; }
 
 // Temporary page navigation helper
 .temp-page-nav { position: absolute; z-index: 99999999999999; left: 0; top: 0; margin: 0; padding: 10px 0; background-color: rgba(0,0,0,0.85); font-size: 13px; a { color: white; @extend %fix-webkit-font-rendering; padding: 2px 1em; display: block; &:hover { background-color: $red;} } }

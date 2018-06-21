@@ -196,21 +196,21 @@ body { background-color: $black; }
   background-color: $paper;
   margin-left: auto;
   margin-right: auto;
-  padding: $grid-unit $grid-unit*1 $grid-unit;
-  @media (min-width: $screen-md) { padding-top: $grid-unit*2; padding-bottom: $grid-unit*2; }
+  padding: $h $h*1 $h;
+  @media (min-width: $screen-md) { padding-top: $h*2; padding-bottom: $h*2; }
 }
 
 button, .button, %button {
   @extend %fix-webkit-font-rendering;
   border: .5px solid rgba($red, .5);
-  margin-right: $v-grid-unit/2;
+  margin-right: $v/2;
   text-align: center;
   @include font-size(14px, 24px);
   background-color: $red;
   color: $paper;
   display: flex;
   align-items: center;
-  padding: $grid-unit/2 $v-grid-unit/2;
+  padding: $h/2 $v/2;
   a > & {
     margin-right: 0;
   }
@@ -235,8 +235,8 @@ $nav-button-lg: 68px;
 // <ul>
 .main-nav {
   margin-top: 0;
-  margin-bottom: $grid-unit;
-  @media (min-width: $screen-md) { margin-bottom: $grid-unit*1.5; }
+  margin-bottom: $h;
+  @media (min-width: $screen-md) { margin-bottom: $h*1.5; }
   list-style:none;
   margin-left:0;
   display: flex;
@@ -250,7 +250,7 @@ $nav-button-lg: 68px;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    margin-right: $grid-unit;
+    margin-right: $h;
     @media (min-width: $screen-md) {
       // margin-right: 35px;
       @include font-size(12px);
@@ -374,7 +374,7 @@ $nav-button-lg: 68px;
 }
 
 .photo-credit {
-  @include font-size(9px, $v-grid-unit);
+  @include font-size(9px, $v);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -396,14 +396,14 @@ $nav-button-lg: 68px;
 
 // <div>
 .aside {
-  margin-bottom: $grid-unit;
+  margin-bottom: $h;
   @include font-size(14px, 24px);
   h4 { margin-top: 18px; }
 }
 
 // <img>
 .app-icon {
-  margin-top: $grid-unit/2;
+  margin-top: $h/2;
   border-radius: 15px;
   &.outline {
     box-shadow: 0 0 1px rgba(0,0,0,0.25);
@@ -465,13 +465,13 @@ $nav-button-lg: 68px;
 // ------------------------------------
 
 .Footer {
-  margin-top: $grid-unit*3;
+  margin-top: $h*3;
   @include media-query(tablet) {
-    margin-top: $grid-unit*4;
-    margin-left: $grid-unit;
-    margin-right: $grid-unit;
+    margin-top: $h*4;
+    margin-left: $h;
+    margin-right: $h;
   }
-  padding: $grid-unit/2 $grid-unit;
+  padding: $h/2 $h;
   border: .5px solid rgba($black, .5);
   display: flex;
   justify-content: space-between;
@@ -488,7 +488,7 @@ $nav-button-lg: 68px;
   @include font-size(12px);
   li {
     display: inline-block;
-    margin-right: $grid-unit;
+    margin-right: $h;
   }
 }
 

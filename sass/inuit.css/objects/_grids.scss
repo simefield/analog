@@ -39,7 +39,7 @@
  * Grid wrapper
  */
 .grid{
-    margin-left:-$grid-unit*2;
+    margin-left:-$h*2;
     list-style:none;
     margin-bottom:0;
 }
@@ -59,7 +59,7 @@
     .grid__item{
         display:inline-block;
         width:100%;
-        padding-left:$grid-unit*2;
+        padding-left:$h*2;
         vertical-align:top;
         box-sizing: border-box;
     }
@@ -73,8 +73,8 @@
 // narrow left and right columns
 // -----------------------------
 @mixin skinny-col($namespace: "") {
-    .skinny-left#{$namespace} > :first-child { margin-left: $grid-unit; }
-    .skinny-right#{$namespace} > :first-child { margin-right: $grid-unit; }
+    .skinny-left#{$namespace} > :first-child { margin-left: $h; }
+    .skinny-right#{$namespace} > :first-child { margin-right: $h; }
 }
 
 @include skinny-col();

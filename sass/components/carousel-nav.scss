@@ -7,16 +7,16 @@
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  margin-left: -$grid-unit/2;
+  margin-left: -$h/2;
   @include media-query(tablet) {
-    margin-top: $grid-unit*2;
-    margin-left: $grid-unit/2;
+    margin-top: $h*2;
+    margin-left: $h/2;
   }
 }
 
 .CarouselNav-item {
-  margin-top: $grid-unit/2;
-  padding-left: $grid-unit/2;
+  margin-top: $h/2;
+  padding-left: $h/2;
   width: #{1/4 * 100%};
   @include media-query(tablet) { width: #{1/6 * 100%}; }
   @include media-query(desktop) { width: #{1/8 * 100%}; }

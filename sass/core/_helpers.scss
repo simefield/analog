@@ -52,9 +52,9 @@
   text-justify: distribute-all-lines;
   font-size: 0 !important;
   // analog site specific (due to skinny side columns)
-  margin-left: -$grid-unit/2;
+  margin-left: -$h/2;
   @include media-query(tablet) {
-    margin-left: -$grid-unit;
+    margin-left: -$h;
     margin-left: 0;
   }
   // end analog specific
@@ -72,9 +72,9 @@
   text-align: left;
   font-size: medium;
   // analog site specific (due to skinny side columns)
-  padding-left: $grid-unit/2;
+  padding-left: $h/2;
   @include media-query(tablet) {
-    padding-left: $grid-unit;
+    padding-left: $h;
   }
   // end analog specific
 }
