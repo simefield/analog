@@ -42,15 +42,15 @@
 {{/websites}}
 </script>
 
-<div class="grid">
-  <div class="grid__item  skinny-right-tablet">
+<div class="Grid Grid--withGutter">
+  <div class="Grid__item  skinny-right-tablet">
     <ul class="Carousel"></ul><!-- /Carousel -->
-  </div><!-- /grid__item
---><div class="grid__item  skinny-right-tablet">
-    <!-- distribute grid items must have white-space between them, and a mobile width declaration -->
+  </div><!-- /Grid__item
+--><div class="Grid__item  skinny-right-tablet">
+    <!-- distribute Grid items must have white-space between them, and a mobile width declaration -->
     <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
-  </div><!-- /grid__item -->
-</div><!-- /grid -->
+  </div><!-- /Grid__item -->
+</div><!-- /Grid -->
 
 <?php /*
     OTHER SITES

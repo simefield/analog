@@ -655,109 +655,6 @@ ul, ol, dd {
 }
 
 /**
- * Fluid and nestable grid system, e.g.:
- *
-   <div class="grid">
-
-       <div class="grid__item  one-third">
-           <p>One third grid</p>
-       </div><!--
-
-    --><div class="grid__item  two-thirds">
-           <p>Two thirds grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-half">
-           <p>One half grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div><!--
-
-    --><div class="grid__item  one-quarter">
-           <p>One quarter grid</p>
-       </div>
-
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
-/**
- * Grid wrapper
- */
-.grid {
-  margin-left: -32px;
-  list-style: none;
-  margin-bottom: 0;
-}
-
-/**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
- */
-.grid > .grid {
-  margin-left: 0;
-}
-
-/**
- * Grid
- */
-.grid__item {
-  display: inline-block;
-  width: 100%;
-  padding-left: 32px;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-
-.skinny-left > :first-child {
-  margin-left: 16px;
-}
-
-.skinny-right > :first-child {
-  margin-right: 16px;
-}
-
-@media (max-width: 47.9375em) {
-  .skinny-left-mobile > :first-child {
-    margin-left: 16px;
-  }
-
-  .skinny-right-mobile > :first-child {
-    margin-right: 16px;
-  }
-}
-@media (min-width: 48em) {
-  .skinny-left-tablet > :first-child {
-    margin-left: 16px;
-  }
-
-  .skinny-right-tablet > :first-child {
-    margin-right: 16px;
-  }
-}
-@media (min-width: 56.0625em) {
-  .skinny-left-desktop > :first-child {
-    margin-left: 16px;
-  }
-
-  .skinny-right-desktop > :first-child {
-    margin-right: 16px;
-  }
-}
-/*
- * generates:
- *
- * .skinny-left > :first-child { margin-left: 16px; }
- * .skinny-right > :first-child { margin-right: 16px; }
- *
- * @media (max-width: 47.9375em) {
- *     .skinny-left-mobile > :first-child { margin-left: 16px; }
- *
- *     etc...
- */
-/**
  * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
  * When used on an `ol` or `ul`, this class throws the list into horizontal mode
  * e.g.:
@@ -2988,6 +2885,30 @@ button.small, .button.small, .main-nav a.small {
   font-size: 0.75rem;
   line-height: 2;
   white-space: nowrap;
+}
+
+.Grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.Grid > * {
+  box-sizing: inherit;
+  flex-basis: 100%;
+  min-width: 0;
+}
+
+.Grid--withGutter {
+  margin-left: calc(-.5 * 32px);
+  margin-right: calc(-.5 * 32px);
+}
+
+.Grid--withGutter > * {
+  padding-left: calc(.5 * 32px);
+  padding-right: calc(.5 * 32px);
 }
 
 .Carousel {
