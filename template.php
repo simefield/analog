@@ -21,13 +21,13 @@
   <body>
     <div class='content'>
       <div class="Grid">
-         <div class="u-sm-width1of2 u-md-width1of2 skinny-left-tablet">
+         <div class="u-sm-width1of2 u-md-width1of2 Grid-md-skinnyLeft">
            <ul class='main-nav'>
               <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
          </div>
-         <div class=" p-l-0-mobile u-sm-width1of2 u-md-width1of2 skinny-right-tablet">
+         <div class="p-l-0-mobile u-sm-width1of2 u-md-width1of2 Grid-md-skinnyRight">
         <!-- <div class="logo-wrapper"> -->
             <a class="logo" href="">
               <span class="logo-ana">ana</span>
@@ -41,7 +41,7 @@
             </ul> -->
           <!-- </div> -->
         </div>
-        <?php if (isset($photoClass)) { ?><div class=" skinny-left-tablet  skinny-right-tablet">
+        <?php if (isset($photoClass)) { ?><div class="Grid-md-skinnyLeft  Grid-md-skinnyRight">
             <div><!-- must nest for skinny- type margins -->
                 <div class="hero">
                     <div class="hero__image  <?= $photoClass ?>"></div>

@@ -1,10 +1,10 @@
 <div class="Grid Grid--withGutter">
-  <div class="u-md-width3of4 push--tablet-one-quarter">
+  <div class="u-md-width3of4 u-md-push1of4">
     <h1>Curriculum&nbsp;Vitæ of Richard&nbsp;Sime</h1>
   </div>
 </div>
 <div class="Grid Grid--withGutter">
-  <div class="u-md-width1of2 push--tablet-one-quarter">
+  <div class="u-md-width1of2 u-md-push1of4">
     <div><!-- must nest hero image to respect skinny- type margins -->
       <div class="cv">
         <h2>Employment</h2>
@@ -44,7 +44,7 @@
       </div><!-- /cv -->
     </div><!-- /skinny nested element -->
   </div>
-  <div class="u-md-width1of4 skinny-right-tablet  push--tablet-one-quarter">
+  <div class="u-md-width1of4 Grid-md-skinnyRight  u-md-push1of4">
   <div class="cv">
       <h2>Technologies</h2>
         <p class='m-t-md'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>

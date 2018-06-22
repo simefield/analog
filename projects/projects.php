@@ -43,10 +43,10 @@
 </script>
 
 <div class="Grid Grid--withGutter">
-  <div class="Grid__item  skinny-right-tablet">
+  <div class="Grid__item  Grid-md-skinnyRight">
     <ul class="Carousel"></ul><!-- /Carousel -->
   </div>
-  <div class="Grid__item  skinny-right-tablet">
+  <div class="Grid__item  Grid-md-skinnyRight">
     <!-- distribute Grid items must have white-space between them, and a mobile width declaration -->
     <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
   </div>

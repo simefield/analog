@@ -69,12 +69,12 @@ $grid-gutter-size: $h*2;
 // ============
 
 @mixin skinny-col($namespace: "") {
- .skinny-left#{$namespace} > :first-child { margin-left: $h; }
- .skinny-right#{$namespace} > :first-child { margin-right: $h; }
+ .Grid-#{$namespace}skinnyLeft > :first-child { margin-left: $h; }
+ .Grid-#{$namespace}skinnyRight > :first-child { margin-right: $h; }
 }
 
-@media (min-width: $screen-md)     { @include skinny-col("-tablet"); }
+@media (min-width: $screen-md)     { @include skinny-col("md-"); }
 
 // OUTPUT
-// .skinny-left > :first-child { margin-left: 16px; }
-// .skinny-right > :first-child { margin-right: 16px; }
+// .Grid-skinnyLeft > :first-child { margin-left: 16px; }
+// .Grid-skinnyRight > :first-child { margin-right: 16px; }

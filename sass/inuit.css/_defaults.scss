@@ -14,19 +14,6 @@ $base-line-height:  24px!default;
 $base-font-family:  sans-serif!default;
 
 // ------------------------------------
-// RESPONSIVE
-// ------------------------------------
-// Responsive push and pull produce a LOT of code, only turn them on if you
-// definitely need them.
-
-$push:              true!default;
-// Note: `$push` variable above must be set to true before enabling these.
-
-$mobile-push:       true!default;
-$tablet-push:       true!default;
-$desktop-push:      true!default;
-
-// ------------------------------------
 // FRAMEWORK
 // ------------------------------------
 // inuit.css will work these next ones out for use within the framework.
