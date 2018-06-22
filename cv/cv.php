@@ -14,7 +14,7 @@
             <!-- <h4>Alphero</h4> -->
             <p class="u-mt-0"><b>Front End Developer</b></p>
             <p>Alphero are a fast-growing design-led digital development company offering end-to-end solutions for Android, iOS and web.</p>
-            <p>As a member of the web team, I led the front-end build on a number of websites including: <b>The <span class="whiteSpace--nowrap">Co-operative</span> Bank</b>, <b>FMG</b>, <b>MFAT</b>, <b>MyMSD</b>, <b>Overseer</b>, and <b>Paymark</b>.</p>
+            <p>As a member of the web team, I led the front-end build on a number of websites including: <b>The <span class="u-noWrap">Co-operative</span> Bank</b>, <b>FMG</b>, <b>MFAT</b>, <b>MyMSD</b>, <b>Overseer</b>, and <b>Paymark</b>.</p>
             <p>After a couple of years at Alphero working with a mix of my favourite CSS frameworks I decided to put my hand to formalising an in-house boilerplate. Out of my jumble of experience, development, and borrowed code I wrote what was to become Alphero‘s standard SASS framework, AINT (Alphero’s Inverted Triangle). AINT gives our web developers a running start on our projects and has proven quick and lean, with our average CSS files weighing in at anywhere from 4,000-7,000 lines of compiled code. It has been used on every web project since early 2016, and it continues to be refined and improved upon.</p>
           </li>
           <li>

@@ -15,7 +15,6 @@
 //------------------------------------
 
 // Generic utility styles etc.
-@import "defaults";
 @import "generic/normalize";
 @import "generic/reset";
 @import "generic/clearfix";
@@ -23,7 +22,3 @@
 
 // Objects and abstractions
 @import "objects/nav";
-@import "objects/media";
-
-// Style trumps; helper and brand classes
-@import "generic/helper";

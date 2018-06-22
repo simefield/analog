@@ -20,7 +20,7 @@
           <h4><a href="apps/typesetter/">Typesetter</a></h4>
           <p class='u-mt-0'>Live typeface prototyping.</p>
           <a href="apps/typesetter/">
-            <div class="text--center u-mt-lg u-mb-lg">
+            <div class="u-textCenter u-mt-lg u-mb-lg">
               <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'>
             </div>
           </a>

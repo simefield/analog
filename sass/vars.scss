@@ -1,21 +1,7 @@
 // ------------------------------------
-// VARS.SCSS
+// VARIABLES
 // ------------------------------------
-// Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
-// keep, simply redefine here. This means that if inuit.css, for example, sets
-// your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
-// that variable in this file. inuit.css ignores its own variables in favour of
-// using your own, so you can completely modify how inuit.css works without ever
-// having to alter the framework itself.
 
-// OBJECTS-AND-ABSTRACTIONS
-// ------------------------------------
-// All of inuit.css’ objects and abstractions are initially turned off by
-// default. This means that you start any project with as little as possible,
-// and introducing objects and abstractions is as simple as switching the
-// following variables to `true`.
-
-$use-media:   true;
 $use-nav:     true;
 
 // CUSTOM
@@ -29,6 +15,11 @@ $red: #ff443d;
 
 $h: 16px !default;
 $v: 20px !default; // vertical grid unit
+
+// Base font
+$base-font-size:    16px!default;
+$base-line-height:  24px!default;
+$base-font-family:  sans-serif!default;
 
 // Media queries breakpoints
 // --------------------------------------------------

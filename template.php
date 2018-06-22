@@ -17,7 +17,6 @@
     <script src="js/mustache.js"></script>
     <script src="js/imagesloaded.pkgd.js"></script>
   </head>
-
   <body>
     <div class='content'>
       <div class="Grid">
@@ -28,37 +27,25 @@
             </ul>
          </div>
          <div class="Grid-md-skinnyRight u-sm-pl-0 u-sm-width1of2 u-md-width1of2">
-        <!-- <div class="logo-wrapper"> -->
-            <a class="logo" href="">
-              <span class="logo-ana">ana</span>
-              <span class="logo-log">log</span>
-              <!-- <img src="images/analog.png" alt="Analog logo"> -->
-            </a>
-            <!-- <ul class='nav  nav--stacked  contact'>
-              <li class='hide_mobile'>Say g’day
-              <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
-              <li><a href="tel:04-022-568-8907">022.568.8907</a>
-            </ul> -->
-          <!-- </div> -->
+          <a class="logo" href="">
+            <span class="logo-ana">ana</span>
+            <span class="logo-log">log</span>
+            <!-- <img src="images/analog.png" alt="Analog logo"> -->
+          </a>
         </div>
         <?php if (isset($photoClass)) { ?><div class="Grid-md-skinnyLeft Grid-md-skinnyRight">
-            <div><!-- must nest for skinny- type margins -->
-                <div class="Hero">
-                    <div class="Hero-image  <?= $photoClass ?>"></div>
-                    <span class='Hero-credit'>
-                      <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
-                    </span>
-                </div>
+          <div><!-- must nest for skinny- type margins -->
+            <div class="Hero">
+              <div class="Hero-image  <?= $photoClass ?>"></div>
+              <span class='Hero-credit'>
+                <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
+              </span>
             </div>
+          </div>
         </div>
       <?php } ?>
-
       </div>
-
-      <?php
-          require_once ($content);
-      ?>
-
+      <?php require_once ($content); ?>
       <div class="Footer-wrapper">
         <div class="Footer">
           <ul class='Footer-list'>
@@ -72,17 +59,14 @@
         </div>
       </div>
     </div><!-- /content -->
-
     <script src="js/common.js"></script>
-
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-50448076-1', 'analog.co.nz');
-        ga('send', 'pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-50448076-1', 'analog.co.nz');
+      ga('send', 'pageview');
     </script>
-
   </body>
 </html>

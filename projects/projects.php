@@ -9,7 +9,7 @@
         {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}{{#siteNote}}<em> <small>[{{siteNote}}]</small></em>{{/siteNote}}</span>{{/site}}
       </h1>
     </div>
-    <div class="u-sm-width1of1 u-md-width3of5 u-sm-mt-md u-md-mt-lg float--right">
+    <div class="u-sm-width1of1 u-md-width3of5 u-sm-mt-md u-md-mt-lg u-floatRight">
       <img src="images/portfolio/{{image}}" width='100%' alt="screenshot of {{site}} website">
     </div>
     <div class="u-sm-width1of1 u-md-width2of5 u-sm-mt-md u-md-pr-md u-lg-mt-lg">

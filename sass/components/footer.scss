@@ -1,0 +1,37 @@
+// ------------------------------------
+// Footer
+// ------------------------------------
+
+.Footer {
+  margin-top: $h*3;
+  @include media-query(tablet) {
+    margin-top: $h*4;
+    margin-left: $h;
+    margin-right: $h;
+  }
+  padding: $h/2 $h;
+  border: .5px solid rgba($black, .5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (min-width: $screen-lg) {
+    align-items: center;
+  }
+}
+
+.Footer-list {
+  list-style: none;
+  margin-top: 0;
+  margin-left: 0;
+  @include font-size(12px);
+  li {
+    display: inline-block;
+    margin-right: $h;
+  }
+}
+
+.Footer-copyright {
+  margin-top: 0;
+  @include font-size(12px);
+  white-space: nowrap;
+}
