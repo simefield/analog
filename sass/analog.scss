@@ -51,7 +51,7 @@ body {
   display: flex;
 }
 
-.content {
+.Container {
   width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
@@ -76,7 +76,7 @@ body {
   @extend %sansSerif;
 }
 
-.content {
+.Container {
   color: $black;
   @media (max-width: $screen-sm-max) {
     @include font-size(14px, 24px);
@@ -185,7 +185,7 @@ a {
 
 body { background-color: $black; }
 
-.content {
+.Container {
   max-width: 63.625em; // 1018
   max-width: 63.625rem;
   background-color: $paper;
@@ -195,14 +195,12 @@ body { background-color: $black; }
   @media (min-width: $screen-md) { padding-top: $h*2; padding-bottom: $h*2; }
 }
 
-
-
 // ------------------------------------
 // ASIDES
 // ------------------------------------
 
 // <div>
-.aside {
+.Aside {
   margin-bottom: $h;
   @include font-size(14px, 24px);
   h4 { margin-top: 18px; }

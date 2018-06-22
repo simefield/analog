@@ -18,7 +18,7 @@
     <script src="js/imagesloaded.pkgd.js"></script>
   </head>
   <body>
-    <div class='content'>
+    <div class='Container'>
       <div class="Grid">
          <div class="Grid-md-skinnyLeft u-sm-width1of2 u-md-width1of2">
            <ul class='Nav'>

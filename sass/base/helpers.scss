@@ -71,58 +71,12 @@
   display: inline-block;
   text-align: left;
   font-size: medium;
-  // analog site specific (due to skinny side columns)
   padding-left: $h/2;
   @include media-query(tablet) {
     padding-left: $h;
   }
-  // end analog specific
 }
 
-// Hide/show helpers
+// Hide helpers
 // ----------------------------------------------------------------------------
-
-.hide_mobile { @include media-query(mobile) { display: none !important; } }
-.hide_tablet { @include media-query(tablet) { display: none !important; } }
-.hide_desktop { @include media-query(desktop) { display: none !important; } }
-
-// .show_mobile {
-//   display: none;
-//   @include media-query(mobile) { display: block; }
-// }
-// .show_desktop {
-//   @include media-query(desktop) { display: none; }
-// }
-
-
-// ============
-// PLACEHOLDER
-// ============
-
-// Usage
-//
-//.Input {
-//  input {
-//    // long way
-//    @include placeholder {
-//      color: transparent;
-//    }
-//    // Shorthand for just colour
-//    @include placeholder(transparent);
-//  }
-//}
-
-@mixin placeholder($colour: null) {
-  &::-webkit-input-placeholder {
-    @if $colour { color: $colour }
-  }
-  &:-moz-placeholder {
-    @if $colour { color: $colour }
-  }
-  &::-moz-placeholder {
-    @if $colour { color: $colour }
-  }
-  &:-ms-input-placeholder {
-    @if $colour { color: $colour }
-  }
-}
+.u-md-displayNone { @include media-query(tablet) { display: none !important; } }

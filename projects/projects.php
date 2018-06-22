@@ -44,11 +44,10 @@
 
 <div class="Grid Grid--withGutter">
   <div class="Grid-md-skinnyRight">
-    <ul class="Carousel"></ul><!-- /Carousel -->
+    <ul class="Carousel"></ul>
   </div>
   <div class="Grid-md-skinnyRight">
-    <!-- distribute Grid items must have white-space between them, and a mobile width declaration -->
-    <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
+    <ul class='CarouselNav'></ul>
   </div>
 </div>
 

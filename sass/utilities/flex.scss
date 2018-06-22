@@ -1,0 +1,38 @@
+// ============
+// FLEX
+// ============
+
+@mixin flex($namespace: "") {
+  // ============
+  // Applies to flex container
+  // ============
+  // Container
+  .u-#{$namespace}flex { display: flex !important; }
+  .u-#{$namespace}flexInline { display: inline-flex !important; }
+  // Direction: row
+  .u-#{$namespace}flexRow { flex-direction: row !important; }
+  // Direction: column
+  .u-#{$namespace}flexCol { flex-direction: column !important; }
+  // .u-#{$namespace}flexColReverse { flex-direction: column-reverse !important; }
+  // Wrap
+  .u-#{$namespace}flexWrap { flex-wrap: wrap !important; }
+  // Align items along the main axis of the current line of the flex container
+  .u-#{$namespace}flexJustifyCenter { justify-content: center !important; }
+  // Align items in the cross axis of the current line of the flex container
+  .u-#{$namespace}flexAlignItemsCenter { align-items: center !important; }
+  // ============
+  // Applies to flex items
+  // ============
+  // Specify the flex grow factor, which determines how much the flex item will
+  // grow relative to the rest of the flex items in the flex container.
+  // Supports 1-5 proportions
+  // 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+  //   Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+  // .u-#{$namespace}flexGrow1 { flex: 1 1 0% !important; } // 1
+  .u-#{$namespace}flexGrow1 { flex-grow: 1 !important; }
+}
+
+@include flex();
+@include media-query(mobile)  { @include flex("sm-"); }
+@include media-query(tablet)  { @include flex("md-"); }
+// @include media-query(desktop) { @include flex("lg-"); }

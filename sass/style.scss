@@ -1,34 +1,20 @@
 @charset "UTF-8";
 
+// ------------------------------------
+// STYLE.CSS
+// ------------------------------------
+
 /*!
  * ProCSS
  * © 2018 Richard Sime
  *
  */
 
-// ------------------------------------
-// STYLE.CSS
-// ------------------------------------
-
 // sass --watch sass/style.scss:css/style.css --style compressed
-
-// Here we pull in some variables, include the inuit.css framework,
-// then add our project-specific components
 
 // Setup ==========
 @import "vars";
-@import "core/mixins";
-@import "core/helpers";
-@import "core/js-rmq";
-
-// Dev tools ==========
-@import "core/dev-tools";
-
-// Inuit ==========
-@import "inuit.css/inuit";
-
-// Analog ==========
-@import "glyphs";
+@import "base/index";
 @import "analog";
 @import "layout/index";
 @import "components/index";

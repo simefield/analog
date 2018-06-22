@@ -2,7 +2,7 @@
 // BUTTON
 // ------------------------------------
 
-button, .button, %button {
+button, .Button, %button {
   @extend %fix-webkit-font-rendering;
   border: .5px solid rgba($red, .5);
   margin-right: $v/2;
@@ -24,7 +24,7 @@ button, .button, %button {
     background-color: transparent;
     color: $red;
   }
-  &.block {
+  &.Button--block {
     width: 100%;
   }
   &.small {

@@ -4,107 +4,16 @@
  * © 2018 Richard Sime
  *
  */
-.Logo, .CarouselNav-item h5 span, button, .button, .Nav a, h1, h2, h3, .temp-page-nav a {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-.i {
-  display: inline-block;
-  overflow: hidden;
-}
-
-.u-listReset {
-  margin-top: 0;
-  margin-left: 0;
-  list-style: none;
-}
-.u-listReset li {
-  padding-bottom: 0;
-  list-style-image: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.Logo, .CarouselNav-item h5 span, button, .button, .Nav a, h1, h2, h3, .temp-page-nav a {
-  -webkit-font-smoothing: antialiased;
-}
-
-.distribute {
-  text-align: justify !important;
-  text-justify: distribute-all-lines;
-  font-size: 0 !important;
-  margin-left: -8px;
-}
-@media only screen and (min-width: 48em) {
-  .distribute {
-    margin-left: -16px;
-    margin-left: 0;
-  }
-}
-
-.distribute:after {
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.Carousel dl:after,
+.cf:after {
   content: "";
-  display: inline-block;
-  width: 100%;
-}
-
-.distribute > * {
-  vertical-align: top;
-  display: inline-block;
-  text-align: left;
-  font-size: medium;
-  padding-left: 8px;
-}
-@media only screen and (min-width: 48em) {
-  .distribute > * {
-    padding-left: 16px;
-  }
-}
-
-@media only screen and (max-width: 47.9375em) {
-  .hide_mobile {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 48em) {
-  .hide_tablet {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 56.0625em) {
-  .hide_desktop {
-    display: none !important;
-  }
-}
-
-#viewport {
-  position: fixed;
-  z-index: 999999999;
-  right: 16px;
-  bottom: 8px;
-  color: #999;
-  font-size: 12px;
-  padding: 3px 8px 2px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 2px;
-  line-height: 1.563;
-  margin-bottom: 0;
-}
-#viewport:after {
-  content: "mobile";
-}
-@media (min-width: 48em) {
-  #viewport:after {
-    content: "tablet";
-  }
-}
-@media (min-width: 56.0625em) {
-  #viewport:after {
-    content: "desktop";
-  }
+  display: table;
+  clear: both;
 }
 
 #grid-toggle {
@@ -142,39 +51,97 @@
   }
 }
 
-.greybox {
-  background-color: #0067a8;
-  line-height: 160px;
-  color: white;
-  text-align: center;
+.Logo, .CarouselNav-item h5 span, button, .Button, .Nav a, h1, h2, h3 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.temp-page-nav {
-  position: absolute;
-  z-index: 99999999999999;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 10px 0;
+.i {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.u-listReset {
+  margin-top: 0;
+  margin-left: 0;
+  list-style: none;
+}
+.u-listReset li {
+  padding-bottom: 0;
+  list-style-image: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.Logo, .CarouselNav-item h5 span, button, .Button, .Nav a, h1, h2, h3 {
+  -webkit-font-smoothing: antialiased;
+}
+
+.distribute {
+  text-align: justify !important;
+  text-justify: distribute-all-lines;
+  font-size: 0 !important;
+  margin-left: -8px;
+}
+@media only screen and (min-width: 48em) {
+  .distribute {
+    margin-left: -16px;
+    margin-left: 0;
+  }
+}
+
+.distribute:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.distribute > * {
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  font-size: medium;
+  padding-left: 8px;
+}
+@media only screen and (min-width: 48em) {
+  .distribute > * {
+    padding-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .u-md-displayNone {
+    display: none !important;
+  }
+}
+
+#viewport {
+  position: fixed;
+  z-index: 999999999;
+  right: 16px;
+  bottom: 8px;
+  color: #999;
+  font-size: 12px;
+  padding: 3px 8px 2px;
   background-color: rgba(0, 0, 0, 0.85);
-  font-size: 13px;
+  border-radius: 2px;
+  line-height: 1.563;
+  margin-bottom: 0;
 }
-.temp-page-nav a {
-  color: white;
-  padding: 2px 1em;
-  display: block;
+#viewport:after {
+  content: "mobile";
 }
-.temp-page-nav a:hover {
-  background-color: #ff443d;
+@media (min-width: 48em) {
+  #viewport:after {
+    content: "tablet";
+  }
+}
+@media (min-width: 56.0625em) {
+  #viewport:after {
+    content: "desktop";
+  }
 }
 
-/*! inuitcss.com -- @inuitcss -- @csswizardry */
-/* LICENSE
- * Copyright 2013 Harry Roberts
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
- * http://apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /*
  * Correct `block` display not defined in IE 8/9.
@@ -528,9 +495,6 @@ html {
   box-sizing: inherit;
 }
 
-/**
- * The usual...
- */
 html, body,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -540,39 +504,25 @@ table, th, td, caption,
 hr {
   margin: 0;
   padding: 0;
+  padding: 0;
 }
 
-/**
- * Give a help cursor to elements that give extra info on `:hover`.
- */
 abbr[title], dfn[title] {
   cursor: help;
 }
 
-/**
- * Remove underlines from potentially troublesome elements.
- */
 u, ins {
   text-decoration: none;
 }
 
-/**
- * Apply faux underline via `border-bottom`.
- */
 ins {
   border-bottom: 1px solid;
 }
 
-/**
- * So that `alt` text is visually offset if images don’t load.
- */
 img {
   font-style: italic;
 }
 
-/**
- * Give form elements some cursor interactions...
- */
 label,
 input,
 textarea,
@@ -582,62 +532,520 @@ option {
   cursor: pointer;
 }
 
-.text-input:active,
-.text-input:focus,
 textarea:active,
 textarea:focus {
   cursor: text;
   outline: none;
 }
 
-/**
- * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
- * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
- * and over in your markup.
- */
-.Carousel dl:after,
-.cf:after {
-  content: "";
-  display: table;
-  clear: both;
+/*!  @license  MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400 The fonts listed in this notice are subject to the End User License Agreement(s) entered into by the website owner. All other parties are explicitly restricted from using the Licensed Webfonts(s). License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715 © 2014 MyFonts Inc */
+@font-face {
+  font-family: "NHaasGroteskDSStd-75Bd";
+  src: url("../fonts/NHaasGroteskDSStd-75Bd.woff") format("woff");
+  font-weight: 700;
+}
+.Logo, h1, h2, h3 {
+  font-family: "NHaasGroteskDSStd-75Bd", "Helvetica-Bold", "HelveticaNeue-Bold", sans-serif;
 }
 
-/**
- * Where `margin-top` is concerned, this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
- */
-/**
- * Base elements
- */
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre,
-.media,
-.island {
+.CarouselNav-item h5 span strong, .CarouselNav-item h5, h1 span em, body {
+  font-family: "Helvetica-Light", "HelveticaNeue-Light", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+i, cite, var, address, dfn {
+  font-family: "Helvetica-LightOblique", "HelveticaNeue-LightItalic", Helvetica-Oblique, "Helvetica-Light", "HelveticaNeue-Light", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.CV h3 span, b, dd {
+  font-family: "Helvetica-Medium", "Helvetica-Regular", Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+}
+
+.Container {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer-wrapper {
+  margin-top: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.Container {
+  color: #3b3a37;
+}
+@media (max-width: 47.9375em) {
+  .Container {
+    font-size: 0.875rem;
+    line-height: 1.7142857143;
+  }
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.3333333333;
+}
+
+h1 {
+  font-size: 2.625rem;
+  line-height: 1.2380952381;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.1428571429;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  line-height: 1.1428571429;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  line-height: 1.4117647059;
+}
+
+h4 {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+h5 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 2.625rem;
+    line-height: 1.2380952381;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.1428571429;
+  }
+
+  h3 {
+    font-size: 1.3125rem;
+    line-height: 1.1428571429;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+h1 {
+  margin-top: 32px;
+}
+
+h2 {
+  margin-top: 24px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+h5 {
   margin-top: 16px;
+}
+
+h1 span {
+  float: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+h1 span em {
+  font-style: normal;
+}
+
+h1 + p {
   margin-top: 1rem;
 }
 
-/**
- * `hr` elements only take up a few pixels, so we need to give them special
- * treatment regarding vertical rhythm.
- */
-hr {
-  margin-top: 14px;
-  margin-top: 0.875rem;
+p {
+  margin-top: 1rem;
 }
 
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once, here.
- */
-ul, ol, dd {
-  margin-left: 32px;
-  margin-left: 2rem;
+p + h1 {
+  margin-top: 1.1071428571rem;
+}
+
+p + h2 {
+  margin-top: 1.5238095238rem;
+}
+
+p + h3 {
+  margin-top: 1.9375rem;
+}
+
+dt {
+  float: left;
+  margin-right: 0.25rem;
+}
+
+dd {
+  margin-left: 0;
+}
+
+a {
+  color: #ff443d;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: #3b3a37;
+  outline: 0;
+}
+
+a p, a h1, a h2, a h3, a h4, a h5 {
+  color: #3b3a37;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: #3b3a37;
+}
+
+.Container {
+  max-width: 63.625em;
+  max-width: 63.625rem;
+  background-color: #ffffef;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 16px 16px;
+}
+@media (min-width: 48em) {
+  .Container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.Aside {
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+}
+.Aside h4 {
+  margin-top: 18px;
+}
+
+.app-icon {
+  margin-top: 8px;
+  border-radius: 15px;
+}
+.app-icon.outline {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.app-iphone {
+  margin-top: 6px;
+}
+
+.Grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.Grid > * {
+  box-sizing: inherit;
+  flex-basis: 100%;
+  min-width: 0;
+}
+
+.Grid--withGutter {
+  margin-left: calc(-.5 * 32px);
+  margin-right: calc(-.5 * 32px);
+}
+
+.Grid--withGutter > * {
+  padding-left: calc(.5 * 32px);
+  padding-right: calc(.5 * 32px);
+}
+
+@media (min-width: 48em) {
+  .Grid-md-skinnyLeft > :first-child {
+    margin-left: 16px;
+  }
+
+  .Grid-md-skinnyRight > :first-child {
+    margin-right: 16px;
+  }
+}
+button, .Button, .Nav a {
+  border: 0.5px solid rgba(255, 68, 61, 0.5);
+  margin-right: 10px;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  background-color: #ff443d;
+  color: #ffffef;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+}
+a > button, a > .Button, .Nav a > a {
+  margin-right: 0;
+}
+button .glyph, .Button .glyph, .Nav a .glyph {
+  margin-left: auto;
+}
+button:focus, button:hover, button:active, button.active, .Button:focus, .Button:hover, .Button:active, .Button.active, .Nav a:focus, .Nav a:hover, .Nav a:active, .Nav a.active {
+  background-color: transparent;
+  color: #ff443d;
+}
+button.Button--block, .Button.Button--block, .Nav a.Button--block {
+  width: 100%;
+}
+button.small, .Button.small, .Nav a.small {
+  padding: 0 11px;
+}
+
+.Carousel {
+  margin-left: 0;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s, height, cubic-bezier(0, 0.25, 0.75, 1);
+}
+.Carousel li {
+  position: absolute;
+  transition-duration: 0.2s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.5, 0.5, 0.5, 1);
+  transform: translate3d(150px, 0, 0);
+  opacity: 0;
+  z-index: 0;
+}
+.Carousel li.slideOut {
+  transform: translate3d(-150px, 0, 0);
+}
+.Carousel li.current {
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) !important;
+}
+.Carousel dt {
+  float: left;
+  clear: left;
+}
+.Carousel .copy {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  overflow-y: scroll;
+  /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding-bottom: 10px;
+}
+.Carousel .copy > *:first-child {
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.CarouselNav {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-left: -8px;
+}
+@media only screen and (min-width: 48em) {
+  .CarouselNav {
+    margin-top: 32px;
+    margin-left: 8px;
+  }
+}
+
+.CarouselNav-item {
+  margin-top: 8px;
+  padding-left: 8px;
+  width: 25%;
+}
+@media only screen and (min-width: 48em) {
+  .CarouselNav-item {
+    width: 16.6666666667%;
+  }
+}
+@media only screen and (min-width: 56.0625em) {
+  .CarouselNav-item {
+    width: 12.5%;
+  }
+}
+.CarouselNav-item a {
+  display: block;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.CarouselNav-item a:hover h5, .CarouselNav-item a:active h5, .CarouselNav-item a:focus h5, .CarouselNav-item a.active h5 {
+  left: 0;
+}
+.CarouselNav-item a:not(.active):not(:hover):not(:focus) img {
+  mix-blend-mode: luminosity;
+}
+.CarouselNav-item a:not(.active):not(:hover):not(:focus)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffef;
+  mix-blend-mode: multiply;
+}
+.CarouselNav-item h5 {
+  left: -200%;
+  top: 0;
+  margin-top: 0;
+  position: absolute;
+  z-index: 10;
+}
+@media (max-width: 47.9375em) {
+  .CarouselNav-item h5 {
+    font-size: 0.625rem;
+    line-height: 1.5;
+  }
+}
+.CarouselNav-item h5 span {
+  color: #ffffef;
+  background-color: #ff443d;
+  display: table-caption;
+  padding: 4px;
+}
+@media (min-width: 48em) {
+  .CarouselNav-item h5 span {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.CarouselNav-item img {
+  width: 100%;
+  position: absolute;
+}
+
+.CV ul {
+  list-style: none;
+  margin-left: 0;
+}
+.CV h3, .CV h5 {
+  text-transform: uppercase;
+}
+.CV h2 {
+  border-bottom: 0.5px solid rgba(59, 58, 55, 0.5);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .CV h2 {
+    border-bottom: none;
+    background-image: linear-gradient(0deg, #ffffef, transparent 50%, #3b3a37 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+.CV h3 span {
+  font-size: 0.625rem;
+  line-height: 0.9;
+  display: inline-block;
+  border-left: 0.5px solid rgba(59, 58, 55, 0.5);
+  margin-left: 10px;
+  padding-left: 8px;
+  vertical-align: 4px;
+  height: 12px;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 56.0625em) {
+  .CV h3 span {
+    font-size: 0.6875rem;
+    line-height: 0.9090909091;
+    vertical-align: 7px;
+    height: 16px;
+    letter-spacing: 0.2px;
+  }
+}
+
+.Footer {
+  margin-top: 48px;
+  padding: 8px 16px;
+  border: 0.5px solid rgba(59, 58, 55, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 48em) {
+  .Footer {
+    margin-top: 64px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+@media (min-width: 56.0625em) {
+  .Footer {
+    align-items: center;
+  }
+}
+
+.Footer-list {
+  list-style: none;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+.Footer-list li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.Footer-copyright {
+  margin-top: 0;
+  font-size: 0.75rem;
+  line-height: 2;
+  white-space: nowrap;
 }
 
 @font-face {
@@ -1744,516 +2152,6 @@ ul, ol, dd {
 
 .glyph-right:before {
   content: "";
-}
-
-/*!  @license  MyFonts Webfont Build ID 2779715, 2014-03-23T17:10:55-0400 The fonts listed in this notice are subject to the End User License Agreement(s) entered into by the website owner. All other parties are explicitly restricted from using the Licensed Webfonts(s). License: http://www.myfonts.com/viewlicense?type=web&buildid=2779715 © 2014 MyFonts Inc */
-@font-face {
-  font-family: "NHaasGroteskDSStd-75Bd";
-  src: url("../fonts/NHaasGroteskDSStd-75Bd.woff") format("woff");
-  font-weight: 700;
-}
-.Logo, h1, h2, h3 {
-  font-family: "NHaasGroteskDSStd-75Bd", "Helvetica-Bold", "HelveticaNeue-Bold", sans-serif;
-}
-
-.CarouselNav-item h5 span strong, .CarouselNav-item h5, h1 span em, body {
-  font-family: "Helvetica-Light", "HelveticaNeue-Light", Helvetica, sans-serif;
-  font-weight: normal;
-}
-
-i, cite, var, address, dfn {
-  font-family: "Helvetica-LightOblique", "HelveticaNeue-LightItalic", Helvetica-Oblique, "Helvetica-Light", "HelveticaNeue-Light", Helvetica, sans-serif;
-  font-weight: normal;
-}
-
-.CV h3 span, b, dd {
-  font-family: "Helvetica-Medium", "Helvetica-Regular", Helvetica, sans-serif;
-  font-weight: normal;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-}
-
-.content {
-  width: 100%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.Footer-wrapper {
-  margin-top: auto;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.content {
-  color: #3b3a37;
-}
-@media (max-width: 47.9375em) {
-  .content {
-    font-size: 0.875rem;
-    line-height: 1.7142857143;
-  }
-}
-
-.lead {
-  font-size: 1.125rem;
-  line-height: 1.3333333333;
-}
-
-h1 {
-  font-size: 2.625rem;
-  line-height: 1.2380952381;
-}
-
-h1 {
-  font-size: 1.75rem;
-  line-height: 1.1428571429;
-}
-
-h2 {
-  font-size: 1.3125rem;
-  line-height: 1.1428571429;
-}
-
-h3 {
-  font-size: 1.0625rem;
-  line-height: 1.4117647059;
-}
-
-h4 {
-  font-size: 0.9375rem;
-  line-height: 1.6;
-}
-
-h5 {
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
-
-@media (min-width: 48em) {
-  h1 {
-    font-size: 2.625rem;
-    line-height: 1.2380952381;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-    line-height: 1.1428571429;
-  }
-
-  h3 {
-    font-size: 1.3125rem;
-    line-height: 1.1428571429;
-  }
-
-  h4 {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  h5 {
-    font-size: 0.75rem;
-    line-height: 1.5;
-  }
-}
-h1 {
-  margin-top: 32px;
-}
-
-h2 {
-  margin-top: 24px;
-}
-
-h3 {
-  margin-top: 20px;
-}
-
-h4 {
-  margin-top: 20px;
-}
-
-h5 {
-  margin-top: 16px;
-}
-
-h1 span {
-  float: left;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-h1 span em {
-  font-style: normal;
-}
-
-h1 + p {
-  margin-top: 1rem;
-}
-
-p {
-  margin-top: 1rem;
-}
-
-p + h1 {
-  margin-top: 1.1071428571rem;
-}
-
-p + h2 {
-  margin-top: 1.5238095238rem;
-}
-
-p + h3 {
-  margin-top: 1.9375rem;
-}
-
-dt {
-  float: left;
-  margin-right: 0.25rem;
-}
-
-dd {
-  margin-left: 0;
-}
-
-a {
-  color: #ff443d;
-  text-decoration: none;
-  outline: 0;
-}
-
-a:focus,
-a:hover,
-a:active {
-  color: #3b3a37;
-  outline: 0;
-}
-
-a p, a h1, a h2, a h3, a h4, a h5 {
-  color: #3b3a37;
-}
-
-.hide {
-  display: none;
-}
-
-body {
-  background-color: #3b3a37;
-}
-
-.content {
-  max-width: 63.625em;
-  max-width: 63.625rem;
-  background-color: #ffffef;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px 16px 16px;
-}
-@media (min-width: 48em) {
-  .content {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-
-.aside {
-  margin-bottom: 16px;
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-}
-.aside h4 {
-  margin-top: 18px;
-}
-
-.app-icon {
-  margin-top: 8px;
-  border-radius: 15px;
-}
-.app-icon.outline {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
-}
-
-.app-iphone {
-  margin-top: 6px;
-}
-
-.Grid {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.Grid > * {
-  box-sizing: inherit;
-  flex-basis: 100%;
-  min-width: 0;
-}
-
-.Grid--withGutter {
-  margin-left: calc(-.5 * 32px);
-  margin-right: calc(-.5 * 32px);
-}
-
-.Grid--withGutter > * {
-  padding-left: calc(.5 * 32px);
-  padding-right: calc(.5 * 32px);
-}
-
-@media (min-width: 48em) {
-  .Grid-md-skinnyLeft > :first-child {
-    margin-left: 16px;
-  }
-
-  .Grid-md-skinnyRight > :first-child {
-    margin-right: 16px;
-  }
-}
-button, .button, .Nav a {
-  border: 0.5px solid rgba(255, 68, 61, 0.5);
-  margin-right: 10px;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-  background-color: #ff443d;
-  color: #ffffef;
-  display: flex;
-  align-items: center;
-  padding: 8px 10px;
-}
-a > button, a > .button, .Nav a > a {
-  margin-right: 0;
-}
-button .glyph, .button .glyph, .Nav a .glyph {
-  margin-left: auto;
-}
-button:focus, button:hover, button:active, button.active, .button:focus, .button:hover, .button:active, .button.active, .Nav a:focus, .Nav a:hover, .Nav a:active, .Nav a.active {
-  background-color: transparent;
-  color: #ff443d;
-}
-button.block, .button.block, .Nav a.block {
-  width: 100%;
-}
-button.small, .button.small, .Nav a.small {
-  padding: 0 11px;
-}
-
-.Carousel {
-  margin-left: 0;
-  position: relative;
-  overflow: hidden;
-  height: 0;
-  transition: 0.5s, height, cubic-bezier(0, 0.25, 0.75, 1);
-}
-.Carousel li {
-  position: absolute;
-  transition-duration: 0.2s;
-  transition-property: opacity, transform;
-  transition-timing-function: cubic-bezier(0.5, 0.5, 0.5, 1);
-  transform: translate3d(150px, 0, 0);
-  opacity: 0;
-  z-index: 0;
-}
-.Carousel li.slideOut {
-  transform: translate3d(-150px, 0, 0);
-}
-.Carousel li.current {
-  z-index: 10;
-  opacity: 1;
-  transform: translate3d(0, 0, 0) !important;
-}
-.Carousel dt {
-  float: left;
-  clear: left;
-}
-.Carousel .copy {
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  overflow-y: scroll;
-  /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  padding-bottom: 10px;
-}
-.Carousel .copy > *:first-child {
-  margin-top: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.CarouselNav {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-  margin-left: -8px;
-}
-@media only screen and (min-width: 48em) {
-  .CarouselNav {
-    margin-top: 32px;
-    margin-left: 8px;
-  }
-}
-
-.CarouselNav-item {
-  margin-top: 8px;
-  padding-left: 8px;
-  width: 25%;
-}
-@media only screen and (min-width: 48em) {
-  .CarouselNav-item {
-    width: 16.6666666667%;
-  }
-}
-@media only screen and (min-width: 56.0625em) {
-  .CarouselNav-item {
-    width: 12.5%;
-  }
-}
-.CarouselNav-item a {
-  display: block;
-  padding-bottom: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.CarouselNav-item a:hover h5, .CarouselNav-item a:active h5, .CarouselNav-item a:focus h5, .CarouselNav-item a.active h5 {
-  left: 0;
-}
-.CarouselNav-item a:not(.active):not(:hover):not(:focus) img {
-  mix-blend-mode: luminosity;
-}
-.CarouselNav-item a:not(.active):not(:hover):not(:focus)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #ffffef;
-  mix-blend-mode: multiply;
-}
-.CarouselNav-item h5 {
-  left: -200%;
-  top: 0;
-  margin-top: 0;
-  position: absolute;
-  z-index: 10;
-}
-@media (max-width: 47.9375em) {
-  .CarouselNav-item h5 {
-    font-size: 0.625rem;
-    line-height: 1.5;
-  }
-}
-.CarouselNav-item h5 span {
-  color: #ffffef;
-  background-color: #ff443d;
-  display: table-caption;
-  padding: 4px;
-}
-@media (min-width: 48em) {
-  .CarouselNav-item h5 span {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-.CarouselNav-item img {
-  width: 100%;
-  position: absolute;
-}
-
-.CV ul {
-  list-style: none;
-  margin-left: 0;
-}
-.CV h3, .CV h5 {
-  text-transform: uppercase;
-}
-.CV h2 {
-  border-bottom: 0.5px solid rgba(59, 58, 55, 0.5);
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .CV h2 {
-    border-bottom: none;
-    background-image: linear-gradient(0deg, #ffffef, transparent 50%, #3b3a37 50%);
-    background-size: 100% 1px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-  }
-}
-.CV h3 span {
-  font-size: 0.625rem;
-  line-height: 0.9;
-  display: inline-block;
-  border-left: 0.5px solid rgba(59, 58, 55, 0.5);
-  margin-left: 10px;
-  padding-left: 8px;
-  vertical-align: 4px;
-  height: 12px;
-  letter-spacing: 0.5px;
-}
-@media (min-width: 56.0625em) {
-  .CV h3 span {
-    font-size: 0.6875rem;
-    line-height: 0.9090909091;
-    vertical-align: 7px;
-    height: 16px;
-    letter-spacing: 0.2px;
-  }
-}
-
-.Footer {
-  margin-top: 48px;
-  padding: 8px 16px;
-  border: 0.5px solid rgba(59, 58, 55, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-@media only screen and (min-width: 48em) {
-  .Footer {
-    margin-top: 64px;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-}
-@media (min-width: 56.0625em) {
-  .Footer {
-    align-items: center;
-  }
-}
-
-.Footer-list {
-  list-style: none;
-  margin-top: 0;
-  margin-left: 0;
-  font-size: 0.75rem;
-  line-height: 2;
-}
-.Footer-list li {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.Footer-copyright {
-  margin-top: 0;
-  font-size: 0.75rem;
-  line-height: 2;
-  white-space: nowrap;
 }
 
 .Hero {

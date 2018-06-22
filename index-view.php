@@ -15,8 +15,8 @@
    </div>
    <div class="u-md-width1of4 Grid-md-skinnyRight u-md-push1of4">
     <div><!-- nest skinny- type margins -->
-      <div class='aside'>
-        <h2 class="hide_tablet">Apps</h2>
+      <div class='Aside'>
+        <h2 class="u-md-displayNone">Apps</h2>
           <h4><a href="apps/typesetter/">Typesetter</a></h4>
           <p class='u-mt-0'>Live typeface prototyping.</p>
           <a href="apps/typesetter/">
@@ -24,8 +24,8 @@
               <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'>
             </div>
           </a>
-      </div><!-- /aside -->
-      <a href="apps/" class='button block'><span>More apps</span><span class="glyph  glyph-right-open"></span></a>
+      </div>
+      <a href="apps/" class='Button Button--block'><span>More apps</span><span class="glyph  glyph-right-open"></span></a>
     </div>
   </div>
 </div>
