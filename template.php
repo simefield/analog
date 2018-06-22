@@ -21,13 +21,13 @@
   <body>
     <div class='content'>
       <div class="Grid">
-         <div class="u-sm-width1of2 u-md-width1of2 Grid-md-skinnyLeft">
+         <div class="Grid-md-skinnyLeft u-sm-width1of2 u-md-width1of2">
            <ul class='main-nav'>
               <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
          </div>
-         <div class="u-sm-pl-0 u-sm-width1of2 u-md-width1of2 Grid-md-skinnyRight">
+         <div class="Grid-md-skinnyRight u-sm-pl-0 u-sm-width1of2 u-md-width1of2">
         <!-- <div class="logo-wrapper"> -->
             <a class="logo" href="">
               <span class="logo-ana">ana</span>
@@ -41,11 +41,11 @@
             </ul> -->
           <!-- </div> -->
         </div>
-        <?php if (isset($photoClass)) { ?><div class="Grid-md-skinnyLeft  Grid-md-skinnyRight">
+        <?php if (isset($photoClass)) { ?><div class="Grid-md-skinnyLeft Grid-md-skinnyRight">
             <div><!-- must nest for skinny- type margins -->
-                <div class="hero">
-                    <div class="hero__image  <?= $photoClass ?>"></div>
-                    <span class='photo-credit'>
+                <div class="Hero">
+                    <div class="Hero-image  <?= $photoClass ?>"></div>
+                    <span class='Hero-credit'>
                       <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
                     </span>
                 </div>

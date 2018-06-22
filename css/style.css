@@ -2542,62 +2542,6 @@ button.small, .button.small, .main-nav a.small {
   }
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  padding-bottom: 100%;
-}
-@media (min-width: 48em) {
-  .hero {
-    padding-bottom: 56.25%;
-  }
-}
-
-.hero__image {
-  width: 100%;
-  height: 100%;
-  background-color: #ffffef;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-}
-.hero__image.stella {
-  background-image: url("../images/stella.jpg");
-}
-.hero__image.laffare {
-  background-image: url("../images/laffare.jpg");
-}
-.hero__image.sky {
-  background-image: url("../images/sky.jpg");
-}
-.hero__image.lyall-bay {
-  background-image: url("../images/lyall-bay.jpg");
-}
-
-.photo-credit {
-  font-size: 0.5625rem;
-  line-height: 2.2222222222;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  height: 20px;
-}
-.photo-credit span {
-  display: inline-block;
-  height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #ffffef;
-  background-color: rgba(59, 58, 55, 0.5);
-}
-
 .aside {
   margin-bottom: 16px;
   font-size: 0.875rem;
@@ -2853,6 +2797,62 @@ button.small, .button.small, .main-nav a.small {
 .CarouselNav-item img {
   width: 100%;
   position: absolute;
+}
+
+.Hero {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding-bottom: 100%;
+}
+@media (min-width: 48em) {
+  .Hero {
+    padding-bottom: 56.25%;
+  }
+}
+
+.Hero-image {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffef;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+.Hero-image.stella {
+  background-image: url("../images/stella.jpg");
+}
+.Hero-image.laffare {
+  background-image: url("../images/laffare.jpg");
+}
+.Hero-image.sky {
+  background-image: url("../images/sky.jpg");
+}
+.Hero-image.lyall-bay {
+  background-image: url("../images/lyall-bay.jpg");
+}
+
+.Hero-credit {
+  font-size: 0.5625rem;
+  line-height: 2.2222222222;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  height: 20px;
+}
+.Hero-credit span {
+  display: inline-block;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #ffffef;
+  background-color: rgba(59, 58, 55, 0.5);
 }
 
 .u-mt-0 {
