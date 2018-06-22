@@ -81,7 +81,6 @@
 }
 
 #viewport {
-  /* comment this line out for debugging purposes (can't be display: none;) */
   position: fixed;
   z-index: 999999999;
   right: 16px;
@@ -93,19 +92,6 @@
   border-radius: 2px;
   line-height: 1.563;
   margin-bottom: 0;
-}
-.lt-ie9 #viewport {
-  font-family: mobile;
-}
-@media (min-width: 48em) {
-  .lt-ie9 #viewport {
-    font-family: tablet;
-  }
-}
-@media (min-width: 56.0625em) {
-  .lt-ie9 #viewport {
-    font-family: desktop;
-  }
 }
 #viewport:after {
   content: "mobile";
@@ -1823,10 +1809,6 @@ body {
     font-size: 0.875rem;
     line-height: 1.7142857143;
   }
-}
-
-.lt-ie9 * {
-  font-family: comic-sans !important;
 }
 
 .lead {
