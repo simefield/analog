@@ -65,26 +65,16 @@ $grid-gutter-size: $h*2;
 }
 
 // ============
-// narrow left and right columns
-// -----------------------------
- @mixin skinny-col($namespace: "") {
-   .skinny-left#{$namespace} > :first-child { margin-left: $h; }
-   .skinny-right#{$namespace} > :first-child { margin-right: $h; }
- }
+// Skinny – narrow left and right columns
+// ============
 
- @include skinny-col();
- @media (max-width: $screen-sm-max) { @include skinny-col("-mobile"); }
- @media (min-width: $screen-md)     { @include skinny-col("-tablet"); }
- @media (min-width: $screen-lg)     { @include skinny-col("-desktop"); }
+@mixin skinny-col($namespace: "") {
+ .skinny-left#{$namespace} > :first-child { margin-left: $h; }
+ .skinny-right#{$namespace} > :first-child { margin-right: $h; }
+}
 
- /*
- * generates:
- *
- * .skinny-left > :first-child { margin-left: 16px; }
- * .skinny-right > :first-child { margin-right: 16px; }
- *
- * @media (max-width: 47.9375em) {
- *     .skinny-left-mobile > :first-child { margin-left: 16px; }
- *
- *     etc...
- */
+@media (min-width: $screen-md)     { @include skinny-col("-tablet"); }
+
+// OUTPUT
+// .skinny-left > :first-child { margin-left: 16px; }
+// .skinny-right > :first-child { margin-right: 16px; }

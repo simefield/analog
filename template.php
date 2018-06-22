@@ -20,14 +20,14 @@
 
   <body>
     <div class='content'>
-      <div class="Grid XGrid--withGutter">
-         <div class="Grid__item u-sm-width1of2 u-md-width1of2 skinny-left-tablet">
+      <div class="Grid">
+         <div class="u-sm-width1of2 u-md-width1of2 skinny-left-tablet">
            <ul class='main-nav'>
               <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
-         </div><!-- /Grid__item
-      --><div class="Grid__item  p-l-0-mobile u-sm-width1of2 u-md-width1of2 skinny-right-tablet">
+         </div>
+         <div class=" p-l-0-mobile u-sm-width1of2 u-md-width1of2 skinny-right-tablet">
         <!-- <div class="logo-wrapper"> -->
             <a class="logo" href="">
               <span class="logo-ana">ana</span>
@@ -40,20 +40,20 @@
               <li><a href="tel:04-022-568-8907">022.568.8907</a>
             </ul> -->
           <!-- </div> -->
-        </div><!-- /Grid__item
-      --><!-- /Grid__item
-      --><?php if (isset($photoClass)) { ?><div class="Grid__item  skinny-left-tablet  skinny-right-tablet">
-              <div><!-- must nest for skinny- type margins -->
-                  <div class="hero">
-                      <div class="hero__image  <?= $photoClass ?>"></div>
-                      <span class='photo-credit'>
-                        <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
-                      </span>
-                  </div>
-              </div>
-          </div><?php } ?><!-- /Grid__item -->
+        </div>
+        <?php if (isset($photoClass)) { ?><div class=" skinny-left-tablet  skinny-right-tablet">
+            <div><!-- must nest for skinny- type margins -->
+                <div class="hero">
+                    <div class="hero__image  <?= $photoClass ?>"></div>
+                    <span class='photo-credit'>
+                      <span><i><?= $photoCredit[1] ?></i>. <?= $photoCredit[0] ?> © <?= $photoCredit[2] ?></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+      <?php } ?>
 
-      </div><!-- /Grid -->
+      </div>
 
       <?php
           require_once ($content);

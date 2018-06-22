@@ -1,10 +1,10 @@
 <div class="Grid Grid--withGutter">
-  <div class="Grid__item u-md-width3of4 push--tablet-one-quarter">
+  <div class="u-md-width3of4 push--tablet-one-quarter">
     <h1>Curriculum&nbsp;Vitæ of Richard&nbsp;Sime</h1>
   </div>
 </div>
 <div class="Grid Grid--withGutter">
-  <div class="Grid__item u-md-width1of2 push--tablet-one-quarter">
+  <div class="u-md-width1of2 push--tablet-one-quarter">
     <div><!-- must nest hero image to respect skinny- type margins -->
       <div class="cv">
         <h2>Employment</h2>
@@ -43,12 +43,13 @@
         </ul>
       </div><!-- /cv -->
     </div><!-- /skinny nested element -->
-  </div><!-- /Grid__item
-  --><div class="Grid__item u-md-width1of4 skinny-right-tablet  push--tablet-one-quarter">
+  </div>
+  <div class="u-md-width1of4 skinny-right-tablet  push--tablet-one-quarter">
   <div class="cv">
       <h2>Technologies</h2>
-        <p class='m-t-sm'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
+        <p class='m-t-md'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
         <h2>Referees</h2>
+        <p class='m-t-md'>Please feel free to contact either of my referees.</p>
         <ul class="m-t-sm">
           <li>
             <p>
@@ -66,10 +67,10 @@
           </li>
         </ul>
         <h2>Contact me</h2>
-        <ul class='m-t-sm'>
+        <ul class='m-t-md'>
           <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a></li>
           <li><a href="tel:022-568-8907">022.568.8907</a></li>
         </ul>
       </div>
-  </div><!-- /Grid__item -->
-</div><!-- /Grid -->
+  </div>
+</div>

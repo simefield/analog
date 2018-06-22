@@ -45,12 +45,12 @@
 <div class="Grid Grid--withGutter">
   <div class="Grid__item  skinny-right-tablet">
     <ul class="Carousel"></ul><!-- /Carousel -->
-  </div><!-- /Grid__item
---><div class="Grid__item  skinny-right-tablet">
+  </div>
+  <div class="Grid__item  skinny-right-tablet">
     <!-- distribute Grid items must have white-space between them, and a mobile width declaration -->
     <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
-  </div><!-- /Grid__item -->
-</div><!-- /Grid -->
+  </div>
+</div>
 
 <?php /*
     OTHER SITES

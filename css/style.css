@@ -2911,6 +2911,26 @@ button.small, .button.small, .main-nav a.small {
   padding-right: calc(.5 * 32px);
 }
 
+@media (min-width: 48em) {
+  .skinny-left-tablet > :first-child {
+    margin-left: 16px;
+  }
+
+  .skinny-right-tablet > :first-child {
+    margin-right: 16px;
+  }
+}
+/*
+* generates:
+*
+* .skinny-left > :first-child { margin-left: 16px; }
+* .skinny-right > :first-child { margin-right: 16px; }
+*
+* @media (max-width: 47.9375em) {
+*     .skinny-left-mobile > :first-child { margin-left: 16px; }
+*
+*     etc...
+*/
 .Carousel {
   margin-left: 0;
   position: relative;
