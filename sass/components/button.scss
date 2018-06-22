@@ -1,0 +1,33 @@
+// ------------------------------------
+// BUTTON
+// ------------------------------------
+
+button, .button, %button {
+  @extend %fix-webkit-font-rendering;
+  border: .5px solid rgba($red, .5);
+  margin-right: $v/2;
+  text-align: center;
+  @include font-size(14px, 24px);
+  background-color: $red;
+  color: $paper;
+  display: flex;
+  align-items: center;
+  padding: $h/2 $v/2;
+  a > & {
+    margin-right: 0;
+  }
+  .glyph { margin-left: auto; }
+  &:focus,
+  &:hover,
+  &:active,
+  &.active {
+    background-color: transparent;
+    color: $red;
+  }
+  &.block {
+    width: 100%;
+  }
+  &.small {
+    padding: 0 11px; // small square
+  }
+}

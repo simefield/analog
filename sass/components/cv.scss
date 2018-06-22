@@ -1,0 +1,43 @@
+// ------------------------------------
+// CURRICULUM VITAE
+// ------------------------------------
+
+.CV {
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  h3, h5 {
+    text-transform: uppercase;
+  }
+  h2 {
+    border-bottom: .5px solid rgba($black, .5);
+    // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/
+    @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
+      border-bottom: none;
+      background-image: linear-gradient(0deg, $paper, transparent 50%, $black 50%);
+      background-size: 100% 1px;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
+  }
+  h3 {
+    span { // date range
+      @include font-size(10px, 9px);
+      display: inline-block;
+      border-left: .5px solid rgba($black, .5);
+      margin-left: 10px;
+      padding-left: 8px;
+      @extend %sansSerif-bold;
+      vertical-align: 4px;
+      height: 12px;
+      letter-spacing: 0.5px;
+      @media (min-width: $screen-lg) {
+        @include font-size(11px, 10px);
+        vertical-align: 7px;
+        height: 16px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}

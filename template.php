@@ -21,15 +21,15 @@
     <div class='content'>
       <div class="Grid">
          <div class="Grid-md-skinnyLeft u-sm-width1of2 u-md-width1of2">
-           <ul class='main-nav'>
+           <ul class='Nav'>
               <li><a href="projects/" class="<?php echo ($content == 'projects.php') ? 'active' : ''?>"><span>Projects</span></a>
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
          </div>
          <div class="Grid-md-skinnyRight u-sm-pl-0 u-sm-width1of2 u-md-width1of2">
-          <a class="logo" href="">
-            <span class="logo-ana">ana</span>
-            <span class="logo-log">log</span>
+          <a class="Logo" href="">
+            <span class="Logo-ana">ana</span>
+            <span class="Logo-log">log</span>
             <!-- <img src="images/analog.png" alt="Analog logo"> -->
           </a>
         </div>

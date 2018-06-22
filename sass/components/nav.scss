@@ -1,0 +1,39 @@
+// ------------------------------------
+// NAV
+// ------------------------------------
+
+.Nav {
+  margin-top: 0;
+  margin-bottom: $h;
+  @media (min-width: $screen-md) { margin-bottom: $h*1.5; }
+  list-style:none;
+  margin-left:0;
+  display: flex;
+  a {
+    @extend %button;
+    @include font-size(10px);
+    width: $nav-button-sm; // match logo square size
+    height: $nav-button-sm;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: $h;
+    @media (min-width: $screen-md) {
+      // margin-right: 35px;
+      @include font-size(12px);
+      width: $nav-button-lg; // match logo square size
+      height: $nav-button-lg;
+    }
+    background-color: transparent;
+    color: $red;
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $red;
+      color: $paper;
+    }
+  }
+}

@@ -182,10 +182,8 @@ a {
 }
 
 // ------------------------------------
-// HEADER
+// TODO: tidy this
 // ------------------------------------
-// Any css in this header.scss file will target the website header section only
-// this will include the utility navigation, search, logo and main navigation.
 
 .hide {display: none;}
 
@@ -201,144 +199,7 @@ body { background-color: $black; }
   @media (min-width: $screen-md) { padding-top: $h*2; padding-bottom: $h*2; }
 }
 
-button, .button, %button {
-  @extend %fix-webkit-font-rendering;
-  border: .5px solid rgba($red, .5);
-  margin-right: $v/2;
-  text-align: center;
-  @include font-size(14px, 24px);
-  background-color: $red;
-  color: $paper;
-  display: flex;
-  align-items: center;
-  padding: $h/2 $v/2;
-  a > & {
-    margin-right: 0;
-  }
-  .glyph { margin-left: auto; }
-  &:focus,
-  &:hover,
-  &:active,
-  &.active {
-    background-color: transparent;
-    color: $red;
-  }
-  &.block {
-    width: 100%;
-  }
-  &.small {
-    padding: 0 11px; // small square
-  }
-}
 
-$nav-button-sm: 57px;
-$nav-button-lg: 68px;
-// <ul>
-.main-nav {
-  margin-top: 0;
-  margin-bottom: $h;
-  @media (min-width: $screen-md) { margin-bottom: $h*1.5; }
-  list-style:none;
-  margin-left:0;
-  display: flex;
-  a {
-    @extend %button;
-    @include font-size(10px);
-    width: $nav-button-sm; // match logo square size
-    height: $nav-button-sm;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-right: $h;
-    @media (min-width: $screen-md) {
-      // margin-right: 35px;
-      @include font-size(12px);
-      width: $nav-button-lg; // match logo square size
-      height: $nav-button-lg;
-    }
-    background-color: transparent;
-    color: $red;
-    &:focus,
-    &:hover,
-    &:active,
-    &.active {
-      background-color: $red;
-      color: $paper;
-    }
-  }
-}
-
-// Image version ==========
-//
-// .logo {
-//   display: inline-block;
-//   margin-top: 14px;
-//   @media (min-width: $screen-md) {
-//     margin-top: 2px;
-//   }
-//   img {
-//     width: 148px;
-//     @media (min-width: $screen-md) {
-//       width: 187px;
-//     }
-//   }
-// }
-
-// Text version ==========
-
-.logo {
-  @include font-size(34px, 34px); // line-height 1
-  @media (min-width: $screen-md) {
-    @include font-size(42px, 42px);
-  }
-  @extend %neueHaasGrotesk;
-  @extend %fix-webkit-font-rendering;
-  display: flex;
-  align-items: center;
-  height: $nav-button-sm;
-  @media (min-width: $screen-md) { height: $nav-button-lg; }
-  &:focus,
-  &:hover,
-  &:active {
-    .logo-log::before { background-color: $black; }
-  }
-  span {
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 3px;
-    height: $nav-button-sm;
-    @media (min-width: $screen-md) { height: $nav-button-lg; }
-  }
-}
-
-.logo-ana {
-  margin-left: auto; // right align
-  padding-right: 2.5px;
-  color: $black;
-}
-
-.logo-log {
-  position: relative;
-  padding-left: 4px;
-  padding-right: 4px;
-  color: $paper;
-  z-index: 1;
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: $red;
-    display: block;
-    width: 100%;
-    padding-top: 100%; // square
-    top: 0;
-    left: 0;
-    z-index: -1;
-    min-height: $nav-button-sm;
-    @media (min-width: $screen-md) { min-height: $nav-button-lg; }
-  }
-}
 
 // ------------------------------------
 // ASIDES
@@ -363,49 +224,4 @@ $nav-button-lg: 68px;
 // <img>
 .app-iphone {
   margin-top: 6px;
-}
-
-// ------------------------------------
-// CURRICULUM VITAE
-// ------------------------------------
-
-// <div>
-.cv {
-  ul {
-    list-style: none;
-    margin-left: 0;
-  }
-  h3, h5 {
-    text-transform: uppercase;
-  }
-  h2 {
-    border-bottom: .5px solid rgba($black, .5);
-    // 1 physical pixel on retina: https://excellenteasy.com/devblog/posts/how-to-target-physical-pixels-on-retina-screens-with-css/
-    @media only screen and (-webkit-min-device-pixel-ratio: 2.00), only screen and (min--moz-device-pixel-ratio: 2.00), only screen and (-o-min-device-pixel-ratio: 2.00/1), only screen and (min-device-pixel-ratio: 2.00), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2.00dppx) {
-      border-bottom: none;
-      background-image: linear-gradient(0deg, $paper, transparent 50%, $black 50%);
-      background-size: 100% 1px;
-      background-repeat: no-repeat;
-      background-position: bottom left;
-    }
-  }
-  h3 {
-    span { // date range
-      @include font-size(10px, 9px);
-      display: inline-block;
-      border-left: .5px solid rgba($black, .5);
-      margin-left: 10px;
-      padding-left: 8px;
-      @extend %sansSerif-bold;
-      vertical-align: 4px;
-      height: 12px;
-      letter-spacing: 0.5px;
-      @media (min-width: $screen-lg) {
-        @include font-size(11px, 10px);
-        vertical-align: 7px;
-        height: 16px;
-        letter-spacing: 0.2px;
-      }
-    }
-  }
 }

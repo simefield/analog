@@ -4,7 +4,7 @@
  * © 2018 Richard Sime
  *
  */
-.CarouselNav-item h5 span, .logo, button, .button, .main-nav a, h1, h2, h3, .temp-page-nav a {
+.Logo, .CarouselNav-item h5 span, button, .button, .Nav a, h1, h2, h3, .temp-page-nav a {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -26,7 +26,7 @@
   margin-left: 0;
 }
 
-.CarouselNav-item h5 span, .logo, button, .button, .main-nav a, h1, h2, h3, .temp-page-nav a {
+.Logo, .CarouselNav-item h5 span, button, .button, .Nav a, h1, h2, h3, .temp-page-nav a {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -609,7 +609,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.Carousel dl:after, .nav:after,
+.Carousel dl:after,
 .cf:after {
   content: "";
   display: table;
@@ -652,130 +652,6 @@ hr {
 ul, ol, dd {
   margin-left: 32px;
   margin-left: 2rem;
-}
-
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- * e.g.:
- *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Demo: jsfiddle.net/inuitcss/Vnph4
- *
- */
-.nav {
-  list-style: none;
-  margin-left: 0;
-}
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
- * <ul class="nav  nav--stacked">
- *     <li><a href=#>Home</a></li>
- *     <li><a href=#>About</a></li>
- *     <li><a href=#>Portfolio</a></li>
- *     <li><a href=#>Contact</a></li>
- * </ul>
- *
- */
-.nav--stacked > li {
-  display: list-item;
-}
-.nav--stacked > li > a {
-  display: block;
-}
-
-/**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
- *
- * <ul class="nav  nav--banner">
- *     <li><a href=#>Home</a></li>
- *     <li><a href=#>About</a></li>
- *     <li><a href=#>Portfolio</a></li>
- *     <li><a href=#>Contact</a></li>
- * </ul>
- *
- */
-.nav--banner {
-  text-align: center;
-}
-
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
- * <ul class="nav  nav--block">
- *     <li><a href=#>Home</a></li>
- *     <li><a href=#>About</a></li>
- *     <li><a href=#>Portfolio</a></li>
- *     <li><a href=#>Contact</a></li>
- * </ul>
- *
- */
-.nav--block {
-  line-height: 1;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-  white-space: nowrap;
-}
-.nav--block > li {
-  letter-spacing: normal;
-  word-spacing: normal;
-}
-.nav--block > li > a {
-  padding: 8px;
-}
-
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
- * <ul class="nav  nav--fit">
- *     <li><a href=#>Home</a></li>
- *     <li><a href=#>About</a></li>
- *     <li><a href=#>Portfolio</a></li>
- *     <li><a href=#>Contact</a></li>
- * </ul>
- *
- * Thanks to @pimpl for this idea!
- */
-.nav--fit {
-  display: table;
-  width: 100%;
-}
-.nav--fit > li {
-  display: table-cell;
-}
-.nav--fit > li > a {
-  display: block;
-}
-
-/**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
- * `<ul class="nav  nav--keywords>`
- *
- */
-.nav--keywords > li:after {
-  content: "," " ";
-}
-.nav--keywords > li:last-child:after {
-  display: none;
 }
 
 @font-face {
@@ -1890,7 +1766,7 @@ ul, ol, dd {
   src: url("../fonts/NHaasGroteskDSStd-75Bd.woff") format("woff");
   font-weight: 700;
 }
-.logo, h1, h2, h3 {
+.Logo, h1, h2, h3 {
   font-family: "NHaasGroteskDSStd-75Bd", "Helvetica-Bold", "HelveticaNeue-Bold", sans-serif;
 }
 
@@ -1904,7 +1780,7 @@ i, cite, var, address, dfn {
   font-weight: normal;
 }
 
-.cv h3 span, b, dd {
+.CV h3 span, b, dd {
   font-family: "Helvetica-Medium", "Helvetica-Regular", Helvetica, sans-serif;
   font-weight: normal;
 }
@@ -2112,138 +1988,6 @@ body {
   }
 }
 
-button, .button, .main-nav a {
-  border: 0.5px solid rgba(255, 68, 61, 0.5);
-  margin-right: 10px;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.7142857143;
-  background-color: #ff443d;
-  color: #ffffef;
-  display: flex;
-  align-items: center;
-  padding: 8px 10px;
-}
-a > button, a > .button, .main-nav a > a {
-  margin-right: 0;
-}
-button .glyph, .button .glyph, .main-nav a .glyph {
-  margin-left: auto;
-}
-button:focus, button:hover, button:active, button.active, .button:focus, .button:hover, .button:active, .button.active, .main-nav a:focus, .main-nav a:hover, .main-nav a:active, .main-nav a.active {
-  background-color: transparent;
-  color: #ff443d;
-}
-button.block, .button.block, .main-nav a.block {
-  width: 100%;
-}
-button.small, .button.small, .main-nav a.small {
-  padding: 0 11px;
-}
-
-.main-nav {
-  margin-top: 0;
-  margin-bottom: 16px;
-  list-style: none;
-  margin-left: 0;
-  display: flex;
-}
-@media (min-width: 48em) {
-  .main-nav {
-    margin-bottom: 24px;
-  }
-}
-.main-nav a {
-  font-size: 0.625rem;
-  line-height: 2.4;
-  width: 57px;
-  height: 57px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-right: 16px;
-  background-color: transparent;
-  color: #ff443d;
-}
-@media (min-width: 48em) {
-  .main-nav a {
-    font-size: 0.75rem;
-    line-height: 2;
-    width: 68px;
-    height: 68px;
-  }
-}
-.main-nav a:focus, .main-nav a:hover, .main-nav a:active, .main-nav a.active {
-  background-color: #ff443d;
-  color: #ffffef;
-}
-
-.logo {
-  font-size: 2.125rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  height: 57px;
-}
-@media (min-width: 48em) {
-  .logo {
-    font-size: 2.625rem;
-    line-height: 1;
-  }
-}
-@media (min-width: 48em) {
-  .logo {
-    height: 68px;
-  }
-}
-.logo:focus .logo-log::before, .logo:hover .logo-log::before, .logo:active .logo-log::before {
-  background-color: #3b3a37;
-}
-.logo span {
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 3px;
-  height: 57px;
-}
-@media (min-width: 48em) {
-  .logo span {
-    height: 68px;
-  }
-}
-
-.logo-ana {
-  margin-left: auto;
-  padding-right: 2.5px;
-  color: #3b3a37;
-}
-
-.logo-log {
-  position: relative;
-  padding-left: 4px;
-  padding-right: 4px;
-  color: #ffffef;
-  z-index: 1;
-}
-.logo-log::before {
-  position: absolute;
-  content: "";
-  background-color: #ff443d;
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  min-height: 57px;
-}
-@media (min-width: 48em) {
-  .logo-log::before {
-    min-height: 68px;
-  }
-}
-
 .aside {
   margin-bottom: 16px;
   font-size: 0.875rem;
@@ -2263,46 +2007,6 @@ button.small, .button.small, .main-nav a.small {
 
 .app-iphone {
   margin-top: 6px;
-}
-
-.cv ul {
-  list-style: none;
-  margin-left: 0;
-}
-.cv h3, .cv h5 {
-  text-transform: uppercase;
-}
-.cv h2 {
-  border-bottom: 0.5px solid rgba(59, 58, 55, 0.5);
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .cv h2 {
-    border-bottom: none;
-    background-image: linear-gradient(0deg, #ffffef, transparent 50%, #3b3a37 50%);
-    background-size: 100% 1px;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-  }
-}
-.cv h3 span {
-  font-size: 0.625rem;
-  line-height: 0.9;
-  display: inline-block;
-  border-left: 0.5px solid rgba(59, 58, 55, 0.5);
-  margin-left: 10px;
-  padding-left: 8px;
-  vertical-align: 4px;
-  height: 12px;
-  letter-spacing: 0.5px;
-}
-@media (min-width: 56.0625em) {
-  .cv h3 span {
-    font-size: 0.6875rem;
-    line-height: 0.9090909091;
-    vertical-align: 7px;
-    height: 16px;
-    letter-spacing: 0.2px;
-  }
 }
 
 .Grid {
@@ -2338,6 +2042,35 @@ button.small, .button.small, .main-nav a.small {
     margin-right: 16px;
   }
 }
+button, .button, .Nav a {
+  border: 0.5px solid rgba(255, 68, 61, 0.5);
+  margin-right: 10px;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  background-color: #ff443d;
+  color: #ffffef;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+}
+a > button, a > .button, .Nav a > a {
+  margin-right: 0;
+}
+button .glyph, .button .glyph, .Nav a .glyph {
+  margin-left: auto;
+}
+button:focus, button:hover, button:active, button.active, .button:focus, .button:hover, .button:active, .button.active, .Nav a:focus, .Nav a:hover, .Nav a:active, .Nav a.active {
+  background-color: transparent;
+  color: #ff443d;
+}
+button.block, .button.block, .Nav a.block {
+  width: 100%;
+}
+button.small, .button.small, .Nav a.small {
+  padding: 0 11px;
+}
+
 .Carousel {
   margin-left: 0;
   position: relative;
@@ -2461,6 +2194,46 @@ button.small, .button.small, .main-nav a.small {
   position: absolute;
 }
 
+.CV ul {
+  list-style: none;
+  margin-left: 0;
+}
+.CV h3, .CV h5 {
+  text-transform: uppercase;
+}
+.CV h2 {
+  border-bottom: 0.5px solid rgba(59, 58, 55, 0.5);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .CV h2 {
+    border-bottom: none;
+    background-image: linear-gradient(0deg, #ffffef, transparent 50%, #3b3a37 50%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+.CV h3 span {
+  font-size: 0.625rem;
+  line-height: 0.9;
+  display: inline-block;
+  border-left: 0.5px solid rgba(59, 58, 55, 0.5);
+  margin-left: 10px;
+  padding-left: 8px;
+  vertical-align: 4px;
+  height: 12px;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 56.0625em) {
+  .CV h3 span {
+    font-size: 0.6875rem;
+    line-height: 0.9090909091;
+    vertical-align: 7px;
+    height: 16px;
+    letter-spacing: 0.2px;
+  }
+}
+
 .Footer {
   margin-top: 48px;
   padding: 8px 16px;
@@ -2555,6 +2328,109 @@ button.small, .button.small, .main-nav a.small {
   padding-right: 5px;
   color: #ffffef;
   background-color: rgba(59, 58, 55, 0.5);
+}
+
+.Logo {
+  font-size: 2.125rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 57px;
+}
+@media (min-width: 48em) {
+  .Logo {
+    font-size: 2.625rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 48em) {
+  .Logo {
+    height: 68px;
+  }
+}
+.Logo:focus .Logo-log::before, .Logo:hover .Logo-log::before, .Logo:active .Logo-log::before {
+  background-color: #3b3a37;
+}
+.Logo span {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px;
+  height: 57px;
+}
+@media (min-width: 48em) {
+  .Logo span {
+    height: 68px;
+  }
+}
+
+.Logo-ana {
+  margin-left: auto;
+  padding-right: 2.5px;
+  color: #3b3a37;
+}
+
+.Logo-log {
+  position: relative;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #ffffef;
+  z-index: 1;
+}
+.Logo-log::before {
+  position: absolute;
+  content: "";
+  background-color: #ff443d;
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-height: 57px;
+}
+@media (min-width: 48em) {
+  .Logo-log::before {
+    min-height: 68px;
+  }
+}
+
+.Nav {
+  margin-top: 0;
+  margin-bottom: 16px;
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+}
+@media (min-width: 48em) {
+  .Nav {
+    margin-bottom: 24px;
+  }
+}
+.Nav a {
+  font-size: 0.625rem;
+  line-height: 2.4;
+  width: 57px;
+  height: 57px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+  background-color: transparent;
+  color: #ff443d;
+}
+@media (min-width: 48em) {
+  .Nav a {
+    font-size: 0.75rem;
+    line-height: 2;
+    width: 68px;
+    height: 68px;
+  }
+}
+.Nav a:focus, .Nav a:hover, .Nav a:active, .Nav a.active {
+  background-color: #ff443d;
+  color: #ffffef;
 }
 
 .u-floatRight {

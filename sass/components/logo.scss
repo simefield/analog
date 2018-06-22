@@ -1,0 +1,55 @@
+// ------------------------------------
+// LOGO
+// ------------------------------------
+
+.Logo {
+  @include font-size(34px, 34px); // line-height 1
+  @media (min-width: $screen-md) {
+    @include font-size(42px, 42px);
+  }
+  @extend %neueHaasGrotesk;
+  @extend %fix-webkit-font-rendering;
+  display: flex;
+  align-items: center;
+  height: $nav-button-sm;
+  @media (min-width: $screen-md) { height: $nav-button-lg; }
+  &:focus,
+  &:hover,
+  &:active {
+    .Logo-log::before { background-color: $black; }
+  }
+  span {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3px;
+    height: $nav-button-sm;
+    @media (min-width: $screen-md) { height: $nav-button-lg; }
+  }
+}
+
+.Logo-ana {
+  margin-left: auto; // right align
+  padding-right: 2.5px;
+  color: $black;
+}
+
+.Logo-log {
+  position: relative;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: $paper;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $red;
+    display: block;
+    width: 100%;
+    padding-top: 100%; // square
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: $nav-button-sm;
+    @media (min-width: $screen-md) { min-height: $nav-button-lg; }
+  }
+}

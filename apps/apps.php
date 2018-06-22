@@ -1,14 +1,14 @@
 <script id='carousel-tmpl' type='text/template'>
 {{#apps}}<li class='distribute'>
-     <div class="one-whole  p-r-md-tablet">
+     <div class="u-width1of1 u-md-pr-md">
       <h1 class="m-t-0">{{{title}}}
         {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}</span>{{/site}}
       </h1>
     </div>
-    <div class="mobile-one-whole  tablet-three-fifths  m-t-md-mobile  m-t-lg-tablet  float--right">
+    <div class="u-sm-width1of1 u-md-width3of5 u-sm-mt-md u-md-mt-lg u-floatRight">
       <img src="images/portfolio/{{image}}" width='100%' alt="screenshot of {{site}} website">
     </div>
-    <div class="mobile-one-whole  tablet-two-fifths  p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
+    <div class="u-sm-width1of1 u-md-width2of5 u-sm-mt-md u-md-mt-lg u-md-pr-md">
       <div class='copy'>
         <p><b>Designer / developer</b><br>
           Produced at <a href="{{productionUrl}}">{{production}}</a>
@@ -32,12 +32,12 @@
 {{/apps}}
 </script>
 
-<div class="grid">
-  <div class="grid__item  skinny-right-tablet">
-    <ul class="Carousel"></ul><!-- /Carousel -->
-  </div><!-- /grid__item
---><div class="grid__item  skinny-right-tablet">
+<div class="Grid">
+  <div class="Grid-md-skinnyRight">
+    <ul class="Carousel"></ul>
+  </div>
+  <div class="Grid-md-skinnyRight">
     <!-- distribute grid items must have white-space between them, and a mobile width declaration -->
     <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
-  </div><!-- /grid__item -->
-</div><!-- /grid -->
+  </div>
+</div>

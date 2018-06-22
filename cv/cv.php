@@ -6,7 +6,7 @@
 <div class="Grid Grid--withGutter">
   <div class="u-md-width1of2 u-md-push1of4">
     <div><!-- must nest hero image to respect skinny- type margins -->
-      <div class="cv">
+      <div class="CV">
         <h2>Employment</h2>
         <ul>
           <li>
@@ -45,7 +45,7 @@
     </div><!-- /skinny nested element -->
   </div>
   <div class="Grid-md-skinnyRight u-md-width1of4 u-md-push1of4">
-  <div class="cv">
+  <div class="CV">
       <h2>Technologies</h2>
         <p class='u-mt-md'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
         <h2>Referees</h2>
