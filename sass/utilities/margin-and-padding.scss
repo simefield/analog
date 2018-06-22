@@ -4,33 +4,32 @@
 
 @mixin margin-and-padding($namespace: "") {
   // Margin top
-  .m-t-0#{$namespace}  { margin-top: 0 !important; }
-  .m-t-sm#{$namespace} { margin-top: $h/2 !important; }
-  .m-t-md#{$namespace} { margin-top: $h !important; }
-  .m-t-lg#{$namespace} { margin-top: $h*1.5 !important; }
-  .m-t-xl#{$namespace} { margin-top: $h*2 !important; }
+  .u-#{$namespace}mt-0  { margin-top: 0 !important; }
+  .u-#{$namespace}mt-sm { margin-top: $h/2 !important; }
+  .u-#{$namespace}mt-md { margin-top: $h !important; }
+  .u-#{$namespace}mt-lg { margin-top: $h*1.5 !important; }
+  .u-#{$namespace}mt-xl { margin-top: $h*2 !important; }
   // Margin bottom
-  .m-b-lg#{$namespace} { margin-bottom: $h*1.5 !important; }
+  .u-#{$namespace}mb-lg { margin-bottom: $h*1.5 !important; }
   // Padding right
-  .p-r-md#{$namespace} { padding-right: $v !important; }
+  .u-#{$namespace}pr-md { padding-right: $v !important; }
   // Padding left
-  .p-l-0#{$namespace}  { padding-left: 0 !important; }
+  .u-#{$namespace}pl-0  { padding-left: 0 !important; }
 }
 
 @include margin-and-padding();
-@media (max-width: $screen-sm-max) { @include margin-and-padding("-mobile"); }
-@media (min-width: $screen-md)     { @include margin-and-padding("-tablet"); }
-@media (min-width: $screen-lg)     { @include margin-and-padding("-desktop"); }
+@media (max-width: $screen-sm-max) { @include margin-and-padding("sm-"); }
+@media (min-width: $screen-md)     { @include margin-and-padding("md-"); }
+@media (min-width: $screen-lg)     { @include margin-and-padding("lg-"); }
 
 // OUTPUTS:
-// .m-t-0-mobile { margin-top: 0; }
-// .m-t-xs-mobile { margin-top: 4px; }
-// .m-t-sm-mobile { margin-top: 8px; }
-// .m-t-md-mobile { margin-top: 16px; }
+// .u-sm-mt-0 { margin-top: 0; }
+// .u-sm-mt-sm { margin-top: 8px; }
+// .u-sm-mt-md { margin-top: 16px; }
 // ...
 // @media (min-width: 48em) {
-//  .m-t-0-tablet { margin-top: 0; }
-//  .m-t-xs-tablet { margin-top: 4px; }
+//  .u-md-mt-0 { margin-top: 0; }
+//  .u-md-mt-sm { margin-top: 8px; }
 //  ...
 // }
 // etc...

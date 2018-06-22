@@ -27,7 +27,7 @@
               <li><a href="cv/" class="<?php echo ($content == 'cv.php') ? 'active' : ''?>">CV</a>
             </ul>
          </div>
-         <div class="p-l-0-mobile u-sm-width1of2 u-md-width1of2 Grid-md-skinnyRight">
+         <div class="u-sm-pl-0 u-sm-width1of2 u-md-width1of2 Grid-md-skinnyRight">
         <!-- <div class="logo-wrapper"> -->
             <a class="logo" href="">
               <span class="logo-ana">ana</span>

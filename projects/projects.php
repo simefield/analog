@@ -4,15 +4,15 @@
   {{#hide}}
   {{/hide}}
   {{^hide}}<li class='distribute'>
-     <div class="u-width1of1 p-r-md-tablet">
-      <h1 class="m-t-0">{{{title}}}
+     <div class="u-width1of1 u-md-pr-md">
+      <h1 class="u-mt-0">{{{title}}}
         {{#site}}<br><span>{{#siteUrl}}<a href="{{siteUrl}}">{{/siteUrl}}{{{site}}}{{#siteUrl}}</a>{{/siteUrl}}{{#siteNote}}<em> <small>[{{siteNote}}]</small></em>{{/siteNote}}</span>{{/site}}
       </h1>
     </div>
-    <div class="u-sm-width1of1 u-md-width3of5 m-t-md-mobile  m-t-lg-tablet  float--right">
+    <div class="u-sm-width1of1 u-md-width3of5 u-sm-mt-md u-md-mt-lg float--right">
       <img src="images/portfolio/{{image}}" width='100%' alt="screenshot of {{site}} website">
     </div>
-    <div class="u-sm-width1of1 u-md-width2of5 p-r-md-tablet  m-t-md-mobile  m-t-lg-tablet">
+    <div class="u-sm-width1of1 u-md-width2of5 u-sm-mt-md u-md-pr-md u-lg-mt-lg">
       <div class='copy'>
         <p>
           <!-- <b>{{#role}}{{role}}{{/role}}{{^role}}Lead front-end{{/role}}</b><br> -->
@@ -43,10 +43,10 @@
 </script>
 
 <div class="Grid Grid--withGutter">
-  <div class="Grid__item  Grid-md-skinnyRight">
+  <div class="Grid-md-skinnyRight">
     <ul class="Carousel"></ul><!-- /Carousel -->
   </div>
-  <div class="Grid__item  Grid-md-skinnyRight">
+  <div class="Grid-md-skinnyRight">
     <!-- distribute Grid items must have white-space between them, and a mobile width declaration -->
     <ul class='CarouselNav'></ul><!-- /distribute & CarouselNav -->
   </div>
