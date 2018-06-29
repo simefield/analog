@@ -12,14 +12,14 @@
           <li>
             <h3><a href="https://alphero.com/">Alphero</a><span>Jul. 2014 – present</span></h3>
             <!-- <h4>Alphero</h4> -->
-            <p class="u-mt-0"><b>Front End Developer</b></p>
+            <p class="u-mt-0"><b>Front-end Developer</b></p>
             <p>Alphero are a fast-growing design-led digital development company offering end-to-end solutions for Android, iOS and web.</p>
             <p>As a member of the web team, I led the front-end build on a number of websites including: <b>The <span class="u-noWrap">Co-operative</span> Bank</b>, <b>FMG</b>, <b>MFAT</b>, <b>MyMSD</b>, <b>Overseer</b>, and <b>Paymark</b>.</p>
-            <p>After a couple of years at Alphero working with a mix of my favourite CSS frameworks I decided to put my hand to formalising an in-house boilerplate. Out of my jumble of experience, development, and borrowed code I wrote what was to become Alphero‘s standard SASS framework, AINT (Alphero’s Inverted Triangle). AINT gives our web developers a running start on our projects and has proven quick and lean, with our average CSS files weighing in at anywhere from 4,000-7,000 lines of compiled code. It has been used on every web project since early 2016, and it continues to be refined and improved upon.</p>
+            <p>After a couple of years at Alphero working with a mix of my favourite CSS frameworks I decided to put my hand to formalising an in-house boilerplate. Out of my jumble of experience, development, and borrowed code I wrote what was to become Alphero‘s standard Sass framework, AINT (Alphero’s Inverted Triangle). AINT gives our web developers a running start on our projects and has proven quick and lean, with our average CSS files weighing in at anywhere from 4,000-7,000 lines of compiled code. It has been used on every web project since early 2016, and it continues to be refined and improved upon.</p>
           </li>
           <li>
             <h3 class="u-mt-xl"><a href="https://springload.co.nz/">Springload</a><span>Apr. 2008 – Oct. 2012</span></h3>
-            <p class="u-mt-0"><b>Lead Front End Developer</b></p>
+            <p class="u-mt-0"><b>Lead Front-end Developer</b></p>
             <p>Springload values their clients and staff highly, while also placing an emphasis on top calibre code. And so do I. This made for an enjoyable and creative tenure that enabled me to hone my front end skills on some wondrously designed projects, including websites for: <b>Chamber Music</b>, <b>CreativeNZ</b>, <b>Deaf Aotearoa</b>, <b>Gibson Sheat</b>, <b>Kiwibank</b>, <b>Loaded Card</b>, <b>NZ International Arts Festival</b>, <b>Right House</b>, and <b>Wellington Airport</b></p>
             <p>My time with Springload honed my pixel-eye for design, and was invaluable in my path to becoming a fully-fledged Object Oriented CSS developer.</p>
           </li>
@@ -47,7 +47,7 @@
   <div class="Grid-md-skinnyRight u-md-width1of4 u-md-push1of4">
   <div class="CV">
       <h2>Technologies</h2>
-        <p class='u-mt-md'>CSS3, SASS, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
+        <p class='u-mt-md'>CSS3, Sass, OOCSS, HTML5, JavaScript, jQuery, Git, Photoshop, Illustrator and InDesign.</p>
         <h2>Referees</h2>
         <p class='u-mt-md'>Please feel free to contact either of my referees.</p>
         <ul class="u-mt-sm">

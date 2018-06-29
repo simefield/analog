@@ -1,29 +1,29 @@
 <div class="Grid Grid--withGutter">
   <div class="u-md-width3of4 u-md-push1of4">
-    <h1>About what I&nbsp;do</h1>
+    <h1>The Glass Monkey</h1>
   </div>
-    <div class="u-md-width1of2 u-md-push1of4">
-     <p class="lead">I remember the day a friend first spoke to me of stylesheets. It sounds silly now, but I was gobsmacked to learn I could change the colour of <i>all</i> the links on a website by defining it in just one place.</p>
-     <p>Both myself and CSS have come a long way since then. I've come to cherish the challenges of responsive layouts, and of writing readable, succinct and maintainable code, while this beastly lanuage has been domesticated by CSS pre-processing.</p>
-     <p>My background was in the more artistic realm of digital multimedia (3D modelling, animation, &c.). I then went on to work in print and digital design, and desktop publishing. It was around the same time I practised web design and development in earnest.</p>
-     <p>My appetite for beautiful web design and typography was largely satisfied during my tenure at Springload, though it also spoiled me in the same way teaching your enemies about bad ke<span style="letter-spacing: -.05em;">r</span>n<span style="letter-spacing: .1em;">i</span>ng can do.</p>
-     <p>During this period, my inner OOCSS (Object Oriented CSS) self was awakened through the musings of the rockstars of front-end development such as Doug Bowman, Stubbornella, Ethan Marcotte, Paul Irish and Harry Roberts, to name but a few.</p>
-     <p>More recently, while working at Alphero, I have developed AINT – a lean SASS framework designed for rapid development, lightweight stylesheets, and robust and maintainable code. It incorporates BEM-esque naming (we call it “Better-than-BEM”) and has been influenced by frameworks such as INUITCSS, ITCSS, and SUITCSS.</p>
-     <h2>Hire me</h2>
-     <p>I’m available for short-term contracts to build websites, or as a consultant to assess your current methods and to teach your staff to write lean CSS.</p>
-     <p>Get in touch by <a href="mailto:reg@analog.co.nz">email</a> or <a href="tel:022-568-8907">phone</a>.</p>
-   </div>
-   <div class="u-md-width1of4 Grid-md-skinnyRight u-md-push1of4">
-    <div><!-- nest skinny- type margins -->
+  <div class="u-md-width1of2 u-md-push1of4">
+    <p class="lead">A glass monkey polishes the screen, that is, they write the HTML and CSS required to make a website or app faithfully reflect design,
+    respond seemlessly to variations in viewport dimensions, and uphold consistency and harmony throughout.</p>
+    <p>It is commmon for a project’s CSS to get a bit unruly. To achieve success a well-structured and clearly defined codebase is needed.</p>
+    <p>I advocate for a well thought-out and unopinionated CSS pre-processing framework combined with BEM methodologies.
+      Having written just such a boilerplate while at Alphero, I am now developing a lighter and more flexible one.</p>
+    <p>So, why not grab yourself a hot covfefe and settle in to peruse my <a href="projects/">portfolio</a> and <a href="cv/">curriculum vitæ</a>.</p>
+    <h2>Hire me</h2>
+    <p>I’m available for short-term contracts to either build new websites or transition existing projects into a more manageable state, or as a consultant to assess your current methods and to teach your staff to write slim CSS.</p>
+    <p>Get in touch by <a href="mailto:reg@analog.co.nz">email</a> or <a href="tel:022-568-8907">phone</a>.</p>
+  </div>
+  <div class="u-md-width1of4 Grid-md-skinnyRight u-md-push1of4">
+    <div>
       <div class='Aside'>
         <h2 class="u-md-displayNone">Apps</h2>
-          <h4><a href="apps/typesetter/">Typesetter</a></h4>
-          <p class='u-mt-0'>Live typeface prototyping.</p>
-          <a href="apps/typesetter/">
-            <div class="u-textCenter u-mt-lg u-mb-lg">
-              <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'>
-            </div>
-          </a>
+        <h4><a href="apps/typesetter/">Typesetter</a></h4>
+        <p class='u-mt-0'>Live typeface prototyping.</p>
+        <a href="apps/typesetter/">
+          <div class="u-textCenter u-mt-lg u-mb-lg">
+            <img class='app-iphone' src="images/app-typesetter.png" alt="Typesetter on iOS" width='112'>
+          </div>
+        </a>
       </div>
       <a href="apps/" class='Button Button--block'><span>More apps</span><span class="glyph  glyph-right-open"></span></a>
     </div>

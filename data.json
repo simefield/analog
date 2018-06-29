@@ -12,7 +12,7 @@
     "partnerUrl": "",
     "partnerRole": "",
     "awards": "■ Best Awards: Value of Design Award, Bronze<br>■ Best Awards: Best Effect Award, Finalist",
-    "blurb": "<p>The Co-operative Bank’s digital offerings have a reputation for being user friendly and gorgeous. This project was no different and encompassed their public marketing site and their online banking.</p><p>Interestingly, the site was built mobile-last, following assurances it would never supplant their native mobile apps. Not surprisingly, Co-op made a u-turn on this decision, so retrospectively incorporated mobile-responsive layouts across the sites. Thankfully, our SASS framework made this relatively painless, proving its flexibility and strength.</p>"
+    "blurb": "<p>The Co-operative Bank’s digital offerings have a reputation for being user friendly and gorgeous. This project was no different and encompassed their public marketing site and their online banking.</p><p>Interestingly, the site was built mobile-last, following assurances it would never supplant their native mobile apps. Not surprisingly, Co-op made a u-turn on this decision, so retrospectively incorporated mobile-responsive layouts across the sites. Thankfully, our Sass framework made this relatively painless, proving its flexibility and strength.</p>"
   },
   {
     "title": "FMG Connect",
@@ -27,7 +27,7 @@
     "partnerUrl": "",
     "partnerRole": "",
     "awards": "",
-    "blurb": "<p>FMG wanted a responsive website where their clients could view, edit and update their insurance policies.</p><p>The large scope of project demanded well componetised SASS partials for future maintainability. Working closely with the developers we were able to deliver a tight and robust web app that has been extremely well received by their customers, prompting FMG to push their limited test release to all their customers early. FMG have also seen a marked increase in new business attributed to the app.</p>"
+    "blurb": "<p>FMG wanted a responsive website where their clients could view, edit and update their insurance policies.</p><p>The large scope of project demanded well componetised Sass partials for future maintainability. Working closely with the developers we were able to deliver a tight and robust web app that has been extremely well received by their customers, prompting FMG to push their limited test release to all their customers early. FMG have also seen a marked increase in new business attributed to the app.</p>"
   },
   {
     "hide": true,
@@ -255,7 +255,7 @@
     "partnerUrl": "",
     "partnerRole": "",
     "awards": "",
-    "blurb": "<p>Showtools provide a suite of online tools for the film and television industry, facilitating the booking of crew and rental equipment, as well as production planning for shoots.</p><p>I’d performed a lot of work on the booking tools in the application itself, now the whole suite required a public web face to allow the client to market the services. For their new site I took a mobile first approach implementing the best in Object Oriented CSS with SASS to keep the code base clean.</p><p>The site features a custom drawn set of vector glyphs, CSS animations, and responds fluidly across devices.</p>"
+    "blurb": "<p>Showtools provide a suite of online tools for the film and television industry, facilitating the booking of crew and rental equipment, as well as production planning for shoots.</p><p>I’d performed a lot of work on the booking tools in the application itself, now the whole suite required a public web face to allow the client to market the services. For their new site I took a mobile first approach implementing the best in Object Oriented CSS with Sass to keep the code base clean.</p><p>The site features a custom drawn set of vector glyphs, CSS animations, and responds fluidly across devices.</p>"
   },
   {
     "title": "Deaf Aotearoa",
