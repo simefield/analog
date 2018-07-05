@@ -3,7 +3,7 @@
     <h1>The Glass Monkey</h1>
   </div>
   <div class="u-md-width1of2 u-md-push1of4">
-    <p class="lead">Glass monkies are font-end developers who polish the screen—that is, they write the HTML and CSS required to make a website or app faithfully reflect design,
+    <p class="lead">Glass monkeys are font-end developers who polish the screen—that is, they write the HTML and CSS required to make a website or app faithfully reflect design,
     respond seemlessly to variations in viewport dimensions, and uphold consistency and harmony throughout.</p>
     <p>It is commmon for a project’s stylesheets to get a bit unwieldly. To attain success a well-structured and clearly defined codebase is essential. I advocate for a thoughtfully considered and unopinionated CSS pre-processing framework combined with BEM methodology.
       Having written just such a boilerplate while at Alphero, I am now developing a lighter and more flexible one.</p>
