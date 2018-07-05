@@ -5,13 +5,12 @@
 </div>
 <div class="Grid Grid--withGutter">
   <div class="u-md-width1of2 u-md-push1of4">
-    <div><!-- must nest hero image to respect skinny- type margins -->
+    <div>
       <div class="CV">
         <h2>Employment</h2>
         <ul>
           <li>
             <h3><a href="https://alphero.com/">Alphero</a><span>Jul. 2014 – present</span></h3>
-            <!-- <h4>Alphero</h4> -->
             <p class="u-mt-0"><b>Front-end Developer</b></p>
             <p>Alphero are a fast-growing design-led digital development company offering end-to-end solutions for Android, iOS and web.</p>
             <p>As a member of the web team, I led the front-end build on a number of websites including: <b>The <span class="u-noWrap">Co-operative</span> Bank</b>, <b>FMG</b>, <b>MFAT</b>, <b>MyMSD</b>, <b>Overseer</b>, and <b>Paymark</b>.</p>
@@ -20,7 +19,7 @@
           <li>
             <h3 class="u-mt-xl"><a href="https://springload.co.nz/">Springload</a><span>Apr. 2008 – Oct. 2012</span></h3>
             <p class="u-mt-0"><b>Lead Front-end Developer</b></p>
-            <p>Springload values their clients and staff highly, while also placing an emphasis on top calibre code. And so do I. This made for an enjoyable and creative tenure that enabled me to hone my front end skills on some wondrously designed projects, including websites for: <b>Chamber Music</b>, <b>CreativeNZ</b>, <b>Deaf Aotearoa</b>, <b>Gibson Sheat</b>, <b>Kiwibank</b>, <b>Loaded Card</b>, <b>NZ International Arts Festival</b>, <b>Right House</b>, and <b>Wellington Airport</b></p>
+            <p>Springload values their clients and staff highly, while also placing an emphasis on top calibre code. And so do I. This made for an enjoyable and creative tenure that enabled me to fine-tune my front end skills on some wondrously designed projects, including websites for: <b>Chamber Music</b>, <b>CreativeNZ</b>, <b>Deaf Aotearoa</b>, <b>Gibson Sheat</b>, <b>Kiwibank</b>, <b>Loaded Card</b>, <b>NZ International Arts Festival</b>, <b>Right House</b>, and <b>Wellington Airport</b></p>
             <p>My time with Springload honed my pixel-eye for design, and was invaluable in my path to becoming a fully-fledged Object Oriented CSS developer.</p>
           </li>
           <li>
@@ -41,8 +40,8 @@
             </dl>
           </li>
         </ul>
-      </div><!-- /cv -->
-    </div><!-- /skinny nested element -->
+      </div>
+    </div>
   </div>
   <div class="Grid-md-skinnyRight u-md-width1of4 u-md-push1of4">
   <div class="CV">
