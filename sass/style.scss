@@ -1,16 +1,13 @@
+/*! Slim CSS © 2018 Richard Sime */
+
 @charset "UTF-8";
 
 // ------------------------------------
 // STYLE.CSS
 // ------------------------------------
 
-/*!
- * ProCSS
- * © 2018 Richard Sime
- *
- */
-
 // sass --watch sass/style.scss:css/style.css --style compressed
+// sass sass/style.scss:css/style.css --style compressed
 
 // Setup ==========
 @import "vars";
@@ -19,3 +16,4 @@
 @import "layout/index";
 @import "components/index";
 @import "utilities/index";
+@import "base/dev-tools";

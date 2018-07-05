@@ -79,4 +79,5 @@
 
 // Hide helpers
 // ----------------------------------------------------------------------------
+.u-sm-displayNone { @include media-query(mobile) { display: none !important; } }
 .u-md-displayNone { @include media-query(tablet) { display: none !important; } }

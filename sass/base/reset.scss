@@ -25,11 +25,6 @@ hr {
   padding: 0;
 }
 
-// Give a help cursor to elements that give extra info on `:hover`.
-abbr[title],dfn[title] {
-  cursor: help;
-}
-
 // Remove underlines from potentially troublesome elements.
 u, ins {
   text-decoration: none;
@@ -48,15 +43,8 @@ img {
 // Give form elements some cursor interactions...
 label,
 input,
-textarea,
 button,
 select,
 option {
   cursor: pointer;
-}
-
-textarea:active,
-textarea:focus {
-  cursor: text;
-  outline: none;
 }

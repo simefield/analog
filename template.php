@@ -30,11 +30,10 @@
           <a class="Logo" href="">
             <span class="Logo-ana">ana</span>
             <span class="Logo-log">log</span>
-            <!-- <img src="images/analog.png" alt="Analog logo"> -->
           </a>
         </div>
         <?php if (isset($photoClass)) { ?><div class="Grid-md-skinnyLeft Grid-md-skinnyRight">
-          <div><!-- must nest for skinny- type margins -->
+          <div>
             <div class="Hero">
               <div class="Hero-image  <?= $photoClass ?>"></div>
               <span class='Hero-credit'>
@@ -49,16 +48,16 @@
       <div class="Footer-wrapper">
         <div class="Footer">
           <ul class='Footer-list'>
-            <li class='hide_mobile'>Say g’day
-            <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a>
-            <li><a href="tel:04-022-568-8907">022.568.8907</a>
+            <li class='u-sm-displayNone'>Say g’day</li>
+            <li><a href="mailto:reg@analog.co.nz">reg@analog.co.nz</a></li>
+            <li><a href="tel:04-022-568-8907">022.568.8907</a></li>
           </ul>
           <p class="Footer-copyright">
             <small>Richard Sime © 2018</small>
           </p>
         </div>
       </div>
-    </div><!-- /content -->
+    </div>
     <script src="js/common.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

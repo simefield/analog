@@ -24,9 +24,9 @@
 <script id='carousel-thumbnails-tmpl' type='text/template'>
 {{#apps}}
   <li class="CarouselNav-item">
-    <a href="" onclick='return false;'>
-      <h5><span>{{{title}}}</span></h5>
-      <img src="images/portfolio/thumb-{{image}}" alt="screenshot of {{site}} website">
+    <a class="CarouselNav-link" href="" onclick='return false;'>
+      <h5 class="CarouselNav-text"><span>{{{title}}}</span></h5>
+      <img class="CarouselNav-image" src="images/portfolio/thumb-{{image}}" alt="screenshot of {{site}} website">
     </a>
   </li>
 {{/apps}}

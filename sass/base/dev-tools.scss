@@ -11,3 +11,16 @@
     background-image: url('../images/_grid.png');
   }
 }
+
+// --------------------------------------------------
+// Media query "hooks" for responsive JS
+// ----------------------------------------------------------------------------
+
+#viewport {
+  position: fixed; z-index: 999999999; right: 16px; bottom: 8px; color: #999; font-size: 12px; padding: 3px 8px 2px; background-color: rgba(0, 0, 0, 0.85); border-radius: 2px; line-height: 1.563; margin-bottom: 0;
+  &::after {
+    content: "mobile";
+    @media (min-width: $screen-md) { content: "tablet"; }
+    @media (min-width: $screen-lg) { content: "desktop"; }
+  }
+}
